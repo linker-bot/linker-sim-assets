@@ -1,12 +1,12 @@
-<mujoco model="lkls73_arm_right">
+<mujoco model="p7_right">
   <compiler meshdir="meshes" discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ"/>
   <option/>
 
   <default>
-    <default class="arm_lkls73_arm_visual">
+    <default class="arm_p7_visual">
       <geom type="mesh" contype="0" conaffinity="0" group="1"/>
     </default>
-    <default class="arm_lkls73_arm_collision">
+    <default class="arm_p7_collision">
       <geom type="mesh" contype="1" conaffinity="1" group="3"/>
     </default>
   </default>
@@ -32,8 +32,8 @@
                   fullinertia="0.00114445390268402 0.000654874566780468 0.000691494652521253 -2.33503672059843E-06 9.94413679130844E-09 -1.0590763545097E-06"/>
         <joint name="R1_Joint" type="hinge" axis="0 1 0"
                range="-2.91 2.91" damping="20" frictionloss="0.0" armature="0.01"/>
-        <geom class="arm_lkls73_arm_visual" mesh="R1"/>
-        <geom class="arm_lkls73_arm_collision" mesh="R1"/>
+        <geom class="arm_p7_visual" mesh="R1"/>
+        <geom class="arm_p7_collision" mesh="R1"/>
 
         <body name="R2_Link" pos="-3.32E-05 -0.058001 0">
           <inertial pos="-0.00161840435618426 -8.19852199768212E-06 -0.0795740266968583"
@@ -41,8 +41,8 @@
                     fullinertia="0.00099926032712546 0.000929597930299551 0.000490873969400915 4.38390428673455E-06 1.34112399215467E-06 -2.7915125849712E-07"/>
           <joint name="R2_Joint" type="hinge" axis="-1 0 0"
                  range="-0.07 3.2" damping="20" frictionloss="0.0" armature="0.01"/>
-          <geom class="arm_lkls73_arm_visual" mesh="R2"/>
-          <geom class="arm_lkls73_arm_collision" mesh="R2"/>
+          <geom class="arm_p7_visual" mesh="R2"/>
+          <geom class="arm_p7_collision" mesh="R2"/>
 
           <body name="R3_Link" pos="2.5018E-05 0 -0.123">
             <inertial pos="-0.000181281046893987 -0.00124930020984915 -0.128548942421424"
@@ -50,8 +50,8 @@
                       fullinertia="0.00158095142360156 0.00163152744277086 0.000344148863355523 7.74064683830126E-07 8.68119825601561E-07 2.41539423740222E-06"/>
             <joint name="R3_Joint" type="hinge" axis="0 0 1"
                    range="-2.69 2.69" damping="20" frictionloss="0.0" armature="0.01"/>
-            <geom class="arm_lkls73_arm_visual" mesh="R3"/>
-            <geom class="arm_lkls73_arm_collision" mesh="R3"/>
+            <geom class="arm_p7_visual" mesh="R3"/>
+            <geom class="arm_p7_collision" mesh="R3"/>
 
             <body name="R4_Link" pos="-2.5308E-05 0 -0.1621">
               <inertial pos="4.42383386005531E-06 -0.000778418113624724 -0.0846001182728231"
@@ -59,8 +59,8 @@
                         fullinertia="0.00050824600575807 0.000524130564978714 0.000333983373234424 -4.12349458829714E-06 1.60122816329668E-07 3.4575721962879E-07"/>
               <joint name="R4_Joint" type="hinge" axis="0 1 0"
                      range="-2.05 2.05" damping="20" frictionloss="0.0" armature="0.01"/>
-              <geom class="arm_lkls73_arm_visual" mesh="R4"/>
-              <geom class="arm_lkls73_arm_collision" mesh="R4"/>
+              <geom class="arm_p7_visual" mesh="R4"/>
+              <geom class="arm_p7_collision" mesh="R4"/>
 
               <body name="R5_Link" pos="0 0 -0.124">
                 <inertial pos="7.89161129038714E-05 -0.00127720103461224 -0.0361226257678754"
@@ -68,8 +68,8 @@
                           fullinertia="0.000356325710016729 0.000385006832605378 0.000101746689163179 8.49345579615723E-07 1.06208408022809E-06 -2.16308499009301E-06"/>
                 <joint name="R5_Joint" type="hinge" axis="0 0 1"
                        range="-2.69 2.69" damping="20" frictionloss="0.0" armature="0.01"/>
-                <geom class="arm_lkls73_arm_visual" mesh="R5"/>
-                <geom class="arm_lkls73_arm_collision" mesh="R5"/>
+                <geom class="arm_p7_visual" mesh="R5"/>
+                <geom class="arm_p7_collision" mesh="R5"/>
 
                 <body name="R6_Link" pos="0 0 -0.0881">
                   <inertial pos="-0.00423362800835291 0.00438647668797748 -0.0324823687491156"
@@ -77,8 +77,8 @@
                             fullinertia="0.000194396918256628 0.000233882313857475 0.00010145861997438 1.34060453386023E-06 -9.47065531650411E-06 -2.86903332334497E-07"/>
                   <joint name="R6_Joint" type="hinge" axis="0 1 0"
                          range="-1.59 1.59" damping="20" frictionloss="0.0" armature="0.01"/>
-                  <geom class="arm_lkls73_arm_visual" mesh="R6"/>
-                  <geom class="arm_lkls73_arm_collision" mesh="R6"/>
+                  <geom class="arm_p7_visual" mesh="R6"/>
+                  <geom class="arm_p7_collision" mesh="R6"/>
 
                   <body name="R7_Link" pos="2.5631E-05 0 -0.0655">
                     <inertial pos="0.00330667550394679 -1.18809317478652E-06 -0.0202430179967651"
@@ -86,15 +86,15 @@
                               fullinertia="6.98168229201036E-05 5.48675476764227E-05 4.4020607930099E-05 2.70503363330993E-07 3.17975733407385E-08 -1.01361997649667E-12"/>
                     <joint name="R7_Joint" type="hinge" axis="-1 0 0"
                            range="-1.59 1.59" damping="20" frictionloss="0.0" armature="0.01"/>
-                    <geom class="arm_lkls73_arm_visual" mesh="R7"/>
-                    <geom class="arm_lkls73_arm_collision" mesh="R7"/>
+                    <geom class="arm_p7_visual" mesh="R7"/>
+                    <geom class="arm_p7_collision" mesh="R7"/>
 
                     <body name="R8_Link" pos="-2.5732E-05 0 -0.0455">
                       <inertial pos="-1.03808180585258E-10 5.33808552916071E-11 0.000499999999999834"
                                 mass="6.05149284897743E-05"
                                 fullinertia="8.49604381443613E-09 8.49604381442903E-09 1.69820018074356E-08 8.31967629121856E-22 7.81277954468574E-15 9.03653481925555E-16"/>
-                      <geom class="arm_lkls73_arm_visual" mesh="R8"/>
-                      <geom class="arm_lkls73_arm_collision" mesh="R8"/>
+                      <geom class="arm_p7_visual" mesh="R8"/>
+                      <geom class="arm_p7_collision" mesh="R8"/>
                       <site name="tool0" pos="0 0 0"/>
                     </body>
                   </body>

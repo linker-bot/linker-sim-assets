@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<robot name="lkls73_torso">
+<robot name="p7_torso">
 
   <!-- Stand: zero-mass link welded to world by the composer. base_link
        hangs from it via a fixed joint that lifts the shoulder level up
@@ -27,7 +27,7 @@
       <geometry>
         <mesh filename="meshes/base_link.STL" />
       </geometry>
-      <material name="lkls73_torso_gray">
+      <material name="p7_torso_gray">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>

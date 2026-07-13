@@ -1,20 +1,20 @@
 schema_version: 1
-name: lkls73_i1_bimanual
+name: p7_i1_bimanual
 composer_version: 0.1.0
-recipe_sha256: cf521bd5c786fac04d2135e2dfe0bc68ba929431ddd9c0664adff9bd48e0788b
+recipe_sha256: d6cc37ca57f554b83c5957287564394009229876597c5cadb7ee29057f94aa65
 components:
   base:
-    name: bases/lkls73_torso
+    name: bases/p7_torso
     variant: default
-    sha256: 0ef0b02cce2994be49d52de9c87a6a4dcd420bb963bb2df12bead7821c3f57bc
+    sha256: cb38aeaaa572961e9dde478592b28740bf779e2223e5255d4e4e66dae2146007
   arm_left:
-    name: arms/lkls73_arm
+    name: arms/p7
     variant: left
-    sha256: a54c8dc24b5c03d1e478b0902b4a924c357aa2c4cfa4918615fd85ab5629266b
+    sha256: ad3cb26790ca9ffd67d8e1299b6e9e371c7660d6987fd703d28ca40289440916
   arm_right:
-    name: arms/lkls73_arm
+    name: arms/p7
     variant: right
-    sha256: 902a6c1bd326ef737a318a10e07f989d7c6be44cfe29ba7840f1a89bc5ed4d17
+    sha256: e5f5a6a27fdc64ffe0c0eca4eb76c365af551a74bdbd3e5521740b1d8fcf77c1
   hand_left:
     name: hands/linkerhand_l6
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.mjcf
-  urdf_sha256: ef4b2da3d7a9134682bfde92685541b0dbe2db07350be0d866a6c927ac95389f
-  mjcf_sha256: 81961f5653880d641e5a7a462d1f58a3696e2d017625c2ad7ed437f42c516d62
+  urdf_sha256: 2a910e4189188d9c5f934e07b4a055dcbe062a8f7d20de2c6bc964e46166bf40
+  mjcf_sha256: 4d51fbe01fb98f45d3a39a10520f556325a5b03844fb1b88a7e97970e8579ea2
 joints:
   base: []
   arm_left:
