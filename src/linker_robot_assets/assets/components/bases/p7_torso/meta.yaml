@@ -1,10 +1,10 @@
 schema_version: 1
 kind: base
-name: lkls73_torso
+name: p7_torso
 
 # Single variant — the torso ships one mesh set with fixed mount pads for
 # both arms baked at the L1_Joint / R1_Joint origins from the source URDF
-# (lkls73_i1_dual_arm_description).
+# (p7_i1_dual_arm_description).
 variants:
   default:
     vars: {}

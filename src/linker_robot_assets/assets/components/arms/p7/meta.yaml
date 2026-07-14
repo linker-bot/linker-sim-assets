@@ -1,9 +1,9 @@
 schema_version: 1
 kind: arm
-name: lkls73_arm
+name: p7
 drive: position
 
-# Two mirrored variants derived from the lkls73_i1_dual_arm_description
+# Two mirrored variants derived from the p7_i1_dual_arm_description
 # package (source robot name A7V2_50_4.27). Each variant URDF keeps the
 # source's literal L1..L8 / R1..R8 link names; the composer prefixes them
 # with <role>_ per recipe. The `{V}` placeholder expands to L / R in

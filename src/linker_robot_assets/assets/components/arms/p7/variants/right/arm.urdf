@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Source: vendor lkls73_i1_dual_arm_description package (A7V2_50_4.27).
+<!-- Source: vendor p7_i1_dual_arm_description package (A7V2_50_4.27).
      Mirror of variants/left: rerooted at R_arm_root so the recipe's fixed
      mount joint can live above R1_Joint. Kinematics match the source URDF;
      R1_Joint's original [3.32E-05 -0.164 0] offset is absorbed by the
      torso base's arm_right_mount placement. Joint axes and limits are
      the source's mirrored values (not recomputed from the left). -->
-<robot name="lkls73_arm_right">
+<robot name="p7_right">
 
   <link name="R_arm_root" />
 

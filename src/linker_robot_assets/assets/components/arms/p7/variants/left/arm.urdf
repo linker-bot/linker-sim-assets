@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Source: vendor lkls73_i1_dual_arm_description package (A7V2_50_4.27).
+<!-- Source: vendor p7_i1_dual_arm_description package (A7V2_50_4.27).
      Rerooted at a zero-mass virtual link L_arm_root so the recipe's fixed
      mount joint can live above the first revolute L1_Joint. Kinematics
      otherwise match the source URDF exactly; L1_Joint's original [0 0.164 0]
      xyz offset is absorbed by the torso base's arm_left_mount placement. -->
-<robot name="lkls73_arm_left">
+<robot name="p7_left">
 
   <link name="L_arm_root" />
 
