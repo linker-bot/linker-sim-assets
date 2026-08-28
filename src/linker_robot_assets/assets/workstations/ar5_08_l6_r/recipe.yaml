@@ -1,0 +1,28 @@
+schema_version: 1
+name: ar5_08_l6_r
+description: >
+  Single AR5_08 right arm + Linkerhand L6 right, welded into one articulation
+  (arm frozen to world; hand welded to the arm flange/tool0). Authored for
+  linker-sim-isaac's combined arm+hand profile (== AR5V2_L6V1_R). The
+  wrist transform reproduces Isaac's combined MJCF: hand base at the flange
+  (tcp, z=0.09 from link7), rotated -90deg about Z. Finger equality/mimic
+  coupling is carried through the composed MJCF.
+
+components:
+  arm:
+    component: arms/ar5_08
+    variant: right
+  hand:
+    component: hands/linkerhand_l6
+    variant: right
+
+freeze_base: arm
+
+mounts:
+  # Matches assets/combined_system/AR5V2_L6V1_R/AR5V2_L6V1_R.xml:
+  # L6V1_R_hand_base_link at flan_link, pos 0 0 0, quat (w,x,y,z)=
+  # (0.7071,0,0,-0.7071) == rpy [0,0,-1.5708].
+  - child: hand:wrist_mount
+    parent: arm:tool0
+    xyz: [0.0, 0.0, 0.0]
+    rpy: [0.0, 0.0, -1.5708]

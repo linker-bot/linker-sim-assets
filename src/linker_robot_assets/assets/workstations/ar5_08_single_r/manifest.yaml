@@ -1,0 +1,47 @@
+schema_version: 1
+name: ar5_08_single_r
+composer_version: 0.1.0
+recipe_sha256: 7393f1615072841cbeb1bb54aa951a84908b2e45cf3cdffc873c169cb0150390
+components:
+  arm:
+    name: arms/ar5_08
+    variant: right
+    sha256: 715ac8a4989a663e7328b5d0be74584a5bcd09cf7b635b1ef91f12fb209507f4
+artifacts:
+  urdf: workstation.urdf
+  mjcf: workstation.mjcf
+  urdf_sha256: 7b43cce33c98a8295b62209ff7c05bbf82a52bdbcb5ccf4a59cd0a2a34056fc0
+  mjcf_sha256: a591b1d8930d8f98faf43be9e432189a1ec76847e25356f59207896382e449fc
+joints:
+  arm:
+  - arm_AR5_5_08R_W4C4A6_joint_1
+  - arm_AR5_5_08R_W4C4A6_joint_2
+  - arm_AR5_5_08R_W4C4A6_joint_3
+  - arm_AR5_5_08R_W4C4A6_joint_4
+  - arm_AR5_5_08R_W4C4A6_joint_5
+  - arm_AR5_5_08R_W4C4A6_joint_6
+  - arm_AR5_5_08R_W4C4A6_joint_7
+mimic_joints:
+  arm: []
+frames:
+  arm:base_mount: arm_AR5_5_08R_W4C4A6_base
+  arm:tool0: arm_AR5_5_08R_W4C4A6_tcp
+ee_link: arm_AR5_5_08R_W4C4A6_tcp
+ee_links:
+  arm: arm_AR5_5_08R_W4C4A6_tcp
+base_link: arm_AR5_5_08R_W4C4A6_base
+default_gains:
+  arm:
+    stiffness: 1000.0
+    damping: 4.0
+gain_profiles:
+  arm:
+    default:
+      stiffness: 1000.0
+      damping: 4.0
+    joint:
+      stiffness: 1000.0
+      damping: 4.0
+    osc:
+      stiffness: 150.0
+      damping: 8.0
