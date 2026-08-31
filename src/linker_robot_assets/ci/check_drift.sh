@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # CI drift check: re-run the composer on every workstation and verify that
-# the committed workstation.urdf / workstation.mjcf / manifest.yaml match a
+# the committed workstation.urdf / workstation.xml / manifest.yaml match a
 # fresh compose. Any mismatch means someone edited a recipe or component
 # source without re-running the composer.
 #

@@ -6,7 +6,9 @@ Usage:
 
 Reads `recipe.yaml` from the workstation directory, resolves every referenced
 component under `assets/components/`, emits `workstation.urdf` and (when
-component MJCFs are present) `workstation.mjcf`, and writes a generated
+component MJCFs are present) `workstation.xml` (an MJCF model; the `.xml`
+extension is the canonical MuJoCo one and is required by Isaac Sim's MJCF
+importer), and writes a generated
 `manifest.yaml` describing the result.
 
 With `--check-drift`, the composer runs the full pipeline in memory and
@@ -78,7 +80,7 @@ def resolve_paths(workstation_dir: Path, assets_root: Path | None) -> Paths:
         components_root=components_root,
         recipe=recipe,
         out_urdf=workstation_dir / "workstation.urdf",
-        out_mjcf=workstation_dir / "workstation.mjcf",
+        out_mjcf=workstation_dir / "workstation.xml",
         out_manifest=workstation_dir / "manifest.yaml",
     )
 
@@ -186,7 +188,7 @@ def compose(paths: Paths) -> ComposeResult:
         mjcf_sha = sha256_bytes(mjcf_text.encode("utf-8"))
     else:
         print(
-            "[compose] skipping workstation.mjcf (component MJCFs not "
+            "[compose] skipping workstation.xml (component MJCFs not "
             "yet authored):",
             file=sys.stderr,
         )
@@ -266,7 +268,7 @@ def compose(paths: Paths) -> ComposeResult:
         components=provenance,
         artifacts=Artifacts(
             urdf="workstation.urdf",
-            mjcf=("workstation.mjcf" if mjcf_text is not None else None),
+            mjcf=("workstation.xml" if mjcf_text is not None else None),
             urdf_sha256=urdf_sha,
             mjcf_sha256=mjcf_sha,
         ),

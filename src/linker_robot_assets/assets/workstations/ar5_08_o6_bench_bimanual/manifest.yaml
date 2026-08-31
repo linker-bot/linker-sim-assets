@@ -25,7 +25,7 @@ components:
     sha256: 704caa9cf2820e26f5cf08d4d8a07afd0c5d9544a209017d97fe083061f5cdf2
 artifacts:
   urdf: workstation.urdf
-  mjcf: workstation.mjcf
+  mjcf: workstation.xml
   urdf_sha256: a8e08d0fef0ede95a54bb4fdfe3ba6f98737504829391525914bac2f25e2bfbf
   mjcf_sha256: 697529144a5491227e8db5af6b56cef195d53798c1af2f3b57def791912e2d10
 joints:
