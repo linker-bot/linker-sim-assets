@@ -1,0 +1,13 @@
+schema_version: 1
+name: linkerhand_l6_single_r
+description: >
+  Single Linkerhand L6 right hand as one articulation, frozen to world.
+  Authored for linker-sim-isaac's hand-only profile (== L6V1_R). Carries the
+  finger equality/mimic coupling through the composed MJCF.
+
+components:
+  hand:
+    component: hands/linkerhand_l6
+    variant: right
+
+freeze_base: hand

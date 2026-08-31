@@ -1,0 +1,16 @@
+schema_version: 1
+name: ar5_08_single_l
+description: >
+  Single AR5_08 (08-class W4C4A6) left arm as one articulation, frozen to
+  world. Authored for linker-sim-isaac's single-arm profile (kinematically
+  == its AR5V2_L) and reused as the cuRobo planning URDF. No hand, no base.
+  NOTE: the arm base carries the ar5_08 mounting convention (rpy=-1.5708 at
+  joint_1); consumers that need Isaac's AR5V2 base orientation compensate at
+  the placement/root_pose level.
+
+components:
+  arm:
+    component: arms/ar5_08
+    variant: left
+
+freeze_base: arm
