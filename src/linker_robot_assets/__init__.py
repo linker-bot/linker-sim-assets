@@ -39,7 +39,7 @@ def asset_root() -> Path:
 
         components/{arms,bases,hands}/<name>/{meta.yaml,variants/...}
         workstations/<name>/{recipe.yaml, manifest.yaml,
-                             workstation.urdf, workstation.mjcf}
+                             workstation.urdf, workstation.xml}
     """
     return _ASSET_ROOT
 

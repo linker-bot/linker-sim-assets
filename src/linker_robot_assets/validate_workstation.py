@@ -8,7 +8,7 @@ Checks performed:
      declared EE link and every mount frame resolve to existing links.
   3. Mesh resolution: every `<mesh filename=>` path resolves on disk.
   4. Drift: re-run composer in memory; committed artifacts match fresh output.
-  5. MJCF parity (when workstation.mjcf is committed):
+  5. MJCF parity (when workstation.xml is committed):
      - Loads in MuJoCo with no warnings.
      - Actuator-joint order matches manifest.joints[role] (concatenated).
      - Every manifest.frames[role:frame] site at qpos=0 matches the
@@ -401,7 +401,7 @@ def validate(workstation_dir: Path, assets_root: Path | None) -> int:
         ("urdf.single_tree", lambda: _check_single_tree(paths)),
         ("composer.drift", lambda: _check_drift(paths)),
     ]
-    # MJCF checks gated on a committed workstation.mjcf — they're skipped
+    # MJCF checks gated on a committed workstation.xml — they're skipped
     # for components that haven't authored their MJCFs yet.
     if paths.out_mjcf.is_file():
         checks.extend([
