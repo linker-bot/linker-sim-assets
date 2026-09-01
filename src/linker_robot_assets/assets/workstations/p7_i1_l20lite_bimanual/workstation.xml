@@ -104,13 +104,16 @@
   </asset>
   <worldbody>
     <body name="base_torso_root" pos="0 0 0">
+      <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
       <body name="base_base_link" pos="0 0 1.2">
         <inertial pos="5.75109188383945E-05 1.44120839455095E-05 -0.489174317245241" mass="10.8067081992573" fullinertia="0.192527915393298 0.191539752328327 0.103049415034787 -1.67956043663548E-08 -3.68569447484118E-08 6.60319145138974E-08" />
         <geom class="base_base_p7_torso_visual" mesh="base_torso_base_link" />
         <geom class="base_base_p7_torso_collision" mesh="base_torso_base_link" />
         <body name="base_arm_left_mount" pos="0 0.164 0">
+          <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
           <site name="base_arm_left_mount" pos="0 0 0" />
           <body name="arm_left_L_arm_root" pos="0 0 0">
+            <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
             <site name="arm_left_base_mount" pos="0 0 0" />
             <body name="arm_left_L1_Link" pos="0 0 0">
               <inertial pos="0.00235600060651345 0.0538143182293528 0.00010452198160641" mass="1.3997199601261" fullinertia="0.00114445383866051 0.000654874787984474 0.000691494366096022 -2.33503672142218E-06 -9.94413789148138E-09 1.05907637546798E-06" />
@@ -289,8 +292,10 @@
           </body>
         </body>
         <body name="base_arm_right_mount" pos="3.32E-05 -0.164 0">
+          <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
           <site name="base_arm_right_mount" pos="0 0 0" />
           <body name="arm_right_R_arm_root" pos="0 0 0">
+            <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
             <site name="arm_right_base_mount" pos="0 0 0" />
             <body name="arm_right_R1_Link" pos="0 0 0">
               <inertial pos="-0.00238919607727967 -0.0538157456440336 0.00010452196048521" mass="1.39972022686362" fullinertia="0.00114445390268402 0.000654874566780468 0.000691494652521253 -2.33503672059843E-06 9.94413679130844E-09 -1.0590763545097E-06" />
@@ -472,40 +477,40 @@
     </body>
   </worldbody>
   <actuator>
-    <position name="arm_left_L1_Joint_act" joint="arm_left_L1_Joint" kp="2000" kv="0" ctrlrange="-2.91 2.91" />
-    <position name="arm_left_L2_Joint_act" joint="arm_left_L2_Joint" kp="2000" kv="0" ctrlrange="-3.2 0.07" />
-    <position name="arm_left_L3_Joint_act" joint="arm_left_L3_Joint" kp="2000" kv="0" ctrlrange="-2.69 2.69" />
-    <position name="arm_left_L4_Joint_act" joint="arm_left_L4_Joint" kp="2000" kv="0" ctrlrange="-2.05 2.05" />
-    <position name="arm_left_L5_Joint_act" joint="arm_left_L5_Joint" kp="2000" kv="0" ctrlrange="-2.69 2.69" />
-    <position name="arm_left_L6_Joint_act" joint="arm_left_L6_Joint" kp="2000" kv="0" ctrlrange="-1.59 1.59" />
-    <position name="arm_left_L7_Joint_act" joint="arm_left_L7_Joint" kp="2000" kv="0" ctrlrange="-1.59 1.59" />
-    <position name="arm_right_R1_Joint_act" joint="arm_right_R1_Joint" kp="2000" kv="0" ctrlrange="-2.91 2.91" />
-    <position name="arm_right_R2_Joint_act" joint="arm_right_R2_Joint" kp="2000" kv="0" ctrlrange="-0.07 3.2" />
-    <position name="arm_right_R3_Joint_act" joint="arm_right_R3_Joint" kp="2000" kv="0" ctrlrange="-2.69 2.69" />
-    <position name="arm_right_R4_Joint_act" joint="arm_right_R4_Joint" kp="2000" kv="0" ctrlrange="-2.05 2.05" />
-    <position name="arm_right_R5_Joint_act" joint="arm_right_R5_Joint" kp="2000" kv="0" ctrlrange="-2.69 2.69" />
-    <position name="arm_right_R6_Joint_act" joint="arm_right_R6_Joint" kp="2000" kv="0" ctrlrange="-1.59 1.59" />
-    <position name="arm_right_R7_Joint_act" joint="arm_right_R7_Joint" kp="2000" kv="0" ctrlrange="-1.59 1.59" />
-    <position name="hand_left_lh_thumb_cmc_roll_act" joint="hand_left_lh_thumb_cmc_roll" kp="200" kv="0" ctrlrange="0 1.03" />
-    <position name="hand_left_lh_thumb_cmc_yaw_act" joint="hand_left_lh_thumb_cmc_yaw" kp="200" kv="0" ctrlrange="0 1.4" />
-    <position name="hand_left_lh_thumb_cmc_pitch_act" joint="hand_left_lh_thumb_cmc_pitch" kp="200" kv="0" ctrlrange="0 0.52" />
-    <position name="hand_left_lh_index_mcp_roll_act" joint="hand_left_lh_index_mcp_roll" kp="200" kv="0" ctrlrange="0 0.19" />
-    <position name="hand_left_lh_index_mcp_pitch_act" joint="hand_left_lh_index_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_left_lh_middle_mcp_pitch_act" joint="hand_left_lh_middle_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_left_lh_ring_mcp_roll_act" joint="hand_left_lh_ring_mcp_roll" kp="200" kv="0" ctrlrange="0 0.2" />
-    <position name="hand_left_lh_ring_mcp_pitch_act" joint="hand_left_lh_ring_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_left_lh_pinky_mcp_roll_act" joint="hand_left_lh_pinky_mcp_roll" kp="200" kv="0" ctrlrange="0 0.3" />
-    <position name="hand_left_lh_pinky_mcp_pitch_act" joint="hand_left_lh_pinky_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_right_rh_thumb_cmc_roll_act" joint="hand_right_rh_thumb_cmc_roll" kp="200" kv="0" ctrlrange="0 1.03" />
-    <position name="hand_right_rh_thumb_cmc_yaw_act" joint="hand_right_rh_thumb_cmc_yaw" kp="200" kv="0" ctrlrange="0 1.4" />
-    <position name="hand_right_rh_thumb_cmc_pitch_act" joint="hand_right_rh_thumb_cmc_pitch" kp="200" kv="0" ctrlrange="0 0.52" />
-    <position name="hand_right_rh_index_mcp_roll_act" joint="hand_right_rh_index_mcp_roll" kp="200" kv="0" ctrlrange="0 0.19" />
-    <position name="hand_right_rh_index_mcp_pitch_act" joint="hand_right_rh_index_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_right_rh_middle_mcp_pitch_act" joint="hand_right_rh_middle_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_right_rh_ring_mcp_roll_act" joint="hand_right_rh_ring_mcp_roll" kp="200" kv="0" ctrlrange="0 0.2" />
-    <position name="hand_right_rh_ring_mcp_pitch_act" joint="hand_right_rh_ring_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_right_rh_pinky_mcp_roll_act" joint="hand_right_rh_pinky_mcp_roll" kp="200" kv="0" ctrlrange="0 0.3" />
-    <position name="hand_right_rh_pinky_mcp_pitch_act" joint="hand_right_rh_pinky_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.36" />
+    <motor name="arm_left_L1_Joint_act" joint="arm_left_L1_Joint" ctrllimited="true" ctrlrange="-80 80" gear="1" />
+    <motor name="arm_left_L2_Joint_act" joint="arm_left_L2_Joint" ctrllimited="true" ctrlrange="-80 80" gear="1" />
+    <motor name="arm_left_L3_Joint_act" joint="arm_left_L3_Joint" ctrllimited="true" ctrlrange="-36 36" gear="1" />
+    <motor name="arm_left_L4_Joint_act" joint="arm_left_L4_Joint" ctrllimited="true" ctrlrange="-36 36" gear="1" />
+    <motor name="arm_left_L5_Joint_act" joint="arm_left_L5_Joint" ctrllimited="true" ctrlrange="-36 36" gear="1" />
+    <motor name="arm_left_L6_Joint_act" joint="arm_left_L6_Joint" ctrllimited="true" ctrlrange="-18 18" gear="1" />
+    <motor name="arm_left_L7_Joint_act" joint="arm_left_L7_Joint" ctrllimited="true" ctrlrange="-18 18" gear="1" />
+    <motor name="arm_right_R1_Joint_act" joint="arm_right_R1_Joint" ctrllimited="true" ctrlrange="-80 80" gear="1" />
+    <motor name="arm_right_R2_Joint_act" joint="arm_right_R2_Joint" ctrllimited="true" ctrlrange="-80 80" gear="1" />
+    <motor name="arm_right_R3_Joint_act" joint="arm_right_R3_Joint" ctrllimited="true" ctrlrange="-36 36" gear="1" />
+    <motor name="arm_right_R4_Joint_act" joint="arm_right_R4_Joint" ctrllimited="true" ctrlrange="-36 36" gear="1" />
+    <motor name="arm_right_R5_Joint_act" joint="arm_right_R5_Joint" ctrllimited="true" ctrlrange="-36 36" gear="1" />
+    <motor name="arm_right_R6_Joint_act" joint="arm_right_R6_Joint" ctrllimited="true" ctrlrange="-18 18" gear="1" />
+    <motor name="arm_right_R7_Joint_act" joint="arm_right_R7_Joint" ctrllimited="true" ctrlrange="-18 18" gear="1" />
+    <motor name="hand_left_lh_thumb_cmc_roll_act" joint="hand_left_lh_thumb_cmc_roll" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_left_lh_thumb_cmc_yaw_act" joint="hand_left_lh_thumb_cmc_yaw" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_left_lh_thumb_cmc_pitch_act" joint="hand_left_lh_thumb_cmc_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_left_lh_index_mcp_roll_act" joint="hand_left_lh_index_mcp_roll" ctrllimited="true" ctrlrange="-4.29 4.29" gear="1" />
+    <motor name="hand_left_lh_index_mcp_pitch_act" joint="hand_left_lh_index_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_left_lh_middle_mcp_pitch_act" joint="hand_left_lh_middle_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_left_lh_ring_mcp_roll_act" joint="hand_left_lh_ring_mcp_roll" ctrllimited="true" ctrlrange="-4.29 4.29" gear="1" />
+    <motor name="hand_left_lh_ring_mcp_pitch_act" joint="hand_left_lh_ring_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_left_lh_pinky_mcp_roll_act" joint="hand_left_lh_pinky_mcp_roll" ctrllimited="true" ctrlrange="-4.29 4.29" gear="1" />
+    <motor name="hand_left_lh_pinky_mcp_pitch_act" joint="hand_left_lh_pinky_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_right_rh_thumb_cmc_roll_act" joint="hand_right_rh_thumb_cmc_roll" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_right_rh_thumb_cmc_yaw_act" joint="hand_right_rh_thumb_cmc_yaw" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_right_rh_thumb_cmc_pitch_act" joint="hand_right_rh_thumb_cmc_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_right_rh_index_mcp_roll_act" joint="hand_right_rh_index_mcp_roll" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_index_mcp_pitch_act" joint="hand_right_rh_index_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_right_rh_middle_mcp_pitch_act" joint="hand_right_rh_middle_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_ring_mcp_roll_act" joint="hand_right_rh_ring_mcp_roll" ctrllimited="true" ctrlrange="-4.29 4.29" gear="1" />
+    <motor name="hand_right_rh_ring_mcp_pitch_act" joint="hand_right_rh_ring_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
+    <motor name="hand_right_rh_pinky_mcp_roll_act" joint="hand_right_rh_pinky_mcp_roll" ctrllimited="true" ctrlrange="-4.29 4.29" gear="1" />
+    <motor name="hand_right_rh_pinky_mcp_pitch_act" joint="hand_right_rh_pinky_mcp_pitch" ctrllimited="true" ctrlrange="-4.8 4.8" gear="1" />
   </actuator>
   <equality>
     <joint name="hand_left_lh_couple_thumb_mcp" joint1="hand_left_lh_thumb_mcp" joint2="hand_left_lh_thumb_cmc_pitch" polycoef="0 1.38 0 0 0" />

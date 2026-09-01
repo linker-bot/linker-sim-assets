@@ -30,7 +30,12 @@ import yaml
 
 from . import COMPOSER_VERSION
 from .determinism import serialize
-from .mjcf_ops import check_mjcf_availability, compose_mjcf
+from .mjcf_ops import (
+    check_mjcf_availability,
+    compose_mjcf,
+    inject_placeholder_inertials,
+    rewrite_position_actuators_to_motors,
+)
 from .schemas import (
     Artifacts,
     ComponentMeta,
@@ -129,6 +134,24 @@ class ComposeResult:
     manifest_yaml: str
 
 
+def _joint_effort_limits(urdf_root: ET.Element) -> dict[str, str]:
+    """Map joint name -> raw effort-limit string from a composed URDF.
+
+    Used to give the composed MJCF's torque motors the same +/- effort
+    ctrlrange the joints carry in URDF (fixed joints and joints without an
+    effort attribute are omitted).
+    """
+    limits: dict[str, str] = {}
+    for joint in urdf_root.findall("joint"):
+        name = joint.attrib.get("name")
+        limit = joint.find("limit")
+        if name and limit is not None:
+            effort = limit.attrib.get("effort")
+            if effort is not None:
+                limits[name] = effort
+    return limits
+
+
 def compose(paths: Paths) -> ComposeResult:
     recipe = Recipe.load(paths.recipe)
     recipe_sha = sha256_file(paths.recipe)
@@ -180,6 +203,14 @@ def compose(paths: Paths) -> ComposeResult:
             freeze_base_role=recipe.freeze_base,
             workstation_dir=paths.workstation_dir,
         )
+        # Match linker-sim-isaac's authored convention so the composed MJCF
+        # loads as a stable PhysX/Newton articulation: torque motors (from the
+        # URDF effort limits) instead of position servos, and a placeholder
+        # inertial on every massless frame body.
+        rewrite_position_actuators_to_motors(
+            mjcf_root, _joint_effort_limits(urdf_root)
+        )
+        inject_placeholder_inertials(mjcf_root)
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),
             recipe_name=recipe.name,
