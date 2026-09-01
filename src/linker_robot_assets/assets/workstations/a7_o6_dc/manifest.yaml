@@ -27,7 +27,7 @@ artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
   urdf_sha256: 5d63eff8b5b4149a50ad091adf277950189e4a241c6a68129bcaf4ba07f6d737
-  mjcf_sha256: 7f6d04e6a6f9b43a9f9ad492072eec2bb7302b6e8549e33e670163f6638557bf
+  mjcf_sha256: 524943126c00b620728b55a3c5468f3f26e7ea1c6f7a1f20fc8db9e1de2aea32
 joints:
   base: []
   arm_left:

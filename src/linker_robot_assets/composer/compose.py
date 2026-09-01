@@ -35,6 +35,7 @@ from .mjcf_ops import (
     compose_mjcf,
     inject_placeholder_inertials,
     rewrite_position_actuators_to_motors,
+    strip_native_joint_dynamics,
 )
 from .schemas import (
     Artifacts,
@@ -205,12 +206,14 @@ def compose(paths: Paths) -> ComposeResult:
         )
         # Match linker-sim-isaac's authored convention so the composed MJCF
         # loads as a stable PhysX/Newton articulation: torque motors (from the
-        # URDF effort limits) instead of position servos, and a placeholder
-        # inertial on every massless frame body.
+        # URDF effort limits) instead of position servos, a placeholder
+        # inertial on every massless frame body, and no intrinsic joint
+        # damping/armature/frictionloss (Isaac drives joints via DriveAPI).
         rewrite_position_actuators_to_motors(
             mjcf_root, _joint_effort_limits(urdf_root)
         )
         inject_placeholder_inertials(mjcf_root)
+        strip_native_joint_dynamics(mjcf_root)
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),
             recipe_name=recipe.name,

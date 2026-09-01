@@ -547,3 +547,29 @@ def inject_placeholder_inertials(root: ET.Element) -> None:
                 },
             ),
         )
+
+
+_STRIPPED_JOINT_DYNAMICS = ("damping", "armature", "frictionloss")
+
+
+def strip_native_joint_dynamics(root: ET.Element) -> None:
+    """Remove intrinsic ``damping``/``armature``/``frictionloss`` from DOF joints.
+
+    Isaac drives every commanded joint through a runtime ``UsdPhysics.DriveAPI``
+    (stiffness/damping from the robot profile). The MuJoCo-native joint damping,
+    armature, and frictionloss a component authors for passive standalone
+    simulation are redundant under that drive and destabilize the imported
+    PhysX articulation — the joints drift away from a held target. Stripping
+    them matches linker-sim-isaac's hand-authored assets (clean arm joints).
+    Both explicit ``<worldbody>`` DOF joints and ``<default>`` class joint
+    defaults (which joints inherit) are cleaned; ``<equality>`` coupling joints
+    are a separate section and keep their coefficients. MuJoCo / mujoco-wasm
+    consumers apply their own drives.
+    """
+    for section_tag in ("worldbody", "default"):
+        section = root.find(section_tag)
+        if section is None:
+            continue
+        for joint in section.iter("joint"):
+            for attr in _STRIPPED_JOINT_DYNAMICS:
+                joint.attrib.pop(attr, None)
