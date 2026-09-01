@@ -127,6 +127,7 @@
         </body>
       </body>
       <body name="base_workstation_arm_left_mount" pos="0.0637 0.719 1.267" euler="0 1.57079633 1.57079633">
+        <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
         <site name="base_arm_left_mount" pos="0 0 0" />
         <body name="arm_left_AR5_5_08L_W4C4A6_base" pos="0 0 0" euler="1.5708 0 -1.5708">
           <geom class="arm_left_arm_ar5_08_visual" mesh="arm_left_ar5_08_base" euler="-1.5708 0 0" />
@@ -168,6 +169,7 @@
                         <geom class="arm_left_arm_ar5_08_visual" mesh="arm_left_ar5_08_link7" />
                         <geom class="arm_left_arm_ar5_08_collision" mesh="arm_left_ar5_08_link7" />
                         <body name="arm_left_AR5_5_08L_W4C4A6_tcp" pos="0 0 0.09">
+                          <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
                           <site name="arm_left_tool0" pos="0 0 0" />
                           <body name="hand_left_lh_hand_base_link" pos="0 0 -0.038" euler="3.1416 0 -1.5708">
                             <inertial pos="-0.00157788568070457 -0.00034876725935859 0.0538452219801211" mass="0.0672935238166485" fullinertia="5.22525212160954E-05 3.33522349207724E-05 2.28469461105385E-05 3.06955729584715E-07 -3.90341166950521E-07 -7.76680063574627E-07" />
@@ -252,6 +254,7 @@
         </body>
       </body>
       <body name="base_workstation_arm_right_mount" pos="0.0637 0.536 1.267" euler="0 1.57079633 -1.57079633">
+        <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
         <site name="base_arm_right_mount" pos="0 0 0" />
         <body name="arm_right_AR5_5_08R_W4C4A6_base" pos="0 0 0" euler="-1.5708 0 1.5708">
           <geom class="arm_right_arm_ar5_08_visual" mesh="arm_right_ar5_08_base" euler="1.5708 0 0" />
@@ -293,6 +296,7 @@
                         <geom class="arm_right_arm_ar5_08_visual" mesh="arm_right_ar5_08_link7" />
                         <geom class="arm_right_arm_ar5_08_collision" mesh="arm_right_ar5_08_link7" />
                         <body name="arm_right_AR5_5_08R_W4C4A6_tcp" pos="0 0 0.09">
+                          <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
                           <site name="arm_right_tool0" pos="0 0 0" />
                           <body name="hand_right_rh_hand_base_link" pos="0 0 -0.038" euler="3.1416 0 1.5708">
                             <inertial pos="-0.00160320773490556 0.000358462699237561 0.0538002704027215" mass="0.06740077960995" fullinertia="5.22359941041901E-05 3.33473043513648E-05 2.28342677422006E-05 3.0391535852764E-07 3.88322215371643E-07 -7.77555280794861E-07" />
@@ -379,32 +383,32 @@
     </body>
   </worldbody>
   <actuator>
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_1_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_1" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_2_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_2" kp="1000" kv="4" ctrlrange="-2.0944 2.0944" />
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_3_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_3" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_4_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_4" kp="1000" kv="4" ctrlrange="-1.0472 2.5307" />
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_5_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_5" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_6_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_6" kp="1000" kv="4" ctrlrange="-0.9599 0.9599" />
-    <position name="arm_left_AR5_5_08L_W4C4A6_joint_7_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_7" kp="1000" kv="4" ctrlrange="-0.9599 0.9599" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_1_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_1" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_2_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_2" kp="1000" kv="4" ctrlrange="-2.0944 2.0944" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_3_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_3" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_4_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_4" kp="1000" kv="4" ctrlrange="-1.0472 2.5307" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_5_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_5" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_6_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_6" kp="1000" kv="4" ctrlrange="-0.9599 0.9599" />
-    <position name="arm_right_AR5_5_08R_W4C4A6_joint_7_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_7" kp="1000" kv="4" ctrlrange="-0.9599 0.9599" />
-    <position name="hand_left_lh_thumb_cmc_yaw_act" joint="hand_left_lh_thumb_cmc_yaw" kp="200" kv="0" ctrlrange="0 1.3" />
-    <position name="hand_left_lh_thumb_cmc_pitch_act" joint="hand_left_lh_thumb_cmc_pitch" kp="200" kv="0" ctrlrange="0 0.58" />
-    <position name="hand_left_lh_index_mcp_pitch_act" joint="hand_left_lh_index_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_left_lh_middle_mcp_pitch_act" joint="hand_left_lh_middle_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_left_lh_ring_mcp_pitch_act" joint="hand_left_lh_ring_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_left_lh_pinky_mcp_pitch_act" joint="hand_left_lh_pinky_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_right_rh_thumb_cmc_yaw_act" joint="hand_right_rh_thumb_cmc_yaw" kp="200" kv="0" ctrlrange="0 1.36" />
-    <position name="hand_right_rh_thumb_cmc_pitch_act" joint="hand_right_rh_thumb_cmc_pitch" kp="200" kv="0" ctrlrange="0 0.58" />
-    <position name="hand_right_rh_index_mcp_pitch_act" joint="hand_right_rh_index_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_right_rh_middle_mcp_pitch_act" joint="hand_right_rh_middle_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_right_rh_ring_mcp_pitch_act" joint="hand_right_rh_ring_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
-    <position name="hand_right_rh_pinky_mcp_pitch_act" joint="hand_right_rh_pinky_mcp_pitch" kp="200" kv="0" ctrlrange="0 1.60" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_1_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_1" ctrllimited="true" ctrlrange="-108 108" gear="1" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_2_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_2" ctrllimited="true" ctrlrange="-108 108" gear="1" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_3_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_3" ctrllimited="true" ctrlrange="-66 66" gear="1" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_4_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_4" ctrllimited="true" ctrlrange="-66 66" gear="1" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_5_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_5" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_6_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_6" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_left_AR5_5_08L_W4C4A6_joint_7_act" joint="arm_left_AR5_5_08L_W4C4A6_joint_7" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_1_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_1" ctrllimited="true" ctrlrange="-108 108" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_2_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_2" ctrllimited="true" ctrlrange="-108 108" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_3_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_3" ctrllimited="true" ctrlrange="-66 66" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_4_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_4" ctrllimited="true" ctrlrange="-66 66" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_5_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_5" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_6_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_6" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_right_AR5_5_08R_W4C4A6_joint_7_act" joint="arm_right_AR5_5_08R_W4C4A6_joint_7" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="hand_left_lh_thumb_cmc_yaw_act" joint="hand_left_lh_thumb_cmc_yaw" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_left_lh_thumb_cmc_pitch_act" joint="hand_left_lh_thumb_cmc_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_left_lh_index_mcp_pitch_act" joint="hand_left_lh_index_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_left_lh_middle_mcp_pitch_act" joint="hand_left_lh_middle_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_left_lh_ring_mcp_pitch_act" joint="hand_left_lh_ring_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_left_lh_pinky_mcp_pitch_act" joint="hand_left_lh_pinky_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_thumb_cmc_yaw_act" joint="hand_right_rh_thumb_cmc_yaw" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_thumb_cmc_pitch_act" joint="hand_right_rh_thumb_cmc_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_index_mcp_pitch_act" joint="hand_right_rh_index_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_middle_mcp_pitch_act" joint="hand_right_rh_middle_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_ring_mcp_pitch_act" joint="hand_right_rh_ring_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
+    <motor name="hand_right_rh_pinky_mcp_pitch_act" joint="hand_right_rh_pinky_mcp_pitch" ctrllimited="true" ctrlrange="-100 100" gear="1" />
   </actuator>
   <equality>
     <joint name="hand_left_lh_couple_thumb" joint1="hand_left_lh_thumb_ip" joint2="hand_left_lh_thumb_cmc_pitch" polycoef="0 1.8788 0 0 0" />

@@ -62,6 +62,7 @@
                     <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link7" />
                     <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link7" />
                     <body name="arm_AR5_5_08R_W4C4A6_tcp" pos="0 0 0.09">
+                      <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
                       <site name="arm_tool0" pos="0 0 0" />
                     </body>
                   </body>
@@ -74,13 +75,13 @@
     </body>
   </worldbody>
   <actuator>
-    <position name="arm_AR5_5_08R_W4C4A6_joint_1_act" joint="arm_AR5_5_08R_W4C4A6_joint_1" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_AR5_5_08R_W4C4A6_joint_2_act" joint="arm_AR5_5_08R_W4C4A6_joint_2" kp="1000" kv="4" ctrlrange="-2.0944 2.0944" />
-    <position name="arm_AR5_5_08R_W4C4A6_joint_3_act" joint="arm_AR5_5_08R_W4C4A6_joint_3" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_AR5_5_08R_W4C4A6_joint_4_act" joint="arm_AR5_5_08R_W4C4A6_joint_4" kp="1000" kv="4" ctrlrange="-1.0472 2.5307" />
-    <position name="arm_AR5_5_08R_W4C4A6_joint_5_act" joint="arm_AR5_5_08R_W4C4A6_joint_5" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" />
-    <position name="arm_AR5_5_08R_W4C4A6_joint_6_act" joint="arm_AR5_5_08R_W4C4A6_joint_6" kp="1000" kv="4" ctrlrange="-0.9599 0.9599" />
-    <position name="arm_AR5_5_08R_W4C4A6_joint_7_act" joint="arm_AR5_5_08R_W4C4A6_joint_7" kp="1000" kv="4" ctrlrange="-0.9599 0.9599" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_1_act" joint="arm_AR5_5_08R_W4C4A6_joint_1" ctrllimited="true" ctrlrange="-108 108" gear="1" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_2_act" joint="arm_AR5_5_08R_W4C4A6_joint_2" ctrllimited="true" ctrlrange="-108 108" gear="1" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_3_act" joint="arm_AR5_5_08R_W4C4A6_joint_3" ctrllimited="true" ctrlrange="-66 66" gear="1" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_4_act" joint="arm_AR5_5_08R_W4C4A6_joint_4" ctrllimited="true" ctrlrange="-66 66" gear="1" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_5_act" joint="arm_AR5_5_08R_W4C4A6_joint_5" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_6_act" joint="arm_AR5_5_08R_W4C4A6_joint_6" ctrllimited="true" ctrlrange="-19 19" gear="1" />
+    <motor name="arm_AR5_5_08R_W4C4A6_joint_7_act" joint="arm_AR5_5_08R_W4C4A6_joint_7" ctrllimited="true" ctrlrange="-19 19" gear="1" />
   </actuator>
   <contact>
     <exclude body1="arm_AR5_5_08R_W4C4A6_base" body2="arm_AR5_5_08R_W4C4A6_link1" />

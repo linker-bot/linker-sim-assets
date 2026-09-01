@@ -458,3 +458,92 @@ def compose_mjcf(
             out_contact.append(child)
 
     return out
+
+
+# --------------------- Isaac-convention output transforms ----------------- #
+#
+# Isaac Sim imports the composed MJCF as the simulated PhysX/Newton
+# articulation and applies its own position drives at runtime (stiffness and
+# damping come from the robot profile, not the asset). Two authored-MJCF
+# conventions must hold for that to be stable, matching how linker-sim-isaac's
+# hand-authored assets were built:
+#
+#   * Actuators are torque ``<motor>``s (gear=1, ctrlrange = the joint's
+#     +/- effort limit), not ``<position>`` servos. A position servo holding
+#     target 0 fights the runtime drive and the joint diverges; a motor left
+#     at ctrl=0 applies zero torque and is inert under the runtime drive.
+#   * Every rigid body carries a valid inertial. MuJoCo tolerates a massless
+#     frame body (no ``<inertial>`` and no ``<geom>``), but PhysX/Newton reject
+#     a zero-mass articulation link, so tool/mount frame bodies get a tiny
+#     placeholder inertial (1 mg, ~50 mm equivalent radius).
+#
+# Components stay authored MuJoCo-native (position servos, massless frames);
+# these transforms run once on the composed document so the shared artifact
+# loads identically in Isaac, MuJoCo, and mujoco-wasm.
+
+_PLACEHOLDER_MASS = "1e-6"
+_PLACEHOLDER_DIAGINERTIA = "1e-9 1e-9 1e-9"
+
+
+def rewrite_position_actuators_to_motors(
+    root: ET.Element, effort_limits: dict[str, str]
+) -> None:
+    """Replace ``<position>`` servos with torque ``<motor>``s in place.
+
+    ``effort_limits`` maps joint name -> the raw effort-limit string from the
+    composed URDF. Each rewritten motor gets ``gear="1"`` and, when the joint
+    has a positive effort limit, ``ctrllimited="true"`` with
+    ``ctrlrange="-<effort> <effort>"``. Non-``<position>`` actuators are left
+    untouched.
+    """
+    actuator = root.find("actuator")
+    if actuator is None:
+        return
+    for index, act in enumerate(list(actuator)):
+        if act.tag != "position":
+            continue
+        motor = ET.Element("motor")
+        name = act.attrib.get("name")
+        if name is not None:
+            motor.set("name", name)
+        joint = act.attrib.get("joint")
+        if joint is not None:
+            motor.set("joint", joint)
+        effort = effort_limits.get(joint) if joint is not None else None
+        if effort is not None:
+            try:
+                positive = float(effort) > 0.0
+            except ValueError:
+                positive = False
+            if positive:
+                motor.set("ctrllimited", "true")
+                motor.set("ctrlrange", f"-{effort} {effort}")
+        motor.set("gear", "1")
+        actuator[index] = motor
+
+
+def inject_placeholder_inertials(root: ET.Element) -> None:
+    """Give every massless frame body a tiny valid inertial, in place.
+
+    A body with neither an ``<inertial>`` nor a ``<geom>`` is a pure frame
+    (tool/mount marker); MuJoCo treats it as massless, which PhysX/Newton
+    reject as a zero-mass link. Bodies whose mass is defined (own inertial)
+    or inferred (own geom) are left untouched.
+    """
+    worldbody = root.find("worldbody")
+    if worldbody is None:
+        return
+    for body in worldbody.iter("body"):
+        if body.find("inertial") is not None or body.find("geom") is not None:
+            continue
+        body.insert(
+            0,
+            ET.Element(
+                "inertial",
+                {
+                    "pos": "0 0 0",
+                    "mass": _PLACEHOLDER_MASS,
+                    "diaginertia": _PLACEHOLDER_DIAGINERTIA,
+                },
+            ),
+        )
