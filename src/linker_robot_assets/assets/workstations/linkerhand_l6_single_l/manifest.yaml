@@ -11,7 +11,7 @@ artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
   urdf_sha256: 2c53f56d2d9b8ff2e7a77a260d9f5e1d8ae14bb5979bfb890de38be73133bf2e
-  mjcf_sha256: 98e052ec16f3e9e6e764061ba9738d6d7e167fb4a873ba52963e126935cf7c67
+  mjcf_sha256: 74128490f852f6a681c38f371dbe6c965ab8744d94b46905b5336a68f88e34b0
 joints:
   hand:
   - hand_lh_thumb_cmc_roll
