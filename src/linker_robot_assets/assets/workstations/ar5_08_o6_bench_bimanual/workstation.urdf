@@ -93,14 +93,14 @@
       <geometry>
         <mesh filename="../../components/arms/ar5_08/variants/left/meshes/AR5_5_08L_W4C4A6_base.STL" scale="0.001 0.001 0.001" />
       </geometry>
-      <origin rpy="-1.5708 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
       <material name="arm_left_white" />
     </visual>
     <collision>
       <geometry>
         <mesh filename="../../components/arms/ar5_08/variants/left/meshes/AR5_5_08L_W4C4A6_base.STL" scale="0.001 0.001 0.001" />
       </geometry>
-      <origin rpy="-1.5708 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
     </collision>
   </link>
   <link name="arm_left_AR5_5_08L_W4C4A6_link1">
@@ -267,14 +267,14 @@
       <geometry>
         <mesh filename="../../components/arms/ar5_08/variants/right/meshes/AR5_5_08R_W4C4A6_base.STL" scale="0.001 0.001 0.001" />
       </geometry>
-      <origin rpy="1.5708 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
       <material name="arm_right_white" />
     </visual>
     <collision>
       <geometry>
         <mesh filename="../../components/arms/ar5_08/variants/right/meshes/AR5_5_08R_W4C4A6_base.STL" scale="0.001 0.001 0.001" />
       </geometry>
-      <origin rpy="1.5708 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
     </collision>
   </link>
   <link name="arm_right_AR5_5_08R_W4C4A6_link1">
@@ -943,7 +943,7 @@
     <child link="arm_left_AR5_5_08L_W4C4A6_link1" />
     <limit effort="108" lower="-3.1067" upper="3.1067" velocity="3.0543261909900763" />
     <axis xyz="0 0 1" />
-    <origin rpy="-1.5708 0 0" xyz="0 0 0" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
   </joint>
   <joint name="arm_left_AR5_5_08L_W4C4A6_joint_2" type="revolute">
     <parent link="arm_left_AR5_5_08L_W4C4A6_link1" />
@@ -997,7 +997,7 @@
     <child link="arm_right_AR5_5_08R_W4C4A6_link1" />
     <limit effort="108" lower="-3.1067" upper="3.1067" velocity="3.0543261909900763" />
     <axis xyz="0 0 1" />
-    <origin rpy="1.5708 0 0" xyz="0 0 0" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
   </joint>
   <joint name="arm_right_AR5_5_08R_W4C4A6_joint_2" type="revolute">
     <parent link="arm_right_AR5_5_08R_W4C4A6_link1" />

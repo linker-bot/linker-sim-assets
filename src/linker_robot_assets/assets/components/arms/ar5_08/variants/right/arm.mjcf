@@ -24,11 +24,11 @@
 
   <worldbody>
     <body name="AR5_5_08R_W4C4A6_base" pos="0 0 0">
-      <geom class="arm_ar5_08_visual" mesh="ar5_08_base" euler="1.5708 0 0"/>
-      <geom class="arm_ar5_08_collision" mesh="ar5_08_base" euler="1.5708 0 0"/>
+      <geom class="arm_ar5_08_visual" mesh="ar5_08_base" euler="0 0 0"/>
+      <geom class="arm_ar5_08_collision" mesh="ar5_08_base" euler="0 0 0"/>
       <site name="base_mount" pos="0 0 0"/>
 
-      <body name="AR5_5_08R_W4C4A6_link1" pos="0 0 0" euler="1.5708 0 0">
+      <body name="AR5_5_08R_W4C4A6_link1" pos="0 0 0" euler="0 0 0">
         <inertial pos="0.000186 -0.001543 0.172784" mass="2.166"
                   fullinertia="0.00329374 0.00258807 0.00314817 0.00000029 0.00000048 0.00001496"/>
         <joint name="AR5_5_08R_W4C4A6_joint_1" type="hinge" axis="0 0 1"
