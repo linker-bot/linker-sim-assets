@@ -8,6 +8,10 @@ or other actuated subsystems gain SDK-shaped telemetry.
 See `docs/known_limitations.md` for the linear-fit caveat.
 """
 
-from linker_robot_assets.decoders.hand import CONVENTION, decode_hand
+from linker_robot_assets.decoders.hand import (
+    CONVENTION,
+    decode_hand,
+    sdk_channel_width,
+)
 
-__all__ = ["CONVENTION", "decode_hand"]
+__all__ = ["CONVENTION", "decode_hand", "sdk_channel_width"]

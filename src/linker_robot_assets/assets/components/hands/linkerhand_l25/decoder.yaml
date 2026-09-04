@@ -1,17 +1,26 @@
-schema_version: 1
+schema_version: 2
 convention: linear-fit-v0
+sdk_layout: l20-v1
 
-# SDK channel index -> templated actuated-joint name, in LinkerHand SDK
-# order (the 20-slot "L20" protocol layout used by L25). The SDK groups by
-# DoF type — the five bases, the five side-swings, thumb yaw, [SDK slots
-# 11-14 reserved], then the five tips — NOT per-finger, so this differs
-# from meta.yaml:actuated_joints order. The 4 reserved slots carry no
-# actuated joint and are omitted here, leaving 16 active channels;
-# recordings must strip them so hand columns are 16-wide. The decoder
-# reorders these to URDF/manifest order on output. {S} expands to `l`/`r`.
+# SDK wire vector -> templated actuated-joint name, in LinkerHand SDK order.
+# The hand ships under three names for the same hardware: G20 (SDK), L20 (data
+# collection), L25 (these assets).
+#
+# `slots` is the FULL 20-slot vector the SDK puts on the wire, including the
+# four 预留/reserved slots (11-14) that carry no actuated joint — recordings
+# that store the SDK packet verbatim are 20 columns wide per hand. Consumers
+# pass the whole vector and select `slots="raw"`; `decode_hand` drops the
+# reserved slots, leaving the 16 active channels. Callers that already hold
+# stripped 16-wide columns keep the default `slots="active"`.
+#
+# The SDK groups by DoF type — the five bases, the five side-swings, thumb
+# yaw, [reserved], then the five tips — NOT per-finger, so this order differs
+# from meta.yaml:actuated_joints. The decoder reorders to URDF/manifest order
+# on output. {S} expands to `l`/`r`.
+#
 # Ref: linkerhand-ros2-sdk Topic-Reference.md (L20灵巧手关节顺序);
 # thumb axis binding confirmed against hardware.
-channels:
+slots:
   - "{S}h_thumb_cmc_pitch"   # 0   拇指根部   thumb base
   - "{S}h_index_mcp_pitch"   # 1   食指根部   index base
   - "{S}h_middle_mcp_pitch"  # 2   中指根部   middle base
@@ -23,7 +32,10 @@ channels:
   - "{S}h_ring_mcp_roll"     # 8   无名指侧摆  ring side-swing
   - "{S}h_pinky_mcp_roll"    # 9   小指侧摆   pinky side-swing
   - "{S}h_thumb_cmc_yaw"     # 10  拇指横摆   thumb yaw
-  # SDK slots 11-14: 预留 / reserved — no actuated joint, dropped.
+  - reserved                 # 11  预留
+  - reserved                 # 12  预留
+  - reserved                 # 13  预留
+  - reserved                 # 14  预留
   - "{S}h_thumb_mcp"         # 15  拇指尖部   thumb tip
   - "{S}h_index_pip"         # 16  食指末端   index tip
   - "{S}h_middle_pip"        # 17  中指末端   middle tip
