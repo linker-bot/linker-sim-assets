@@ -6,12 +6,12 @@ components:
   arm:
     name: arms/ar5_08
     variant: right
-    sha256: 715ac8a4989a663e7328b5d0be74584a5bcd09cf7b635b1ef91f12fb209507f4
+    sha256: 423305682e0dac38a77881e5abb3d0632cd42296281d8d4ef70933fc9856451a
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 7b43cce33c98a8295b62209ff7c05bbf82a52bdbcb5ccf4a59cd0a2a34056fc0
-  mjcf_sha256: ef45f3f66111c69c246db88bd2bf8e7408e8e5830c4d734ba374d26e31df0431
+  urdf_sha256: e9344ae5bee08403045d6b81b2ef9283f830a11defb78f2b5cfb47e6f5128859
+  mjcf_sha256: 9853effb8348161b2be46c7c41be2b31a0eef86ff92ab8059b4b48ffb9a9e17b
 joints:
   arm:
   - arm_AR5_5_08R_W4C4A6_joint_1

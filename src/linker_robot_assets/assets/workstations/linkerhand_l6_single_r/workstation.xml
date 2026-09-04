@@ -11,7 +11,7 @@
       <geom type="mesh" contype="1" conaffinity="1" group="3" />
     </default>
     <default class="hand_hand_linkerhand_l6_joint">
-      <joint />
+      <joint armature="3.4707e-08" damping="5.0" frictionloss="0.5" />
     </default>
   </default>
   <asset>
