@@ -36,6 +36,12 @@ CONVENTION = "linear-fit-v0"
 
 _VALID_SIDES = ("left", "right")
 _SIDE_TO_PREFIX = {"left": "l", "right": "r"}
+_VALID_SLOT_MODES = ("active", "raw")
+
+# Placeholder in `decoder.yaml::slots` for an SDK wire slot that carries no
+# actuated joint (预留 / reserved). Present so the file describes the SDK's
+# real vector width, letting callers hand over a recorded packet verbatim.
+_RESERVED = "reserved"
 
 
 def _resolve_component_dir(name: str, component_root: Path | None) -> Path:
@@ -61,10 +67,61 @@ def _read_decoder_yaml(cdir: Path) -> dict:
             f"{path}: convention {declared!r} != module CONVENTION {CONVENTION!r}. "
             "Bump the file or the module to match."
         )
-    channels = spec.get("channels") or []
-    if not channels:
-        raise ValueError(f"{path}: empty 'channels' list")
+    if not (spec.get("slots") or spec.get("channels")):
+        raise ValueError(f"{path}: needs a 'slots' or 'channels' list")
     return spec
+
+
+def _channel_lists(
+    spec: dict, cdir: Path, *, legacy: bool
+) -> tuple[list[str], list[str]]:
+    """Resolve (slot_names, active_names) for one hand's SDK vector.
+
+    `slots` describes the SDK's full wire vector and may contain `reserved`
+    placeholders; `active_names` drops them. A hand whose vector has no
+    reserved slots declares `channels` instead, and the two lists coincide.
+    """
+    if legacy:
+        chans = spec.get("legacy_channels")
+        if not chans:
+            raise ValueError(
+                f"{cdir / 'decoder.yaml'}: no 'legacy_channels' list "
+                "(required for legacy=True)"
+            )
+        return list(chans), list(chans)
+
+    slots = spec.get("slots")
+    if slots:
+        active = [s for s in slots if s != _RESERVED]
+        if not active:
+            raise ValueError(
+                f"{cdir / 'decoder.yaml'}: 'slots' has no non-reserved entries"
+            )
+        return list(slots), active
+
+    chans = list(spec["channels"])
+    return chans, chans
+
+
+def sdk_channel_width(
+    name: str,
+    *,
+    slots: str = "active",
+    legacy: bool = False,
+    component_root: Path | None = None,
+) -> int:
+    """Column count `decode_hand` expects for this hand in the given mode.
+
+    Lets a caller size a recording's per-hand column block without
+    hard-coding it: `"raw"` is the SDK's full wire vector (reserved slots
+    included), `"active"` is the actuated-joint count.
+    """
+    if slots not in _VALID_SLOT_MODES:
+        raise ValueError(f"slots {slots!r} not in {_VALID_SLOT_MODES}")
+    cdir = _resolve_component_dir(name, component_root)
+    spec = _read_decoder_yaml(cdir)
+    slot_names, active_names = _channel_lists(spec, cdir, legacy=legacy)
+    return len(slot_names) if slots == "raw" else len(active_names)
 
 
 def _expand_template(name: str, side: str) -> str:
@@ -145,6 +202,7 @@ def decode_hand(
     sdk_0_100: np.ndarray,
     *,
     legacy: bool = False,
+    slots: str = "active",
     component_root: Path | None = None,
 ) -> np.ndarray:
     """Linear interp from SDK [0, 100] to URDF [lower, upper] per joint.
@@ -159,41 +217,59 @@ def decode_hand(
             channel order shipped by early/buggy client devices) instead of
             the default ``channels``. Both list the same joints; only the
             input column order differs.
+        slots: ``"active"`` (default) means the input holds one column per
+            actuated joint, with any reserved SDK slots already stripped.
+            ``"raw"`` means the input is the SDK's full wire vector, reserved
+            slots included, as stored by recorders that save the packet
+            verbatim — this function drops them. Use
+            :func:`sdk_channel_width` to size the block either way.
         component_root: override the asset-tree component root (test-only).
 
     Returns:
-        Same shape as ``sdk_0_100``, dtype float32, in radians, reordered
-        from SDK channel order into the URDF actuated-joint document order
-        (== ``handle.joints[role]``, which replay feeds positionally).
+        Radians, dtype float32, one column per actuated joint, reordered from
+        SDK channel order into the URDF actuated-joint document order (==
+        ``handle.joints[role]``, which replay feeds positionally). Leading
+        dimensions are preserved; the last is the actuated-joint count, which
+        is narrower than the input when ``slots="raw"`` and the hand has
+        reserved slots.
 
     Raises:
         FileNotFoundError: component dir or ``decoder.yaml`` missing.
         ValueError: ``decoder.yaml`` convention mismatch, channel count
-            mismatch, missing ``legacy_channels`` when ``legacy=True``, or a
-            joint without a ``<limit>`` element.
+            mismatch, bad ``slots`` mode, missing ``legacy_channels`` when
+            ``legacy=True``, or a joint without a ``<limit>`` element.
         KeyError: a templated joint name not present in the variant URDF.
     """
     if side not in _VALID_SIDES:
         raise ValueError(f"side {side!r} not in {_VALID_SIDES}")
+    if slots not in _VALID_SLOT_MODES:
+        raise ValueError(f"slots {slots!r} not in {_VALID_SLOT_MODES}")
 
     cdir = _resolve_component_dir(name, component_root)
     spec = _read_decoder_yaml(cdir)
-    key = "legacy_channels" if legacy else "channels"
-    chans = spec.get(key)
-    if not chans:
-        raise ValueError(
-            f"{cdir / 'decoder.yaml'}: no {key!r} list "
-            f"(required for legacy={legacy})"
-        )
-    joint_names = [_expand_template(c, side) for c in chans]
+    slot_names, active_names = _channel_lists(spec, cdir, legacy=legacy)
+    joint_names = [_expand_template(c, side) for c in active_names]
 
     sdk = np.asarray(sdk_0_100, dtype=np.float32)
-    if sdk.shape[-1] != len(joint_names):
+    expected = len(slot_names) if slots == "raw" else len(joint_names)
+    if sdk.shape[-1] != expected:
+        hint = ""
+        other = len(joint_names) if slots == "raw" else len(slot_names)
+        if other != expected and sdk.shape[-1] == other:
+            other_mode = "active" if slots == "raw" else "raw"
+            hint = (
+                f" — that is this hand's {other_mode!r} width, so the columns "
+                f"are {'already stripped' if other_mode == 'active' else 'the raw SDK packet'}"
+                f"; pass slots={other_mode!r}"
+            )
         raise ValueError(
-            f"{name}/{side}: decoder.yaml has {len(joint_names)} channels "
-            f"but input has shape {sdk.shape} (last dim should be "
-            f"{len(joint_names)})"
+            f"{name}/{side}: slots={slots!r} expects {expected} columns "
+            f"but input has shape {sdk.shape}{hint}"
         )
+
+    if slots == "raw" and len(slot_names) != len(joint_names):
+        keep = [i for i, s in enumerate(slot_names) if s != _RESERVED]
+        sdk = sdk[..., keep]
 
     urdf_path = _resolve_hand_urdf(cdir, name, side)
     lo, hi = _read_urdf_limits(urdf_path, joint_names)
@@ -213,7 +289,7 @@ def decode_hand(
     sdk_clipped = np.clip(sdk, 0.0, 100.0)
     out = lo.astype(np.float32) + ((100.0 - sdk_clipped) / 100.0) * (hi - lo).astype(np.float32)
 
-    # `channels` is in SDK/hardware order; the sim feeds hand columns
+    # The channel list is in SDK/hardware order; the sim feeds hand columns
     # positionally against the URDF's actuated-joint document order
     # (== handle.joints[role]). Reorder so returned columns line up with it.
     manifest = _urdf_actuated_order(urdf_path)
