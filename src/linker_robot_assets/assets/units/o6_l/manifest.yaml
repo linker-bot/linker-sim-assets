@@ -1,0 +1,46 @@
+schema_version: 1
+name: o6_l
+composer_version: 0.1.0
+recipe_sha256: 16bba3348d3adcbc6bad539985d609ad5a390c6e4053abba1a069ccfac8a5f12
+components:
+  hand:
+    name: hands/linkerhand_o6
+    variant: left
+    sha256: 0544e93dda920cb765cec24a33593eab67b243bd5f946e3f97fa9adeaae37ef4
+artifacts:
+  urdf: workstation.urdf
+  mjcf: workstation.xml
+  urdf_sha256: 78730a77b143467484714aeba30519c282804714e17e3beaa1c5954b2079f6c5
+  mjcf_sha256: 226e5b59d829139ca7857822470eea31590f9ff6f6f91d267e49188f5cf7f1a6
+joints:
+  hand:
+  - hand_lh_thumb_cmc_yaw
+  - hand_lh_thumb_cmc_pitch
+  - hand_lh_index_mcp_pitch
+  - hand_lh_middle_mcp_pitch
+  - hand_lh_ring_mcp_pitch
+  - hand_lh_pinky_mcp_pitch
+mimic_joints:
+  hand:
+  - hand_lh_thumb_ip
+  - hand_lh_index_dip
+  - hand_lh_middle_dip
+  - hand_lh_ring_dip
+  - hand_lh_pinky_dip
+frames:
+  hand:wrist_mount: hand_lh_hand_base_link
+ee_link: ''
+ee_links: {}
+base_link: hand_lh_hand_base_link
+default_gains:
+  hand:
+    stiffness: 200.0
+    damping: 4.0
+gain_profiles:
+  hand:
+    default:
+      stiffness: 200.0
+      damping: 4.0
+    joint:
+      stiffness: 200.0
+      damping: 4.0

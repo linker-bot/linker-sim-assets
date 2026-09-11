@@ -1,0 +1,85 @@
+schema_version: 1
+name: ar5_08_l25_l
+composer_version: 0.1.0
+recipe_sha256: e3504b0c6469d7e9639ceaad91ff0d505b258894fd3e231d791de5ef7554c6c8
+components:
+  arm:
+    name: arms/ar5_08
+    variant: left
+    sha256: 71220a669aa3a2c75f43b1b2d1de15890678116a48b4c63e63d7ee56f36f4d53
+  hand:
+    name: hands/linkerhand_l25
+    variant: left
+    sha256: 6806965520c4517150136a832896f56081437d285e061a9afe156400c90da595
+artifacts:
+  urdf: workstation.urdf
+  mjcf: workstation.xml
+  urdf_sha256: af69036d1684eb0a207ee6979127f5e29055e2b94a46c83e5a8904e17a5a98c9
+  mjcf_sha256: 950c55cc063a42c452e5c64d908283e954562a244990dec97ab825f4ab052ad6
+joints:
+  arm:
+  - arm_AR5_5_08L_W4C4A6_joint_1
+  - arm_AR5_5_08L_W4C4A6_joint_2
+  - arm_AR5_5_08L_W4C4A6_joint_3
+  - arm_AR5_5_08L_W4C4A6_joint_4
+  - arm_AR5_5_08L_W4C4A6_joint_5
+  - arm_AR5_5_08L_W4C4A6_joint_6
+  - arm_AR5_5_08L_W4C4A6_joint_7
+  hand:
+  - hand_lh_thumb_cmc_roll
+  - hand_lh_thumb_cmc_yaw
+  - hand_lh_thumb_cmc_pitch
+  - hand_lh_thumb_mcp
+  - hand_lh_index_mcp_roll
+  - hand_lh_index_mcp_pitch
+  - hand_lh_index_pip
+  - hand_lh_middle_mcp_roll
+  - hand_lh_middle_mcp_pitch
+  - hand_lh_middle_pip
+  - hand_lh_ring_mcp_roll
+  - hand_lh_ring_mcp_pitch
+  - hand_lh_ring_pip
+  - hand_lh_pinky_mcp_roll
+  - hand_lh_pinky_mcp_pitch
+  - hand_lh_pinky_pip
+mimic_joints:
+  arm: []
+  hand:
+  - hand_lh_thumb_dip
+  - hand_lh_index_dip
+  - hand_lh_middle_dip
+  - hand_lh_ring_dip
+  - hand_lh_pinky_dip
+frames:
+  arm:base_mount: arm_AR5_5_08L_W4C4A6_base
+  arm:tool0: arm_AR5_5_08L_W4C4A6_tcp
+  hand:wrist_mount: hand_lh_hand_base_link
+ee_link: arm_AR5_5_08L_W4C4A6_tcp
+ee_links:
+  arm: arm_AR5_5_08L_W4C4A6_tcp
+base_link: arm_AR5_5_08L_W4C4A6_base
+default_gains:
+  arm:
+    stiffness: 1000.0
+    damping: 4.0
+  hand:
+    stiffness: 200.0
+    damping: 4.0
+gain_profiles:
+  arm:
+    default:
+      stiffness: 1000.0
+      damping: 4.0
+    joint:
+      stiffness: 1000.0
+      damping: 4.0
+    osc:
+      stiffness: 150.0
+      damping: 8.0
+  hand:
+    default:
+      stiffness: 200.0
+      damping: 4.0
+    joint:
+      stiffness: 200.0
+      damping: 4.0

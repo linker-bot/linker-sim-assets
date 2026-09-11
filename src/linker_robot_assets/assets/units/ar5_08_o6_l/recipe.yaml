@@ -1,0 +1,24 @@
+schema_version: 1
+name: ar5_08_o6_l
+description: >
+  Single AR5_08 left arm + Linkerhand O6 left, welded into one articulation
+  (arm frozen to world; hand welded to the arm flange/tool0). Wrist transform
+  follows the ar5_08_l6 convention (hand base rotated +90deg about tool0 Z)
+  plus a +20 mm tool0-Z (fingertip) offset for flange thickness. Finger
+  equality/mimic coupling carried through the composed MJCF.
+
+components:
+  arm:
+    component: arms/ar5_08
+    variant: left
+  hand:
+    component: hands/linkerhand_o6
+    variant: left
+
+freeze_base: arm
+
+mounts:
+  - child: hand:wrist_mount
+    parent: arm:tool0
+    xyz: [0.0, 0.0, 0.0205]
+    rpy: [0.0, 0.0, 1.5708]
