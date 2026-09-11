@@ -70,15 +70,18 @@ def _joint_set_from_manifest(manifest: dict) -> frozenset[str]:
 
 
 def _current_joint_sets() -> dict[str, frozenset[str]]:
-    """Read joint sets per workstation from the current asset tree."""
-    ws_root = asset_root() / "workstations"
+    """Read joint sets per workstation/unit from the current asset tree."""
     out: dict[str, frozenset[str]] = {}
-    for ws_dir in sorted(ws_root.iterdir()):
-        manifest = ws_dir / "manifest.yaml"
-        if not manifest.is_file():
+    for subdir in ("workstations", "units"):
+        root = asset_root() / subdir
+        if not root.is_dir():
             continue
-        with manifest.open() as f:
-            out[ws_dir.name] = _joint_set_from_manifest(yaml.safe_load(f) or {})
+        for ws_dir in sorted(root.iterdir()):
+            manifest = ws_dir / "manifest.yaml"
+            if not manifest.is_file():
+                continue
+            with manifest.open() as f:
+                out[ws_dir.name] = _joint_set_from_manifest(yaml.safe_load(f) or {})
     return out
 
 
@@ -90,7 +93,11 @@ def _tagged_joint_sets(tag: str) -> dict[str, frozenset[str]] | None:
         ls = _git("ls-tree", "-r", "--name-only", tag)
     except subprocess.CalledProcessError:
         return None
-    manifests = [p for p in ls.splitlines() if p.endswith("/manifest.yaml") and "workstations/" in p]
+    manifests = [
+        p
+        for p in ls.splitlines()
+        if p.endswith("/manifest.yaml") and ("workstations/" in p or "units/" in p)
+    ]
     if not manifests:
         return None
     out: dict[str, frozenset[str]] = {}

@@ -3,6 +3,10 @@ kind: arm
 name: ar5_08
 drive: position
 
+# Stands alone as a robot: the composer's derive_solo step emits a loadable
+# single-arm unit (units/ar5_08_l, units/ar5_08_r) per variant.
+emit_solo_unit: true
+
 # Two mirrored variants with pre-baked mesh sets. The composer substitutes
 # {V} -> L or R in every link/joint name derived from templates below.
 variants:

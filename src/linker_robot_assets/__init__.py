@@ -29,7 +29,7 @@ import yaml
 # problem.
 _ASSET_ROOT = Path(__file__).resolve().parent / "assets"
 
-__all__ = ["asset_root", "workstations", "load_manifest"]
+__all__ = ["asset_root", "workstations", "units", "load_manifest"]
 
 
 def asset_root() -> Path:
@@ -44,29 +44,45 @@ def asset_root() -> Path:
     return _ASSET_ROOT
 
 
-def workstations() -> list[str]:
-    """List workstation names that are composed (have ``manifest.yaml``).
-
-    Returns the directory basenames sorted alphabetically. Workstations
-    without a committed ``manifest.yaml`` are excluded — those need
-    ``python -m linker_robot_assets.composer.compose`` to be runnable.
-    """
-    ws_dir = _ASSET_ROOT / "workstations"
-    if not ws_dir.is_dir():
+def _scan(subdir: str) -> list[str]:
+    """List names under `_ASSET_ROOT/<subdir>` that have a committed manifest."""
+    root = _ASSET_ROOT / subdir
+    if not root.is_dir():
         return []
     return sorted(
         p.name
-        for p in ws_dir.iterdir()
+        for p in root.iterdir()
         if p.is_dir() and (p / "manifest.yaml").is_file()
     )
 
 
-def load_manifest(name: str) -> dict:
-    """Load a workstation's ``manifest.yaml`` and return it as a dict.
+def workstations() -> list[str]:
+    """List full multi-robot workstation scenes that are composed.
 
-    Raises ``FileNotFoundError`` if the workstation directory or manifest
-    is missing — call ``workstations()`` first to enumerate composed names.
+    Returns the directory basenames sorted alphabetically. Scenes
+    without a committed ``manifest.yaml`` are excluded — those need
+    ``python -m linker_robot_assets.composer.compose`` to be runnable.
     """
-    manifest_path = _ASSET_ROOT / "workstations" / name / "manifest.yaml"
+    return _scan("workstations")
+
+
+def units() -> list[str]:
+    """List atomic single-system units (single-arm / arm+hand / single-hand).
+
+    These are one-articulation composed assets under ``units/`` (solo units
+    are auto-derived by ``composer.derive_solo``). Same shape as
+    :func:`workstations` — sorted basenames with a committed manifest.
+    """
+    return _scan("units")
+
+
+def load_manifest(name: str, *, subdir: str = "workstations") -> dict:
+    """Load a ``manifest.yaml`` and return it as a dict.
+
+    Loads from ``workstations/`` by default; pass ``subdir="units"`` for an
+    atomic unit. Raises ``FileNotFoundError`` if the directory or manifest is
+    missing — call :func:`workstations` / :func:`units` first to enumerate.
+    """
+    manifest_path = _ASSET_ROOT / subdir / name / "manifest.yaml"
     with manifest_path.open() as f:
         return yaml.safe_load(f)

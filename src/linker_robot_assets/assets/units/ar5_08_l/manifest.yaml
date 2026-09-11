@@ -1,17 +1,17 @@
 schema_version: 1
-name: ar5_08_single_l
+name: ar5_08_l
 composer_version: 0.1.0
-recipe_sha256: 4f4c0adc1b4349c76968baa63e2dad5f1fc39ad456a1691cfdafebf6f68c4eec
+recipe_sha256: 9fa09e427280f4d28d775574f5d0f6b2716e0fed73d61403fed12f18f00102c3
 components:
   arm:
     name: arms/ar5_08
     variant: left
-    sha256: 3e951f616f5e1151606cb3f251a09472a0c92e8cffd96307f03bc8502026a062
+    sha256: 71220a669aa3a2c75f43b1b2d1de15890678116a48b4c63e63d7ee56f36f4d53
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 9db3069a6d983ef3edab785336e169ea82bc0fa80411f9214926a5e28bbdcdc2
-  mjcf_sha256: 535996ca3fc9711f853448c8f6447700112c2718d34c55b3c6d722c95c46c3d6
+  urdf_sha256: 60cdbc885814f2145537f027ebeae3c89d948554183161ca721d4ac574ac2e01
+  mjcf_sha256: 90e18f21b44ea70bbf1b093a19a537361d85cfef64b445bcc76595b75a8e17b2
 joints:
   arm:
   - arm_AR5_5_08L_W4C4A6_joint_1

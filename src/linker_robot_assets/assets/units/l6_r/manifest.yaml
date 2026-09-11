@@ -1,17 +1,17 @@
 schema_version: 1
-name: linkerhand_l6_single_r
+name: l6_r
 composer_version: 0.1.0
-recipe_sha256: 74ee5d41bca3515b8bfb5f5c7ad86e04ce9b5f4f08c4616d281c10ed36f3867a
+recipe_sha256: 2ea28ddf639313506a30e6f51d4ca57b8fb98c999111f3092f39217e3593b039
 components:
   hand:
     name: hands/linkerhand_l6
     variant: right
-    sha256: 99d1b9c3d55480d0f8e01ae78c8a2829f8f6007d0a51a5058ef7e00cb988ce91
+    sha256: deb27493da96f8edadaf3e6764673915e914e0778e8358392c45ebcbfb311fe2
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 1703d1211c14fa2bcfa429d72ac66f98775a66b62d5e0cc2df141cbbdea4de6d
-  mjcf_sha256: ca94c9ab15805a831070551c19cfd736e3c8a82c57b09b43becd9adae6faca2a
+  urdf_sha256: 4ffed824e11acaf8a1257259a8d93c4b40ac3b7334d7866cfb196b62a7cca4bd
+  mjcf_sha256: 69820eac797afb6e634324a392ba2b4c226769797c66bd296188de4b6f9721ea
 joints:
   hand:
   - hand_rh_thumb_cmc_roll

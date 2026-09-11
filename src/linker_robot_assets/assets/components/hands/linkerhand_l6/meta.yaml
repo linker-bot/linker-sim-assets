@@ -3,6 +3,10 @@ kind: hand
 name: linkerhand_l6
 drive: position
 
+# Stands alone as a robot: the composer's derive_solo step emits a loadable
+# single-hand unit (units/l6_l, units/l6_r) per variant.
+emit_solo_unit: true
+
 # L/R variants share structure but ship pre-mirrored meshes. The {S}
 # placeholder expands to `l` or `r` to form the joint-name prefix
 # (lh_*, rh_*) used in each variant's source URDF.
