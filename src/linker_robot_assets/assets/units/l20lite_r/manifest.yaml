@@ -1,0 +1,55 @@
+schema_version: 1
+name: l20lite_r
+composer_version: 0.1.0
+recipe_sha256: 5cbb710f7bff0924262b947c005b7b8fac0c7dc0151beba0c238ffa2405b96b8
+components:
+  hand:
+    name: hands/linkerhand_l20lite
+    variant: right
+    sha256: f3ca73e19be564a8ba94011c7c1fcdcf1c704fae4db256bb21482f18b80ae34e
+artifacts:
+  urdf: workstation.urdf
+  mjcf: workstation.xml
+  urdf_sha256: 9928a61f6366c1ccfead2abb5898679b979cca109e458825fa6c1505d1a79daf
+  mjcf_sha256: e1ca7fdf7ea9f264011e8eec9cd88a578e16611442c78bfc28c238e5fbcb3f3c
+joints:
+  hand:
+  - hand_rh_thumb_cmc_roll
+  - hand_rh_thumb_cmc_yaw
+  - hand_rh_thumb_cmc_pitch
+  - hand_rh_index_mcp_roll
+  - hand_rh_index_mcp_pitch
+  - hand_rh_middle_mcp_pitch
+  - hand_rh_ring_mcp_roll
+  - hand_rh_ring_mcp_pitch
+  - hand_rh_pinky_mcp_roll
+  - hand_rh_pinky_mcp_pitch
+mimic_joints:
+  hand:
+  - hand_rh_thumb_mcp
+  - hand_rh_thumb_ip
+  - hand_rh_index_pip
+  - hand_rh_index_dip
+  - hand_rh_middle_pip
+  - hand_rh_middle_dip
+  - hand_rh_ring_pip
+  - hand_rh_ring_dip
+  - hand_rh_pinky_pip
+  - hand_rh_pinky_dip
+frames:
+  hand:wrist_mount: hand_rh_hand_base_link
+ee_link: ''
+ee_links: {}
+base_link: hand_rh_hand_base_link
+default_gains:
+  hand:
+    stiffness: 200.0
+    damping: 4.0
+gain_profiles:
+  hand:
+    default:
+      stiffness: 200.0
+      damping: 4.0
+    joint:
+      stiffness: 200.0
+      damping: 4.0

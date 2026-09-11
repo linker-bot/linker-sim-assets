@@ -3,6 +3,9 @@ kind: hand
 name: linkerhand_l25
 drive: position
 
+# Stands alone as a robot: derive_solo emits units/l25_l and units/l25_r.
+emit_solo_unit: true
+
 # L/R variants share structure but ship pre-mirrored meshes. The {S}
 # placeholder expands to `l` or `r` to form the joint-name prefix
 # (lh_*, rh_*) used in each variant's source URDF.
