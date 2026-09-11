@@ -18,11 +18,11 @@ components:
   hand_left:
     name: hands/linkerhand_l6
     variant: left
-    sha256: 4200f775251b313e7c13b5b4ad05b058c618d4fed0e1916a69651b0c98e69647
+    sha256: e87b104a7b1854e7ef941e525780cedc24ee3aeda1ce13d84d9fb817af66d2ad
   hand_right:
     name: hands/linkerhand_l6
     variant: right
-    sha256: 99d1b9c3d55480d0f8e01ae78c8a2829f8f6007d0a51a5058ef7e00cb988ce91
+    sha256: deb27493da96f8edadaf3e6764673915e914e0778e8358392c45ebcbfb311fe2
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml

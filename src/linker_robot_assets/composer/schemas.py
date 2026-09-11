@@ -136,6 +136,10 @@ class ComponentMeta:
     `default_gains` is preserved as a backward-compat alias for the
     single-profile case."""
     source_dir: Path  # directory containing this meta.yaml
+    emit_solo_unit: bool = False
+    """When true, the composer's `derive_solo` step emits a loadable
+    single-component `units/<token>_<side>/` unit per variant (arm/hand
+    only). Off by default; set on components that stand alone as a robot."""
 
     @staticmethod
     def load(path: Path) -> "ComponentMeta":
@@ -202,6 +206,7 @@ class ComponentMeta:
             default_gains=default_gains,
             gain_profiles=gain_profiles,
             source_dir=path.parent.resolve(),
+            emit_solo_unit=bool(d.get("emit_solo_unit", False)),
         )
 
 
