@@ -1,7 +1,7 @@
 schema_version: 1
 name: ar5_08_o6_bench_bimanual
 composer_version: 0.1.0
-recipe_sha256: 481ecf1af02bd88465f2cd7e1b831834046d5f9b30c65e9070310fb1f0c0da70
+recipe_sha256: 6a212e1592163ca14b50293ce01c4fb88babcc36537941029fccc0045cca37db
 components:
   base:
     name: bases/bench_table
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 18f8f4f71716bf0de7d224cf7cc9c1734f8c5abe6de1b92da56f794ee50d2860
-  mjcf_sha256: 599cd2143061873b95002de74a4d9a6524b60424e70687064b2e61dcf5917e51
+  urdf_sha256: c52e3cf9b230630e3854525d6127fc1e4407f17def7ad178cd40fe624972f32c
+  mjcf_sha256: 2e4765784c1402199524a267789ed6816b17ceca74ba500439b37efd7fa15c88
 joints:
   base: []
   arm_left:
