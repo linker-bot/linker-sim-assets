@@ -757,7 +757,7 @@
     <origin xyz="0.0038 0.03525 0.1481" rpy="0 0 0" />
     <parent link="hand_rh_hand_base_link" />
     <child link="hand_rh_index_metacarpals" />
-    <axis xyz="-1 0 0" />
+    <axis xyz="1 0 0" />
     <limit lower="-0.2269" upper="0.2269" effort="1" velocity="100" />
   </joint>
   <joint name="hand_rh_index_mcp_pitch" type="revolute">
@@ -786,7 +786,7 @@
     <origin xyz="0.0038 0.01175 0.1526" rpy="0 0 0" />
     <parent link="hand_rh_hand_base_link" />
     <child link="hand_rh_middle_metacarpals" />
-    <axis xyz="-1 0 0" />
+    <axis xyz="1 0 0" />
     <limit lower="-0.23" upper="0.23" effort="1" velocity="100" />
   </joint>
   <joint name="hand_rh_middle_mcp_pitch" type="revolute">
@@ -815,7 +815,7 @@
     <origin xyz="0.0038 -0.01175 0.1481" rpy="0 0 0" />
     <parent link="hand_rh_hand_base_link" />
     <child link="hand_rh_ring_metacarpals" />
-    <axis xyz="-1 0 0" />
+    <axis xyz="1 0 0" />
     <limit lower="-0.23" upper="0.23" effort="1" velocity="100" />
   </joint>
   <joint name="hand_rh_ring_mcp_pitch" type="revolute">
@@ -844,7 +844,7 @@
     <origin xyz="0.0038 -0.03525 0.1436" rpy="0 0 0" />
     <parent link="hand_rh_hand_base_link" />
     <child link="hand_rh_pinky_metacarpals" />
-    <axis xyz="-1 0 0" />
+    <axis xyz="1 0 0" />
     <limit lower="-0.23" upper="0.23" effort="1" velocity="100" />
   </joint>
   <joint name="hand_rh_pinky_mcp_pitch" type="revolute">
