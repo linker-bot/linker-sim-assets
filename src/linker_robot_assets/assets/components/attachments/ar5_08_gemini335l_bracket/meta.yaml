@@ -1,0 +1,20 @@
+schema_version: 1
+kind: attachment
+name: ar5_08_gemini335l_bracket
+variants:
+  left:
+    vars: {}
+    urdf: variants/left/component.urdf
+    mjcf: variants/left/component.mjcf
+    meshdir: variants/left/meshes
+  right:
+    vars: {}
+    urdf: variants/right/component.urdf
+    mjcf: variants/right/component.mjcf
+    meshdir: variants/right/meshes
+root_link: bracket_link
+mount_frames:
+  flange_mount:
+    parent: bracket_link
+  camera_mount:
+    parent: camera_mount

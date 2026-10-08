@@ -1,0 +1,52 @@
+schema_version: 1
+name: ar5_08_l6_gemini335l_r
+description: AR5_08 right with Linkerhand L6, shared 44.5 g flange and complete Gemini
+  335L wrist camera.
+components:
+  arm:
+    component: arms/ar5_08
+    variant: right
+  hand:
+    component: hands/linkerhand_l6
+    variant: right
+  flange:
+    component: attachments/ar5_08_l6_o6_flange
+    variant: default
+  bracket:
+    component: attachments/ar5_08_gemini335l_bracket
+    variant: right
+  camera:
+    component: sensors/orbbec_gemini335l
+    variant: default
+freeze_base: arm
+mounts:
+- child: flange:arm_mount
+  parent: arm:tool0
+  xyz: [0, 0, 0]
+  rpy: [0, 0, 1.5707963267948966]
+- child: hand:wrist_mount
+  parent: flange:hand_mount
+  xyz: [0, 0, 0]
+  rpy: [0.03490658503988659, 0, -3.141592653589793]
+- child: bracket:flange_mount
+  parent: flange:bracket_mount
+  xyz: [0, 0, 0]
+  rpy: [0, 0, 0]
+- child: camera:base_mount
+  parent: bracket:camera_mount
+  xyz: [0, 0, 0]
+  rpy: [0, 0, 0]
+collision_exclusions:
+- body1: arm:AR5_5_08R_W4C4A6_link7
+  body2: flange:flange_link
+  reason: Bolted large disk and 2 mm locating boss at the arm tool0 recess.
+- body1: flange:flange_link
+  body2: hand:rh_hand_base_link
+  reason: Small adapter seating face and hand locating boss; other hand links remain
+    collidable.
+- body1: flange:flange_link
+  body2: bracket:bracket_link
+  reason: Bracket is bolted to the common flange.
+- body1: bracket:bracket_link
+  body2: camera:camera_link
+  reason: Camera mounting surface touches its bracket.

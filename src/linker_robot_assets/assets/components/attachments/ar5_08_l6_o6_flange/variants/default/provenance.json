@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "mass_kg": 0.0445,
+  "virtual_frame_mass_kg": 1e-09,
+  "inertia_method": "known total mass; uniform density across CAD closed solids; not measured",
+  "length_unit": "m",
+  "collision_method": "24 angular CAD sectors, convex hull per solid sector",
+  "collision_part_count": 48,
+  "collision_limits": "conservative approximation; small fastener holes may be filled; not a fastener insertion model",
+  "visual_sha256": {
+    "flange_plate": "f91e9a6e5e0b9cc372a5d6d9be730cae3fb8dfd6ba4a07b8d02cdecb1d6f0cb7",
+    "flange_adapter": "4ceb749fef8712486887a26cc4416df70c1d975e161c84d885b77c89ef3afefa"
+  },
+  "collision_sha256": {
+    "collision/part_000.stl": "0d14775bcf88397a2daa9b62d3ec3bb4b6d2e5251ae62299e832c3bec13f357a",
+    "collision/part_001.stl": "b47be95e80a8e8d6d80a0aeff9a85cae846b2bc2445398db6928857d4208da47",
+    "collision/part_002.stl": "2cb62199c6f617fd43c1fb3fa7debf854ddf23cfe79b87ed7b0eb62141f3611a",
+    "collision/part_003.stl": "7949a2e8031b292e1c824d3c3bc43cee4ec4e5ff3d5a8cfe017706176e70597d",
+    "collision/part_004.stl": "d0dab07188c24696a3e0e23233a08e17fdd7bcf51dba2db09a86f4af37210afc",
+    "collision/part_005.stl": "1732d231a7558f803cafae39c7864f42b942638024b00013d8800706d3056fb0",
+    "collision/part_006.stl": "5b01394b91bf95c26181e2fd1651cbe7976d25cf5307e32bb44f33d9b2a1c698",
+    "collision/part_007.stl": "ea317e46a0f81bfa1549fec3a616ca85c66b53e7f4ace57ac561a821bf855eec",
+    "collision/part_008.stl": "70309938c83ace7ee1392cf5d450f5b9b594e958e32e7b053deeb7f87a4fe491",
+    "collision/part_009.stl": "23cdcfe8f9573379e7068f47f8d4ef37329ce3da168e2402856e4faf7beb7b3f",
+    "collision/part_010.stl": "3b9974d16855a4a90d61065e7d188a042bb718c6f2c1775482b0ddadd066573f",
+    "collision/part_011.stl": "28c0acea24aae213ecc757fbbb1386507c36e51d30fb48ae340511f1c5dadf0a",
+    "collision/part_012.stl": "7e62127dc5536dfbd601231a59b3ef41e06ff70cca8b1f822a204d47a7bdc226",
+    "collision/part_013.stl": "c54e66b33c24e3509e7d7053ffa82d71cacb96c94096410aba9fb2af6c130b7e",
+    "collision/part_014.stl": "fb05e4b04f3f8ee5b1e49eb78f1baa0ec02067be7268addaafc3677daff57d2a",
+    "collision/part_015.stl": "312eceb8ad21f985be542190a8879bbb6ba57f2805729ea62a628806285eff60",
+    "collision/part_016.stl": "937e2d668c27f34632b4a54542a1afae9ca8df1f4b7ef3cfe1373f71059663a8",
+    "collision/part_017.stl": "75973231e4dc6a56a4774b56e8c0331716e16abb42037b96bfd2c58b8ac316ac",
+    "collision/part_018.stl": "e235471cf1c488f6903ccab2fa90c939faa8200bf49a948fe8c7e5df746a6ac4",
+    "collision/part_019.stl": "d59dd3f19039f219542db4a4409e34c928c52f0b274e7b4f9a191868b7ecf8ae",
+    "collision/part_020.stl": "1f88ec068eec4af3a6a3fdf047d0f37446aa28ba39ef22245d5c0651eb3828e3",
+    "collision/part_021.stl": "00d01d087e2ce8ac942d511239fc56767f0506ff5530e222a80cac3483283a74",
+    "collision/part_022.stl": "bd90c5cd6ee151e3dce14c99cc2fb0d7c1c4f210c369685acbd1734e1aed0958",
+    "collision/part_023.stl": "2ef9dcc89efbc37519cea946239c6d40e8e8439746b51bfa79739ceaddd1b894",
+    "collision/part_024.stl": "1f669773766f270066a537559c2e30941f7f9a2d3fb79d4f50509b5170c56882",
+    "collision/part_025.stl": "1abffd7c84c07c282238de8ce71752c480dd9ea192d605aed37fffe4689dc151",
+    "collision/part_026.stl": "54bd4d1a714261de9134abd99b76bdd780dbf6fa4c8093fb19cdf53ab0da33de",
+    "collision/part_027.stl": "77c7977913f12011bf58c3faab2b8e091b2a3288715e167e50a549af09a00c17",
+    "collision/part_028.stl": "007420b20643b65397f7f59ea2619ca87d90a057f1af6406484cecb396ed3448",
+    "collision/part_029.stl": "d52380ddd61762ac6838b3a7d8eb4f6484295a89e8a59db920c95fb873a6e3a4",
+    "collision/part_030.stl": "31f5247a955544ac74ad99682908ea79014c2526b58807eced523dfc01925123",
+    "collision/part_031.stl": "64281d5c2dfd129e69782a997bb27c30437d998fce9f46272ddaefa39db37e70",
+    "collision/part_032.stl": "2c3aa3c265296f88532bfd15ea1b272b660b28255affa373a9e16b97922e31c6",
+    "collision/part_033.stl": "8b068c6a53a518b7ee7a9ded3476b258a2f2132bc71210db017366f37016b816",
+    "collision/part_034.stl": "8b171047d996f4c704781d7238ea560207af5b49de04d1fb3b579f1a8db2f6dc",
+    "collision/part_035.stl": "1ce39bc0edbf412f5b869fd0b59f00571227d6ac71b4ff073e19e28b0a6b977f",
+    "collision/part_036.stl": "bc7ed073f9e971790ea61de4f74b6afe23429ba77c785c3a53090a67147dd50c",
+    "collision/part_037.stl": "2a3b6858b15d78c96f9767a8baffdffb07b5d500c0e1bf7135d08f26990ac6cc",
+    "collision/part_038.stl": "c5ff4cf625b427640d1ba0f07a61173e93cbba042f1b9f10f550e95b5578fba6",
+    "collision/part_039.stl": "a94c56b7dd1e2ed216681f52ada856b40862d213fcef73f1347707ffe8f397a4",
+    "collision/part_040.stl": "24c242317cbff65211315ca346875235b380df3ccfd238e2e1d0ca4151127b70",
+    "collision/part_041.stl": "9d987d05f488a08bc448e082d31cb9154ab3063556f91460a6016b8b6989f1c8",
+    "collision/part_042.stl": "0f804f347531e50b39104bdd16dd906e57cd937633975ddc6a8ad1e593817bfc",
+    "collision/part_043.stl": "2e9b57f11d5d7d9692a51e0f0e7258b9dc5f849cb1a1b7fd8ab7b389586ced97",
+    "collision/part_044.stl": "a924570e674edf27ef849b6a76d94c842400f69c85747c96a65c81a782a027e2",
+    "collision/part_045.stl": "721bceba7d4e9ebd5af2881d64a4443802d94ff619d4f2715b2904955f1ca807",
+    "collision/part_046.stl": "0663e881917be30586da35f5976fe2cc97d970c859d3ec2838e2dd6d4f8634ef",
+    "collision/part_047.stl": "e89bf1cd6dfd97d9451e54ff6aad7f26430a934bd4e20cfce27260392fbc50bf"
+  },
+  "authoring_versions": {
+    "numpy": "2.3.1",
+    "scipy": "1.17.0",
+    "trimesh": "4.11.1"
+  },
+  "source": {
+    "description": "Hardware-owner supplied CAD; assembly reviewed against arm/hand mounting faces",
+    "input_length_unit": "mm",
+    "scale_to_m": 0.001,
+    "input_sha256": {
+      "\u6cd5\u5170\u88c5\u914d.STL": "9fce31dd61d60c39c5c91db87070c3fd7d5674b0a67bc686cad9defdb8bc4ab8",
+      "335L.STL": "01057f50fb9908be9ae9cee71306e402b42bbcd29d5d395d8b8183aa4d43879c",
+      "O6-\u8155\u90e8\u76f8\u673a-\u5965\u6bd4\u4e2d\u5149335L-\u5de6\u624b.STL": "9d20940ddefa84e2c2fbe84a37670b75f2eef8eb7047e87c091c78152f308eea",
+      "O6-\u8155\u90e8\u76f8\u673a-\u5965\u6bd4\u4e2d\u5149335L-\u53f3\u624b.STL": "9b7e2e956ae729da273e228320598f5c5ddd5edf0128117935051e6616b449a9",
+      "\u6cd5\u5170\u88c5\u914d+\u76f8\u673a\u652f\u67b6\u88c5\u914d\u4f53\u6587\u4ef6.STL": "9ccb581139a4e3ce6cc4560a1326451fad76e88fd3316766200ced6132c32d11",
+      "\u6cd5\u5170\u88c5\u914d+\u76f8\u673a\u652f\u67b6\u88c5\u914d\u4f53\u6587\u4ef62.STL": "85efbcf81d8d3d9403dfabbd95f0646a06fe3481d4ef5baf3abcf3e772269d79"
+    },
+    "transforms_apply_after_scaling": true,
+    "cad_to_component": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0076
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.004499946
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0322
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "mass_source": "hardware owner: 44.5 g total for the two flange parts",
+    "mount": "large seating face at tool0; 2 mm pilot enters arm recess; small hand seat at +22.5 mm"
+  }
+}

@@ -1,0 +1,82 @@
+<robot name="orbbec_gemini335l">
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="-0.00833106297068 -0.0474999989383 -4.47034835815e-06" rpy="0 0 0" />
+      <mass value="0.132999995" />
+      <inertia ixx="0.00017981969092" iyy="1.87769051006e-05" izz="0.0001799143384" ixy="-8.37768720529e-21" ixz="-6.43257477066e-22" iyz="-2.52803256488e-21" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="meshes/gemini335l.stl" />
+      </geometry>
+      <material name="gemini335l_material">
+        <color rgba="0.25 0.28 0.32 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_000.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="depth_optical">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-12" iyy="1e-12" izz="1e-12" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="depth_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+    <parent link="camera_link" />
+    <child link="depth_optical" />
+  </joint>
+  <link name="rgb_frame">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-12" iyy="1e-12" izz="1e-12" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="rgb_frame_joint" type="fixed">
+    <origin xyz="0 -0.02375 0" rpy="0.0010157 0 0" />
+    <parent link="camera_link" />
+    <child link="rgb_frame" />
+  </joint>
+  <link name="rgb_optical">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-12" iyy="1e-12" izz="1e-12" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="rgb_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+    <parent link="rgb_frame" />
+    <child link="rgb_optical" />
+  </joint>
+  <link name="right_ir_frame">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-12" iyy="1e-12" izz="1e-12" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="right_ir_frame_joint" type="fixed">
+    <origin xyz="0 -0.095 0" rpy="0 0 0" />
+    <parent link="camera_link" />
+    <child link="right_ir_frame" />
+  </joint>
+  <link name="right_ir_optical">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-12" iyy="1e-12" izz="1e-12" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="right_ir_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+    <parent link="right_ir_frame" />
+    <child link="right_ir_optical" />
+  </joint>
+</robot>

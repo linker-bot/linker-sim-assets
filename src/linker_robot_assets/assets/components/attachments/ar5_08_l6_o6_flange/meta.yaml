@@ -1,0 +1,17 @@
+schema_version: 1
+kind: attachment
+name: ar5_08_l6_o6_flange
+variants:
+  default:
+    vars: {}
+    urdf: variants/default/component.urdf
+    mjcf: variants/default/component.mjcf
+    meshdir: variants/default/meshes
+root_link: flange_link
+mount_frames:
+  arm_mount:
+    parent: flange_link
+  hand_mount:
+    parent: hand_mount
+  bracket_mount:
+    parent: flange_link

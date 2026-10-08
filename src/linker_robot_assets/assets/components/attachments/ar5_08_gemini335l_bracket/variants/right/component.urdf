@@ -1,0 +1,149 @@
+<robot name="ar5_08_gemini335l_bracket">
+  <link name="bracket_link">
+    <inertial>
+      <origin xyz="-0.0170467817267 -0.0186586593967 0.0113804112197" rpy="0 0 0" />
+      <mass value="0.028999999" />
+      <inertia ixx="2.85198618931e-05" iyy="1.38178590477e-05" izz="4.09679060097e-05" ixy="-4.30737984152e-06" ixz="-6.26545862101e-07" iyz="-3.65662963816e-07" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="meshes/bracket.stl" />
+      </geometry>
+      <material name="bracket_material">
+        <color rgba="0.25 0.28 0.32 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_000.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_001.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_002.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_003.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_004.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_005.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_006.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_007.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_008.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_009.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_010.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_011.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_012.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_013.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_014.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_015.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_016.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_017.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_018.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_019.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_020.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_021.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_022.stl" />
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="meshes/collision/part_023.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="camera_mount">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-12" iyy="1e-12" izz="1e-12" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="camera_mount_joint" type="fixed">
+    <origin xyz="-0.0454344910202 -0.067500000756 0.0374074526432" rpy="0 -1.2217304764 3.14159265359" />
+    <parent link="bracket_link" />
+    <child link="camera_mount" />
+  </joint>
+</robot>

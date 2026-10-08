@@ -13,11 +13,17 @@ This package ships:
 
 | dir | what | consumed by |
 |---|---|---|
-| `components/{arms,hands,bases}/` | **parametric templates** — `{V}`/`{S}` placeholders, both variants, no manifest; *not directly loadable*. The composer's inputs. | composer only |
+| `components/{arms,hands,bases,attachments,sensors}/` | **parametric templates** — `{V}`/`{S}` placeholders, both variants, no manifest; *not directly loadable*. The composer's inputs. | composer only |
 | `units/` | **atomic single-system units** — one articulation each, `freeze_base` on its own root: solo arm / arm+hand / solo hand. | Isaac Sim (per-robot articulations), real-robot teleop |
 | `workstations/` | **full multi-robot scenes** — torso/bench + 2 arms + 2 hands, one composed model. | linker-sim (MuJoCo), viser |
 
 Both `units/` and `workstations/` hold composed, loadable `workstation.urdf` + `workstation.xml` (MJCF) + `manifest.yaml`.
+
+AR5_08 L6/O6 units now include the shared physical flange. Optional Gemini 335L
+wrist assemblies and the reusable top ZED module are described in
+[Camera assemblies](docs/camera-assemblies.md) / [相机装配](docs/camera-assemblies.zh-CN.md).
+Old tasks must retain their frozen asset revision: these mounts deliberately
+correct the old L6 zero offset and the O6 left seating mismatch.
 
 **Unit naming** = component short-tokens + side (`l`/`r`). Arm token = component dir name (`ar5_08`); hand token = component name minus `linkerhand_` (`l6`):
 

@@ -14,8 +14,8 @@
     "scipy": "1.17.0"
   },
   "unchanged_non_collision_xml_sha256": {
-    "base.urdf": "65384e90a04ac6e77ed43109bd968fe049cd92f27d5ab4f68c74b0af1da1a161",
-    "base.mjcf": "30a6103d340531eb94d4d085a85520856f2f51e0a07fd9d76eea0052ea36fd91"
+    "base.urdf": "f60345841aa7f76e7ac6665d7fbe99b2f8b8f793a63bd11fe692040f6e7f9cd8",
+    "base.mjcf": "7e4067df29af789bebc37410b6efcc8f8d0522584459df64cb5ff2350ddfb185"
   },
   "collision_count": 48,
   "mesh_file_count": 29,

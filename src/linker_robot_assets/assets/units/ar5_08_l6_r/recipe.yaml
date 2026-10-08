@@ -1,13 +1,6 @@
 schema_version: 1
 name: ar5_08_l6_r
-description: >
-  Single AR5_08 right arm + Linkerhand L6 right, welded into one articulation
-  (arm frozen to world; hand welded to the arm flange/tool0). Authored for
-  linker-sim-isaac's combined arm+hand profile (== AR5V2_L6V1_R). The
-  wrist transform reproduces Isaac's combined MJCF: hand base at the flange
-  (tcp, z=0.09 from link7), rotated -90deg about Z. Finger equality/mimic
-  coupling is carried through the composed MJCF.
-
+description: AR5_08 right with Linkerhand L6, shared 44.5 g flange.
 components:
   arm:
     component: arms/ar5_08
@@ -15,19 +8,24 @@ components:
   hand:
     component: hands/linkerhand_l6
     variant: right
-
+  flange:
+    component: attachments/ar5_08_l6_o6_flange
+    variant: default
 freeze_base: arm
-
 mounts:
-  # Matches assets/combined_system/AR5V2_L6V1_R/AR5V2_L6V1_R.xml:
-  # L6V1_R_hand_base_link at flan_link, pos 0 0 0, quat (w,x,y,z)=
-  # (0.7071,0,0,-0.7071) == rpy [0,0,-1.5708].
-  - child: hand:wrist_mount
-    parent: arm:tool0
-    xyz: [0.0, 0.0, 0.0]
-    rpy: [0.0, 0.0, -1.5708]
-
+- child: flange:arm_mount
+  parent: arm:tool0
+  xyz: [0, 0, 0]
+  rpy: [0, 0, 1.5707963267948966]
+- child: hand:wrist_mount
+  parent: flange:hand_mount
+  xyz: [0, 0, 0]
+  rpy: [0.03490658503988659, 0, -3.141592653589793]
 collision_exclusions:
 - body1: arm:AR5_5_08R_W4C4A6_link7
+  body2: flange:flange_link
+  reason: Bolted large disk and 2 mm locating boss at the arm tool0 recess.
+- body1: flange:flange_link
   body2: hand:rh_hand_base_link
-  reason: Installation seam at arm:tool0 -> hand:wrist_mount; other links remain collidable.
+  reason: Small adapter seating face and hand locating boss; other hand links remain
+    collidable.

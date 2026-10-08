@@ -1,0 +1,102 @@
+schema_version: 1
+name: ar5_08_l6_gemini335l_r
+composer_version: 0.1.0
+recipe_sha256: 78e4a49af3e1d5b96b666fd5a24a62ee2dee66154695d5234fb837b4a175de83
+components:
+  arm:
+    name: arms/ar5_08
+    variant: right
+    sha256: 8f7bb4f3cf4347e77bc953da7e2fd5baac06bfb5f55ea66e5ad0c49b5434b01a
+  hand:
+    name: hands/linkerhand_l6
+    variant: right
+    sha256: deb27493da96f8edadaf3e6764673915e914e0778e8358392c45ebcbfb311fe2
+  flange:
+    name: attachments/ar5_08_l6_o6_flange
+    variant: default
+    sha256: e85bd7f1e37db7ddad785a54abdf354d1995120ae89b15dc69338ce4444b5f14
+  bracket:
+    name: attachments/ar5_08_gemini335l_bracket
+    variant: right
+    sha256: 5ea7e966600e848b7bb9dbbd502045bcbe49e4d0b7693cbe49c5b563655a2ac2
+  camera:
+    name: sensors/orbbec_gemini335l
+    variant: default
+    sha256: 1b0923c72fadccf442c10b7817a3a104000c681582c3e2d50388d62dd354815c
+artifacts:
+  urdf: workstation.urdf
+  mjcf: workstation.xml
+  urdf_sha256: e1d6ccea1ffb3d26794fd5f1cc1d811fe33ecbe4e99b3e0cfdd2021066cff3c4
+  mjcf_sha256: a9783f7dc9669d2083bb67b1604b238665e0170c8f0d4e14f38a51db9999c2a1
+joints:
+  arm:
+  - arm_AR5_5_08R_W4C4A6_joint_1
+  - arm_AR5_5_08R_W4C4A6_joint_2
+  - arm_AR5_5_08R_W4C4A6_joint_3
+  - arm_AR5_5_08R_W4C4A6_joint_4
+  - arm_AR5_5_08R_W4C4A6_joint_5
+  - arm_AR5_5_08R_W4C4A6_joint_6
+  - arm_AR5_5_08R_W4C4A6_joint_7
+  hand:
+  - hand_rh_thumb_cmc_roll
+  - hand_rh_thumb_cmc_pitch
+  - hand_rh_index_mcp_pitch
+  - hand_rh_middle_mcp_pitch
+  - hand_rh_ring_mcp_pitch
+  - hand_rh_pinky_mcp_pitch
+  flange: []
+  bracket: []
+  camera: []
+mimic_joints:
+  arm: []
+  hand:
+  - hand_rh_thumb_dip
+  - hand_rh_index_dip
+  - hand_rh_middle_dip
+  - hand_rh_ring_dip
+  - hand_rh_pinky_dip
+  flange: []
+  bracket: []
+  camera: []
+frames:
+  arm:base_mount: arm_AR5_5_08R_W4C4A6_base
+  arm:tool0: arm_AR5_5_08R_W4C4A6_tcp
+  hand:wrist_mount: hand_rh_hand_base_link
+  flange:arm_mount: flange_flange_link
+  flange:hand_mount: flange_hand_mount
+  flange:bracket_mount: flange_flange_link
+  bracket:flange_mount: bracket_bracket_link
+  bracket:camera_mount: bracket_camera_mount
+  camera:base_mount: camera_camera_link
+  camera:depth_optical: camera_depth_optical
+  camera:rgb_optical: camera_rgb_optical
+  camera:right_ir_optical: camera_right_ir_optical
+ee_link: arm_AR5_5_08R_W4C4A6_tcp
+ee_links:
+  arm: arm_AR5_5_08R_W4C4A6_tcp
+base_link: arm_AR5_5_08R_W4C4A6_base
+default_gains:
+  arm:
+    stiffness: 1000.0
+    damping: 4.0
+  hand:
+    stiffness: 20.0
+    damping: 2.0
+gain_profiles:
+  arm:
+    default:
+      stiffness: 1000.0
+      damping: 4.0
+    joint:
+      stiffness: 1000.0
+      damping: 4.0
+    osc:
+      stiffness: 150.0
+      damping: 8.0
+  hand:
+    default:
+      stiffness: 20.0
+      damping: 2.0
+    joint:
+      stiffness: 20.0
+      damping: 2.0
