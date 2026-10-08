@@ -43,204 +43,70 @@
   </default>
   <asset>
     <mesh name="base_torso_base_link" file="../../components/bases/p7_torso/variants/default/meshes/base_link.STL" />
-    <mesh name="base_base_collision_000" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_000.stl" />
-    <mesh name="base_base_collision_001" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_001.stl" />
-    <mesh name="base_base_collision_002" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_002.stl" />
-    <mesh name="base_base_collision_003" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_003.stl" />
-    <mesh name="base_base_collision_004" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_004.stl" />
-    <mesh name="base_base_collision_005" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_005.stl" />
-    <mesh name="base_base_collision_006" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_006.stl" />
-    <mesh name="base_base_collision_007" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_007.stl" />
-    <mesh name="base_base_collision_008" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_008.stl" />
-    <mesh name="base_base_collision_009" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_009.stl" />
-    <mesh name="base_base_collision_010" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_010.stl" />
-    <mesh name="base_base_collision_011" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_011.stl" />
-    <mesh name="base_base_collision_012" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_012.stl" />
-    <mesh name="base_base_collision_013" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_013.stl" />
-    <mesh name="base_base_collision_014" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_014.stl" />
-    <mesh name="base_base_collision_015" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_015.stl" />
-    <mesh name="base_base_collision_016" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_016.stl" />
-    <mesh name="base_base_collision_017" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_017.stl" />
-    <mesh name="base_base_collision_018" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_018.stl" />
-    <mesh name="base_base_collision_019" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_019.stl" />
-    <mesh name="base_base_collision_020" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_020.stl" />
-    <mesh name="base_base_collision_021" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_021.stl" />
-    <mesh name="base_base_collision_022" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_022.stl" />
-    <mesh name="base_base_collision_023" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_023.stl" />
-    <mesh name="base_base_collision_024" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_024.stl" />
-    <mesh name="base_base_collision_025" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_025.stl" />
-    <mesh name="base_base_collision_026" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_026.stl" />
-    <mesh name="base_base_collision_027" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_027.stl" />
-    <mesh name="base_base_collision_028" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_028.stl" />
-    <mesh name="base_base_collision_029" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_029.stl" />
-    <mesh name="base_base_collision_030" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_030.stl" />
-    <mesh name="base_base_collision_031" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_031.stl" />
-    <mesh name="base_base_collision_032" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_032.stl" />
-    <mesh name="base_base_collision_033" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_033.stl" />
-    <mesh name="base_base_collision_034" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_034.stl" />
-    <mesh name="base_base_collision_035" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_035.stl" />
-    <mesh name="base_base_collision_036" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_036.stl" />
-    <mesh name="base_base_collision_037" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_037.stl" />
-    <mesh name="base_base_collision_038" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_038.stl" />
-    <mesh name="base_base_collision_039" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_039.stl" />
-    <mesh name="base_base_collision_040" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_040.stl" />
-    <mesh name="base_base_collision_041" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_041.stl" />
-    <mesh name="base_base_collision_042" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_042.stl" />
-    <mesh name="base_base_collision_043" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_043.stl" />
-    <mesh name="base_base_collision_044" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_044.stl" />
-    <mesh name="base_base_collision_045" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_045.stl" />
-    <mesh name="base_base_collision_046" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_046.stl" />
-    <mesh name="base_base_collision_047" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_047.stl" />
-    <mesh name="base_base_collision_048" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_048.stl" />
-    <mesh name="base_base_collision_049" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_049.stl" />
-    <mesh name="base_base_collision_050" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_050.stl" />
-    <mesh name="base_base_collision_051" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_051.stl" />
-    <mesh name="base_base_collision_052" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_052.stl" />
-    <mesh name="base_base_collision_053" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_053.stl" />
-    <mesh name="base_base_collision_054" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_054.stl" />
-    <mesh name="base_base_collision_055" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_055.stl" />
-    <mesh name="base_base_collision_056" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_056.stl" />
-    <mesh name="base_base_collision_057" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_057.stl" />
-    <mesh name="base_base_collision_058" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_058.stl" />
-    <mesh name="base_base_collision_059" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_059.stl" />
-    <mesh name="base_base_collision_060" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_060.stl" />
-    <mesh name="base_base_collision_061" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_061.stl" />
-    <mesh name="base_base_collision_062" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_062.stl" />
-    <mesh name="base_base_collision_063" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_063.stl" />
-    <mesh name="base_base_collision_064" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_064.stl" />
-    <mesh name="base_base_collision_065" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_065.stl" />
-    <mesh name="base_base_collision_066" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_066.stl" />
-    <mesh name="base_base_collision_067" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_067.stl" />
-    <mesh name="base_base_collision_068" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_068.stl" />
-    <mesh name="base_base_collision_069" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_069.stl" />
-    <mesh name="base_base_collision_070" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_070.stl" />
-    <mesh name="base_base_collision_071" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_071.stl" />
-    <mesh name="base_base_collision_072" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_072.stl" />
-    <mesh name="base_base_collision_073" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_073.stl" />
-    <mesh name="base_base_collision_074" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_074.stl" />
-    <mesh name="base_base_collision_075" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_075.stl" />
-    <mesh name="base_base_collision_076" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_076.stl" />
-    <mesh name="base_base_collision_077" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_077.stl" />
-    <mesh name="base_base_collision_078" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_078.stl" />
-    <mesh name="base_base_collision_079" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_079.stl" />
-    <mesh name="base_base_collision_080" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_080.stl" />
-    <mesh name="base_base_collision_081" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_081.stl" />
-    <mesh name="base_base_collision_082" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_082.stl" />
-    <mesh name="base_base_collision_083" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_083.stl" />
-    <mesh name="base_base_collision_084" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_084.stl" />
-    <mesh name="base_base_collision_085" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_085.stl" />
-    <mesh name="base_base_collision_086" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_086.stl" />
-    <mesh name="base_base_collision_087" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_087.stl" />
-    <mesh name="base_base_collision_088" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_088.stl" />
-    <mesh name="base_base_collision_089" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_089.stl" />
-    <mesh name="base_base_collision_090" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_090.stl" />
-    <mesh name="base_base_collision_091" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_091.stl" />
-    <mesh name="base_base_collision_092" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_092.stl" />
-    <mesh name="base_base_collision_093" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_093.stl" />
-    <mesh name="base_base_collision_094" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_094.stl" />
-    <mesh name="base_base_collision_095" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_095.stl" />
-    <mesh name="base_base_collision_096" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_096.stl" />
-    <mesh name="base_base_collision_097" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_097.stl" />
-    <mesh name="base_base_collision_098" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_098.stl" />
-    <mesh name="base_base_collision_099" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_099.stl" />
-    <mesh name="base_base_collision_100" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_100.stl" />
-    <mesh name="base_base_collision_101" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_101.stl" />
-    <mesh name="base_base_collision_102" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_102.stl" />
-    <mesh name="base_base_collision_103" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_103.stl" />
-    <mesh name="base_base_collision_104" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_104.stl" />
-    <mesh name="base_base_collision_105" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_105.stl" />
-    <mesh name="base_base_collision_106" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_106.stl" />
-    <mesh name="base_base_collision_107" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_107.stl" />
-    <mesh name="base_base_collision_108" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_108.stl" />
-    <mesh name="base_base_collision_109" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_109.stl" />
-    <mesh name="base_base_collision_110" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_110.stl" />
-    <mesh name="base_base_collision_111" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_111.stl" />
-    <mesh name="base_base_collision_112" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_112.stl" />
-    <mesh name="base_base_collision_113" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_113.stl" />
-    <mesh name="base_base_collision_114" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_114.stl" />
-    <mesh name="base_base_collision_115" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_115.stl" />
-    <mesh name="base_base_collision_116" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_116.stl" />
-    <mesh name="base_base_collision_117" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_117.stl" />
-    <mesh name="base_base_collision_118" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_118.stl" />
-    <mesh name="base_base_collision_119" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_119.stl" />
-    <mesh name="base_base_collision_120" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_120.stl" />
-    <mesh name="base_base_collision_121" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_121.stl" />
-    <mesh name="base_base_collision_122" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_122.stl" />
-    <mesh name="base_base_collision_123" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_123.stl" />
-    <mesh name="base_base_collision_124" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_124.stl" />
-    <mesh name="base_base_collision_125" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_125.stl" />
-    <mesh name="base_base_collision_126" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_126.stl" />
-    <mesh name="base_base_collision_127" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_127.stl" />
-    <mesh name="base_base_collision_128" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_128.stl" />
-    <mesh name="base_base_collision_129" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_129.stl" />
-    <mesh name="base_base_collision_130" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_130.stl" />
-    <mesh name="base_base_collision_131" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_131.stl" />
-    <mesh name="base_base_collision_132" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_132.stl" />
-    <mesh name="base_base_collision_133" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_133.stl" />
-    <mesh name="base_base_collision_134" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_134.stl" />
-    <mesh name="base_base_collision_135" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_135.stl" />
-    <mesh name="base_base_collision_136" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_136.stl" />
-    <mesh name="base_base_collision_137" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_137.stl" />
-    <mesh name="base_base_collision_138" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_138.stl" />
-    <mesh name="base_base_collision_139" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_139.stl" />
-    <mesh name="base_base_collision_140" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_140.stl" />
-    <mesh name="base_base_collision_141" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_141.stl" />
-    <mesh name="base_base_collision_142" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_142.stl" />
-    <mesh name="base_base_collision_143" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_143.stl" />
-    <mesh name="base_base_collision_144" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_144.stl" />
-    <mesh name="base_base_collision_145" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_145.stl" />
-    <mesh name="base_base_collision_146" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_146.stl" />
-    <mesh name="base_base_collision_147" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_147.stl" />
-    <mesh name="base_base_collision_148" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_148.stl" />
-    <mesh name="base_base_collision_149" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_149.stl" />
-    <mesh name="base_base_collision_150" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_150.stl" />
-    <mesh name="base_base_collision_151" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_151.stl" />
-    <mesh name="base_base_collision_152" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_152.stl" />
-    <mesh name="base_base_collision_153" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_153.stl" />
-    <mesh name="base_base_collision_154" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_154.stl" />
-    <mesh name="base_base_collision_155" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_155.stl" />
-    <mesh name="base_base_collision_156" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_156.stl" />
-    <mesh name="base_base_collision_157" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_157.stl" />
-    <mesh name="base_base_collision_158" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_158.stl" />
-    <mesh name="base_base_collision_159" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_159.stl" />
-    <mesh name="base_base_collision_160" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_160.stl" />
-    <mesh name="base_base_collision_161" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_161.stl" />
-    <mesh name="base_base_collision_162" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_162.stl" />
-    <mesh name="base_base_collision_163" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_163.stl" />
-    <mesh name="base_base_collision_164" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_164.stl" />
-    <mesh name="base_base_collision_165" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_165.stl" />
-    <mesh name="base_base_collision_166" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_166.stl" />
-    <mesh name="base_base_collision_167" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_167.stl" />
-    <mesh name="base_base_collision_168" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_168.stl" />
-    <mesh name="base_base_collision_169" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_169.stl" />
-    <mesh name="base_base_collision_170" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_170.stl" />
-    <mesh name="base_base_collision_171" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_171.stl" />
-    <mesh name="base_base_collision_172" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_172.stl" />
-    <mesh name="base_base_collision_173" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_173.stl" />
-    <mesh name="base_base_collision_174" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_174.stl" />
-    <mesh name="base_base_collision_175" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_175.stl" />
-    <mesh name="base_base_collision_176" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_176.stl" />
-    <mesh name="base_base_collision_177" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_177.stl" />
-    <mesh name="base_base_collision_178" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_178.stl" />
-    <mesh name="base_base_collision_179" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_179.stl" />
-    <mesh name="base_base_collision_180" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_180.stl" />
-    <mesh name="base_base_collision_181" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_181.stl" />
-    <mesh name="base_base_collision_182" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_182.stl" />
-    <mesh name="base_base_collision_183" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_183.stl" />
-    <mesh name="base_base_collision_184" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_184.stl" />
-    <mesh name="base_base_collision_185" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_185.stl" />
-    <mesh name="base_base_collision_186" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_186.stl" />
-    <mesh name="base_base_collision_187" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_187.stl" />
-    <mesh name="base_base_collision_188" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_188.stl" />
-    <mesh name="base_base_collision_189" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_189.stl" />
-    <mesh name="base_base_collision_190" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_190.stl" />
-    <mesh name="base_base_collision_191" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_191.stl" />
-    <mesh name="base_base_collision_192" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_192.stl" />
-    <mesh name="base_base_collision_193" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_193.stl" />
-    <mesh name="base_base_collision_194" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_194.stl" />
-    <mesh name="base_base_collision_195" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_195.stl" />
-    <mesh name="base_base_collision_196" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_196.stl" />
-    <mesh name="base_base_collision_197" file="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_197.stl" />
+    <mesh name="base_base_collision_p7_torso_upper_body_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_01.stl" />
+    <mesh name="base_base_collision_p7_torso_upper_body_02" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_02.stl" />
+    <mesh name="base_base_collision_p7_torso_upper_body_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_03.stl" />
+    <mesh name="base_base_collision_p7_torso_upper_body_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_04.stl" />
+    <mesh name="base_base_collision_p7_torso_upper_body_05" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_05.stl" />
+    <mesh name="base_base_collision_p7_torso_upper_body_06" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_06.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_07" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_07.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_12" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_12.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_13" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_13.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_14" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_14.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_15" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_15.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_16" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_16.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_17" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_17.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_18" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_18.stl" />
+    <mesh name="base_base_collision_p7_torso_base_frame_19" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_19.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_rear_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_01.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_rear_02" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_02.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_rear_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_03.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_rear_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_04.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_front_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_01.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_front_02" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_02.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_front_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_03.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_front_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_04.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_front_05" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_05.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_right_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_01.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_right_02" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_02.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_right_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_03.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_right_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_04.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_left_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_01.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_left_02" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_02.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_left_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_03.stl" />
+    <mesh name="base_base_collision_p7_torso_caster_left_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_04.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_01.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_03.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_04.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_05" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_05.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_06" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_06.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_08" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_08.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_09" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_09.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_right_10" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_10.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_01.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_03.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_04.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_05" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_05.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_06" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_06.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_08" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_08.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_09" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_09.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_right_10" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_10.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_01.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_03.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_04.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_05" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_05.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_06" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_06.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_08" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_08.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_09" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_09.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_front_left_10" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_10.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_01" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_01.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_03" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_03.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_04" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_04.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_05" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_05.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_06" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_06.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_08" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_08.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_09" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_09.stl" />
+    <mesh name="base_base_collision_p7_torso_leveling_foot_rear_left_10" file="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_10.stl" />
     <mesh name="arm_left_L1" file="../../components/arms/p7/variants/left/meshes/L1_Link.STL" />
     <mesh name="arm_left_L2" file="../../components/arms/p7/variants/left/meshes/L2_Link.STL" />
     <mesh name="arm_left_L3" file="../../components/arms/p7/variants/left/meshes/L3_Link.STL" />
@@ -288,204 +154,145 @@
       <body name="base_base_link" pos="0 0 1.2">
         <inertial pos="5.75109188383945E-05 1.44120839455095E-05 -0.489174317245241" mass="10.8067081992573" fullinertia="0.192527915393298 0.191539752328327 0.103049415034787 -1.67956043663548E-08 -3.68569447484118E-08 6.60319145138974E-08" />
         <geom class="base_base_p7_torso_visual" mesh="base_torso_base_link" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_000" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_001" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_002" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_003" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_004" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_005" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_006" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_007" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_008" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_009" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_010" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_011" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_012" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_013" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_014" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_015" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_016" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_017" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_018" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_019" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_020" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_021" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_022" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_023" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_024" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_025" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_026" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_027" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_028" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_029" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_030" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_031" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_032" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_033" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_034" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_035" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_036" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_037" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_038" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_039" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_040" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_041" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_042" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_043" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_044" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_045" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_046" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_047" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_048" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_049" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_050" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_051" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_052" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_053" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_054" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_055" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_056" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_057" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_058" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_059" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_060" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_061" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_062" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_063" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_064" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_065" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_066" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_067" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_068" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_069" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_070" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_071" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_072" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_073" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_074" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_075" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_076" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_077" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_078" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_079" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_080" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_081" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_082" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_083" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_084" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_085" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_086" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_087" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_088" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_089" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_090" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_091" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_092" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_093" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_094" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_095" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_096" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_097" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_098" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_099" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_100" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_101" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_102" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_103" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_104" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_105" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_106" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_107" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_108" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_109" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_110" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_111" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_112" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_113" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_114" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_115" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_116" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_117" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_118" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_119" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_120" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_121" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_122" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_123" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_124" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_125" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_126" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_127" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_128" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_129" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_130" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_131" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_132" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_133" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_134" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_135" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_136" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_137" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_138" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_139" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_140" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_141" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_142" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_143" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_144" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_145" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_146" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_147" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_148" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_149" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_150" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_151" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_152" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_153" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_154" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_155" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_156" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_157" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_158" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_159" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_160" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_161" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_162" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_163" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_164" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_165" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_166" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_167" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_168" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_169" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_170" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_171" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_172" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_173" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_174" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_175" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_176" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_177" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_178" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_179" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_180" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_181" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_182" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_183" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_184" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_185" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_186" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_187" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_188" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_189" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_190" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_191" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_192" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_193" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_194" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_195" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_196" />
-        <geom class="base_base_p7_torso_collision" mesh="base_base_collision_197" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_column_support" type="box" pos="0.000471560284495354 9.31322574615479e-10 -0.579999982379377" quat="1 0 0 0" size="0.0449999999 0.0300000003 0.550000013" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_01" mesh="base_base_collision_p7_torso_upper_body_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_02" mesh="base_base_collision_p7_torso_upper_body_02" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_03" mesh="base_base_collision_p7_torso_upper_body_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_04" mesh="base_base_collision_p7_torso_upper_body_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_05" mesh="base_base_collision_p7_torso_upper_body_05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_06" mesh="base_base_collision_p7_torso_upper_body_06" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_07" type="cylinder" pos="0.000471562147140503 -0.0820249989628792 -0.00174999237060547" quat="0.707106781186548 -0.707106781186547 0 0" size="0.0671549278 0.00802499801" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_upper_body_08" type="cylinder" pos="0.000471558421850204 0.0890000015497208 -0.000103771686553949" quat="0.707106781186548 -0.707106781186547 0 0" size="0.0641034352 0.00105000287" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_plate" type="box" pos="0.000471562147140503 0 -1.09799998998642" quat="1 0 0 0" size="0.275000006 0.275000006 0.00200003386" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_01" type="box" pos="-0.244528442621231 0 -1.11500000953674" quat="1 0 0 0" size="0.0300000012 0.275000006 0.0149999857" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_02" type="box" pos="0.245471566915512 0 -1.11500000953674" quat="1 0 0 0" size="0.0300000012 0.275000006 0.0149999857" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_03" type="box" pos="0.000471562147140503 0.244999997317791 -1.11500000953674" quat="1 0 0 0" size="0.215000004 0.0300000086 0.0149999857" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_04" type="box" pos="0.000471562147140503 -0.245000004768372 -1.11500000953674" quat="1 0 0 0" size="0.215000004 0.0300000012 0.0149999857" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_05" type="box" pos="0.000471562147140503 0.0899999979883432 -1.11500000953674" quat="1 0 0 0" size="0.215000004 0.0299999993 0.0149999857" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_06" type="box" pos="0.000471562147140503 -0.0899999979883432 -1.11500000953674" quat="1 0 0 0" size="0.215000004 0.0299999993 0.0149999857" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_07" mesh="base_base_collision_p7_torso_base_frame_07" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_08" type="box" pos="0.000471558887511492 0.244999997317791 -1.13599997758865" quat="1 0 0 0" size="0.0150000001 0.0300000086 0.00599998236" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_09" type="box" pos="0.000471558887511492 -0.245000004768372 -1.13599997758865" quat="1 0 0 0" size="0.0150000001 0.0300000012 0.00599998236" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_10" type="box" pos="0.245471566915512 4.65661287307739e-10 -1.13599997758865" quat="1 0 0 0" size="0.0300000012 0.0150000001 0.00599998236" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_11" type="box" pos="-0.244528442621231 4.65661287307739e-10 -1.13599997758865" quat="1 0 0 0" size="0.0300000012 0.0150000001 0.00599998236" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_12" mesh="base_base_collision_p7_torso_base_frame_12" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_13" mesh="base_base_collision_p7_torso_base_frame_13" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_14" mesh="base_base_collision_p7_torso_base_frame_14" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_15" mesh="base_base_collision_p7_torso_base_frame_15" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_16" mesh="base_base_collision_p7_torso_base_frame_16" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_17" mesh="base_base_collision_p7_torso_base_frame_17" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_18" mesh="base_base_collision_p7_torso_base_frame_18" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_19" mesh="base_base_collision_p7_torso_base_frame_19" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_20" type="box" pos="-0.0295263826847076 0.0450026728212833 -1.11870002746582" quat="1 0 0 0" size="0.00291468576 0.00291438028 4.99486923e-05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_base_frame_21" type="box" pos="0.0304736187681556 0.0450026728212833 -1.11870002746582" quat="1 0 0 0" size="0.00291468669 0.00291438028 4.99486923e-05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_rear_01" mesh="base_base_collision_p7_torso_caster_rear_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_rear_02" mesh="base_base_collision_p7_torso_caster_rear_02" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_rear_03" mesh="base_base_collision_p7_torso_caster_rear_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_rear_04" mesh="base_base_collision_p7_torso_caster_rear_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_rear_05" type="cylinder" pos="-0.2724419683218 0.0397125240415335 -1.21399998664856" quat="0.707106781186548 0 0.707106781186547 0" size="0.00807737298 0.00758258998" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_rear_06" type="cylinder" pos="-0.220944747328758 0.0402468573302031 -1.21399998664856" quat="0.707106781186548 0 0.707106781186547 0" size="0.00804106481 0.00408276916" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_front_01" mesh="base_base_collision_p7_torso_caster_front_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_front_02" mesh="base_base_collision_p7_torso_caster_front_02" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_front_03" mesh="base_base_collision_p7_torso_caster_front_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_front_04" mesh="base_base_collision_p7_torso_caster_front_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_front_05" mesh="base_base_collision_p7_torso_caster_front_05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_front_06" type="cylinder" pos="0.268954753875732 0.0403055734932423 -1.21399998664856" quat="0.707106781186548 0 0.707106781186547 0" size="0.00805081043 0.0041026175" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_right_01" mesh="base_base_collision_p7_torso_caster_right_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_right_02" mesh="base_base_collision_p7_torso_caster_right_02" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_right_03" mesh="base_base_collision_p7_torso_caster_right_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_right_04" mesh="base_base_collision_p7_torso_caster_right_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_right_05" type="cylinder" pos="0.0404135882854462 -0.217415876686573 -1.21399998664856" quat="0.707106781186548 -0.707106781186547 0 0" size="0.00801576495 0.00751682371" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_right_06" type="cylinder" pos="0.0405219867825508 -0.268915757536888 -1.21399998664856" quat="0.707106781186548 -0.707106781186547 0 0" size="0.00800840127 0.00401683152" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_left_01" mesh="base_base_collision_p7_torso_caster_left_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_left_02" mesh="base_base_collision_p7_torso_caster_left_02" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_left_03" mesh="base_base_collision_p7_torso_caster_left_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_left_04" mesh="base_base_collision_p7_torso_caster_left_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_left_05" type="cylinder" pos="0.0404049549251795 0.27259661257267 -1.21399998664856" quat="0.707106781186548 -0.707106781186547 0 0" size="0.00801810591 0.00751931965" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_caster_left_06" type="cylinder" pos="0.0405294671654701 0.221096776425838 -1.21399998664856" quat="0.707106781186548 -0.707106781186547 0 0" size="0.00800964531 0.00401932746" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_01" mesh="base_base_collision_p7_torso_leveling_foot_front_right_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_02" type="box" pos="0.245471566915512 -0.245000004768372 -1.18099999427795" quat="1 0 0 0" size="0.0300000012 0.0300000012 0.00600004196" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_03" mesh="base_base_collision_p7_torso_leveling_foot_front_right_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_04" mesh="base_base_collision_p7_torso_leveling_foot_front_right_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_05" mesh="base_base_collision_p7_torso_leveling_foot_front_right_05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_06" mesh="base_base_collision_p7_torso_leveling_foot_front_right_06" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_07" type="cylinder" pos="0.245471559464931 -0.245000004768372 -1.19222205877304" quat="1 0 0 0" size="0.0103923095 0.00424998999" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_08" mesh="base_base_collision_p7_torso_leveling_foot_front_right_08" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_09" mesh="base_base_collision_p7_torso_leveling_foot_front_right_09" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_10" mesh="base_base_collision_p7_torso_leveling_foot_front_right_10" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_11" type="box" pos="0.274371564388275 -0.245000004768372 -1.15249997377396" quat="1 0 0 0" size="0.00110000372 0.0107499957 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_12" type="box" pos="0.245471559464931 -0.274050012230873 -1.15249997377396" quat="1 0 0 0" size="0.0107500032 0.00094999373 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_13" type="box" pos="0.216421559453011 -0.245000004768372 -1.15249997377396" quat="1 0 0 0" size="0.00094999373 0.0107499957 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_14" type="box" pos="0.245471559464931 -0.215950004756451 -1.15249997377396" quat="1 0 0 0" size="0.0107500032 0.00095000118 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_15" type="box" pos="0.268033078091373 -0.254021038118078 -1.15249997377396" quat="0 0.358168391140012 0.933657005322712 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_16" type="box" pos="0.223696552217007 -0.266775004565716 -1.15249997377396" quat="0 0.923879532511287 -0.38268343236509 0" size="0.00139289012 0.00277175588 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_17" type="box" pos="0.22291004083849 -0.254021038118078 -1.15249997377396" quat="0 0.933657005322712 0.358168391140012 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_18" type="box" pos="0.236450523385992 -0.267561519320441 -1.15249997377396" quat="0 0.913458863228352 0.406931081621406 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_19" type="box" pos="0.268033081795922 -0.235978968085941 -1.15249997377396" quat="0 0.933657005322712 0.358168391140012 0" size="0.000127585981 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_20" type="box" pos="0.236450523385992 -0.222438490216302 -1.15249997377396" quat="0 0.406931081621406 0.913458863228352 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_right_21" type="box" pos="0.216921553015709 -0.225350007414818 -1.15249997377396" quat="1 0 0 0" size="0.000450000167 0.000400006771 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_01" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_02" type="box" pos="-0.244528442621231 -0.245000004768372 -1.18099999427795" quat="1 0 0 0" size="0.0300000012 0.0300000012 0.00600004196" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_03" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_04" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_05" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_06" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_06" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_07" type="cylinder" pos="-0.244528442621231 -0.245000004768372 -1.19222205877304" quat="1 0 0 0" size="0.0103923115 0.00424998999" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_08" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_08" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_09" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_09" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_10" mesh="base_base_collision_p7_torso_leveling_foot_rear_right_10" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_11" type="box" pos="-0.273428440093994 -0.245000004768372 -1.15249997377396" quat="1 0 0 0" size="0.00110000372 0.0107499957 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_12" type="box" pos="-0.244528442621231 -0.274050012230873 -1.15249997377396" quat="1 0 0 0" size="0.0107499957 0.00094999373 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_13" type="box" pos="-0.21547844260931 -0.245000004768372 -1.15249997377396" quat="1 0 0 0" size="0.00095000118 0.0107499957 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_14" type="box" pos="-0.244528442621231 -0.215950004756451 -1.15249997377396" quat="1 0 0 0" size="0.0107499957 0.00095000118 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_15" type="box" pos="-0.267089953797092 -0.254021038118078 -1.15249997377396" quat="0 0.933657005322712 0.358168391140012 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_16" type="box" pos="-0.222753442823887 -0.266775004565716 -1.15249997377396" quat="0 -0.38268343236509 0.923879532511287 0" size="0.00139289012 0.00277175588 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_17" type="box" pos="-0.22196693144537 -0.254021038118078 -1.15249997377396" quat="0 0.358168391140012 0.933657005322712 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_18" type="box" pos="-0.235507399091711 -0.267561519320441 -1.15249997377396" quat="0 0.406931081621406 0.913458863228352 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_19" type="box" pos="-0.267089957501641 -0.235978968085941 -1.15249997377396" quat="0 0.358168391140012 0.933657005322712 0" size="0.000127585981 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_20" type="box" pos="-0.235507399091711 -0.222438490216302 -1.15249997377396" quat="0 0.913458863228352 0.406931081621406 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_right_21" type="box" pos="-0.215978443622589 -0.225350007414818 -1.15249997377396" quat="1 0 0 0" size="0.000450000167 0.000400006771 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_01" mesh="base_base_collision_p7_torso_leveling_foot_front_left_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_02" type="box" pos="0.245471566915512 0.244999997317791 -1.18099999427795" quat="1 0 0 0" size="0.0300000012 0.0300000086 0.00600004196" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_03" mesh="base_base_collision_p7_torso_leveling_foot_front_left_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_04" mesh="base_base_collision_p7_torso_leveling_foot_front_left_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_05" mesh="base_base_collision_p7_torso_leveling_foot_front_left_05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_06" mesh="base_base_collision_p7_torso_leveling_foot_front_left_06" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_07" type="cylinder" pos="0.245471566915512 0.244999997317791 -1.19222205877304" quat="1 0 0 0" size="0.0103923237 0.00424998999" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_08" mesh="base_base_collision_p7_torso_leveling_foot_front_left_08" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_09" mesh="base_base_collision_p7_torso_leveling_foot_front_left_09" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_10" mesh="base_base_collision_p7_torso_leveling_foot_front_left_10" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_11" type="box" pos="0.274371564388275 0.244999997317791 -1.15249997377396" quat="1 0 0 0" size="0.00110000372 0.0107500032 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_12" type="box" pos="0.245471559464931 0.274049997329712 -1.15249997377396" quat="1 0 0 0" size="0.0107500032 0.000950008631 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_13" type="box" pos="0.216421559453011 0.244999997317791 -1.15249997377396" quat="1 0 0 0" size="0.00094999373 0.0107500032 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_14" type="box" pos="0.245471559464931 0.215949989855289 -1.15249997377396" quat="1 0 0 0" size="0.0107500032 0.00095000118 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_15" type="box" pos="0.268033078091373 0.254021038118078 -1.15249997377396" quat="0 0.933657005322712 0.358168391140012 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_16" type="box" pos="0.22291004083849 0.254021038118078 -1.15249997377396" quat="0 0.358168391140012 0.933657005322712 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_17" type="box" pos="0.236450523385992 0.267561519320441 -1.15249997377396" quat="0 0.406931081621406 0.913458863228352 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_18" type="box" pos="0.223696555942297 0.266775000840425 -1.15249997377396" quat="0 0.923879532511287 0.38268343236509 0" size="0.00139289012 0.00277175061 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_19" type="box" pos="0.268033081795922 0.23597895318478 -1.15249997377396" quat="0 0.358168391140012 0.933657005322712 0" size="0.000127585981 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_20" type="box" pos="0.236450523385992 0.222438475315141 -1.15249997377396" quat="0 0.913458863228352 0.406931081621406 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_front_left_21" type="box" pos="0.216921553015709 0.225349992513657 -1.15249997377396" quat="1 0 0 0" size="0.000450000167 0.000400006771 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_01" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_01" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_02" type="box" pos="-0.244528442621231 0.244999997317791 -1.18099999427795" quat="1 0 0 0" size="0.0300000012 0.0300000086 0.00600004196" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_03" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_03" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_04" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_04" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_05" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_05" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_06" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_06" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_07" type="cylinder" pos="-0.244528442621231 0.244999997317791 -1.19222205877304" quat="1 0 0 0" size="0.0103923156 0.00424998999" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_08" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_08" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_09" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_09" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_10" mesh="base_base_collision_p7_torso_leveling_foot_rear_left_10" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_11" type="box" pos="-0.273428440093994 0.244999997317791 -1.15249997377396" quat="1 0 0 0" size="0.00110000372 0.0107500032 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_12" type="box" pos="-0.244528442621231 0.274049997329712 -1.15249997377396" quat="1 0 0 0" size="0.0107499957 0.000950008631 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_13" type="box" pos="-0.21547844260931 0.244999997317791 -1.15249997377396" quat="1 0 0 0" size="0.00095000118 0.0107500032 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_14" type="box" pos="-0.244528442621231 0.215949989855289 -1.15249997377396" quat="1 0 0 0" size="0.0107499957 0.00095000118 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_15" type="box" pos="-0.267089953797092 0.254021038118078 -1.15249997377396" quat="0 0.358168391140012 0.933657005322712 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_16" type="box" pos="-0.22196693144537 0.254021038118078 -1.15249997377396" quat="0 0.933657005322712 0.358168391140012 0" size="0.000127590964 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_17" type="box" pos="-0.235507399091711 0.267561519320441 -1.15249997377396" quat="0 0.913458863228352 0.406931081621406 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_18" type="box" pos="-0.222753446549177 0.266775000840425 -1.15249997377396" quat="0 0.38268343236509 0.923879532511287 0" size="0.00139289012 0.00277175061 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_19" type="box" pos="-0.267089957501641 0.23597895318478 -1.15249997377396" quat="0 0.933657005322712 0.358168391140012 0" size="0.000127585981 0.00277562213 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_20" type="box" pos="-0.235507399091711 0.222438475315141 -1.15249997377396" quat="0 0.406931081621406 0.913458863228352 0" size="0.000127586628 0.00277561659 0.0224999785" />
+        <geom class="base_base_p7_torso_collision" name="base_p7_torso_leveling_foot_rear_left_21" type="box" pos="-0.215978443622589 0.225349992513657 -1.15249997377396" quat="1 0 0 0" size="0.000450000167 0.000400006771 0.0224999785" />
         <body name="base_arm_left_mount" pos="0 0.164 0">
           <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
           <site name="base_arm_left_mount" pos="0 0 0" />

@@ -6,7 +6,7 @@ components:
   base:
     name: bases/a7_torso
     variant: default
-    sha256: 80ffc892dc4ea956d14657fa6d7f4155dee7c49a33635a1824c7ba49e757d2f0
+    sha256: c61a67b0d36904949b13299ca56bad04bbef485a057a7e5a3a3147710ebf9c38
   arm_left:
     name: arms/a7
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 604aaa5d462fc99034f93dd3a0dd4db844a40eef8cee521d91e02bdaf3a3708c
-  mjcf_sha256: 163470ae76bc1aae930e41ff44c7e9820aff8c384c982ff78d0e866da58b59fb
+  urdf_sha256: fd25af0a2f630c614ec04511668757a8146f91fc2f093e2a22b97b11085afe74
+  mjcf_sha256: f95548bb50fc444b2615e8b29d66d4cdae17a12afb062cb3852f85222d218a04
 joints:
   base: []
   arm_left:

@@ -30,1304 +30,673 @@
         <color rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_000.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_001.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_002.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_04">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_003.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_05">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_004.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_06">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_005.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_07">
+      <origin xyz="-0.00936859706 -0.123662576 -0.191553295" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_006.stl" />
+        <box size="0.0295713423 0.00995278358 0.00708499551" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_08">
+      <origin xyz="-0.01500804 0.0977878347 -0.192526408" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_007.stl" />
+        <box size="0.0408502291 0.0178182125 0.00903119147" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_09">
+      <origin xyz="0.00029372688 0.104231678 -0.19630763" rpy="-2.86100563 0.06268813 -1.75444794" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_008.stl" />
+        <box size="0.00800901869 0.00949839399 0.0364542114" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_10">
+      <origin xyz="-0.0376303878 -0.100624449 -0.267093001" rpy="1.37882484 -1.37689404 -1.62520875" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_009.stl" />
+        <box size="0.00182435001 0.0199152887 0.0726602824" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_11">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_010.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_11.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_12">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_011.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_12.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_13">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_012.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_13.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_14">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_013.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_14.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_15">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_014.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_15.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_16">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_015.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_16.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_17">
+      <origin xyz="0.00281290468 0.0954894503 -0.271434012" rpy="-3.10447304 0.104953175 2.01786677" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_016.stl" />
+        <box size="0.000100001478 0.0109668259 0.0360740187" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_18">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_017.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_18.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_19">
+      <origin xyz="0.000852700777 -0.0810678117 0.110810075" rpy="0.691064229 -0.132969801 0.278592472" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_018.stl" />
+        <box size="0.000100541698 0.0155596004 0.016988105" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_20">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_019.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_20.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_upper_body_21">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_020.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_upper_body_21.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_column_support">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_021.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_column_support.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_022.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_023.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_024.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_04">
+      <origin xyz="0.00299999863 -0.0141139301 0.155000001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_025.stl" />
+        <box size="0.0815319791 0.0697331335 0.0352621377" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_05">
+      <origin xyz="0.00299999863 -0.0142557686 0.265000008" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_026.stl" />
+        <box size="0.0815319866 0.0699012522 0.0351464897" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_06">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_027.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_07">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_028.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_07.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_08">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_029.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_09">
+      <origin xyz="-0.0211110755 0.0316534983 0.156491771" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_030.stl" />
+        <box size="0.0422338606 0.0128004085 0.0148663819" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_10">
+      <origin xyz="-0.0093685973 0.0363374185 0.20590771" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_031.stl" />
+        <box size="0.0295713418 0.00995277241 0.00708498061" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_11">
+      <origin xyz="-0.0990548199 -0.0434975944 0.289218147" rpy="-2.80318761 0.13128688 2.1036847" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_032.stl" />
+        <box size="0.00010000159 0.0116303856 0.0294109776" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_12">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_033.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_12.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_head_housing_13">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_034.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_head_housing_13.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_plate">
+      <origin xyz="0 -0.014378421 -1.148" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_035.stl" />
+        <box size="0.5 0.500000015 0.0039999485" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_01">
+      <origin xyz="-0.220006436 -0.014436014 -1.16499996" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_036.stl" />
+        <box size="0.060012877 0.500182435 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_02">
+      <origin xyz="0.220006436 -0.0143208206 -1.16499996" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_037.stl" />
+        <box size="0.060012877 0.50018245 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_03">
+      <origin xyz="-2.36928463e-06 -0.23437842 -1.16499996" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_038.stl" />
+        <box size="0.380004764 0.0600000173 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_04">
+      <origin xyz="2.36183405e-06 0.205621585 -1.16499996" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_039.stl" />
+        <box size="0.380004749 0.0600000024 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_05">
+      <origin xyz="2.36183405e-06 0.0898594428 -1.16499996" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_040.stl" />
+        <box size="0.380004749 0.0599999987 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_06">
+      <origin xyz="-2.36183405e-06 -0.118616272 -1.16499996" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_041.stl" />
+        <box size="0.380004749 0.0599999949 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_07">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_042.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_07.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_08">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_043.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_09">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_044.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_10">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_045.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_11">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_046.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_11.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_12">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_047.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_12.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_13">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_048.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_13.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_14">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_049.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_14.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_15">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_050.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_15.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_16">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_051.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_16.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_17">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_052.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_17.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_18">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_053.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_18.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_19">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_054.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_19.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_20">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_055.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_20.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_21">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_056.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_21.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_22">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_057.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_22.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_23">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_058.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_23.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_24">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_059.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_24.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_25">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_060.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_25.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_26">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_061.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_26.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_27">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_062.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_27.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_28">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_063.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_28.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_29">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_064.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_29.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_30">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_065.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_30.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_31">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_066.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_31.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_base_frame_32">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_067.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_base_frame_32.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_068.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_069.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_070.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_04">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_071.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_05">
+      <origin xyz="0.0399420299 -0.206794284 -1.264" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_072.stl" />
+        <cylinder radius="0.00801576674006688" length="0.0150336474180222" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_06">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_073.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_07">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_074.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_07.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_08">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_075.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_09">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_076.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_10">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_077.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_right_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_11">
+      <origin xyz="-0.0490063392 -0.0940771885 -1.19215322" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_078.stl" />
+        <box size="0.00451877713 0.00152967125 0.00116729736" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_right_12">
+      <origin xyz="0.0509936642 -0.0940771885 -1.19215322" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_079.stl" />
+        <box size="0.00451877341 0.00152967125 0.00116729736" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_080.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_081.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_082.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_04">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_083.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_05">
+      <origin xyz="0.040000001 0.233121581 -1.264" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_084.stl" />
+        <cylinder radius="0.00800002626165012" length="0.0150000005960464" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_06">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_085.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_07">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_086.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_07.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_08">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_087.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_09">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_088.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_10">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_089.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_left_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_11">
+      <origin xyz="0.0509936642 0.0559228081 -1.19215322" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_090.stl" />
+        <box size="0.00451877341 0.00152967498 0.00116729736" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_left_12">
+      <origin xyz="-0.0490063373 0.05592281 -1.19215322" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_091.stl" />
+        <box size="0.00451877341 0.00152967125 0.00116729736" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_092.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_rear_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_093.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_rear_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_094.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_rear_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_04">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_095.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_rear_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_05">
+      <origin xyz="-0.247499995 0.0398594458 -1.264" rpy="-0 1.57079633 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_096.stl" />
+        <cylinder radius="0.00800002626165012" length="0.0150000005960464" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_06">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_097.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_rear_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_07">
+      <origin xyz="-0.0540063381 -0.0198393269 -1.19055331" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_098.stl" />
+        <box size="0.00451877713 0.00152966939 0.00116729736" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_rear_08">
+      <origin xyz="-0.0540063381 0.0101606725 -1.19055331" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_099.stl" />
+        <box size="0.00451877713 0.00152967125 0.00116729736" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_100.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_front_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_101.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_front_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_102.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_front_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_04">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_103.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_front_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_05">
+      <origin xyz="0.191987462 0.0252643386 -1.264" rpy="-0 1.57079633 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_104.stl" />
+        <cylinder radius="0.00809586327544935" length="0.0152046829462051" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_06">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_105.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_front_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_caster_front_07">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_106.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_caster_front_07.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_107.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_rear_left_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_108.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_rear_left_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_03">
+      <origin xyz="-0.219999999 0.205621585 -1.23101568" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_109.stl" />
+        <box size="0.0600000024 0.0600000024 0.0120313168" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_04">
+      <origin xyz="-0.244625002 0.180996582 -1.20249999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_110.stl" />
+        <box size="0.0107499957 0.0107499957 0.0450000763" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_05">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_111.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_rear_left_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_112.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_left_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_113.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_left_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_114.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_left_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_04">
+      <origin xyz="0.244625002 0.180996582 -1.20249999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_115.stl" />
+        <box size="0.0107499957 0.0107499957 0.0450000763" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_05">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_116.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_left_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_117.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_right_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_118.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_right_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_03">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_119.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_right_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_04">
+      <origin xyz="0.244625002 -0.209753416 -1.20249999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_120.stl" />
+        <box size="0.0107499957 0.0107500106 0.0450000763" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_05">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_121.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_front_right_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_01">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_122.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_rear_right_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_02">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_123.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_rear_right_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_03">
+      <origin xyz="-0.219999999 -0.23437842 -1.23101568" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_124.stl" />
+        <box size="0.0600000024 0.0600000173 0.0120313168" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_04">
+      <origin xyz="-0.244625002 -0.209753416 -1.20249999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_125.stl" />
+        <box size="0.0107499957 0.0107500106 0.0450000763" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_05">
       <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_126.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_127.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_128.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_129.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_130.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_131.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_132.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_133.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_134.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_135.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_136.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_137.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_138.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_139.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_140.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_141.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_142.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_143.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_144.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_145.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_146.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_147.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_148.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_149.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_150.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_151.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_152.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_153.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_154.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_155.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_156.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_157.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_158.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_159.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_160.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_161.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_162.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_163.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_164.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_165.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_166.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_167.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_168.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_169.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_170.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_171.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_172.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_173.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_174.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_175.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_176.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_177.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_178.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_179.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_180.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_181.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_182.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_183.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_184.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_185.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_186.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_187.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_188.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_189.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_190.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_191.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_192.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_193.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_194.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_195.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_196.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_197.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_198.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_199.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_200.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_201.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_202.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_203.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_204.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_205.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_206.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_207.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_208.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_209.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_210.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_211.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_212.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_213.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_214.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_215.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_216.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_217.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_218.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_219.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_220.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_221.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_222.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_223.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_224.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_225.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_226.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_227.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_228.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_229.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_230.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_231.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_232.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_233.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_234.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_235.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_236.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_237.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_238.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_239.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_240.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_241.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_242.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_243.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_244.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_245.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_246.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_247.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_248.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_249.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_250.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_251.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_252.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_253.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_254.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_255.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_256.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_257.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_258.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/base_part_259.stl" />
+        <mesh filename="../../components/bases/a7_lite_torso/variants/default/meshes/collision/a7_lite_torso_leveling_foot_rear_right_05.stl" />
       </geometry>
     </collision>
   </link>

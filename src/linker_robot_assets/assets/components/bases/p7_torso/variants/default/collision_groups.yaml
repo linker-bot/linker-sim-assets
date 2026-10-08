@@ -1,0 +1,181 @@
+# Pinned source-shell selectors; review assignments after any source change.
+# Directions: +X front, +Y left in the component frame.
+source_sha256: d505826a415f112f7df5fede92893a3b2bd7bb8c217a5118c24438bf75e80bf5
+source_hull_count: 198
+source_hulls_sha256: 6193115687e8daae5407f3649f30c75cd541179125e46ae0a1c2033c113f61dc
+groups:
+  - name: column_support
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [0], shape: box}
+  - name: upper_body
+    max_added_distance_m: 0.001
+    parts:
+      - {shells: [1], shape: mesh}
+      - {shells: [2], shape: mesh}
+      - {shells: [10, 41, 83, 108], shape: mesh}
+      - {shells: [11, 25, 42, 84, 89, 109], shape: mesh}
+      - {shells: [26], shape: mesh}
+      - {shells: [27], shape: mesh}
+      - {shells: [28, 92, 118], shape: cylinder, axis: 1}
+      - {shells: [93, 119], shape: cylinder, axis: 1}
+  - name: base_plate
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [3], shape: box}
+  - name: base_frame
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [4], shape: box}
+      - {shells: [5], shape: box}
+      - {shells: [6], shape: box}
+      - {shells: [7], shape: box}
+      - {shells: [8], shape: box}
+      - {shells: [9], shape: box}
+      - {shells: [12], shape: mesh}
+      - {shells: [43], shape: box}
+      - {shells: [44], shape: box}
+      - {shells: [45], shape: box}
+      - {shells: [46], shape: box}
+      - {shells: [98, 123, 128], shape: mesh}
+      - {shells: [99, 121, 129], shape: mesh}
+      - {shells: [100, 127, 133], shape: mesh}
+      - {shells: [101, 125, 134], shape: mesh}
+      - {shells: [102, 124, 130], shape: mesh}
+      - {shells: [103, 120, 131], shape: mesh}
+      - {shells: [104, 126, 132], shape: mesh}
+      - {shells: [105, 122, 135], shape: mesh}
+      - {shells: [196], shape: box}
+      - {shells: [197], shape: box}
+  - name: caster_rear
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [13], shape: mesh}
+      - {shells: [19], shape: mesh}
+      - {shells: [35], shape: mesh}
+      - {shells: [39], shape: mesh}
+      - {shells: [59], shape: cylinder, axis: 0}
+      - {shells: [106], shape: cylinder, axis: 0}
+  - name: caster_front
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [14], shape: mesh}
+      - {shells: [20], shape: mesh}
+      - {shells: [36], shape: mesh}
+      - {shells: [37], shape: mesh}
+      - {shells: [70], shape: mesh}
+      - {shells: [90], shape: cylinder, axis: 0}
+  - name: caster_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [15], shape: mesh}
+      - {shells: [17], shape: mesh}
+      - {shells: [33], shape: mesh}
+      - {shells: [38], shape: mesh}
+      - {shells: [61], shape: cylinder, axis: 1}
+      - {shells: [91], shape: cylinder, axis: 1}
+  - name: caster_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [16], shape: mesh}
+      - {shells: [18], shape: mesh}
+      - {shells: [34], shape: mesh}
+      - {shells: [40], shape: mesh}
+      - {shells: [60], shape: cylinder, axis: 1}
+      - {shells: [107], shape: cylinder, axis: 1}
+  - name: leveling_foot_front_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [21], shape: mesh}
+      - {shells: [32], shape: box}
+      - {shells: [50], shape: mesh}
+      - {shells: [54], shape: mesh}
+      - {shells: [57], shape: mesh}
+      - {shells: [63, 192], shape: mesh}
+      - {shells: [69], shape: cylinder, axis: 2}
+      - {shells: [76, 171], shape: mesh}
+      - {shells: [80, 141], shape: mesh}
+      - {shells: [82, 155], shape: mesh}
+      - {shells: [87], shape: box}
+      - {shells: [97, 189], shape: box}
+      - {shells: [112, 183], shape: box}
+      - {shells: [116, 177], shape: box}
+      - {shells: [140], shape: box, oriented: true}
+      - {shells: [143, 161], shape: box, oriented: true}
+      - {shells: [144], shape: box, oriented: true}
+      - {shells: [157], shape: box, oriented: true}
+      - {shells: [163], shape: box, oriented: true}
+      - {shells: [169], shape: box, oriented: true}
+      - {shells: [187], shape: box}
+  - name: leveling_foot_rear_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [22], shape: mesh}
+      - {shells: [31], shape: box}
+      - {shells: [49], shape: mesh}
+      - {shells: [53], shape: mesh}
+      - {shells: [55], shape: mesh}
+      - {shells: [65, 191], shape: mesh}
+      - {shells: [68], shape: cylinder, axis: 2}
+      - {shells: [72, 138], shape: mesh}
+      - {shells: [74, 153], shape: mesh}
+      - {shells: [77, 167], shape: mesh}
+      - {shells: [88], shape: box}
+      - {shells: [96, 195], shape: box}
+      - {shells: [110, 181], shape: box}
+      - {shells: [114, 179], shape: box}
+      - {shells: [137], shape: box, oriented: true}
+      - {shells: [146, 151], shape: box, oriented: true}
+      - {shells: [147], shape: box, oriented: true}
+      - {shells: [149], shape: box, oriented: true}
+      - {shells: [159], shape: box, oriented: true}
+      - {shells: [165], shape: box, oriented: true}
+      - {shells: [185], shape: box}
+  - name: leveling_foot_front_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [23], shape: mesh}
+      - {shells: [29], shape: box}
+      - {shells: [48], shape: mesh}
+      - {shells: [52], shape: mesh}
+      - {shells: [58], shape: mesh}
+      - {shells: [62, 193], shape: mesh}
+      - {shells: [66], shape: cylinder, axis: 2}
+      - {shells: [75, 170], shape: mesh}
+      - {shells: [79, 173], shape: mesh}
+      - {shells: [81, 154], shape: mesh}
+      - {shells: [86], shape: box}
+      - {shells: [95, 188], shape: box}
+      - {shells: [113, 182], shape: box}
+      - {shells: [115, 176], shape: box}
+      - {shells: [139], shape: box, oriented: true}
+      - {shells: [142], shape: box, oriented: true}
+      - {shells: [156], shape: box, oriented: true}
+      - {shells: [160, 174], shape: box, oriented: true}
+      - {shells: [162], shape: box, oriented: true}
+      - {shells: [168], shape: box, oriented: true}
+      - {shells: [186], shape: box}
+  - name: leveling_foot_rear_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [24], shape: mesh}
+      - {shells: [30], shape: box}
+      - {shells: [47], shape: mesh}
+      - {shells: [51], shape: mesh}
+      - {shells: [56], shape: mesh}
+      - {shells: [64, 190], shape: mesh}
+      - {shells: [67], shape: cylinder, axis: 2}
+      - {shells: [71, 172], shape: mesh}
+      - {shells: [73, 152], shape: mesh}
+      - {shells: [78, 166], shape: mesh}
+      - {shells: [85], shape: box}
+      - {shells: [94, 194], shape: box}
+      - {shells: [111, 180], shape: box}
+      - {shells: [117, 178], shape: box}
+      - {shells: [136], shape: box, oriented: true}
+      - {shells: [145], shape: box, oriented: true}
+      - {shells: [148], shape: box, oriented: true}
+      - {shells: [150, 175], shape: box, oriented: true}
+      - {shells: [158], shape: box, oriented: true}
+      - {shells: [164], shape: box, oriented: true}
+      - {shells: [184], shape: box}

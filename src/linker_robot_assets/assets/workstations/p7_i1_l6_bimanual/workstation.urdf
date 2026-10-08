@@ -72,994 +72,774 @@
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <collision name="p7_torso_column_support">
+      <origin xyz="0.000471560284 9.31322575e-10 -0.579999982" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_000.stl" />
+        <box size="0.0899999999 0.0600000005 1.10000003" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_001.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_02">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_002.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_003.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_004.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_05">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_005.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_06">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_006.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_upper_body_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_07">
+      <origin xyz="0.000471562147 -0.082024999 -0.00174999237" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_007.stl" />
+        <cylinder radius="0.0671549278140873" length="0.0160499960184097" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_upper_body_08">
+      <origin xyz="0.000471558422 0.0890000015 -0.000103771687" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_008.stl" />
+        <cylinder radius="0.0641034351671055" length="0.00210000574588778" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_plate">
+      <origin xyz="0.000471562147 0 -1.09799999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_009.stl" />
+        <box size="0.550000012 0.550000012 0.00400006771" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_01">
+      <origin xyz="-0.244528443 0 -1.11500001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_010.stl" />
+        <box size="0.0600000024 0.550000012 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_02">
+      <origin xyz="0.245471567 0 -1.11500001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_011.stl" />
+        <box size="0.0600000024 0.550000012 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_03">
+      <origin xyz="0.000471562147 0.244999997 -1.11500001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_012.stl" />
+        <box size="0.430000007 0.0600000173 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_04">
+      <origin xyz="0.000471562147 -0.245000005 -1.11500001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_013.stl" />
+        <box size="0.430000007 0.0600000024 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_05">
+      <origin xyz="0.000471562147 0.089999998 -1.11500001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_014.stl" />
+        <box size="0.430000007 0.0599999987 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_06">
+      <origin xyz="0.000471562147 -0.089999998 -1.11500001" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_015.stl" />
+        <box size="0.430000007 0.0599999987 0.0299999714" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_07">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_016.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_07.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_08">
+      <origin xyz="0.000471558888 0.244999997 -1.13599998" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_017.stl" />
+        <box size="0.0300000003 0.0600000173 0.0119999647" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_09">
+      <origin xyz="0.000471558888 -0.245000005 -1.13599998" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_018.stl" />
+        <box size="0.0300000003 0.0600000024 0.0119999647" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_10">
+      <origin xyz="0.245471567 4.65661287e-10 -1.13599998" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_019.stl" />
+        <box size="0.0600000024 0.0300000003 0.0119999647" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_11">
+      <origin xyz="-0.244528443 4.65661287e-10 -1.13599998" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_020.stl" />
+        <box size="0.0600000024 0.0300000003 0.0119999647" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_12">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_021.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_12.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_13">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_022.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_13.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_14">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_023.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_14.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_15">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_024.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_15.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_16">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_025.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_16.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_17">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_026.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_17.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_18">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_027.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_18.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_19">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_028.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_base_frame_19.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_20">
+      <origin xyz="-0.0295263827 0.0450026728 -1.11870003" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_029.stl" />
+        <box size="0.00582937151 0.00582876056 9.98973846e-05" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_base_frame_21">
+      <origin xyz="0.0304736188 0.0450026728 -1.11870003" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_030.stl" />
+        <box size="0.00582937337 0.00582876056 9.98973846e-05" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_rear_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_031.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_rear_02">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_032.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_rear_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_033.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_rear_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_034.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_rear_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_rear_05">
+      <origin xyz="-0.272441968 0.039712524 -1.21399999" rpy="-0 1.57079633 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_035.stl" />
+        <cylinder radius="0.00807737298426923" length="0.0151651799678802" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_rear_06">
+      <origin xyz="-0.220944747 0.0402468573 -1.21399999" rpy="-0 1.57079633 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_036.stl" />
+        <cylinder radius="0.00804106480668177" length="0.00816553831100464" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_front_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_037.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_front_02">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_038.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_front_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_039.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_front_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_040.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_front_05">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_041.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_front_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_front_06">
+      <origin xyz="0.268954754 0.0403055735 -1.21399999" rpy="-0 1.57079633 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_042.stl" />
+        <cylinder radius="0.00805081042581072" length="0.00820523500442505" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_right_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_043.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_right_02">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_044.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_right_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_045.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_right_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_046.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_right_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_right_05">
+      <origin xyz="0.0404135883 -0.217415877 -1.21399999" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_047.stl" />
+        <cylinder radius="0.00801576495178915" length="0.0150336474180222" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_right_06">
+      <origin xyz="0.0405219868 -0.268915758 -1.21399999" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_048.stl" />
+        <cylinder radius="0.00800840127428914" length="0.00803366303443909" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_left_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_049.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_left_02">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_050.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_02.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_left_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_051.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_left_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_052.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_caster_left_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_left_05">
+      <origin xyz="0.0404049549 0.272596613 -1.21399999" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_053.stl" />
+        <cylinder radius="0.00801810590891508" length="0.0150386393070221" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_caster_left_06">
+      <origin xyz="0.0405294672 0.221096776 -1.21399999" rpy="-1.57079633 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_054.stl" />
+        <cylinder radius="0.00800964531474098" length="0.00803865492343903" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_055.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_02">
+      <origin xyz="0.245471567 -0.245000005 -1.18099999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_056.stl" />
+        <box size="0.0600000024 0.0600000024 0.0120000839" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_057.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_058.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_05">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_059.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_06">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_060.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_07">
+      <origin xyz="0.245471559 -0.245000005 -1.19222206" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_061.stl" />
+        <cylinder radius="0.0103923094535278" length="0.00849997997283936" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_08">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_062.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_09">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_063.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_10">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_064.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_right_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_11">
+      <origin xyz="0.274371564 -0.245000005 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_065.stl" />
+        <box size="0.00220000744 0.0214999914 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_12">
+      <origin xyz="0.245471559 -0.274050012 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_066.stl" />
+        <box size="0.0215000063 0.00189998746 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_13">
+      <origin xyz="0.216421559 -0.245000005 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_067.stl" />
+        <box size="0.00189998746 0.0214999914 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_14">
+      <origin xyz="0.245471559 -0.215950005 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_068.stl" />
+        <box size="0.0215000063 0.00190000236 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_15">
+      <origin xyz="0.268033078 -0.254021038 -1.15249997" rpy="3.14159265 0 2.40898186" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_069.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_16">
+      <origin xyz="0.223696552 -0.266775005 -1.15249997" rpy="3.14159265 0 -0.785398163" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_070.stl" />
+        <box size="0.00278578025 0.00554351176 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_17">
+      <origin xyz="0.222910041 -0.254021038 -1.15249997" rpy="3.14159265 0 0.732610791" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_071.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_18">
+      <origin xyz="0.236450523 -0.267561519 -1.15249997" rpy="3.14159265 0 0.83818374" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_072.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_19">
+      <origin xyz="0.268033082 -0.235978968 -1.15249997" rpy="3.14159265 0 0.732610791" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_073.stl" />
+        <box size="0.000255171961 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_20">
+      <origin xyz="0.236450523 -0.22243849 -1.15249997" rpy="3.14159265 0 2.30340891" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_074.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_right_21">
+      <origin xyz="0.216921553 -0.225350007 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_075.stl" />
+        <box size="0.000900000334 0.000800013542 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_076.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_02">
+      <origin xyz="-0.244528443 -0.245000005 -1.18099999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_077.stl" />
+        <box size="0.0600000024 0.0600000024 0.0120000839" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_078.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_079.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_05">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_080.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_06">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_081.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_07">
+      <origin xyz="-0.244528443 -0.245000005 -1.19222206" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_082.stl" />
+        <cylinder radius="0.0103923115177603" length="0.00849997997283936" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_08">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_083.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_09">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_084.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_10">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_085.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_right_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_11">
+      <origin xyz="-0.27342844 -0.245000005 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_086.stl" />
+        <box size="0.00220000744 0.0214999914 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_12">
+      <origin xyz="-0.244528443 -0.274050012 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_087.stl" />
+        <box size="0.0214999914 0.00189998746 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_13">
+      <origin xyz="-0.215478443 -0.245000005 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_088.stl" />
+        <box size="0.00190000236 0.0214999914 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_14">
+      <origin xyz="-0.244528443 -0.215950005 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_089.stl" />
+        <box size="0.0214999914 0.00190000236 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_15">
+      <origin xyz="-0.267089954 -0.254021038 -1.15249997" rpy="3.14159265 0 0.732610791" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_090.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_16">
+      <origin xyz="-0.222753443 -0.266775005 -1.15249997" rpy="-3.14159265 0 -2.35619449" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_091.stl" />
+        <box size="0.00278578025 0.00554351176 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_17">
+      <origin xyz="-0.221966931 -0.254021038 -1.15249997" rpy="3.14159265 0 2.40898186" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_092.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_18">
+      <origin xyz="-0.235507399 -0.267561519 -1.15249997" rpy="3.14159265 0 2.30340891" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_093.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_19">
+      <origin xyz="-0.267089958 -0.235978968 -1.15249997" rpy="3.14159265 0 2.40898186" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_094.stl" />
+        <box size="0.000255171961 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_20">
+      <origin xyz="-0.235507399 -0.22243849 -1.15249997" rpy="3.14159265 0 0.83818374" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_095.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_right_21">
+      <origin xyz="-0.215978444 -0.225350007 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_096.stl" />
+        <box size="0.000900000334 0.000800013542 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_097.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_02">
+      <origin xyz="0.245471567 0.244999997 -1.18099999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_098.stl" />
+        <box size="0.0600000024 0.0600000173 0.0120000839" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_099.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_100.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_05">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_101.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_06">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_102.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_07">
+      <origin xyz="0.245471567 0.244999997 -1.19222206" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_103.stl" />
+        <cylinder radius="0.010392323653822" length="0.00849997997283936" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_08">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_104.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_09">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_105.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_10">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_106.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_front_left_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_11">
+      <origin xyz="0.274371564 0.244999997 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_107.stl" />
+        <box size="0.00220000744 0.0215000063 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_12">
+      <origin xyz="0.245471559 0.274049997 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_108.stl" />
+        <box size="0.0215000063 0.00190001726 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_13">
+      <origin xyz="0.216421559 0.244999997 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_109.stl" />
+        <box size="0.00189998746 0.0215000063 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_14">
+      <origin xyz="0.245471559 0.21594999 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_110.stl" />
+        <box size="0.0215000063 0.00190000236 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_15">
+      <origin xyz="0.268033078 0.254021038 -1.15249997" rpy="3.14159265 0 0.732610791" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_111.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_16">
+      <origin xyz="0.222910041 0.254021038 -1.15249997" rpy="3.14159265 0 2.40898186" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_112.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_17">
+      <origin xyz="0.236450523 0.267561519 -1.15249997" rpy="3.14159265 0 2.30340891" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_113.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_18">
+      <origin xyz="0.223696556 0.266775001 -1.15249997" rpy="3.14159265 0 0.785398163" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_114.stl" />
+        <box size="0.00278578025 0.00554350123 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_19">
+      <origin xyz="0.268033082 0.235978953 -1.15249997" rpy="3.14159265 0 2.40898186" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_115.stl" />
+        <box size="0.000255171961 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_20">
+      <origin xyz="0.236450523 0.222438475 -1.15249997" rpy="3.14159265 0 0.83818374" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_116.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_front_left_21">
+      <origin xyz="0.216921553 0.225349993 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_117.stl" />
+        <box size="0.000900000334 0.000800013542 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_01">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_118.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_01.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_02">
+      <origin xyz="-0.244528443 0.244999997 -1.18099999" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_119.stl" />
+        <box size="0.0600000024 0.0600000173 0.0120000839" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_03">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_120.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_03.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_04">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_121.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_04.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_05">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_122.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_05.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_06">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_123.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_06.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_07">
+      <origin xyz="-0.244528443 0.244999997 -1.19222206" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_124.stl" />
+        <cylinder radius="0.0103923155725508" length="0.00849997997283936" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_08">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_125.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_08.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_09">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_126.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_09.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_10">
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_127.stl" />
+        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/p7_torso_leveling_foot_rear_left_10.stl" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_11">
+      <origin xyz="-0.27342844 0.244999997 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_128.stl" />
+        <box size="0.00220000744 0.0215000063 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_12">
+      <origin xyz="-0.244528443 0.274049997 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_129.stl" />
+        <box size="0.0214999914 0.00190001726 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_13">
+      <origin xyz="-0.215478443 0.244999997 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_130.stl" />
+        <box size="0.00190000236 0.0215000063 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_14">
+      <origin xyz="-0.244528443 0.21594999 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_131.stl" />
+        <box size="0.0214999914 0.00190000236 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_15">
+      <origin xyz="-0.267089954 0.254021038 -1.15249997" rpy="3.14159265 0 2.40898186" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_132.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_16">
+      <origin xyz="-0.221966931 0.254021038 -1.15249997" rpy="3.14159265 0 0.732610791" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_133.stl" />
+        <box size="0.000255181928 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_17">
+      <origin xyz="-0.235507399 0.267561519 -1.15249997" rpy="3.14159265 0 0.83818374" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_134.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_18">
+      <origin xyz="-0.222753447 0.266775001 -1.15249997" rpy="3.14159265 0 2.35619449" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_135.stl" />
+        <box size="0.00278578025 0.00554350123 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_19">
+      <origin xyz="-0.267089958 0.235978953 -1.15249997" rpy="3.14159265 0 0.732610791" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_136.stl" />
+        <box size="0.000255171961 0.00555124426 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_20">
+      <origin xyz="-0.235507399 0.222438475 -1.15249997" rpy="3.14159265 0 2.30340891" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_137.stl" />
+        <box size="0.000255173257 0.00555123318 0.0449999571" />
       </geometry>
     </collision>
-    <collision>
+    <collision name="p7_torso_leveling_foot_rear_left_21">
+      <origin xyz="-0.215978444 0.225349993 -1.15249997" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_138.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_139.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_140.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_141.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_142.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_143.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_144.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_145.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_146.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_147.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_148.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_149.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_150.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_151.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_152.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_153.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_154.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_155.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_156.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_157.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_158.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_159.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_160.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_161.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_162.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_163.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_164.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_165.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_166.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_167.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_168.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_169.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_170.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_171.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_172.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_173.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_174.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_175.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_176.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_177.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_178.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_179.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_180.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_181.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_182.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_183.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_184.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_185.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_186.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_187.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_188.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_189.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_190.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_191.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_192.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_193.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_194.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_195.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_196.stl" />
-      </geometry>
-    </collision>
-    <collision>
-      <geometry>
-        <mesh filename="../../components/bases/p7_torso/variants/default/meshes/collision/base_part_197.stl" />
+        <box size="0.000900000334 0.000800013542 0.0449999571" />
       </geometry>
     </collision>
   </link>

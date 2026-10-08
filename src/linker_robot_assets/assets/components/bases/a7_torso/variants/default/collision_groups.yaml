@@ -1,0 +1,94 @@
+# Pinned source-shell selectors; review assignments after any source change.
+# Directions: +X front, +Y left in the component frame.
+source_sha256: a77597904393e3e02ddfa842baf0259c68039a3a0847b28cd4649eb43840de38
+source_hull_count: 135
+source_hulls_sha256: b48278cb75ac1d9adcf2ac155ad2dce22cf4c1268e0636669393f7bc412b5b87
+groups:
+  - name: upper_body
+    max_added_distance_m: 0.001
+    parts:
+      - {shells: [0], shape: mesh}
+      - {shells: [1], shape: mesh}
+      - {shells: [6, 9, 10, 15, 16, 17, 18, 22, 23, 24, 25, 26, 29, 30, 31, 36, 37, 43, 44, 45, 46, 47, 49, 53, 54, 67, 73, 74, 76, 77, 81, 82, 84, 85, 90, 91, 92, 99, 101, 102, 110, 111, 113, 120, 122, 123, 124, 128], shape: mesh}
+      - {shells: [42], shape: mesh}
+      - {shells: [98, 127], shape: mesh}
+      - {shells: [100], shape: mesh}
+      - {shells: [103], shape: box}
+      - {shells: [126], shape: box}
+  - name: column_support
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [2], shape: box}
+      - {shells: [7], shape: mesh}
+      - {shells: [20, 55, 57, 58, 62], shape: mesh}
+      - {shells: [21, 56, 59, 60, 64], shape: mesh}
+      - {shells: [27], shape: mesh}
+      - {shells: [28], shape: mesh}
+      - {shells: [50], shape: mesh}
+      - {shells: [51], shape: mesh}
+      - {shells: [61], shape: mesh}
+      - {shells: [63], shape: mesh}
+      - {shells: [65], shape: mesh}
+      - {shells: [66], shape: mesh}
+      - {shells: [68], shape: mesh}
+      - {shells: [75, 79, 80], shape: mesh}
+      - {shells: [78], shape: mesh}
+      - {shells: [83], shape: mesh}
+      - {shells: [97], shape: mesh}
+      - {shells: [129], shape: mesh}
+      - {shells: [130], shape: mesh}
+      - {shells: [131], shape: mesh}
+      - {shells: [132], shape: mesh}
+      - {shells: [133], shape: mesh}
+      - {shells: [134], shape: mesh}
+  - name: head_housing
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [3], shape: mesh}
+      - {shells: [5, 104, 109, 112, 118, 119, 121, 125], shape: mesh}
+      - {shells: [8, 48, 52], shape: mesh}
+      - {shells: [19], shape: mesh}
+  - name: base_plate
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [4], shape: mesh}
+  - name: caster_rear_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [11, 114], shape: mesh}
+      - {shells: [35], shape: mesh}
+      - {shells: [41], shape: mesh}
+      - {shells: [70], shape: mesh}
+      - {shells: [89], shape: mesh}
+      - {shells: [95], shape: mesh}
+      - {shells: [107], shape: mesh}
+  - name: caster_front_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [12, 117], shape: mesh}
+      - {shells: [32], shape: mesh}
+      - {shells: [40], shape: mesh}
+      - {shells: [72], shape: mesh}
+      - {shells: [86], shape: mesh}
+      - {shells: [93], shape: mesh}
+      - {shells: [106], shape: mesh}
+  - name: caster_rear_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [13, 116], shape: mesh}
+      - {shells: [33], shape: mesh}
+      - {shells: [39], shape: mesh}
+      - {shells: [69], shape: mesh}
+      - {shells: [87], shape: mesh}
+      - {shells: [96], shape: mesh}
+      - {shells: [105], shape: mesh}
+  - name: caster_front_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [14, 115], shape: mesh}
+      - {shells: [34], shape: mesh}
+      - {shells: [38], shape: mesh}
+      - {shells: [71], shape: mesh}
+      - {shells: [88], shape: mesh}
+      - {shells: [94], shape: mesh}
+      - {shells: [108], shape: mesh}

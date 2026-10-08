@@ -1,9 +1,13 @@
 {
   "source_mesh": "workstation.STL",
   "source_sha256": "0ce80472ea5cbd9593d034bad53c44f8c4527149f0a0a1936c2d64dc27ec745a",
-  "method": "convex hull per connected CAD shell; contained hulls removed",
+  "groups_sha256": "9f869cc599e893a5b9c7a40b8626771e587b23eca7f53fbee9aa1ad339f274ce",
+  "source_hull_count": 52,
+  "source_hulls_sha256": "d42c17d9c257234e35dad8390aefc0d7c20e3ad3eccd27efcd04d8fa4dc2a857",
+  "method": "semantic convex unions and conservative native primitives",
   "planar_thickness_m": 0.0001,
   "containment_tolerance_m": 1e-08,
+  "envelope_validation": "entire fitted solid within original group union offset; inconclusive fits rejected",
   "authoring_versions": {
     "trimesh": "4.11.1",
     "numpy": "2.3.1",
@@ -13,217 +17,787 @@
     "base.urdf": "65384e90a04ac6e77ed43109bd968fe049cd92f27d5ab4f68c74b0af1da1a161",
     "base.mjcf": "30a6103d340531eb94d4d085a85520856f2f51e0a07fd9d76eea0052ea36fd91"
   },
-  "source_surface_area_m2": 15.807911065949096,
-  "original_whole_hull_volume_m3": 0.8043903288124956,
-  "sum_part_hull_volume_m3": 0.07025575226903111,
+  "collision_count": 48,
+  "mesh_file_count": 29,
   "parts": [
     {
-      "file": "base_part_000.stl",
-      "sha256": "ca70e63916620235c89c334a6aa766b79676ff3d6af84aaf1daaab1d5baf7a22"
+      "name": "bench_table_tabletop",
+      "group": "tabletop",
+      "source_shells": [
+        0
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_tabletop.stl",
+      "sha256": "5f823a4a8b8d94fa253336251e7346d7cb3b86d1e3fb64de8c8703949770daa2"
     },
     {
-      "file": "base_part_001.stl",
-      "sha256": "ea707000c54aa22cfb7d3a13b413ef8168987fa370173d29f27c7b3c0cf6e6ca"
+      "name": "bench_table_arm_column",
+      "group": "arm_column",
+      "source_shells": [
+        1
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.06341500580310822,
+        0.6251999735832214,
+        0.6971550434827805
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.059999942779541016,
+        0.12000012397766113,
+        1.0800000727176666
+      ]
     },
     {
-      "file": "base_part_002.stl",
-      "sha256": "6dfa68da9f1816c6387fcdfd3b1d87355ea184c39879c7962b5065634874eaa6"
+      "name": "bench_table_front_upper_rail",
+      "group": "front_upper_rail",
+      "source_shells": [
+        2
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.6252000043168664,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.2000001054257154,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_003.stl",
-      "sha256": "798333a2e072d4f7448b86ef69edfa993807d3978412652fcbab24b617a84b3d"
+      "name": "bench_table_rear_upper_rail",
+      "group": "rear_upper_rail",
+      "source_shells": [
+        3
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        0.6252000043168664,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.2000001054257154,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_004.stl",
-      "sha256": "a9d1f95312a449456289a377fc3f9d28e66d5ee4d8223cefc78c0d3b85275d4e"
+      "name": "bench_table_rear_lower_rail",
+      "group": "rear_lower_rail",
+      "source_shells": [
+        4
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        0.6251999773085117,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.0800000354647636,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_005.stl",
-      "sha256": "f072bf06efd5e7ad0edf588423ce4d684212e4658cf5123236492fefecde4c9c"
+      "name": "bench_table_front_lower_rail",
+      "group": "front_lower_rail",
+      "source_shells": [
+        5
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.6251999773085117,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.0800000354647636,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_006.stl",
-      "sha256": "b477a327528a388a198979d3c885cfdf6e5babf97ef7b2c261e740a6d14c703b"
+      "name": "bench_table_front_panel",
+      "group": "front_panel",
+      "source_shells": [
+        6
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_front_panel.stl",
+      "sha256": "74180e22f8d18dcaeb613bfef6f57e2abe82b7721c73b1b4f47088b6b01711be"
     },
     {
-      "file": "base_part_007.stl",
-      "sha256": "d2cee8dfda2513af7b99e24c42dc16f09526d0c1e4a46bfd271e7403d7be8782"
+      "name": "bench_table_front_left_leg_01",
+      "group": "front_left_leg",
+      "source_shells": [
+        7,
+        44
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        1.1952000260353088,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000061988830566,
+        0.6365000046789646
+      ]
     },
     {
-      "file": "base_part_008.stl",
-      "sha256": "4008a61dd1910821d01484a5b37764c3eaa0f0f514e6078e1b5a2205761a0d3c"
+      "name": "bench_table_front_left_leg_02",
+      "group": "front_left_leg",
+      "source_shells": [
+        31
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_front_left_leg_02.stl",
+      "sha256": "32e36c4fec8ef704e51377c39f4ff2de78c98802270d1359105b031f43f4515e"
     },
     {
-      "file": "base_part_009.stl",
-      "sha256": "4c6261e3624d780e3194f3e70c02e458cd526a13034bf0413e8f367341e75f42"
+      "name": "bench_table_rear_left_leg_01",
+      "group": "rear_left_leg",
+      "source_shells": [
+        8,
+        45
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        1.1952000260353088,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000061988830566,
+        0.6365000046789646
+      ]
     },
     {
-      "file": "base_part_010.stl",
-      "sha256": "0d14e74735c36c7b22581f22a4b76abe323c3c316d29642343f586036c7faf0e"
+      "name": "bench_table_rear_left_leg_02",
+      "group": "rear_left_leg",
+      "source_shells": [
+        30
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_rear_left_leg_02.stl",
+      "sha256": "fbae6fba3988789d80979b1aa84630a57ebc583b5a48be3e32b1d028fa8b73c6"
     },
     {
-      "file": "base_part_011.stl",
-      "sha256": "fcfd86357d954089262f9109879ffb75f24550479529f6a3e21d44619a9900cd"
+      "name": "bench_table_front_right_leg_01",
+      "group": "front_right_leg",
+      "source_shells": [
+        9,
+        50
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.05519999749958515,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.05999999865889549,
+        0.6365000046789646
+      ]
     },
     {
-      "file": "base_part_012.stl",
-      "sha256": "545d610fcf2bc509fa40907b3a0bc9618a5d45463ca5bbabbd3a81bf50b9ca8b"
+      "name": "bench_table_front_right_leg_02",
+      "group": "front_right_leg",
+      "source_shells": [
+        33
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_front_right_leg_02.stl",
+      "sha256": "b41c3d904a4082f41d01e6fa213c1c5cfe821c36d3fb9d76b5bb3c0fa19c4acd"
     },
     {
-      "file": "base_part_013.stl",
-      "sha256": "d35e870eaaad3b543f0255530f544cb2604153db3716216cbd7c1c2857544af6"
+      "name": "bench_table_rear_right_leg_01",
+      "group": "rear_right_leg",
+      "source_shells": [
+        10,
+        51
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        0.05519999749958515,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.05999999865889549,
+        0.6365000046789646
+      ]
     },
     {
-      "file": "base_part_014.stl",
-      "sha256": "6ff445f90fc3a3de15b1908bd07083b8c753ade6b960ed62194a85a772634316"
+      "name": "bench_table_rear_right_leg_02",
+      "group": "rear_right_leg",
+      "source_shells": [
+        32
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_rear_right_leg_02.stl",
+      "sha256": "1f7b5c9cb1b342a15056f476d283ecc43b0b1d86a485bfabba1031d29d129087"
     },
     {
-      "file": "base_part_015.stl",
-      "sha256": "01b94dab4be43a9a7394b17bca37974f8d861687e5921982b8adcdd71bb9ab80"
+      "name": "bench_table_shelf_left",
+      "group": "shelf_left",
+      "source_shells": [
+        11
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_shelf_left.stl",
+      "sha256": "9f936dabbdce1706bf3e468968fcec4f81e0d835e83701ed44c8ecaf823051ac"
     },
     {
-      "file": "base_part_016.stl",
-      "sha256": "765eef7b1e6f92848e3fd9c1196f130ef6fcb426756f94603fead23cfa547c0f"
+      "name": "bench_table_shelf_right",
+      "group": "shelf_right",
+      "source_shells": [
+        12
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_shelf_right.stl",
+      "sha256": "528eaf05184f6b95bb521f14e7167219b06e11f5686e2a70d21bbc81e5ab0182"
     },
     {
-      "file": "base_part_017.stl",
-      "sha256": "8136c976f750ae0f6344bca1be6b191025a1bfd368f1c72f8dcaf9e6b9030a36"
+      "name": "bench_table_side_panel_right",
+      "group": "side_panel_right",
+      "source_shells": [
+        13
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_side_panel_right.stl",
+      "sha256": "9a88658948e44661e46d426411d8f94a41d9534d964045f9ea1c58b44821cb7f"
     },
     {
-      "file": "base_part_018.stl",
-      "sha256": "954f97137ecb3277f110e8fc03fbf62b0d321b5fde81c6d67567a8b7dd436c5a"
+      "name": "bench_table_side_panel_left",
+      "group": "side_panel_left",
+      "source_shells": [
+        14
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_side_panel_left.stl",
+      "sha256": "0d44fd619d1030ecfbaa878cbca801280b44e8405d72e785391fef56eb879e0d"
     },
     {
-      "file": "base_part_019.stl",
-      "sha256": "aa354ad9b4ed90f9590b86e422d7b54f13adc79548041cbd067f8fc666880529"
+      "name": "bench_table_upper_rail_left",
+      "group": "upper_rail_left",
+      "source_shells": [
+        15
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        1.1952000260353088,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.060000061988830566,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_020.stl",
-      "sha256": "d59e463ea6bec2d0359331e2218066b8f605c83655a2e969815b45b68250fc35"
+      "name": "bench_table_lower_rail_left",
+      "group": "lower_rail_left",
+      "source_shells": [
+        16
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        1.1952000260353088,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.060000061988830566,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_021.stl",
-      "sha256": "76f13e3a0b8f489d23ceb098fe30d891d970084cdb498c7e7f746acc8d074038"
+      "name": "bench_table_upper_rail_right",
+      "group": "upper_rail_right",
+      "source_shells": [
+        17
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.055199998430907726,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.05999999679625034,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_022.stl",
-      "sha256": "9145ad75d32232081fe82b65d0f4ea48f8aeade2ac2f477d2bb8b796256cfa88"
+      "name": "bench_table_lower_rail_right",
+      "group": "lower_rail_right",
+      "source_shells": [
+        18
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.055199998430907726,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.05999999679625034,
+        0.06000000238418579
+      ]
     },
     {
-      "file": "base_part_023.stl",
-      "sha256": "5b11ab1da03e3759b97aa925596290d38055d1016140f9b5e97609c612a21374"
+      "name": "bench_table_shelf_rail_left",
+      "group": "shelf_rail_left",
+      "source_shells": [
+        19
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.7952000200748444,
+        0.2021549940109253
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.06000000238418579,
+        0.030000001192092896
+      ]
     },
     {
-      "file": "base_part_024.stl",
-      "sha256": "1313a4b7446ac0e6e9af774563cf9a65ebf14a6319d643d332226559e7be18fa"
+      "name": "bench_table_shelf_rail_right",
+      "group": "shelf_rail_right",
+      "source_shells": [
+        20
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.4551999866962433,
+        0.2021549940109253
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.06000000238418579,
+        0.030000001192092896
+      ]
     },
     {
-      "file": "base_part_025.stl",
-      "sha256": "15a607ede02203ae06dd494b6f8395f433f59fe15cf92a4692c651418dcb6ff9"
+      "name": "bench_table_mount_crossbar",
+      "group": "mount_crossbar",
+      "source_shells": [
+        21
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.00025,
+      "file": "bench_table_mount_crossbar.stl",
+      "sha256": "9de07d60872a5e1cba09e7d7cfa911fc41f533bce234f7902a7a72cbad3a9f67"
     },
     {
-      "file": "base_part_026.stl",
-      "sha256": "9ec0c68e0eb926417998b1a38b2272573974a5062446730c311a410c21e8a967"
+      "name": "bench_table_mount_right",
+      "group": "mount_right",
+      "source_shells": [
+        34
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.00025,
+      "file": "bench_table_mount_right.stl",
+      "sha256": "76e592fe09bb73573628aa19233433d45a506fa6e59c039582ae81ce50fdbbae"
     },
     {
-      "file": "base_part_027.stl",
-      "sha256": "adac03259d0b87afe94925a9ef9b75a99d7bc582ba859ccc13b576e6169ece28"
+      "name": "bench_table_mount_left",
+      "group": "mount_left",
+      "source_shells": [
+        35
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.00025,
+      "file": "bench_table_mount_left.stl",
+      "sha256": "8dd9b21973c72b953cb4839d0f782dc6573824c7713bfad083b784f90cdc88ca"
     },
     {
-      "file": "base_part_028.stl",
-      "sha256": "b9352cf2e2eb45ae31f0c5b0078ae3e3b8752d65409e4b34d2732dfb34943981"
+      "name": "bench_table_caster_rear_left_01",
+      "group": "caster_rear_left",
+      "source_shells": [
+        22
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_01.stl",
+      "sha256": "bb5d51bc6cd3b6149ca51811afb21cc8f5ef07e1e1492f8952d3ec213e3e64c9"
     },
     {
-      "file": "base_part_029.stl",
-      "sha256": "6b43911a4d3bc5f3a91e1088e0afd056343401cdabb315413d6ae9f2d74f7d1c"
+      "name": "bench_table_caster_rear_left_02",
+      "group": "caster_rear_left",
+      "source_shells": [
+        26
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_02.stl",
+      "sha256": "1b1e94a9c38a65cd0638c6945fe6f55dfb553e6f0ef1fd6d3a0035fd224c65c3"
     },
     {
-      "file": "base_part_030.stl",
-      "sha256": "50991850765dd079cef1cd75e49c80dd84abdf3691b683e73072639383a81bec"
+      "name": "bench_table_caster_rear_left_03",
+      "group": "caster_rear_left",
+      "source_shells": [
+        37
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_03.stl",
+      "sha256": "e70e1a69a454ee0df6b004ed7e12849826bdb19dedefa089282c721816e02c04"
     },
     {
-      "file": "base_part_031.stl",
-      "sha256": "31f2c5d436fc233d16c6f360894fa1b87978ba62c5dde82cb94ce0c8c3601c7b"
+      "name": "bench_table_caster_rear_left_04",
+      "group": "caster_rear_left",
+      "source_shells": [
+        43
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_04.stl",
+      "sha256": "b40ec19139841f802c375e14c8e4ab41cb7a32c224b11b4d07fc653199c2bc8a"
     },
     {
-      "file": "base_part_032.stl",
-      "sha256": "f6fb31e4cea2ded4677b608cf47957c9b180f4c9fc9a6109abec8d49f7774e83"
+      "name": "bench_table_caster_rear_left_05",
+      "group": "caster_rear_left",
+      "source_shells": [
+        47
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341498211026192,
+        0.9852000176906586,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.059999994933605194,
+        0.06000000238418579,
+        0.011500000953674316
+      ]
     },
     {
-      "file": "base_part_033.stl",
-      "sha256": "06ead0ae5ca863aeda72446f285dd78bee68f33fd036cc1ed57a321904e9f060"
+      "name": "bench_table_caster_rear_right_01",
+      "group": "caster_rear_right",
+      "source_shells": [
+        23
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_01.stl",
+      "sha256": "b140a6fc0b002183b591079c108ab6a1b5631f41daa6fc36713769f6822a11e3"
     },
     {
-      "file": "base_part_034.stl",
-      "sha256": "9a2fdd0e527676734c930112d9390b0e2452cc127610a4a9b752fb0a00feb2fb"
+      "name": "bench_table_caster_rear_right_02",
+      "group": "caster_rear_right",
+      "source_shells": [
+        29
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_02.stl",
+      "sha256": "354ea2d490bc59f90c5da81317baee4fae69805f1a27bf28c591c2498ae4f72f"
     },
     {
-      "file": "base_part_035.stl",
-      "sha256": "89d1d6f94629d04f49dcdbf13ff5c14753fb23af46d660f64278e42202ad5882"
+      "name": "bench_table_caster_rear_right_03",
+      "group": "caster_rear_right",
+      "source_shells": [
+        38
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_03.stl",
+      "sha256": "1a9822fe7d9c45c3f0ecaef8183e5b69f1b3593c2d7b33087746f84464569605"
     },
     {
-      "file": "base_part_036.stl",
-      "sha256": "576a04890bfccca1e7af4144279ced9e91ad9472f90be98bc7108b7d4826f622"
+      "name": "bench_table_caster_rear_right_04",
+      "group": "caster_rear_right",
+      "source_shells": [
+        42
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_04.stl",
+      "sha256": "b0e89ca465803403daf6143b61a60fbf5291087d02ef6931f0081abcff4e8599"
     },
     {
-      "file": "base_part_037.stl",
-      "sha256": "d6c63f19c183d7648d77753f3e0ff05254090c574b39820163790dd9346fc84d"
+      "name": "bench_table_caster_rear_right_05",
+      "group": "caster_rear_right",
+      "source_shells": [
+        49
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341498211026192,
+        0.2651999965310097,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.059999994933605194,
+        0.0599999874830246,
+        0.011500000953674316
+      ]
     },
     {
-      "file": "base_part_038.stl",
-      "sha256": "fd7bffc743cd0a90508bd1b661d4b4accc562ac3201fcb08cb5371a026362eda"
+      "name": "bench_table_caster_front_right_01",
+      "group": "caster_front_right",
+      "source_shells": [
+        24
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_01.stl",
+      "sha256": "cd0747bed71fc66280ee3592c5dc4e2b47ce6b12ec084a5af299db0d1d492bc2"
     },
     {
-      "file": "base_part_039.stl",
-      "sha256": "504aa4fbac6747179abfe195f61e3424b2e9d2cace4585ab7df6fcc5edafd5bc"
+      "name": "bench_table_caster_front_right_02",
+      "group": "caster_front_right",
+      "source_shells": [
+        27
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_02.stl",
+      "sha256": "a9a13ebd023d383b68b05d03c9e7fc44edabc165059bd4c78d5d25875b29c29b"
     },
     {
-      "file": "base_part_040.stl",
-      "sha256": "fb1e69a59abf10207ec4a14b43d715ad867979b535c4b8ba65b3176fc58f7d68"
+      "name": "bench_table_caster_front_right_03",
+      "group": "caster_front_right",
+      "source_shells": [
+        36
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_03.stl",
+      "sha256": "14b243adfe8d5ec91f0fd43ce3704542aa6374b6d46feecf731d820f125547be"
     },
     {
-      "file": "base_part_041.stl",
-      "sha256": "f61c1e47870e234dda19464fd7b4e0b0bf8be45b4eaf1439c9bbbe9dab2ed68c"
+      "name": "bench_table_caster_front_right_04",
+      "group": "caster_front_right",
+      "source_shells": [
+        40
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_04.stl",
+      "sha256": "097fc7225468c06e1d1502b01bc26b4e8171f5cb470a9b7b0dbc468eba2c870c"
     },
     {
-      "file": "base_part_042.stl",
-      "sha256": "7e2dff53a288a008bd99e040cf1eac04c57da7d0a4e2ba82a854e726e5f01260"
+      "name": "bench_table_caster_front_right_05",
+      "group": "caster_front_right",
+      "source_shells": [
+        48
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.2651999965310097,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.0599999874830246,
+        0.011500000953674316
+      ]
     },
     {
-      "file": "base_part_043.stl",
-      "sha256": "464e2b4e541c99dfb97a6ce1dd8d12135289f23220c05fc9d62b2757223d3aef"
+      "name": "bench_table_caster_front_left_01",
+      "group": "caster_front_left",
+      "source_shells": [
+        25
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_01.stl",
+      "sha256": "e68ea2fd09f834ff8a4df97ee32d66401a401a16c5ba7f3beeeb529b95728ae5"
     },
     {
-      "file": "base_part_044.stl",
-      "sha256": "240a088900a8f2ff34923e11c95dcd94c614da152afe1c43c2f6155ecef0d584"
+      "name": "bench_table_caster_front_left_02",
+      "group": "caster_front_left",
+      "source_shells": [
+        28
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_02.stl",
+      "sha256": "5cc69afc821842dafe1690d23d8b430dc42f86823c3a56a8f3e4e2b6a14b293d"
     },
     {
-      "file": "base_part_045.stl",
-      "sha256": "efb5381b78f604c6d5adfef07ff8c562a9be3fb2f61dfaf659e2672793e73aa2"
+      "name": "bench_table_caster_front_left_03",
+      "group": "caster_front_left",
+      "source_shells": [
+        39
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_03.stl",
+      "sha256": "8eb5b032830cccd129b2bdadd1cbdce8965a54e9e531fe73675c155d7a5c3a5f"
     },
     {
-      "file": "base_part_046.stl",
-      "sha256": "4d7204096a7ce7db07bb960f792f22b6c768b14c152f48e12fcb4b43aef11cc3"
+      "name": "bench_table_caster_front_left_04",
+      "group": "caster_front_left",
+      "source_shells": [
+        41
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_04.stl",
+      "sha256": "4102926abb05314724c7fc37abeac9311138dc8440cc427a811bcd416f0f2324"
     },
     {
-      "file": "base_part_047.stl",
-      "sha256": "2625a6c34521f6305ceec067b54a9f0d7cef867d1df0dc7fb898a04d75407ad5"
-    },
-    {
-      "file": "base_part_048.stl",
-      "sha256": "14ef33cda2ae87a0c64d85a386564794772a08b8073ab8e1c396ce934fc907ce"
-    },
-    {
-      "file": "base_part_049.stl",
-      "sha256": "dc959fdf9fba9b7f8dfb6b9022ac1b921d097e6b6f3d3adf0ca86c4dd0742127"
-    },
-    {
-      "file": "base_part_050.stl",
-      "sha256": "9ded306a0f8a8a050e71c1067d0566cf1663747053f6af609b206d6630195ef0"
-    },
-    {
-      "file": "base_part_051.stl",
-      "sha256": "f990c142c04342739fc04ef9a0e4922acc00bf1e71121eb61bf796fb734c30f9"
+      "name": "bench_table_caster_front_left_05",
+      "group": "caster_front_left",
+      "source_shells": [
+        46
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.9852000176906586,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.06000000238418579,
+        0.011500000953674316
+      ]
     }
   ]
 }

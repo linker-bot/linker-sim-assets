@@ -6,7 +6,7 @@ components:
   base:
     name: bases/p7_torso
     variant: default
-    sha256: 6dbb9178f8f877ce76b79871d591bb6455de731c0ea0da387024b7086bd3b2b2
+    sha256: 771e2393754ff28b1b73078d0252005dc951b9b098d018731efc9741837b13d4
   arm_left:
     name: arms/p7
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: e729bf6aa477ad744df9292a132dca86494e35491d8e8a126cc45e18376436db
-  mjcf_sha256: 86edddf6d5d89adf46d7343b9e3c474887b94bf9f2734ea840f915ba5c96497c
+  urdf_sha256: ccfbf319988dd62ff55f389430eca12f2ea06f96e037db5dd0b74e06cfe02f4b
+  mjcf_sha256: 1c9499c9dc521b7bd7813dba7d46f8a46880cdaa5c5fbb8fe8def15163ebf1fb
 joints:
   base: []
   arm_left:

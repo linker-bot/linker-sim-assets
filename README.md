@@ -35,7 +35,7 @@ Both `units/` and `workstations/` hold composed, loadable `workstation.urdf` + `
 | Profile | What you get | Pulls |
 |---|---|---|
 | `pip install linker-robot-assets` | Loader API + bundled assets. | `pyyaml` |
-| `pip install linker-robot-assets[authoring]` | Plus composer + validators. | `mujoco`, `numpy` |
+| `pip install linker-robot-assets[authoring]` | Plus composer + validators. | `mujoco`, `numpy`, `trimesh`, `scipy` |
 
 The runtime profile is intentionally light so consumers (e.g. `linker-sim`'s registry) only pay for `pyyaml`. Authoring tools are gated behind `[authoring]`.
 
@@ -87,14 +87,33 @@ Run `just test` with an authoring environment (`PYTHON=/path/to/python just test
 to select it). This compiles every generated MJCF, checks drift, and verifies
 with real MuJoCo contacts that distant links remain collidable.
 
-The A7, A7 Lite, P7 and bench bases use one convex hull per connected CAD shell
-instead of a single hull spanning the entire structure. Hulls wholly contained
-in another hull are removed; open planar patches receive 0.1 mm thickness.
-This retains source surfaces while preserving the gaps between structural parts.
-Each base's `collision_manifest.json` records source and output hashes,
-approximations, authoring versions, and a fingerprint of the unchanged visual,
-inertial and kinematic XML. These are conservative collision approximations,
-not detailed screw-hole or material-deformation models.
+The A7, A7 Lite, P7 and bench bases use named collision assemblies: housing,
+column supports, frame rails, mounting plates, casters and leveling feet. Simple
+parts use native boxes/cylinders; shaped parts retain separate convex meshes.
+A concave assembly must not be concatenated into one mesh: consumers that take
+its convex hull would refill its gaps.
+
+Each base's `collision_groups.yaml` assigns pinned source CAD shells to semantic
+parts. Source and hull-order hashes prevent silently reusing assignments after a
+CAD/toolchain change. The generator verifies every source hull is retained and
+each entire fitted solid is within its **original** assembly's distance bound:
+2 mm for structural parts, 1 mm for upper bodies, 0.25 mm for bench arm mounts.
+Bounds do not accumulate across merges. Inconclusive coverage checks reject the
+fit. These are additional-error limits relative to the prior per-shell hulls,
+not tolerances to physical hardware. Existing shell convexification, including
+0.1 mm thickness for planar patches and filled screw holes, remains approximate.
+
+`collision_manifest.json` records part membership, output hashes, geometry and
+the unchanged visual/inertial/kinematic fingerprint. Mesh names express the base
+and physical part; a local numeric suffix only distinguishes necessary convex
+pieces within one assembly. Visual meshes, bodies, joints and mass are unchanged.
+
+| Base | Previous meshes | Named collision shapes | Mesh files | Native primitives |
+| --- | ---: | ---: | ---: | ---: |
+| Bench | 52 | 48 | 29 | 19 |
+| A7 | 135 | 64 | 61 | 3 |
+| A7 Lite | 260 | 127 | 93 | 34 |
+| P7 | 198 | 139 | 64 | 75 |
 
 To regenerate the four base colliders in an isolated authoring environment:
 
@@ -103,7 +122,9 @@ uv run --no-project --with trimesh==4.11.1 --with scipy==1.17.0 --with numpy==2.
   python scripts/build_base_collisions.py a7_torso a7_lite_torso p7_torso bench_table
 ```
 
-Then recompose the affected workstations and run `just test`. Replacing collision
+Run `just check-base-collisions` with the same Python to repeat the geometric
+and output-drift checks. Then recompose the affected workstations and run
+`just test`. Replacing collision
 meshes does not change visual geometry, joint frames, mass or inertia. It does
 change contact response where the previous hull filled empty space or broad
 filters hid actual collisions.

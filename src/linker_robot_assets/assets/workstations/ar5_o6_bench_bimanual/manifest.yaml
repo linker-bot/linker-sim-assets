@@ -6,7 +6,7 @@ components:
   base:
     name: bases/bench_table
     variant: default
-    sha256: 5849d93ad1e6033fcc398ceca56325d9c7ae0c1a72314fe51e504a82fe191fcd
+    sha256: 960193fff00aa911a5fe03eb5db2d6abd8ea77e2f237060ba6c03e18fcddbd3d
   arm_left:
     name: arms/ar5
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 9bec42c9b182bea3f3ba3589dc0d7308b9d9ff7a183f7f352824ffdfc306b2d1
-  mjcf_sha256: 730676bb5b47b9306e077364f0399ea3af6847c4e92f00de54a8a7d7a984017d
+  urdf_sha256: 72987b88d21bc505df7b3c222246c2884dc376a502939e9adc315db707b6a125
+  mjcf_sha256: 9fc776ee77d294b8a1fc4d4e67c6c2293cb00fe899d1373ed35c2c700d515b9b
 joints:
   base: []
   arm_left:
