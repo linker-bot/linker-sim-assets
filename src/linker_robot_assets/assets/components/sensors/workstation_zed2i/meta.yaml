@@ -1,0 +1,17 @@
+schema_version: 1
+kind: sensor
+name: workstation_zed2i
+variants:
+  default:
+    vars: {}
+    urdf: variants/default/component.urdf
+    mjcf: variants/default/component.mjcf
+    meshdir: variants/default/meshes
+root_link: camera_base_link
+mount_frames:
+  base_mount:
+    parent: camera_base_link
+  left_optical:
+    parent: left_optical
+  right_optical:
+    parent: right_optical

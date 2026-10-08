@@ -1,12 +1,12 @@
 schema_version: 1
 name: ar5_08_l25_bench_bimanual
 composer_version: 0.1.0
-recipe_sha256: 910bc901a15a140e7e3bcb8e6aa5b8003a24ad16a89c4761c619599befaf52ca
+recipe_sha256: 3659a6a39b676ee9e1a75c25ecc55321e2f4b9829af9845f080ddae28a1f93cb
 components:
   base:
     name: bases/bench_table
     variant: default
-    sha256: 960193fff00aa911a5fe03eb5db2d6abd8ea77e2f237060ba6c03e18fcddbd3d
+    sha256: 308f87323bd1a5b57eec66c62f2628b0f5957b2de5360611ac0015c459fd3c06
   arm_left:
     name: arms/ar5_08
     variant: left
@@ -23,11 +23,15 @@ components:
     name: hands/linkerhand_l25
     variant: right
     sha256: 333fce941701b069b97bb5805f128e778c54b524c6dcd72531d8bd2d7822fd62
+  top_camera:
+    name: sensors/workstation_zed2i
+    variant: default
+    sha256: aa144054f74d67067529f38bae87b49d85ded8e47473265142327d4142816e92
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: f2d9ea1d190458520528449cbdf8dc2759d5ec5844bee467f89de4ae356d5d1a
-  mjcf_sha256: 6eafa4df8e6a3d7971deed723779f7150b73bd702d930af6e241f47f51532cfa
+  urdf_sha256: f1af43fe279298a86d76961ac99a64ea4b68e5c54b041230e2a750a2e7dba368
+  mjcf_sha256: 6e340bd46099d2ffb8e24180a991cbb79af649dc57be0a0bcc9fd09ccb7c41a1
 joints:
   base: []
   arm_left:
@@ -80,6 +84,7 @@ joints:
   - hand_right_rh_pinky_mcp_roll
   - hand_right_rh_pinky_mcp_pitch
   - hand_right_rh_pinky_pip
+  top_camera: []
 mimic_joints:
   base: []
   arm_left: []
@@ -96,16 +101,20 @@ mimic_joints:
   - hand_right_rh_middle_dip
   - hand_right_rh_ring_dip
   - hand_right_rh_pinky_dip
+  top_camera: []
 frames:
   base:arm_left_mount: base_workstation_arm_left_mount
   base:arm_right_mount: base_workstation_arm_right_mount
-  base:camera_mount: base_camera_base_link
+  base:camera_mount: base_workstation_camera_mount
   arm_left:base_mount: arm_left_AR5_5_08L_W4C4A6_base
   arm_left:tool0: arm_left_AR5_5_08L_W4C4A6_tcp
   arm_right:base_mount: arm_right_AR5_5_08R_W4C4A6_base
   arm_right:tool0: arm_right_AR5_5_08R_W4C4A6_tcp
   hand_left:wrist_mount: hand_left_lh_hand_base_link
   hand_right:wrist_mount: hand_right_rh_hand_base_link
+  top_camera:base_mount: top_camera_camera_base_link
+  top_camera:left_optical: top_camera_left_optical
+  top_camera:right_optical: top_camera_right_optical
 ee_link: arm_left_AR5_5_08L_W4C4A6_tcp
 ee_links:
   arm_left: arm_left_AR5_5_08L_W4C4A6_tcp

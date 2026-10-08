@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "mass_kg": 0.133,
+  "virtual_frame_mass_kg": 5e-09,
+  "inertia_method": "known total mass; conservative shell bounding box; COM/inertia not measured",
+  "length_unit": "m",
+  "collision_method": "camera CAD convex hull; slanted shell corners retained",
+  "collision_part_count": 1,
+  "collision_limits": "conservative approximation; small fastener holes may be filled; not a fastener insertion model",
+  "visual_sha256": {
+    "gemini335l": "84b0fc3eae79b57dd8572157129bb98303b82e18c6dd2929c59ccc41dcddf604"
+  },
+  "collision_sha256": {
+    "collision/part_000.stl": "db1c57ea19f327e06c4760965e6400bbaec49237a0ff6bbfe69e51cc754244ac"
+  },
+  "authoring_versions": {
+    "numpy": "2.3.1",
+    "scipy": "1.17.0",
+    "trimesh": "4.11.1"
+  },
+  "source": {
+    "description": "Hardware-owner supplied CAD; assembly reviewed against arm/hand mounting faces",
+    "input_length_unit": "mm",
+    "scale_to_m": 0.001,
+    "input_sha256": {
+      "\u6cd5\u5170\u88c5\u914d.STL": "9fce31dd61d60c39c5c91db87070c3fd7d5674b0a67bc686cad9defdb8bc4ab8",
+      "335L.STL": "01057f50fb9908be9ae9cee71306e402b42bbcd29d5d395d8b8183aa4d43879c",
+      "O6-\u8155\u90e8\u76f8\u673a-\u5965\u6bd4\u4e2d\u5149335L-\u5de6\u624b.STL": "9d20940ddefa84e2c2fbe84a37670b75f2eef8eb7047e87c091c78152f308eea",
+      "O6-\u8155\u90e8\u76f8\u673a-\u5965\u6bd4\u4e2d\u5149335L-\u53f3\u624b.STL": "9b7e2e956ae729da273e228320598f5c5ddd5edf0128117935051e6616b449a9",
+      "\u6cd5\u5170\u88c5\u914d+\u76f8\u673a\u652f\u67b6\u88c5\u914d\u4f53\u6587\u4ef6.STL": "9ccb581139a4e3ce6cc4560a1326451fad76e88fd3316766200ced6132c32d11",
+      "\u6cd5\u5170\u88c5\u914d+\u76f8\u673a\u652f\u67b6\u88c5\u914d\u4f53\u6587\u4ef62.STL": "85efbcf81d8d3d9403dfabbd95f0646a06fe3481d4ef5baf3abcf3e772269d79"
+    },
+    "transforms_apply_after_scaling": true,
+    "cad_to_component": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.00408
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.0475
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "mass_source": "Orbbec Gemini 335L product specification: 133 g",
+    "product_url": "https://www.orbbec.com/products/stereo-vision-camera/gemini-335l/",
+    "nominal_frames_url": "https://github.com/orbbec/OrbbecSDK_ROS2/blob/8e7cad2bfa2c4a6ac4e779be99c64e72166043af/orbbec_description/urdf/gemini_335_L_336_L.urdf.xacro",
+    "vendor_shell_registration": {
+      "nearest_vertex_rms_m": 0.0002145,
+      "nearest_vertex_median_m": 1.08e-05,
+      "depth_center_in_cad_mm": [
+        47.5,
+        0,
+        -4.08
+      ],
+      "vendor_mesh_committed": false
+    },
+    "calibration_status": "nominal CAD/vendor reference; not device calibration",
+    "optical_axes": "OpenCV: X right, Y down, Z forward"
+  }
+}

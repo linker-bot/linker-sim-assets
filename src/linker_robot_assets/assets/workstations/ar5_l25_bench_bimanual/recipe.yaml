@@ -1,13 +1,12 @@
 schema_version: 1
 name: ar5_l25_bench_bimanual
-description: >
-  Bimanual AR5 + Linkerhand L25 workstation. Two AR5 arms mounted to the
-  bench's left/right pads, each carrying its own Linkerhand L25 (16
-  actuated + 5 mimic, mirrored meshes). Single composed URDF -> single
-  articulation; roles arm_left / arm_right / hand_left /
-  hand_right are addressable through `Robot.joint_ids_of(role)` and the
-  manifest's per-role ee_links.
+description: 'Bimanual AR5 + Linkerhand L25 workstation. Two AR5 arms mounted to the
+  bench''s left/right pads, each carrying its own Linkerhand L25 (16 actuated + 5
+  mimic, mirrored meshes). Single composed URDF -> single articulation; roles arm_left
+  / arm_right / hand_left / hand_right are addressable through `Robot.joint_ids_of(role)`
+  and the manifest''s per-role ee_links.
 
+  '
 components:
   base:
     component: bases/bench_table
@@ -24,37 +23,48 @@ components:
   hand_right:
     component: hands/linkerhand_l25
     variant: right
-
+  top_camera:
+    component: sensors/workstation_zed2i
+    variant: default
 freeze_base: base
-
 mounts:
-  - child: arm_left:base_mount
-    parent: base:arm_left_mount
-    xyz: [0.0, 0.0, 0.0]
-    rpy: [0.0, 0.0, 0.0]
-  - child: arm_right:base_mount
-    parent: base:arm_right_mount
-    xyz: [0.0, 0.0, 0.0]
-    rpy: [0.0, 0.0, 0.0]
-  - child: hand_left:wrist_mount
-    parent: arm_left:tool0
-    xyz: [0.0, 0.0, 0.03]
-    rpy: [0.0, 0.0, 1.5708]
-  - child: hand_right:wrist_mount
-    parent: arm_right:tool0
-    xyz: [0.0, 0.0, 0.03]
-    rpy: [0.0, 0.0, -1.5708]
-
+- child: arm_left:base_mount
+  parent: base:arm_left_mount
+  xyz: [0.0, 0.0, 0.0]
+  rpy: [0.0, 0.0, 0.0]
+- child: arm_right:base_mount
+  parent: base:arm_right_mount
+  xyz: [0.0, 0.0, 0.0]
+  rpy: [0.0, 0.0, 0.0]
+- child: hand_left:wrist_mount
+  parent: arm_left:tool0
+  xyz: [0.0, 0.0, 0.03]
+  rpy: [0.0, 0.0, 1.5708]
+- child: hand_right:wrist_mount
+  parent: arm_right:tool0
+  xyz: [0.0, 0.0, 0.03]
+  rpy: [0.0, 0.0, -1.5708]
+- child: top_camera:base_mount
+  parent: base:camera_mount
+  xyz: [0, 0, 0]
+  rpy: [0, 0, 0]
 collision_exclusions:
 - body1: base:workstation_link
   body2: arm_left:AR5_5_07L_W4C4A2_base
-  reason: Installation seam at base:arm_left_mount -> arm_left:base_mount; other links remain collidable.
+  reason: Installation seam at base:arm_left_mount -> arm_left:base_mount; other links
+    remain collidable.
 - body1: base:workstation_link
   body2: arm_right:AR5_5_07R_W4C4A2_base
-  reason: Installation seam at base:arm_right_mount -> arm_right:base_mount; other links remain collidable.
+  reason: Installation seam at base:arm_right_mount -> arm_right:base_mount; other
+    links remain collidable.
 - body1: arm_left:AR5_5_07L_W4C4A2_link7
   body2: hand_left:lh_hand_base_link
-  reason: Installation seam at arm_left:tool0 -> hand_left:wrist_mount; other links remain collidable.
+  reason: Installation seam at arm_left:tool0 -> hand_left:wrist_mount; other links
+    remain collidable.
 - body1: arm_right:AR5_5_07R_W4C4A2_link7
   body2: hand_right:rh_hand_base_link
-  reason: Installation seam at arm_right:tool0 -> hand_right:wrist_mount; other links remain collidable.
+  reason: Installation seam at arm_right:tool0 -> hand_right:wrist_mount; other links
+    remain collidable.
+- body1: base:workstation_link
+  body2: top_camera:camera_base_link
+  reason: Top stand is bolted to the bench crossbar; camera housing remains collidable.

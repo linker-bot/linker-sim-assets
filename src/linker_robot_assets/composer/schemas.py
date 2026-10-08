@@ -45,7 +45,7 @@ def _load_yaml(path: Path) -> dict:
 # ----------------------------- Component meta ------------------------------ #
 
 
-ComponentKind = Literal["arm", "hand", "base", "sensor"]
+ComponentKind = Literal["arm", "hand", "base", "sensor", "attachment"]
 DriveMode = Literal["position", "velocity", "effort"]
 
 
@@ -146,9 +146,9 @@ class ComponentMeta:
         d = _load_yaml(path)
         where = str(path)
         kind = _require(d, "kind", where)
-        if kind not in ("arm", "hand", "base", "sensor"):
+        if kind not in ("arm", "hand", "base", "sensor", "attachment"):
             raise SchemaError(
-                f"{where}.kind: must be one of arm|hand|base|sensor, got {kind!r}"
+                f"{where}.kind: must be one of arm|hand|base|sensor|attachment, got {kind!r}"
             )
 
         variants_raw = _require(d, "variants", where)

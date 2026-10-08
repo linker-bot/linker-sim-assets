@@ -1,0 +1,74 @@
+<mujoco model="ar5_08_gemini335l_bracket">
+  <compiler meshdir="meshes" discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <option />
+  <default>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="bracket" file="bracket.stl" />
+    <mesh name="collision_000" file="collision/part_000.stl" />
+    <mesh name="collision_001" file="collision/part_001.stl" />
+    <mesh name="collision_002" file="collision/part_002.stl" />
+    <mesh name="collision_003" file="collision/part_003.stl" />
+    <mesh name="collision_004" file="collision/part_004.stl" />
+    <mesh name="collision_005" file="collision/part_005.stl" />
+    <mesh name="collision_006" file="collision/part_006.stl" />
+    <mesh name="collision_007" file="collision/part_007.stl" />
+    <mesh name="collision_008" file="collision/part_008.stl" />
+    <mesh name="collision_009" file="collision/part_009.stl" />
+    <mesh name="collision_010" file="collision/part_010.stl" />
+    <mesh name="collision_011" file="collision/part_011.stl" />
+    <mesh name="collision_012" file="collision/part_012.stl" />
+    <mesh name="collision_013" file="collision/part_013.stl" />
+    <mesh name="collision_014" file="collision/part_014.stl" />
+    <mesh name="collision_015" file="collision/part_015.stl" />
+    <mesh name="collision_016" file="collision/part_016.stl" />
+    <mesh name="collision_017" file="collision/part_017.stl" />
+    <mesh name="collision_018" file="collision/part_018.stl" />
+    <mesh name="collision_019" file="collision/part_019.stl" />
+    <mesh name="collision_020" file="collision/part_020.stl" />
+    <mesh name="collision_021" file="collision/part_021.stl" />
+    <mesh name="collision_022" file="collision/part_022.stl" />
+    <mesh name="collision_023" file="collision/part_023.stl" />
+  </asset>
+  <worldbody>
+    <body name="bracket_link">
+      <inertial pos="-0.0170487660201 0.0186601157923 0.0113802096453" mass="0.028999999" fullinertia="2.85171737126e-05 1.38172566519e-05 4.09646461979e-05 4.30768571317e-06 -6.26627363413e-07 3.65694809287e-07" />
+      <geom class="visual" mesh="bracket" rgba="0.25 0.28 0.32 1" />
+      <geom class="collision" mesh="collision_000" />
+      <geom class="collision" mesh="collision_001" />
+      <geom class="collision" mesh="collision_002" />
+      <geom class="collision" mesh="collision_003" />
+      <geom class="collision" mesh="collision_004" />
+      <geom class="collision" mesh="collision_005" />
+      <geom class="collision" mesh="collision_006" />
+      <geom class="collision" mesh="collision_007" />
+      <geom class="collision" mesh="collision_008" />
+      <geom class="collision" mesh="collision_009" />
+      <geom class="collision" mesh="collision_010" />
+      <geom class="collision" mesh="collision_011" />
+      <geom class="collision" mesh="collision_012" />
+      <geom class="collision" mesh="collision_013" />
+      <geom class="collision" mesh="collision_014" />
+      <geom class="collision" mesh="collision_015" />
+      <geom class="collision" mesh="collision_016" />
+      <geom class="collision" mesh="collision_017" />
+      <geom class="collision" mesh="collision_018" />
+      <geom class="collision" mesh="collision_019" />
+      <geom class="collision" mesh="collision_020" />
+      <geom class="collision" mesh="collision_021" />
+      <geom class="collision" mesh="collision_022" />
+      <geom class="collision" mesh="collision_023" />
+      <body name="camera_mount" pos="-0.0454344910202 -0.027500000734 0.0374074526432" euler="0 -1.2217304764 3.14159265359">
+        <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
+        <site name="camera_mount" pos="0 0 0" size="0.001" />
+      </body>
+      <site name="flange_mount" pos="0 0 0" size="0.001" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,7 +1,7 @@
 schema_version: 1
 name: ar5_08_l6_l
 composer_version: 0.1.0
-recipe_sha256: 56fa8bdc4cbd29b45a6ada48fffd434f40473b483dfc7d92e112c111e4601d8a
+recipe_sha256: 42732a0a9b5c29414c0aefd1c84c70f36a3a6c6a321a21dbb7f3bd7fec07c775
 components:
   arm:
     name: arms/ar5_08
@@ -11,11 +11,15 @@ components:
     name: hands/linkerhand_l6
     variant: left
     sha256: e87b104a7b1854e7ef941e525780cedc24ee3aeda1ce13d84d9fb817af66d2ad
+  flange:
+    name: attachments/ar5_08_l6_o6_flange
+    variant: default
+    sha256: e85bd7f1e37db7ddad785a54abdf354d1995120ae89b15dc69338ce4444b5f14
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: a388d708c0fdd66b14746edd1aa24163210bec6fab8a58a534c345c84e664e8c
-  mjcf_sha256: 929e52f18b165d16e9753c878a91b823667d94c6cf1ae1f9c9318eb9a223b5b2
+  urdf_sha256: 25dbd7433461c6b02ed565c98a5660ceea9c562eae19ce7ad5a28e3fa4e30282
+  mjcf_sha256: ea8eced617c03616a3717f3ef85a55810939aed6b32c75d371f885cbac4dd77c
 joints:
   arm:
   - arm_AR5_5_08L_W4C4A6_joint_1
@@ -32,6 +36,7 @@ joints:
   - hand_lh_middle_mcp_pitch
   - hand_lh_ring_mcp_pitch
   - hand_lh_pinky_mcp_pitch
+  flange: []
 mimic_joints:
   arm: []
   hand:
@@ -40,10 +45,14 @@ mimic_joints:
   - hand_lh_middle_dip
   - hand_lh_ring_dip
   - hand_lh_pinky_dip
+  flange: []
 frames:
   arm:base_mount: arm_AR5_5_08L_W4C4A6_base
   arm:tool0: arm_AR5_5_08L_W4C4A6_tcp
   hand:wrist_mount: hand_lh_hand_base_link
+  flange:arm_mount: flange_flange_link
+  flange:hand_mount: flange_hand_mount
+  flange:bracket_mount: flange_flange_link
 ee_link: arm_AR5_5_08L_W4C4A6_tcp
 ee_links:
   arm: arm_AR5_5_08L_W4C4A6_tcp

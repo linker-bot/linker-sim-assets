@@ -1,0 +1,27 @@
+schema_version: 1
+name: workstation_zed2i
+composer_version: 0.1.0
+recipe_sha256: c488194cd93acf2a4c99c7f779bdc9c2b2040828481a7222fa6ac561b3b77b0c
+components:
+  sensor:
+    name: sensors/workstation_zed2i
+    variant: default
+    sha256: aa144054f74d67067529f38bae87b49d85ded8e47473265142327d4142816e92
+artifacts:
+  urdf: workstation.urdf
+  mjcf: workstation.xml
+  urdf_sha256: 186b8b81a196bafb2a722f32b595ec3f01cb38159672946871dc9a1be1602416
+  mjcf_sha256: ca567aca4985f298926256f168084dfdc32aa7d7dd5d354171b654c05c933901
+joints:
+  sensor: []
+mimic_joints:
+  sensor: []
+frames:
+  sensor:base_mount: sensor_camera_base_link
+  sensor:left_optical: sensor_left_optical
+  sensor:right_optical: sensor_right_optical
+ee_link: ''
+ee_links: {}
+base_link: sensor_camera_base_link
+default_gains: {}
+gain_profiles: {}

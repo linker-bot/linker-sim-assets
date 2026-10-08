@@ -1,0 +1,9 @@
+schema_version: 1
+name: workstation_zed2i
+description: Static removable top camera stand with nominal ZED 2i optical frames.
+components:
+  sensor:
+    component: sensors/workstation_zed2i
+    variant: default
+freeze_base: sensor
+mounts: []

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "mass_kg": 0.029,
+  "virtual_frame_mass_kg": 1e-09,
+  "inertia_method": "known total mass; uniform density across CAD closed solids; not measured",
+  "length_unit": "m",
+  "collision_method": "24 angular CAD sectors, convex hull per solid sector",
+  "collision_part_count": 24,
+  "collision_limits": "conservative approximation; small fastener holes may be filled; not a fastener insertion model",
+  "visual_sha256": {
+    "bracket": "00f8456df970b60d3d7dc784d161ea135a11aca75a546090a654fe0fe1f97645"
+  },
+  "collision_sha256": {
+    "collision/part_000.stl": "d2026907ec61657184c386b3b2e72db79ba5e6b04337877a404a8aa0b217a2dd",
+    "collision/part_001.stl": "34c8e923fe62e1aa2e130e7c9418bf572c96c6a1b527ce1a0b48f43e396980a9",
+    "collision/part_002.stl": "b0ff669c1b1decaf2102d13f20b2dd01f51e390bf6c075f405bc20248362e3af",
+    "collision/part_003.stl": "010d973df203bbf2ec5f0c2c3b9696e43f9d74c25b3e042dcdf56ffb5b089dea",
+    "collision/part_004.stl": "7979d2fd0427565dcf4b91b7a5726828102f5140b5f0bf014027077d7ecb33e7",
+    "collision/part_005.stl": "a6bda0845656a71c85808463c816eda055eb69088dd6fccffa60d17e2184a3ae",
+    "collision/part_006.stl": "4d5b3f2f220d0ca1f08ac47fbbceb984b00187f5b1e75591a94ddf2de87bd20f",
+    "collision/part_007.stl": "32176deb563ae368cdc1ec7ecc4317aeb676b7d03240be6dfed52e7a6b29916a",
+    "collision/part_008.stl": "d4c4efc3f49a52c7be10eab113eca22fd8d919121de7b5cbb2621806d9f3b3b1",
+    "collision/part_009.stl": "82c8011aa3cf20a27382895aa0e83ce5e46ab0d28ba54b6b5e356eb23843f875",
+    "collision/part_010.stl": "b4ceac83dc07f4372befb8043798698ccb024740fce1176f5cff7c9a3fa5df68",
+    "collision/part_011.stl": "0a61858e07e4a0f5bec7c665f1aa99347923d4e7e69065210af0720798f03383",
+    "collision/part_012.stl": "4286904ab1547b868d32a546af13031f22dbed8b4215a0eb6e46be62adbdd767",
+    "collision/part_013.stl": "add3e23e462ef63b89ca443896a2f0af36c88b5246088be0999cf4c485982d79",
+    "collision/part_014.stl": "5e7cdc9024e9d40fde523c78b5e7ded02cc1518d28b30ce77bfe1688753cf2d0",
+    "collision/part_015.stl": "e71ccd970a73afbd2146ab48cf19c8ca404544b7646d9196e8b03fe2bd7945aa",
+    "collision/part_016.stl": "6eabd58cbff27c493be4572e5b44957091aca446ca1e01bdc7905e7ba07207e8",
+    "collision/part_017.stl": "79598db6ec9d6dda607ad1510e9d2d1ed8e5326e4246812bea81106f1b28db0a",
+    "collision/part_018.stl": "12ce5481012be58560717491fba38aa360a092117375d2def79c78c3d9579e73",
+    "collision/part_019.stl": "de7c76af017a965e3d456a72db8fd606d81de9479fb2555d6cc70ed5e5aba527",
+    "collision/part_020.stl": "4e8ecc019deb15e191ef589dd4c92bf2094cc1181250d39a0ad6d14638e099b7",
+    "collision/part_021.stl": "7623cfb50ce4ebb1c0551396f1d3b88667845474e77c68280bdedcaebf6ae7ea",
+    "collision/part_022.stl": "1a4a6666a526c7e26abe9406d6c6dd5bdf08f16bb53a733fc00cd739877f2637",
+    "collision/part_023.stl": "570eccb1ca52423616cdb9079d2a8f7efd3ecbb66ea9adbd1ac4bec355dea7bf"
+  },
+  "authoring_versions": {
+    "numpy": "2.3.1",
+    "scipy": "1.17.0",
+    "trimesh": "4.11.1"
+  },
+  "source": {
+    "description": "Hardware-owner supplied CAD; assembly reviewed against arm/hand mounting faces",
+    "input_length_unit": "mm",
+    "scale_to_m": 0.001,
+    "input_sha256": {
+      "\u6cd5\u5170\u88c5\u914d.STL": "9fce31dd61d60c39c5c91db87070c3fd7d5674b0a67bc686cad9defdb8bc4ab8",
+      "335L.STL": "01057f50fb9908be9ae9cee71306e402b42bbcd29d5d395d8b8183aa4d43879c",
+      "O6-\u8155\u90e8\u76f8\u673a-\u5965\u6bd4\u4e2d\u5149335L-\u5de6\u624b.STL": "9d20940ddefa84e2c2fbe84a37670b75f2eef8eb7047e87c091c78152f308eea",
+      "O6-\u8155\u90e8\u76f8\u673a-\u5965\u6bd4\u4e2d\u5149335L-\u53f3\u624b.STL": "9b7e2e956ae729da273e228320598f5c5ddd5edf0128117935051e6616b449a9",
+      "\u6cd5\u5170\u88c5\u914d+\u76f8\u673a\u652f\u67b6\u88c5\u914d\u4f53\u6587\u4ef6.STL": "9ccb581139a4e3ce6cc4560a1326451fad76e88fd3316766200ced6132c32d11",
+      "\u6cd5\u5170\u88c5\u914d+\u76f8\u673a\u652f\u67b6\u88c5\u914d\u4f53\u6587\u4ef62.STL": "85efbcf81d8d3d9403dfabbd95f0646a06fe3481d4ef5baf3abcf3e772269d79"
+    },
+    "transforms_apply_after_scaling": true,
+    "cad_to_component": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        -2.220446049250313e-16,
+        -0.072
+      ],
+      [
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.020999999999999998
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "component_to_camera_link": [
+      [
+        -0.3420201433256687,
+        0.0,
+        0.9396926207859084,
+        -0.04543449102023127
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        -0.027500000734
+      ],
+      [
+        0.9396926207859084,
+        0.0,
+        0.3420201433256687,
+        0.03740745264319349
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "mass_source": "hardware owner: 29 g per bracket"
+  }
+}

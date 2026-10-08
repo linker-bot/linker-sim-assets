@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "source": "existing bench_table at asset revision 0da8203, supplied camera stand CAD",
+  "length_unit": "m; source mesh bytes unchanged",
+  "visual_sha256": {
+    "camera.STL": "b229286ab0c617d5474530289ac4fb8818afffb5054d5d73f4f59f06f78794ec",
+    "camera_base_link.STL": "dd82a43f33bf9fdc7c4dbbcb2f53a5462cb0cd75e06587e6ee23d84a8ed50fe2"
+  },
+  "mass_kg": 0.290483237157481,
+  "mass_source": "legacy CAD inertials retained; not hardware weighing; camera vendor specification is not substituted",
+  "stand_inertia_correction": {
+    "rotation_from_legacy": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "old_com_m": [
+      0.0538773695271655,
+      0.0404431717089871,
+      0.0338436903808578
+    ],
+    "new_com_m": [
+      0.0538773695271655,
+      -0.0338436903808578,
+      0.0404431717089871
+    ],
+    "method": "rotate original COM and inertia +90deg about X to match source mesh frame",
+    "verification": "mesh uniform-density COM within 11 micrometres; tensor maximum absolute difference 6.72e-8 kg m^2"
+  },
+  "camera_inertia": "legacy CAD COM matches camera mesh (about 8 micrometres); retained",
+  "optical_frames": {
+    "source": "lens cover centers and face normal from user CAD; 120 mm stereo baseline",
+    "status": "nominal geometry, not calibrated intrinsics/extrinsics",
+    "origin_offset_from_cover_m": 0.003,
+    "reason": "viewpoint just outside opaque cover; not a physical lens principal-plane measurement",
+    "camera_to_optical": {
+      "left_optical": [
+        [
+          -2.925498962235292e-15,
+          -0.856022939440675,
+          -0.5169378368347078,
+          0.4244828848983867
+        ],
+        [
+          0.30010807649619287,
+          0.4931096938400977,
+          -0.8165647385619104,
+          -0.15039371803213286
+        ],
+        [
+          0.9539052062032978,
+          -0.15513721988056933,
+          0.25689939779215654,
+          -0.05248491022869181
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "right_optical": [
+        [
+          -2.925498962235292e-15,
+          -0.856022939440675,
+          -0.5169378368347078,
+          0.42448288489838637
+        ],
+        [
+          0.30010807649619287,
+          0.4931096938400977,
+          -0.8165647385619104,
+          -0.1143807493567713
+        ],
+        [
+          0.9539052062032978,
+          -0.15513721988056933,
+          0.25689939779215654,
+          0.06198371291314318
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "collision_method": "legacy convex hull per stand/camera mesh; conservative, includes recesses",
+  "virtual_frame_mass_kg": 2e-09,
+  "virtual_frame_mass_accounting": "subtracted from camera body mass; unchanged aggregate mass"
+}
