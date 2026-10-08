@@ -294,9 +294,9 @@ def _check_mjcf_actuator_order(paths, manifest: dict) -> str:
 
 def _check_mjcf_self_contact(paths) -> str:
     """Active contacts at qpos=0 clamp joints via friction (same failure
-    mode as the per-component SELF_CONTACT check in §9 #8). The composer
-    auto-emits mount-seam excludes for ancestor-descendant component
-    pairs; this check catches anything missed.
+    mode as the per-component SELF_CONTACT check in §9 #8). Only explicit
+    installation-seam pairs are excluded; this also detects coarse whole-base
+    hulls that incorrectly fill the robot's free workspace.
     """
     if mujoco is None:
         return "mujoco not installed"

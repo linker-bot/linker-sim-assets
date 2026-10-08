@@ -1,12 +1,12 @@
 schema_version: 1
 name: a7_l6_dc
 composer_version: 0.1.0
-recipe_sha256: eb3521e6ef63371d3444383b2c5fc667358b64cd6ee1e74e81f00e2d10458929
+recipe_sha256: e108690b5014fac8b1a6b37095e67c734d350310f1520b50b1a7d0621372315f
 components:
   base:
     name: bases/a7_torso
     variant: default
-    sha256: 68431d544cf2d2ac7b41f86084c7adac148364a40233301ed144942fd6936051
+    sha256: 80ffc892dc4ea956d14657fa6d7f4155dee7c49a33635a1824c7ba49e757d2f0
   arm_left:
     name: arms/a7
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: fc5ab6598a78efd2772315f00d2b62cca712e5e69736b72b5340d1ba33d4c0f5
-  mjcf_sha256: 5a35ea28d5b583631710cf26fabe26f4887c2f527404e7a7c472f5f64093401e
+  urdf_sha256: 55d27eb2f87cf0fd1fc3ef39f4e45229e47b370b5a9107e7bdf23f8a7fae0beb
+  mjcf_sha256: a5f99b094664a77f019e02ff85aa3728ecfa650430ba69f56c6bb8fca7a4a4d2
 joints:
   base: []
   arm_left:

@@ -202,6 +202,7 @@ def compose(paths: Paths) -> ComposeResult:
             mounts=recipe.mounts,
             freeze_base_role=recipe.freeze_base,
             workstation_dir=paths.workstation_dir,
+            collision_exclusions=recipe.collision_exclusions,
         )
         # Match linker-sim-isaac's authored convention so the composed MJCF
         # loads as a stable PhysX/Newton articulation: torque motors (from the
@@ -210,9 +211,7 @@ def compose(paths: Paths) -> ComposeResult:
         # damping/armature/frictionloss are kept — they model real hardware and
         # are what MuJoCo/mujoco-wasm consumers rely on; Isaac's DriveAPI simply
         # adds to them.
-        rewrite_position_actuators_to_motors(
-            mjcf_root, _joint_effort_limits(urdf_root)
-        )
+        rewrite_position_actuators_to_motors(mjcf_root, _joint_effort_limits(urdf_root))
         inject_placeholder_inertials(mjcf_root)
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),
@@ -222,8 +221,7 @@ def compose(paths: Paths) -> ComposeResult:
         mjcf_sha = sha256_bytes(mjcf_text.encode("utf-8"))
     else:
         print(
-            "[compose] skipping workstation.xml (component MJCFs not "
-            "yet authored):",
+            "[compose] skipping workstation.xml (component MJCFs not yet authored):",
             file=sys.stderr,
         )
         for m in mjcf_avail.missing:
@@ -268,8 +266,12 @@ def compose(paths: Paths) -> ComposeResult:
         if base is None:
             continue
         merged_gains[role] = DefaultGains(
-            stiffness=(override.stiffness if override.stiffness is not None else base.stiffness),
-            damping=(override.damping if override.damping is not None else base.damping),
+            stiffness=(
+                override.stiffness if override.stiffness is not None else base.stiffness
+            ),
+            damping=(
+                override.damping if override.damping is not None else base.damping
+            ),
         )
 
     # Per-role named gain profiles. Components declare them under
@@ -334,7 +336,9 @@ def compose(paths: Paths) -> ComposeResult:
 def _rel_component_path(components_root: Path, source_dir: Path) -> str:
     import os.path
 
-    return os.path.relpath(str(source_dir), start=str(components_root)).replace("\\", "/")
+    return os.path.relpath(str(source_dir), start=str(components_root)).replace(
+        "\\", "/"
+    )
 
 
 def _add_header_comment(xml_text: str, *, recipe_name: str, recipe_sha: str) -> str:

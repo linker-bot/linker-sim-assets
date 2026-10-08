@@ -26,6 +26,7 @@ from typing import TYPE_CHECKING
 
 from .determinism import fmt_vec
 from .schemas import (
+    CollisionExclusion,
     ComponentMeta,
     Mount,
     SchemaError,
@@ -66,17 +67,36 @@ def check_mjcf_availability(
 # --------------------------- Name prefixing ------------------------------- #
 
 # Elements that carry a `name=` attribute that we role-prefix.
-PREFIXED_NAME_TAGS = frozenset({
-    # kinematic + visual
-    "body", "joint", "site", "geom", "camera", "light",
-    # assets
-    "mesh", "material", "texture", "skin", "hfield",
-    # tendons, sensors
-    "tendon", "sensor",
-    # actuators (any of these may appear under <actuator>)
-    "general", "motor", "position", "velocity", "intvelocity",
-    "damper", "cylinder", "muscle", "adhesion",
-})
+PREFIXED_NAME_TAGS = frozenset(
+    {
+        # kinematic + visual
+        "body",
+        "joint",
+        "site",
+        "geom",
+        "camera",
+        "light",
+        # assets
+        "mesh",
+        "material",
+        "texture",
+        "skin",
+        "hfield",
+        # tendons, sensors
+        "tendon",
+        "sensor",
+        # actuators (any of these may appear under <actuator>)
+        "general",
+        "motor",
+        "position",
+        "velocity",
+        "intvelocity",
+        "damper",
+        "cylinder",
+        "muscle",
+        "adhesion",
+    }
+)
 
 # Cross-reference attributes — values are names in the same component's
 # namespace, so they get the same role prefix.
@@ -193,35 +213,6 @@ def _collision_body_names(body_root: ET.Element) -> list[str]:
     return out
 
 
-def _mount_ancestor_pairs(
-    roles: list[str],
-    mounts: list[Mount],
-    freeze_base_role: str,
-) -> list[tuple[str, str]]:
-    """Return (ancestor_role, descendant_role) pairs along the mount chain.
-
-    The mount graph is a tree rooted at `freeze_base_role`; for each role,
-    we walk up to the root and emit a pair for every ancestor. Sibling
-    components (e.g. arm_left vs arm_right) share a common ancestor but
-    are not in each other's chain, so they are not paired.
-    """
-    parent_of: dict[str, str | None] = {role: None for role in roles}
-    for m in mounts:
-        child_role = m.child.split(":", 1)[0]
-        parent_role = m.parent.split(":", 1)[0]
-        parent_of[child_role] = parent_role
-
-    pairs: list[tuple[str, str]] = []
-    for role in roles:
-        if role == freeze_base_role:
-            continue
-        cursor = parent_of.get(role)
-        while cursor is not None:
-            pairs.append((cursor, role))
-            cursor = parent_of.get(cursor)
-    return pairs
-
-
 # --------------------------- Composition ---------------------------------- #
 
 
@@ -232,6 +223,7 @@ def compose_mjcf(
     mounts: list[Mount],
     freeze_base_role: str | None,
     workstation_dir: Path,
+    collision_exclusions: list[CollisionExclusion],
 ) -> ET.Element:
     """Compose component MJCFs into one workstation `<mujoco>` document.
 
@@ -273,7 +265,9 @@ def compose_mjcf(
         try:
             comp_root = ET.parse(str(mjcf_path)).getroot()
         except ET.ParseError as e:
-            raise SchemaError(f"role {c.role}: MJCF parse error at {mjcf_path}: {e}") from e
+            raise SchemaError(
+                f"role {c.role}: MJCF parse error at {mjcf_path}: {e}"
+            ) from e
 
         prefix_mjcf(comp_root, c.name_map)
 
@@ -381,8 +375,7 @@ def compose_mjcf(
             )
         if child_role not in comp_by_role:
             raise SchemaError(
-                f"mounts[{i}].child='{m.child}': role '{child_role}' "
-                f"not in components"
+                f"mounts[{i}].child='{m.child}': role '{child_role}' not in components"
             )
         if parent_role not in comp_by_role:
             raise SchemaError(
@@ -417,7 +410,7 @@ def compose_mjcf(
         parent_body_elem.append(child_body)
 
     # `<actuator>`, `<equality>`, `<contact>` — concat in role iteration order.
-    # `<contact>` also receives auto-generated mount-seam excludes (see below).
+    # `<contact>` also receives explicit recipe seam exclusions (see below).
     for tag in ("actuator", "equality"):
         merged: list[ET.Element] = []
         for entry in parsed.values():
@@ -430,12 +423,9 @@ def compose_mjcf(
             for child in merged:
                 out_sec.append(child)
 
-    # `<contact>` — concat per-component excludes, then append mount-seam
-    # excludes between every (ancestor_component, descendant_component) pair
-    # along the mount chain. Without these, the parent's collision mesh
-    # interpenetrates the child's links at qpos=0; contact friction then
-    # clamps the joint and the actuator can't drive it (same failure mode
-    # as adjacent intra-component pairs in §8 of the authoring guide).
+    # Mount ancestry is not a collision policy: fingers must still collide
+    # with the arm/base, and mounted sensors with distant links. Preserve
+    # component-internal filters, then add only documented body pairs.
     contact_children: list[ET.Element] = []
     for entry in parsed.values():
         sec = entry["root"].find("contact")
@@ -443,14 +433,26 @@ def compose_mjcf(
             continue
         contact_children.extend(deepcopy(child) for child in list(sec))
 
-    role_order = [c.role for c in compiled]
-    seam_pairs = _mount_ancestor_pairs(role_order, mounts, freeze_base_role)
-    for ancestor_role, descendant_role in seam_pairs:
-        for a in role_collision_bodies[ancestor_role]:
-            for d in role_collision_bodies[descendant_role]:
-                contact_children.append(
-                    ET.Element("exclude", {"body1": a, "body2": d})
+    seen_pairs: set[frozenset[str]] = set()
+    for exclusion in collision_exclusions:
+        names: list[str] = []
+        for ref in (exclusion.body1, exclusion.body2):
+            role, local_name = ref.split(":", 1)
+            if role not in comp_by_role:
+                raise SchemaError(f"collision exclusion: unknown role in {ref!r}")
+            name = comp_by_role[role].name_map.expand_and_prefix(local_name)
+            if name not in role_collision_bodies[role]:
+                raise SchemaError(
+                    f"collision exclusion {ref!r}: no collision-bearing body {name!r}"
                 )
+            names.append(name)
+        pair = frozenset(names)
+        if pair in seen_pairs:
+            raise SchemaError(f"collision exclusion: duplicate resolved pair {names}")
+        seen_pairs.add(pair)
+        contact_children.append(
+            ET.Element("exclude", dict(zip(("body1", "body2"), names)))
+        )
 
     if contact_children:
         out_contact = ET.SubElement(out, "contact")

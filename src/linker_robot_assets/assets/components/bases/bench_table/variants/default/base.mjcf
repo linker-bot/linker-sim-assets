@@ -15,13 +15,116 @@
     <mesh name="workstation" file="workstation.STL"/>
     <mesh name="camera_base_link" file="camera_base_link.STL"/>
     <mesh name="camera" file="camera.STL"/>
+    <mesh name="base_collision_000" file="collision/base_part_000.stl"/>
+    <mesh name="base_collision_001" file="collision/base_part_001.stl"/>
+    <mesh name="base_collision_002" file="collision/base_part_002.stl"/>
+    <mesh name="base_collision_003" file="collision/base_part_003.stl"/>
+    <mesh name="base_collision_004" file="collision/base_part_004.stl"/>
+    <mesh name="base_collision_005" file="collision/base_part_005.stl"/>
+    <mesh name="base_collision_006" file="collision/base_part_006.stl"/>
+    <mesh name="base_collision_007" file="collision/base_part_007.stl"/>
+    <mesh name="base_collision_008" file="collision/base_part_008.stl"/>
+    <mesh name="base_collision_009" file="collision/base_part_009.stl"/>
+    <mesh name="base_collision_010" file="collision/base_part_010.stl"/>
+    <mesh name="base_collision_011" file="collision/base_part_011.stl"/>
+    <mesh name="base_collision_012" file="collision/base_part_012.stl"/>
+    <mesh name="base_collision_013" file="collision/base_part_013.stl"/>
+    <mesh name="base_collision_014" file="collision/base_part_014.stl"/>
+    <mesh name="base_collision_015" file="collision/base_part_015.stl"/>
+    <mesh name="base_collision_016" file="collision/base_part_016.stl"/>
+    <mesh name="base_collision_017" file="collision/base_part_017.stl"/>
+    <mesh name="base_collision_018" file="collision/base_part_018.stl"/>
+    <mesh name="base_collision_019" file="collision/base_part_019.stl"/>
+    <mesh name="base_collision_020" file="collision/base_part_020.stl"/>
+    <mesh name="base_collision_021" file="collision/base_part_021.stl"/>
+    <mesh name="base_collision_022" file="collision/base_part_022.stl"/>
+    <mesh name="base_collision_023" file="collision/base_part_023.stl"/>
+    <mesh name="base_collision_024" file="collision/base_part_024.stl"/>
+    <mesh name="base_collision_025" file="collision/base_part_025.stl"/>
+    <mesh name="base_collision_026" file="collision/base_part_026.stl"/>
+    <mesh name="base_collision_027" file="collision/base_part_027.stl"/>
+    <mesh name="base_collision_028" file="collision/base_part_028.stl"/>
+    <mesh name="base_collision_029" file="collision/base_part_029.stl"/>
+    <mesh name="base_collision_030" file="collision/base_part_030.stl"/>
+    <mesh name="base_collision_031" file="collision/base_part_031.stl"/>
+    <mesh name="base_collision_032" file="collision/base_part_032.stl"/>
+    <mesh name="base_collision_033" file="collision/base_part_033.stl"/>
+    <mesh name="base_collision_034" file="collision/base_part_034.stl"/>
+    <mesh name="base_collision_035" file="collision/base_part_035.stl"/>
+    <mesh name="base_collision_036" file="collision/base_part_036.stl"/>
+    <mesh name="base_collision_037" file="collision/base_part_037.stl"/>
+    <mesh name="base_collision_038" file="collision/base_part_038.stl"/>
+    <mesh name="base_collision_039" file="collision/base_part_039.stl"/>
+    <mesh name="base_collision_040" file="collision/base_part_040.stl"/>
+    <mesh name="base_collision_041" file="collision/base_part_041.stl"/>
+    <mesh name="base_collision_042" file="collision/base_part_042.stl"/>
+    <mesh name="base_collision_043" file="collision/base_part_043.stl"/>
+    <mesh name="base_collision_044" file="collision/base_part_044.stl"/>
+    <mesh name="base_collision_045" file="collision/base_part_045.stl"/>
+    <mesh name="base_collision_046" file="collision/base_part_046.stl"/>
+    <mesh name="base_collision_047" file="collision/base_part_047.stl"/>
+    <mesh name="base_collision_048" file="collision/base_part_048.stl"/>
+    <mesh name="base_collision_049" file="collision/base_part_049.stl"/>
+    <mesh name="base_collision_050" file="collision/base_part_050.stl"/>
+    <mesh name="base_collision_051" file="collision/base_part_051.stl"/>
   </asset>
 
   <worldbody>
     <body name="workstation_link" pos="0 0 0">
       <inertial pos="0 0 0" mass="50.0" fullinertia="1.0 1.0 1.0 0 0 0"/>
       <geom class="base_bench_table_visual" mesh="workstation"/>
-      <geom class="base_bench_table_collision" mesh="workstation"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_000"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_001"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_002"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_003"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_004"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_005"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_006"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_007"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_008"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_009"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_010"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_011"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_012"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_013"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_014"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_015"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_016"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_017"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_018"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_019"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_020"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_021"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_022"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_023"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_024"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_025"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_026"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_027"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_028"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_029"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_030"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_031"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_032"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_033"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_034"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_035"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_036"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_037"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_038"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_039"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_040"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_041"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_042"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_043"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_044"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_045"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_046"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_047"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_048"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_049"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_050"/>
+        <geom class="base_bench_table_collision" mesh="base_collision_051"/>
 
       <body name="camera_base_link" pos="0.0335 0.67 1.2974" euler="-1.5708 0 -1.5708">
         <inertial pos="0.0538773695271655 0.0404431717089871 0.0338436903808578"

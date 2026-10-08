@@ -59,3 +59,51 @@ python -m linker_robot_assets.composer.derive_solo [--check-drift]
 python -m linker_robot_assets.validate_workstation <workstation_dir>
 python -m linker_robot_assets.validate_component_mjcf <component_dir> [--variant NAME]
 ```
+
+## Installation collision seams
+
+Composition preserves component-internal MJCF filters. It does **not** exclude
+all collisions between mounted components: a hand or camera must still be able
+to contact a distant arm link, the base, or another robot.
+
+Declare only necessary cross-component installation seams in `recipe.yaml`:
+
+```yaml
+collision_exclusions:
+  - body1: arm:AR5_5_08L_W4C4A6_link7
+    body2: hand:lh_hand_base_link
+    reason: Wrist installation seam; fingers remain collidable with the arm.
+```
+
+References use `role:component_local_body`; variant placeholders are expanded
+as for mount frames. Each body must own collision geometry. Missing roles/bodies,
+duplicate pairs and empty reasons are rejected. Internal filters belong to the
+component MJCF. These exclusions are emitted into the composed MJCF; URDF itself
+does not encode them. A URDF consumer must apply its own explicit filtering policy.
+The consumer must also enable articulation self-collision; declaring sparse
+exclusions does not enable that engine setting automatically.
+
+Run `just test` with an authoring environment (`PYTHON=/path/to/python just test`
+to select it). This compiles every generated MJCF, checks drift, and verifies
+with real MuJoCo contacts that distant links remain collidable.
+
+The A7, A7 Lite, P7 and bench bases use one convex hull per connected CAD shell
+instead of a single hull spanning the entire structure. Hulls wholly contained
+in another hull are removed; open planar patches receive 0.1 mm thickness.
+This retains source surfaces while preserving the gaps between structural parts.
+Each base's `collision_manifest.json` records source and output hashes,
+approximations, authoring versions, and a fingerprint of the unchanged visual,
+inertial and kinematic XML. These are conservative collision approximations,
+not detailed screw-hole or material-deformation models.
+
+To regenerate the four base colliders in an isolated authoring environment:
+
+```bash
+uv run --no-project --with trimesh==4.11.1 --with scipy==1.17.0 --with numpy==2.3.1 \
+  python scripts/build_base_collisions.py a7_torso a7_lite_torso p7_torso bench_table
+```
+
+Then recompose the affected workstations and run `just test`. Replacing collision
+meshes does not change visual geometry, joint frames, mass or inertia. It does
+change contact response where the previous hull filled empty space or broad
+filters hid actual collisions.

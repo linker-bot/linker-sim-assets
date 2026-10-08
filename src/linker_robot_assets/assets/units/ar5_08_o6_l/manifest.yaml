@@ -1,7 +1,7 @@
 schema_version: 1
 name: ar5_08_o6_l
 composer_version: 0.1.0
-recipe_sha256: 83bde9129f5f79dc6276e7324f44da21bdba305a7cd958ca03f3f3d1e64b6ddd
+recipe_sha256: b005b78c71018d9d3f4a7a50d402321225b627b371d21d75414e20f2aec822ce
 components:
   arm:
     name: arms/ar5_08
@@ -14,8 +14,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: da4d9afed62ae1972a96ce54eb0ad18c4dc281f52828d299e39dd56e06124c3d
-  mjcf_sha256: 7d77df5c857b28b3708ddb18feb2f7e541ce912e3dc3182def3fb8ea74eec0ee
+  urdf_sha256: 2eb48ac3d6ebb21cacdac46b2ee15a9aa61d9138c134162350fb2f8cf167b8cc
+  mjcf_sha256: 908a36636348f8324cf8f89d1a131fd19e9976f91332b92e2b02b143ef10d10e
 joints:
   arm:
   - arm_AR5_5_08L_W4C4A6_joint_1

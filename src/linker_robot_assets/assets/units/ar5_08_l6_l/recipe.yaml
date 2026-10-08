@@ -26,3 +26,8 @@ mounts:
     parent: arm:tool0
     xyz: [0.0, 0.0, 0.0]
     rpy: [0.0, 0.0, 1.5708]
+
+collision_exclusions:
+- body1: arm:AR5_5_08L_W4C4A6_link7
+  body2: hand:lh_hand_base_link
+  reason: Installation seam at arm:tool0 -> hand:wrist_mount; other links remain collidable.

@@ -1,12 +1,12 @@
 schema_version: 1
 name: p7_i1_l25_bimanual
 composer_version: 0.1.0
-recipe_sha256: d5a416d594c22c1643544729f5e7986d04460f72fa2fc9a718d0a6536cf89935
+recipe_sha256: 53f8706921427f1601618e4c6e45fc0f42a53d6b4cf45ca37c2b8d757cdb0345
 components:
   base:
     name: bases/p7_torso
     variant: default
-    sha256: cb38aeaaa572961e9dde478592b28740bf779e2223e5255d4e4e66dae2146007
+    sha256: 6dbb9178f8f877ce76b79871d591bb6455de731c0ea0da387024b7086bd3b2b2
   arm_left:
     name: arms/p7
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: a2d7128b603223b0213cf34080c14ca2265a483d759879569d35e4d7bed93feb
-  mjcf_sha256: 50c92a0e1875f75829959458f5131d4c67acf07249895d33776d26426701afc5
+  urdf_sha256: 5894a1f1fb34b4e952eaf9a4070d9ed10843fce0d0682bc7a2f2250d519e9740
+  mjcf_sha256: 6b7c87c9b43f63816d1abf00344d15fd309c25e26deab23383fd9ce400e35f5c
 joints:
   base: []
   arm_left:
