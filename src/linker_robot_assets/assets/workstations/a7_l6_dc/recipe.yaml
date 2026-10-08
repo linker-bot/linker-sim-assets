@@ -53,3 +53,17 @@ mounts:
     parent: arm_right:tool0
     xyz: [-0.0225, 0.0, -0.0705]
     rpy: [3.1416, 0.0, 1.5708]
+
+collision_exclusions:
+- body1: base:base_link
+  body2: arm_left:L1_Link
+  reason: Installation seam at base:arm_left_mount -> arm_left:base_mount; other links remain collidable.
+- body1: base:base_link
+  body2: arm_right:R1_Link
+  reason: Installation seam at base:arm_right_mount -> arm_right:base_mount; other links remain collidable.
+- body1: arm_left:L7_Link
+  body2: hand_left:lh_hand_base_link
+  reason: Installation seam at arm_left:tool0 -> hand_left:wrist_mount; other links remain collidable.
+- body1: arm_right:R7_Link
+  body2: hand_right:rh_hand_base_link
+  reason: Installation seam at arm_right:tool0 -> hand_right:wrist_mount; other links remain collidable.

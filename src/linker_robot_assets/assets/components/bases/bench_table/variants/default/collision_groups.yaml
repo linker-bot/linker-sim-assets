@@ -1,0 +1,138 @@
+# Pinned source-shell selectors; review assignments after any source change.
+# Directions: +X front, +Y left in the component frame.
+source_sha256: 0ce80472ea5cbd9593d034bad53c44f8c4527149f0a0a1936c2d64dc27ec745a
+source_hull_count: 52
+source_hulls_sha256: d42c17d9c257234e35dad8390aefc0d7c20e3ad3eccd27efcd04d8fa4dc2a857
+groups:
+  - name: tabletop
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [0], shape: mesh}
+  - name: arm_column
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [1], shape: box}
+  - name: front_upper_rail
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [2], shape: box}
+  - name: rear_upper_rail
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [3], shape: box}
+  - name: rear_lower_rail
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [4], shape: box}
+  - name: front_lower_rail
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [5], shape: box}
+  - name: front_panel
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [6], shape: mesh}
+  - name: front_left_leg
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [7, 44], shape: box}
+      - {shells: [31], shape: mesh}
+  - name: rear_left_leg
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [8, 45], shape: box}
+      - {shells: [30], shape: mesh}
+  - name: front_right_leg
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [9, 50], shape: box}
+      - {shells: [33], shape: mesh}
+  - name: rear_right_leg
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [10, 51], shape: box}
+      - {shells: [32], shape: mesh}
+  - name: shelf_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [11], shape: mesh}
+  - name: shelf_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [12], shape: mesh}
+  - name: side_panel_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [13], shape: mesh}
+  - name: side_panel_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [14], shape: mesh}
+  - name: upper_rail_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [15], shape: box}
+  - name: lower_rail_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [16], shape: box}
+  - name: upper_rail_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [17], shape: box}
+  - name: lower_rail_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [18], shape: box}
+  - name: shelf_rail_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [19], shape: box}
+  - name: shelf_rail_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [20], shape: box}
+  - name: mount_crossbar
+    max_added_distance_m: 0.00025
+    parts:
+      - {shells: [21], shape: mesh}
+  - name: mount_right
+    max_added_distance_m: 0.00025
+    parts:
+      - {shells: [34], shape: mesh}
+  - name: mount_left
+    max_added_distance_m: 0.00025
+    parts:
+      - {shells: [35], shape: mesh}
+  - name: caster_rear_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [22], shape: mesh}
+      - {shells: [26], shape: mesh}
+      - {shells: [37], shape: mesh}
+      - {shells: [43], shape: mesh}
+      - {shells: [47], shape: box}
+  - name: caster_rear_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [23], shape: mesh}
+      - {shells: [29], shape: mesh}
+      - {shells: [38], shape: mesh}
+      - {shells: [42], shape: mesh}
+      - {shells: [49], shape: box}
+  - name: caster_front_right
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [24], shape: mesh}
+      - {shells: [27], shape: mesh}
+      - {shells: [36], shape: mesh}
+      - {shells: [40], shape: mesh}
+      - {shells: [48], shape: box}
+  - name: caster_front_left
+    max_added_distance_m: 0.002
+    parts:
+      - {shells: [25], shape: mesh}
+      - {shells: [28], shape: mesh}
+      - {shells: [39], shape: mesh}
+      - {shells: [41], shape: mesh}
+      - {shells: [46], shape: box}

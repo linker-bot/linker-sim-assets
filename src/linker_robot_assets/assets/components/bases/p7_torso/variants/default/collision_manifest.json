@@ -1,0 +1,2574 @@
+{
+  "source_mesh": "base_link.STL",
+  "source_sha256": "d505826a415f112f7df5fede92893a3b2bd7bb8c217a5118c24438bf75e80bf5",
+  "groups_sha256": "666bbd2838fa49135e423882da258a1a345067769a3d242b1838c5316b3f754e",
+  "source_hull_count": 198,
+  "source_hulls_sha256": "6193115687e8daae5407f3649f30c75cd541179125e46ae0a1c2033c113f61dc",
+  "method": "semantic convex unions and conservative native primitives",
+  "planar_thickness_m": 0.0001,
+  "containment_tolerance_m": 1e-08,
+  "envelope_validation": "entire fitted solid within original group union offset; inconclusive fits rejected",
+  "authoring_versions": {
+    "trimesh": "4.11.1",
+    "numpy": "2.3.1",
+    "scipy": "1.17.0"
+  },
+  "unchanged_non_collision_xml_sha256": {
+    "base.urdf": "5385442a15831689542b12b251fdd1aaad755835ed91c0ad8b9ee65419f5d047",
+    "base.mjcf": "0c36f8156eefa643014647ffd3524787a8f6cce29997e877e32655f3fbd59aa7"
+  },
+  "collision_count": 139,
+  "mesh_file_count": 64,
+  "parts": [
+    {
+      "name": "p7_torso_column_support",
+      "group": "column_support",
+      "source_shells": [
+        0
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.0004715602844953537,
+        9.313225746154785e-10,
+        -0.5799999823793769
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.08999999985098839,
+        0.06000000052154064,
+        1.100000025704503
+      ]
+    },
+    {
+      "name": "p7_torso_upper_body_01",
+      "group": "upper_body",
+      "source_shells": [
+        1
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "p7_torso_upper_body_01.stl",
+      "sha256": "e3b9a8a4958d115c24392a945e206fc81f69bf2e8275c3befb63fe6ef500a44f"
+    },
+    {
+      "name": "p7_torso_upper_body_02",
+      "group": "upper_body",
+      "source_shells": [
+        2
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "p7_torso_upper_body_02.stl",
+      "sha256": "3e85fc737eff0b98dce6dbb5faace676eb62a07c3ac85cd61139ffc685dad417"
+    },
+    {
+      "name": "p7_torso_upper_body_03",
+      "group": "upper_body",
+      "source_shells": [
+        10,
+        41,
+        83,
+        108
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "p7_torso_upper_body_03.stl",
+      "sha256": "e238e9bea8e2a236d52a93d09473ba66bfaecc6ddf689c337618e7e775c9e489"
+    },
+    {
+      "name": "p7_torso_upper_body_04",
+      "group": "upper_body",
+      "source_shells": [
+        11,
+        25,
+        42,
+        84,
+        89,
+        109
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "p7_torso_upper_body_04.stl",
+      "sha256": "a78fd4d9476ba0646e324afb1618c0f2259b680ca9c68258c500e27ae7326d4b"
+    },
+    {
+      "name": "p7_torso_upper_body_05",
+      "group": "upper_body",
+      "source_shells": [
+        26
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "p7_torso_upper_body_05.stl",
+      "sha256": "a0faf2e88124bd8662f0c37f8f2a62e1ef79edf9fd5a6588cb30ed8b91b2000a"
+    },
+    {
+      "name": "p7_torso_upper_body_06",
+      "group": "upper_body",
+      "source_shells": [
+        27
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "p7_torso_upper_body_06.stl",
+      "sha256": "4fca3e5abf86d27e86e14912652cfea5fc0642c6e4b830188e4d0ae917619f4e"
+    },
+    {
+      "name": "p7_torso_upper_body_07",
+      "group": "upper_body",
+      "source_shells": [
+        28,
+        92,
+        118
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.00047156214714050293,
+        -0.08202499896287918,
+        -0.001749992370605473
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0671549278140873,
+        0.016049996018409743
+      ]
+    },
+    {
+      "name": "p7_torso_upper_body_08",
+      "group": "upper_body",
+      "source_shells": [
+        93,
+        119
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.00047155842185020447,
+        0.08900000154972076,
+        -0.0001037716865539492
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06410343516710552,
+        0.002100005745887784
+      ]
+    },
+    {
+      "name": "p7_torso_base_plate",
+      "group": "base_plate",
+      "source_shells": [
+        3
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00047156214714050293,
+        0.0,
+        -1.0979999899864197
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.550000011920929,
+        0.550000011920929,
+        0.004000067710876465
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_01",
+      "group": "base_frame",
+      "source_shells": [
+        4
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        0.0,
+        -1.1150000095367432
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.550000011920929,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_02",
+      "group": "base_frame",
+      "source_shells": [
+        5
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.24547156691551208,
+        0.0,
+        -1.1150000095367432
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.550000011920929,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_03",
+      "group": "base_frame",
+      "source_shells": [
+        6
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00047156214714050293,
+        0.24499999731779099,
+        -1.1150000095367432
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.4300000071525574,
+        0.060000017285346985,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_04",
+      "group": "base_frame",
+      "source_shells": [
+        7
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00047156214714050293,
+        -0.24500000476837158,
+        -1.1150000095367432
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.4300000071525574,
+        0.06000000238418579,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_05",
+      "group": "base_frame",
+      "source_shells": [
+        8
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00047156214714050293,
+        0.08999999798834324,
+        -1.1150000095367432
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.4300000071525574,
+        0.05999999865889549,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_06",
+      "group": "base_frame",
+      "source_shells": [
+        9
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00047156214714050293,
+        -0.08999999798834324,
+        -1.1150000095367432
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.4300000071525574,
+        0.05999999865889549,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_07",
+      "group": "base_frame",
+      "source_shells": [
+        12
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_07.stl",
+      "sha256": "ad4a8b520ae3f689061dfde56f0810da17cf3c2df2f7b19b0c6d30a98f962eed"
+    },
+    {
+      "name": "p7_torso_base_frame_08",
+      "group": "base_frame",
+      "source_shells": [
+        43
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.0004715588875114918,
+        0.24499999731779099,
+        -1.1359999775886536
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.03000000026077032,
+        0.060000017285346985,
+        0.011999964714050293
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_09",
+      "group": "base_frame",
+      "source_shells": [
+        44
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.0004715588875114918,
+        -0.24500000476837158,
+        -1.1359999775886536
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.03000000026077032,
+        0.06000000238418579,
+        0.011999964714050293
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_10",
+      "group": "base_frame",
+      "source_shells": [
+        45
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.24547156691551208,
+        4.656612873077393e-10,
+        -1.1359999775886536
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.03000000026077032,
+        0.011999964714050293
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_11",
+      "group": "base_frame",
+      "source_shells": [
+        46
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        4.656612873077393e-10,
+        -1.1359999775886536
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.03000000026077032,
+        0.011999964714050293
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_12",
+      "group": "base_frame",
+      "source_shells": [
+        98,
+        123,
+        128
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_12.stl",
+      "sha256": "1ad9aace482fb8c292af5157c2db66d817e489d63c708fa302ed8538bbe11241"
+    },
+    {
+      "name": "p7_torso_base_frame_13",
+      "group": "base_frame",
+      "source_shells": [
+        99,
+        121,
+        129
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_13.stl",
+      "sha256": "6c11b1a9ead699bac0da12097b8d25559e834e5830d2f04202bd242fd10032e8"
+    },
+    {
+      "name": "p7_torso_base_frame_14",
+      "group": "base_frame",
+      "source_shells": [
+        100,
+        127,
+        133
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_14.stl",
+      "sha256": "9acd5b8bb989d39bbc43b5505964b10f5982a421993e11b5719cd94efbfc1253"
+    },
+    {
+      "name": "p7_torso_base_frame_15",
+      "group": "base_frame",
+      "source_shells": [
+        101,
+        125,
+        134
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_15.stl",
+      "sha256": "fa7df91a30a7bdac99cd84cf097a4aed60d9489b49134b3796e8a2bb6cb43862"
+    },
+    {
+      "name": "p7_torso_base_frame_16",
+      "group": "base_frame",
+      "source_shells": [
+        102,
+        124,
+        130
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_16.stl",
+      "sha256": "c97d231c718f00014c78a4dd8c316cba8fe215404fae5fff911d94a8f09ddc3e"
+    },
+    {
+      "name": "p7_torso_base_frame_17",
+      "group": "base_frame",
+      "source_shells": [
+        103,
+        120,
+        131
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_17.stl",
+      "sha256": "b62a6f2c03eb9d99ee07570592cdd7ce984084ada7d80d3f5ccdc0e38428ed36"
+    },
+    {
+      "name": "p7_torso_base_frame_18",
+      "group": "base_frame",
+      "source_shells": [
+        104,
+        126,
+        132
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_18.stl",
+      "sha256": "13b2ed770f69b128ec66e56197bb9e21d7f16c4f9f6476f3b6bb7b1af6308b2c"
+    },
+    {
+      "name": "p7_torso_base_frame_19",
+      "group": "base_frame",
+      "source_shells": [
+        105,
+        122,
+        135
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_base_frame_19.stl",
+      "sha256": "b0f0a393f006dee83fd59a3a4dcb1dd335e38aaf6660cb6842043b57fa3b0d94"
+    },
+    {
+      "name": "p7_torso_base_frame_20",
+      "group": "base_frame",
+      "source_shells": [
+        196
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.02952638268470764,
+        0.04500267282128334,
+        -1.1187000274658203
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.005829371511936188,
+        0.00582876056432724,
+        9.989738464355469e-05
+      ]
+    },
+    {
+      "name": "p7_torso_base_frame_21",
+      "group": "base_frame",
+      "source_shells": [
+        197
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.030473618768155575,
+        0.04500267282128334,
+        -1.1187000274658203
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.005829373374581337,
+        0.00582876056432724,
+        9.989738464355469e-05
+      ]
+    },
+    {
+      "name": "p7_torso_caster_rear_01",
+      "group": "caster_rear",
+      "source_shells": [
+        13
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_rear_01.stl",
+      "sha256": "e303a9f4374bd36e5699798f2e0a1a0a3fb81ca7a2b01370ed7cc905e21f4332"
+    },
+    {
+      "name": "p7_torso_caster_rear_02",
+      "group": "caster_rear",
+      "source_shells": [
+        19
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_rear_02.stl",
+      "sha256": "3ac6ca214fc02175e5750fdc4e9b9febf580d75a3f3e718e48334628f97c556e"
+    },
+    {
+      "name": "p7_torso_caster_rear_03",
+      "group": "caster_rear",
+      "source_shells": [
+        35
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_rear_03.stl",
+      "sha256": "5ac7cbfc7a4eba5664b670ec47463d53e83ca4ecc8b1399e461ef72d2385d318"
+    },
+    {
+      "name": "p7_torso_caster_rear_04",
+      "group": "caster_rear",
+      "source_shells": [
+        39
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_rear_04.stl",
+      "sha256": "e79715a2d3485401214c94d7a73dcdb6ba4a95dd808bcebc869bcbb6c23afd28"
+    },
+    {
+      "name": "p7_torso_caster_rear_05",
+      "group": "caster_rear",
+      "source_shells": [
+        59
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.27244196832180023,
+        0.03971252404153347,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -0.0,
+        1.5707963267948966,
+        0.0
+      ],
+      "size_m": [
+        0.00807737298426923,
+        0.015165179967880249
+      ]
+    },
+    {
+      "name": "p7_torso_caster_rear_06",
+      "group": "caster_rear",
+      "source_shells": [
+        106
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.22094474732875824,
+        0.040246857330203056,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -0.0,
+        1.5707963267948966,
+        0.0
+      ],
+      "size_m": [
+        0.00804106480668177,
+        0.008165538311004639
+      ]
+    },
+    {
+      "name": "p7_torso_caster_front_01",
+      "group": "caster_front",
+      "source_shells": [
+        14
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_front_01.stl",
+      "sha256": "69f19ba2bfd15a1de8f5ed2d9d63bd6cfb03d43632a254885f5c53aaa67f0b1e"
+    },
+    {
+      "name": "p7_torso_caster_front_02",
+      "group": "caster_front",
+      "source_shells": [
+        20
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_front_02.stl",
+      "sha256": "5183757d60827ad18b901e7d765eec99408babd74549cec49459ed9c61a3c3e9"
+    },
+    {
+      "name": "p7_torso_caster_front_03",
+      "group": "caster_front",
+      "source_shells": [
+        36
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_front_03.stl",
+      "sha256": "a95f0f5c4ec27dcf2a403baa1d64831bb6acf8ab53f167e13def9eba65f68110"
+    },
+    {
+      "name": "p7_torso_caster_front_04",
+      "group": "caster_front",
+      "source_shells": [
+        37
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_front_04.stl",
+      "sha256": "90e62771dae26c5aeaa6c4df54443762431b711f6993bfa1182d1720eb30b482"
+    },
+    {
+      "name": "p7_torso_caster_front_05",
+      "group": "caster_front",
+      "source_shells": [
+        70
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_front_05.stl",
+      "sha256": "9ac6c83a7334f2c8f0e2371e3b44b91f2d6ae4cad23524b189cefb7ce7daee4c"
+    },
+    {
+      "name": "p7_torso_caster_front_06",
+      "group": "caster_front",
+      "source_shells": [
+        90
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2689547538757324,
+        0.040305573493242264,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -0.0,
+        1.5707963267948966,
+        0.0
+      ],
+      "size_m": [
+        0.008050810425810715,
+        0.008205235004425049
+      ]
+    },
+    {
+      "name": "p7_torso_caster_right_01",
+      "group": "caster_right",
+      "source_shells": [
+        15
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_right_01.stl",
+      "sha256": "4acb932a61eabbeb17f3c73da2a143de039d76a85ff471346a8a3ec63982b2af"
+    },
+    {
+      "name": "p7_torso_caster_right_02",
+      "group": "caster_right",
+      "source_shells": [
+        17
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_right_02.stl",
+      "sha256": "ae4d0b42b04cfd0de96575e65dd1b20488e9eca4f54ac79a5a35d610e75b5037"
+    },
+    {
+      "name": "p7_torso_caster_right_03",
+      "group": "caster_right",
+      "source_shells": [
+        33
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_right_03.stl",
+      "sha256": "57acfb95c1ec54c6fc059268556c056c734634302a686a98f6e785c4a49894e4"
+    },
+    {
+      "name": "p7_torso_caster_right_04",
+      "group": "caster_right",
+      "source_shells": [
+        38
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_right_04.stl",
+      "sha256": "20393748e62aa0649a4217cffc881c12ecfa16b3c8221acd719403d77ffdfe15"
+    },
+    {
+      "name": "p7_torso_caster_right_05",
+      "group": "caster_right",
+      "source_shells": [
+        61
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.04041358828544617,
+        -0.21741587668657303,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.008015764951789147,
+        0.015033647418022156
+      ]
+    },
+    {
+      "name": "p7_torso_caster_right_06",
+      "group": "caster_right",
+      "source_shells": [
+        91
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.04052198678255081,
+        -0.2689157575368881,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.008008401274289137,
+        0.008033663034439087
+      ]
+    },
+    {
+      "name": "p7_torso_caster_left_01",
+      "group": "caster_left",
+      "source_shells": [
+        16
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_left_01.stl",
+      "sha256": "9938faa95603104d61369d276a650fe6a5171fd13ebbca5497df62e1e1b9c279"
+    },
+    {
+      "name": "p7_torso_caster_left_02",
+      "group": "caster_left",
+      "source_shells": [
+        18
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_left_02.stl",
+      "sha256": "dc344070e4a8d8a5d5eef17efcd248a2fccb028c9aade68a4873b37bb06e81d4"
+    },
+    {
+      "name": "p7_torso_caster_left_03",
+      "group": "caster_left",
+      "source_shells": [
+        34
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_left_03.stl",
+      "sha256": "21ed243b8fc54de193ed8f8ffa5d466eea3aa62203066930547af3a090990cf0"
+    },
+    {
+      "name": "p7_torso_caster_left_04",
+      "group": "caster_left",
+      "source_shells": [
+        40
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_caster_left_04.stl",
+      "sha256": "7e6f50da471b26a40b9d58a4a9b0685dbdffc91bea0aca536f6936de8f8c48c8"
+    },
+    {
+      "name": "p7_torso_caster_left_05",
+      "group": "caster_left",
+      "source_shells": [
+        60
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.04040495492517948,
+        0.27259661257267,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.00801810590891508,
+        0.015038639307022095
+      ]
+    },
+    {
+      "name": "p7_torso_caster_left_06",
+      "group": "caster_left",
+      "source_shells": [
+        107
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.04052946716547012,
+        0.22109677642583847,
+        -1.2139999866485596
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.008009645314740977,
+        0.008038654923439026
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_01",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        21
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_01.stl",
+      "sha256": "984811cef3365b93a128bacaaaa96ebf3dac4337db6629bee181dbd53090af65"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_02",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        32
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.24547156691551208,
+        -0.24500000476837158,
+        -1.180999994277954
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.06000000238418579,
+        0.012000083923339844
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_03",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        50
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_03.stl",
+      "sha256": "d0c0e214a4ab7b1f2d8873f566cbf12e4b484cbf34ba4eb1f1621edcea75938f"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_04",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        54
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_04.stl",
+      "sha256": "fa0b2ea51b6976ee0898ee5e49b9480c421d9891988f174e10ff20500327c9f0"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_05",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        57
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_05.stl",
+      "sha256": "dcd5d1b467341adda1b46ce15f2b15ae9eb1582bebf625226c2cddbe882c3515"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_06",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        63,
+        192
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_06.stl",
+      "sha256": "2a37d580792fee18bd5809e5846aba469013d58f28cc6fa3c2dec53bced9f6e0"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_07",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        69
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2454715594649315,
+        -0.24500000476837158,
+        -1.1922220587730408
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010392309453527768,
+        0.008499979972839355
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_08",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        76,
+        171
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_08.stl",
+      "sha256": "76cfb4ef95f0e6456fc02849c2b89f23564dcc2acbd80d54af7b897dba2c15de"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_09",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        80,
+        141
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_09.stl",
+      "sha256": "132217dbbcbf1ea4d72bfb0493ca852fb161b8edcb395059f391e64a22c7e15e"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_10",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        82,
+        155
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_right_10.stl",
+      "sha256": "d0569f81e032e7407241ef4028931cb6a069c5c3d13e5474d5b42d81760bfbe1"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_11",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        87
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.27437156438827515,
+        -0.24500000476837158,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.002200007438659668,
+        0.021499991416931152,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_12",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        97,
+        189
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2454715594649315,
+        -0.2740500122308731,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021500006318092346,
+        0.0018999874591827393,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_13",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        112,
+        183
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.21642155945301056,
+        -0.24500000476837158,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0018999874591827393,
+        0.021499991416931152,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_14",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        116,
+        177
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2454715594649315,
+        -0.21595000475645065,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021500006318092346,
+        0.001900002360343933,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_15",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        140
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.26803307809137317,
+        -0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.408981862191024
+      ],
+      "size_m": [
+        0.0002551819275729561,
+        0.005551244258060879,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_16",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        143,
+        161
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.22369655221700668,
+        -0.2667750045657158,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        -0.7853981633974483
+      ],
+      "size_m": [
+        0.0027857802460245495,
+        0.005543511764365145,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_17",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        144
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.22291004083848973,
+        -0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7326107913987694
+      ],
+      "size_m": [
+        0.00025518192757299947,
+        0.005551244258060917,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_18",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        157
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.23645052338599168,
+        -0.267561519320441,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.8381837401034711
+      ],
+      "size_m": [
+        0.0002551732569261722,
+        0.005551233180087545,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_19",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        163
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.26803308179592167,
+        -0.2359789680859412,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7326107913987694
+      ],
+      "size_m": [
+        0.0002551719614848208,
+        0.005551244258060917,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_20",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        169
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.23645052338599168,
+        -0.2224384902163022,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.3034089134863223
+      ],
+      "size_m": [
+        0.00025517325692614445,
+        0.005551233180087517,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_right_21",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        187
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.21692155301570892,
+        -0.2253500074148178,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0009000003337860107,
+        0.000800013542175293,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_01",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        22
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_01.stl",
+      "sha256": "3e3467b0a7b0a93c31d11d961fc06cf93644abfa116f012dcb0982e770506569"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_02",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        31
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        -0.24500000476837158,
+        -1.180999994277954
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.06000000238418579,
+        0.012000083923339844
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_03",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        49
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_03.stl",
+      "sha256": "76c0d4bd101d585457ae03e9795d49f2e02f1f09c49df8c6a562b085ff810de4"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_04",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        53
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_04.stl",
+      "sha256": "737f86c48dd6b1cabfd6d633bff8a31b22f7ea4860a5876b4601a5a7b7bb088a"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_05",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        55
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_05.stl",
+      "sha256": "bc83fbae98db199deaa298f57255084ff68b89c8cd5f767a112892e93856eb95"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_06",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        65,
+        191
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_06.stl",
+      "sha256": "4ca34c6e55a2d325a92542c12d962c5bf784453593b19bc3f26ff829fa821b2a"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_07",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        68
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        -0.24500000476837158,
+        -1.1922220587730408
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010392311517760322,
+        0.008499979972839355
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_08",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        72,
+        138
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_08.stl",
+      "sha256": "22c1c0a95b5e1176e49ad4ad38ef39372a67611648becd3b5464617cf4408bba"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_09",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        74,
+        153
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_09.stl",
+      "sha256": "45132f53d75d8efc144a574f2924d2fa00cce82aae3bfa498a29c5646dcb3a2d"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_10",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        77,
+        167
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_right_10.stl",
+      "sha256": "f3a542ab5ca2d4b0c3eca69344cd7c3bbbd87a6951b323df945a686226377701"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_11",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        88
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.27342844009399414,
+        -0.24500000476837158,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.002200007438659668,
+        0.021499991416931152,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_12",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        96,
+        195
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        -0.2740500122308731,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021499991416931152,
+        0.0018999874591827393,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_13",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        110,
+        181
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.21547844260931015,
+        -0.24500000476837158,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.001900002360343933,
+        0.021499991416931152,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_14",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        114,
+        179
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        -0.21595000475645065,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021499991416931152,
+        0.001900002360343933,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_15",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        137
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2670899537970922,
+        -0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7326107913987694
+      ],
+      "size_m": [
+        0.0002551819275730116,
+        0.005551244258060852,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_16",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        146,
+        151
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.22275344282388687,
+        -0.2667750045657158,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        -3.141592653589793,
+        0.0,
+        -2.356194490192345
+      ],
+      "size_m": [
+        0.002785780246024605,
+        0.005543511764365124,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_17",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        147
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.22196693144536994,
+        -0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.408981862191024
+      ],
+      "size_m": [
+        0.00025518192757299947,
+        0.005551244258060861,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_18",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        149
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.23550739909171067,
+        -0.267561519320441,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.3034089134863223
+      ],
+      "size_m": [
+        0.00025517325692614445,
+        0.005551233180087545,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_19",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        159
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2670899575016406,
+        -0.23597896808594118,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.408981862191024
+      ],
+      "size_m": [
+        0.0002551719614848347,
+        0.005551244258060861,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_20",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        165
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.23550739909171067,
+        -0.22243849021630216,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.8381837401034711
+      ],
+      "size_m": [
+        0.00025517325692614445,
+        0.005551233180087517,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_right_21",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        185
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2159784436225891,
+        -0.2253500074148178,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0009000003337860107,
+        0.000800013542175293,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_01",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        23
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_01.stl",
+      "sha256": "65b5febe5e9058a5d8830d5308ab7c70cd6a5e509f36d99d6c08507c3df779d7"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_02",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        29
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.24547156691551208,
+        0.24499999731779099,
+        -1.180999994277954
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000017285346985,
+        0.012000083923339844
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_03",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        48
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_03.stl",
+      "sha256": "d0bb0a85ff6eef966263ba8a01b469c145f951f4db1d772fe61a93b99f64b900"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_04",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        52
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_04.stl",
+      "sha256": "363cb0de8e12aad5d764a139c382294f5754d2252fc934d3276c1e3eb851cdac"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_05",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        58
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_05.stl",
+      "sha256": "f0c353f4f5c851d05bd65cc2358d51a9dfaae71dee144575aaa6f89c77fb647d"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_06",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        62,
+        193
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_06.stl",
+      "sha256": "0b38e5e07d8434af95a4105231e1ff0815b0ae2f366c6388942dc57a7956c220"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_07",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        66
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.24547156691551208,
+        0.24499999731779099,
+        -1.1922220587730408
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010392323653822023,
+        0.008499979972839355
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_08",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        75,
+        170
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_08.stl",
+      "sha256": "9076590a4c38fafad3e7553346a5f5de531d24cd081fb7b6553a59e31ac7e681"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_09",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        79,
+        173
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_09.stl",
+      "sha256": "443667d5a5c6264135448bece137e72f8114b9cb3a8b6e65ed5f058a26eaa74e"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_10",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        81,
+        154
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_front_left_10.stl",
+      "sha256": "d36b899153f095d458dc9616aae43c00232408de7a62f48d85a4a1cab546044d"
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_11",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        86
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.27437156438827515,
+        0.24499999731779099,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.002200007438659668,
+        0.021500006318092346,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_12",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        95,
+        188
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2454715594649315,
+        0.2740499973297119,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021500006318092346,
+        0.001900017261505127,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_13",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        113,
+        182
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.21642155945301056,
+        0.24499999731779099,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0018999874591827393,
+        0.021500006318092346,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_14",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        115,
+        176
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2454715594649315,
+        0.21594998985528946,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021500006318092346,
+        0.001900002360343933,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_15",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        139
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.26803307809137317,
+        0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7326107913987694
+      ],
+      "size_m": [
+        0.0002551819275729561,
+        0.005551244258060879,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_16",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        142
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.22291004083848973,
+        0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.408981862191024
+      ],
+      "size_m": [
+        0.00025518192757299947,
+        0.005551244258060917,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_17",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        156
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.23645052338599168,
+        0.267561519320441,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.3034089134863223
+      ],
+      "size_m": [
+        0.0002551732569261722,
+        0.005551233180087545,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_18",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        160,
+        174
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.22369655594229698,
+        0.2667750008404255,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7853981633974483
+      ],
+      "size_m": [
+        0.0027857802460245495,
+        0.005543501227653017,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_19",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        162
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.26803308179592167,
+        0.23597895318478,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.408981862191024
+      ],
+      "size_m": [
+        0.00025517196148482774,
+        0.005551244258060861,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_20",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        168
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.23645052338599168,
+        0.22243847531514097,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.8381837401034711
+      ],
+      "size_m": [
+        0.00025517325692619997,
+        0.0055512331800875205,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_front_left_21",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        186
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.21692155301570892,
+        0.22534999251365662,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0009000003337860107,
+        0.000800013542175293,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_01",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        24
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_01.stl",
+      "sha256": "03f4a6ac89e7802e0252e1bc6a43b1c60a8f75ec4ece876b6cf915a40ec9f0ae"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_02",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        30
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        0.24499999731779099,
+        -1.180999994277954
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000017285346985,
+        0.012000083923339844
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_03",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        47
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_03.stl",
+      "sha256": "6d69b91a8f2c1868de2ea38161bbaed69c0ffc7841b7880dde87aaef5b766198"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_04",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        51
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_04.stl",
+      "sha256": "1fdf470d3eee1d07b5ba26d918951117cbb86eb3131cda4f2fb66ef3e7dcf4b7"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_05",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        56
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_05.stl",
+      "sha256": "3fa5fdf4902ac3b897ff38a65a91214d19829559f8f1fb79ef9913ac785b7938"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_06",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        64,
+        190
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_06.stl",
+      "sha256": "873c36496acee490e555389d2b6a29d2aae634e87e7546c63ffe91343a6eb47a"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_07",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        67
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        0.24499999731779099,
+        -1.1922220587730408
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010392315572550768,
+        0.008499979972839355
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_08",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        71,
+        172
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_08.stl",
+      "sha256": "719ec624be6d0d7e707787491b2cd38f698ed50543c7514b7b8b945e4c892064"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_09",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        73,
+        152
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_09.stl",
+      "sha256": "e3e4e23e5f99df354ee08dd442911246c90e65fe5110b8cabacc8980ebb95f16"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_10",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        78,
+        166
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "p7_torso_leveling_foot_rear_left_10.stl",
+      "sha256": "a4b10da0155d25a9f3e3409b916413006aeff9e4123e62ed85214213df56aa84"
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_11",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        85
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.27342844009399414,
+        0.24499999731779099,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.002200007438659668,
+        0.021500006318092346,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_12",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        94,
+        194
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        0.2740499973297119,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021499991416931152,
+        0.001900017261505127,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_13",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        111,
+        180
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.21547844260931015,
+        0.24499999731779099,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.001900002360343933,
+        0.021500006318092346,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_14",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        117,
+        178
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.24452844262123108,
+        0.21594998985528946,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.021499991416931152,
+        0.001900002360343933,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_15",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        136
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2670899537970922,
+        0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.408981862191024
+      ],
+      "size_m": [
+        0.0002551819275730116,
+        0.005551244258060852,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_16",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        145
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.22196693144536994,
+        0.25402103811807797,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7326107913987694
+      ],
+      "size_m": [
+        0.00025518192757299947,
+        0.005551244258060861,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_17",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        148
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.23550739909171067,
+        0.267561519320441,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.8381837401034711
+      ],
+      "size_m": [
+        0.00025517325692614445,
+        0.005551233180087545,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_18",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        150,
+        175
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.22275344654917717,
+        0.2667750008404255,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.356194490192345
+      ],
+      "size_m": [
+        0.002785780246024605,
+        0.0055435012276529964,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_19",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        158
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.26708995750164066,
+        0.23597895318478002,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.7326107913987694
+      ],
+      "size_m": [
+        0.0002551719614848416,
+        0.005551244258060861,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_20",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        164
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.23550739909171067,
+        0.22243847531514097,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        3.141592653589793,
+        0.0,
+        2.3034089134863223
+      ],
+      "size_m": [
+        0.00025517325692614445,
+        0.0055512331800875205,
+        0.04499995708465576
+      ]
+    },
+    {
+      "name": "p7_torso_leveling_foot_rear_left_21",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        184
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2159784436225891,
+        0.22534999251365662,
+        -1.1524999737739563
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0009000003337860107,
+        0.000800013542175293,
+        0.04499995708465576
+      ]
+    }
+  ]
+}

@@ -1,0 +1,838 @@
+{
+  "source_mesh": "base_link.STL",
+  "source_sha256": "a77597904393e3e02ddfa842baf0259c68039a3a0847b28cd4649eb43840de38",
+  "groups_sha256": "68d3a2f63dd282a221efa31b10c50c384b6104529fb32391d9f1b8cc296423d3",
+  "source_hull_count": 135,
+  "source_hulls_sha256": "b48278cb75ac1d9adcf2ac155ad2dce22cf4c1268e0636669393f7bc412b5b87",
+  "method": "semantic convex unions and conservative native primitives",
+  "planar_thickness_m": 0.0001,
+  "containment_tolerance_m": 1e-08,
+  "envelope_validation": "entire fitted solid within original group union offset; inconclusive fits rejected",
+  "authoring_versions": {
+    "trimesh": "4.11.1",
+    "numpy": "2.3.1",
+    "scipy": "1.17.0"
+  },
+  "unchanged_non_collision_xml_sha256": {
+    "base.urdf": "a53fe04ca730064ce7da2a801a244471545b6675b8e40a0987fb641d81874bde",
+    "base.mjcf": "6d635b486da5130e2f362e496ab169051111fb20670aecb230df934915246c14"
+  },
+  "collision_count": 64,
+  "mesh_file_count": 61,
+  "parts": [
+    {
+      "name": "a7_torso_upper_body_01",
+      "group": "upper_body",
+      "source_shells": [
+        0
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_torso_upper_body_01.stl",
+      "sha256": "2435aa021d0b776b4fe8dddff6b3d8e3ac775940d297119b7282cfbad27127e8"
+    },
+    {
+      "name": "a7_torso_upper_body_02",
+      "group": "upper_body",
+      "source_shells": [
+        1
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_torso_upper_body_02.stl",
+      "sha256": "1a1bf2ddf48e02dc67f002414327d51bfaf2f1fa598939e0a97a125f884ce565"
+    },
+    {
+      "name": "a7_torso_upper_body_03",
+      "group": "upper_body",
+      "source_shells": [
+        6,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        22,
+        23,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        36,
+        37,
+        43,
+        44,
+        45,
+        46,
+        47,
+        49,
+        53,
+        54,
+        67,
+        73,
+        74,
+        76,
+        77,
+        81,
+        82,
+        84,
+        85,
+        90,
+        91,
+        92,
+        99,
+        101,
+        102,
+        110,
+        111,
+        113,
+        120,
+        122,
+        123,
+        124,
+        128
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_torso_upper_body_03.stl",
+      "sha256": "a48afdbd0e84d8d8b0e074fd5ff5ccde8e8e0ea75c4b2a1709ba322fb38c82b0"
+    },
+    {
+      "name": "a7_torso_upper_body_04",
+      "group": "upper_body",
+      "source_shells": [
+        42
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_torso_upper_body_04.stl",
+      "sha256": "43146c01aa731d6a19247cacebdaa334e6ecb5267f8d79bee73a73a2228b87f4"
+    },
+    {
+      "name": "a7_torso_upper_body_05",
+      "group": "upper_body",
+      "source_shells": [
+        98,
+        127
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_torso_upper_body_05.stl",
+      "sha256": "3122e80e9864c7317121fbd9ed5c03651299b2010f280e91e6fb6830ad190cd8"
+    },
+    {
+      "name": "a7_torso_upper_body_06",
+      "group": "upper_body",
+      "source_shells": [
+        100
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_torso_upper_body_06.stl",
+      "sha256": "10f3038ffe290b5d2429ff1cef8f2bd17a3c2f8483814c7791a5d1c342701bbb"
+    },
+    {
+      "name": "a7_torso_upper_body_07",
+      "group": "upper_body",
+      "source_shells": [
+        103
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.02058809041045606,
+        0.12170243635773659,
+        -0.19323918968439102
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.05023740651085973,
+        0.005139701068401337,
+        0.011852189898490906
+      ]
+    },
+    {
+      "name": "a7_torso_upper_body_08",
+      "group": "upper_body",
+      "source_shells": [
+        126
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.006813751417212188,
+        -0.09930964559316635,
+        0.06727412343025208
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.016800891840830445,
+        0.0030074864625930786,
+        0.004731267690658569
+      ]
+    },
+    {
+      "name": "a7_torso_column_support_01",
+      "group": "column_support",
+      "source_shells": [
+        2
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.0,
+        0.0,
+        -0.5869999760761857
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.09000000357627869,
+        0.05999999865889549,
+        1.113999916240573
+      ]
+    },
+    {
+      "name": "a7_torso_column_support_02",
+      "group": "column_support",
+      "source_shells": [
+        7
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_02.stl",
+      "sha256": "d448e25169dd1f845d8b1151cf369bcee0bfa6de68818dab9e3ff7c53d5e2d90"
+    },
+    {
+      "name": "a7_torso_column_support_03",
+      "group": "column_support",
+      "source_shells": [
+        20,
+        55,
+        57,
+        58,
+        62
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_03.stl",
+      "sha256": "f32a3d36ff60a55db01833ef7bfac70b7731768316a2b210bac1bd93dd3f3432"
+    },
+    {
+      "name": "a7_torso_column_support_04",
+      "group": "column_support",
+      "source_shells": [
+        21,
+        56,
+        59,
+        60,
+        64
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_04.stl",
+      "sha256": "2035da3ef175dbc194ce7315a9322fa2925f7c6a859dca0f306dfb7a3fa4c55d"
+    },
+    {
+      "name": "a7_torso_column_support_05",
+      "group": "column_support",
+      "source_shells": [
+        27
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_05.stl",
+      "sha256": "927a7fde8fed76729de11f3fd7feea27f36a54da484111ecec38ddb9274bbcb8"
+    },
+    {
+      "name": "a7_torso_column_support_06",
+      "group": "column_support",
+      "source_shells": [
+        28
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_06.stl",
+      "sha256": "b086bc8027a7a49a558224f7dc23a22f06f4a4c35577f2a8da51f42063863d3a"
+    },
+    {
+      "name": "a7_torso_column_support_07",
+      "group": "column_support",
+      "source_shells": [
+        50
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_07.stl",
+      "sha256": "6b1dc9c1f3bb7ce58264e7110e4553bf15dd316fcd07162028cdeb4bab187413"
+    },
+    {
+      "name": "a7_torso_column_support_08",
+      "group": "column_support",
+      "source_shells": [
+        51
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_08.stl",
+      "sha256": "02fdb1d3fd2f8f34856cee8d1b275b9c514f23937a9843e1671ecae0af1f00fe"
+    },
+    {
+      "name": "a7_torso_column_support_09",
+      "group": "column_support",
+      "source_shells": [
+        61
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_09.stl",
+      "sha256": "ffd2df0dc40abdfca392396e3a0b98f84e8a2d3738a78002bb9a49c170afe063"
+    },
+    {
+      "name": "a7_torso_column_support_10",
+      "group": "column_support",
+      "source_shells": [
+        63
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_10.stl",
+      "sha256": "4e934e1c4fc7577b100cb97b797021d51e652880fadf91a05c56ffcef11a5521"
+    },
+    {
+      "name": "a7_torso_column_support_11",
+      "group": "column_support",
+      "source_shells": [
+        65
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_11.stl",
+      "sha256": "b5084954584679026f2209685e6ff83f635cd76cae0504de9a4a0b3d9792e96a"
+    },
+    {
+      "name": "a7_torso_column_support_12",
+      "group": "column_support",
+      "source_shells": [
+        66
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_12.stl",
+      "sha256": "4f5da6b1ff22d5fa9f2d8b6c289a831a3c6196a7577ce116a7b96cfa60b338b2"
+    },
+    {
+      "name": "a7_torso_column_support_13",
+      "group": "column_support",
+      "source_shells": [
+        68
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_13.stl",
+      "sha256": "07bcebbf240d6be6ec9daf39f03e527c0aeb2077fad88484c49d865b16c109e6"
+    },
+    {
+      "name": "a7_torso_column_support_14",
+      "group": "column_support",
+      "source_shells": [
+        75,
+        79,
+        80
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_14.stl",
+      "sha256": "f34bf67d592da2941eb07617e5a9ce19dbcbd4e158ae92f3d8897baea67c7d6e"
+    },
+    {
+      "name": "a7_torso_column_support_15",
+      "group": "column_support",
+      "source_shells": [
+        78
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_15.stl",
+      "sha256": "e3dc4605d92ef380d5ba15c2a577857cb1193271af0886e302b6f906935052f6"
+    },
+    {
+      "name": "a7_torso_column_support_16",
+      "group": "column_support",
+      "source_shells": [
+        83
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_16.stl",
+      "sha256": "c4bb88e01b713fb069c10346ede00a4080e2b06a3c336ecd1f53ea1583280fe4"
+    },
+    {
+      "name": "a7_torso_column_support_17",
+      "group": "column_support",
+      "source_shells": [
+        97
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_17.stl",
+      "sha256": "b4cb97574dcfa69d650ba2f0186b495bc0fbd1cc6da2d0201f9eb4a675d16f51"
+    },
+    {
+      "name": "a7_torso_column_support_18",
+      "group": "column_support",
+      "source_shells": [
+        129
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_18.stl",
+      "sha256": "ed67c4578efd3b718734e9513c2188bad65b7f2ff75f35c854c753d1b5065533"
+    },
+    {
+      "name": "a7_torso_column_support_19",
+      "group": "column_support",
+      "source_shells": [
+        130
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_19.stl",
+      "sha256": "975af40432291e5bdd9d88daf61166f7badb3a411ca1e76bc36c6648e0dc501e"
+    },
+    {
+      "name": "a7_torso_column_support_20",
+      "group": "column_support",
+      "source_shells": [
+        131
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_20.stl",
+      "sha256": "d2a27d427fd3c3832c87172b1caabc9857150f4bc8754103f762f3c85176fe88"
+    },
+    {
+      "name": "a7_torso_column_support_21",
+      "group": "column_support",
+      "source_shells": [
+        132
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_21.stl",
+      "sha256": "1b00554456707b9d28aaa24dc87b88ab691edde268ed32cd1b9fb4ea30e48662"
+    },
+    {
+      "name": "a7_torso_column_support_22",
+      "group": "column_support",
+      "source_shells": [
+        133
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_22.stl",
+      "sha256": "301cb079eb84592250da5f6c0013cf5e2313899847d97ed90d38c975564ea6b6"
+    },
+    {
+      "name": "a7_torso_column_support_23",
+      "group": "column_support",
+      "source_shells": [
+        134
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_column_support_23.stl",
+      "sha256": "6838dab40394182fd9e1adf2565686185a5408f2a0f670153b686ae587bbf369"
+    },
+    {
+      "name": "a7_torso_head_housing_01",
+      "group": "head_housing",
+      "source_shells": [
+        3
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_head_housing_01.stl",
+      "sha256": "fe3efad7e387165b0ec2d2cafc1fbf66914cc265e4fea8661f246e47f31c8b09"
+    },
+    {
+      "name": "a7_torso_head_housing_02",
+      "group": "head_housing",
+      "source_shells": [
+        5,
+        104,
+        109,
+        112,
+        118,
+        119,
+        121,
+        125
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_head_housing_02.stl",
+      "sha256": "2875bd29bf77d4638522224c8086c98d7d321bb6e29fb192dd71ea24c1801cbb"
+    },
+    {
+      "name": "a7_torso_head_housing_03",
+      "group": "head_housing",
+      "source_shells": [
+        8,
+        48,
+        52
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_head_housing_03.stl",
+      "sha256": "549402ce9da45d14399165cd817364fc98f4e38b04c768719448706469837a67"
+    },
+    {
+      "name": "a7_torso_head_housing_04",
+      "group": "head_housing",
+      "source_shells": [
+        19
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_head_housing_04.stl",
+      "sha256": "87c95d75b7600e3a8196026b09298d24a3cb22b0f0dfc3528c5a30b4f195f4e2"
+    },
+    {
+      "name": "a7_torso_base_plate",
+      "group": "base_plate",
+      "source_shells": [
+        4
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_base_plate.stl",
+      "sha256": "8861f9a464b6cc3b063c02b585b82edfd4f03c9f3e160fb6155851a22ffa3427"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_01",
+      "group": "caster_rear_left",
+      "source_shells": [
+        11,
+        114
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_01.stl",
+      "sha256": "992c1844a9b00266d7d6ef3246a0efd35475c0508bfb578c8d5c8e943128f9f2"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_02",
+      "group": "caster_rear_left",
+      "source_shells": [
+        35
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_02.stl",
+      "sha256": "684a8c6421b0c3cf4fbbfbe83572bd22cea47c35ada61ddf4c61e111a3fe5c39"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_03",
+      "group": "caster_rear_left",
+      "source_shells": [
+        41
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_03.stl",
+      "sha256": "7498346e87d0f43b48659a05d0fdad0a0562dd5e4addfcb94a464a954335449e"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_04",
+      "group": "caster_rear_left",
+      "source_shells": [
+        70
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_04.stl",
+      "sha256": "4393471267e2a6791c0492aa504e695f10e4a0f95b79c271239fed8f1a100ef6"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_05",
+      "group": "caster_rear_left",
+      "source_shells": [
+        89
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_05.stl",
+      "sha256": "6d2587430e70e7e3809ee298489416ea12fe8a31cedcd9cd93a8bc091249e050"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_06",
+      "group": "caster_rear_left",
+      "source_shells": [
+        95
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_06.stl",
+      "sha256": "23b1ca17a26d8ae4e7cd372c6747fb4cc5d8a64ab3bea25697610917000b9068"
+    },
+    {
+      "name": "a7_torso_caster_rear_left_07",
+      "group": "caster_rear_left",
+      "source_shells": [
+        107
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_left_07.stl",
+      "sha256": "0cad3252821ff849b1005fdde31f5d98411cb9683880a0e6b60daddd819f434f"
+    },
+    {
+      "name": "a7_torso_caster_front_left_01",
+      "group": "caster_front_left",
+      "source_shells": [
+        12,
+        117
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_01.stl",
+      "sha256": "7511b7fcab171b0a5c850ef4b69303e355fe2954176c49b071f4c4b3004733b6"
+    },
+    {
+      "name": "a7_torso_caster_front_left_02",
+      "group": "caster_front_left",
+      "source_shells": [
+        32
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_02.stl",
+      "sha256": "9e44813088e0bb24a5f02d36a88a1840364778d97ddb0c44a84be7d598aed37e"
+    },
+    {
+      "name": "a7_torso_caster_front_left_03",
+      "group": "caster_front_left",
+      "source_shells": [
+        40
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_03.stl",
+      "sha256": "585c8d72a2f9d675d0f895c7aca4ae823ab6602c1369854274949bad84bc03b6"
+    },
+    {
+      "name": "a7_torso_caster_front_left_04",
+      "group": "caster_front_left",
+      "source_shells": [
+        72
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_04.stl",
+      "sha256": "2ea4f131dfeed4db0794b2dfda7cf1ddf2be324f341fe90eaa78d597ade54cff"
+    },
+    {
+      "name": "a7_torso_caster_front_left_05",
+      "group": "caster_front_left",
+      "source_shells": [
+        86
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_05.stl",
+      "sha256": "9f2cc8ff938f43c22f6c672b2d370f141ffb024a6099dcf725b3dfbce46c6b8d"
+    },
+    {
+      "name": "a7_torso_caster_front_left_06",
+      "group": "caster_front_left",
+      "source_shells": [
+        93
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_06.stl",
+      "sha256": "22c5927d5eef80ebdbabcabcb259e6bd1c300d2d53c0fab408eb75c5adb0a2c7"
+    },
+    {
+      "name": "a7_torso_caster_front_left_07",
+      "group": "caster_front_left",
+      "source_shells": [
+        106
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_left_07.stl",
+      "sha256": "e592f81fd26de5734dcdd9a3e9dae11167c0f40b2318f67ebb99b22c24698951"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_01",
+      "group": "caster_rear_right",
+      "source_shells": [
+        13,
+        116
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_01.stl",
+      "sha256": "ea9d4b6fd7dd6af6155faafea6b433713ae5f805adb93abafa736f39121fdd8b"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_02",
+      "group": "caster_rear_right",
+      "source_shells": [
+        33
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_02.stl",
+      "sha256": "fb6d6bccd241b7cfb8dbe15e0858feb2f8e0d6b0cb56c2abac988cf720aeddb7"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_03",
+      "group": "caster_rear_right",
+      "source_shells": [
+        39
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_03.stl",
+      "sha256": "ba9b219b76bef6baa86561d8b545ae6e74e341429de14a551b91b8acfa7d5d41"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_04",
+      "group": "caster_rear_right",
+      "source_shells": [
+        69
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_04.stl",
+      "sha256": "df8dbc07522baa40b128af4291c063f8aa91a500a2b8376be3286947e9d66982"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_05",
+      "group": "caster_rear_right",
+      "source_shells": [
+        87
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_05.stl",
+      "sha256": "cb45e46575f82a437ab114dd517251214b8fb8f2f9263415d99f964f42a23212"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_06",
+      "group": "caster_rear_right",
+      "source_shells": [
+        96
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_06.stl",
+      "sha256": "6ad05b8eecf4b42d3dd9b5be03c118725d5c9a8aad7f7475445ff60eb1637c44"
+    },
+    {
+      "name": "a7_torso_caster_rear_right_07",
+      "group": "caster_rear_right",
+      "source_shells": [
+        105
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_rear_right_07.stl",
+      "sha256": "00b75f71174b30fcd6da26d8f1833d7d63c13940cc400cc3d2ab8d8d9d0ff316"
+    },
+    {
+      "name": "a7_torso_caster_front_right_01",
+      "group": "caster_front_right",
+      "source_shells": [
+        14,
+        115
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_01.stl",
+      "sha256": "fe9ab48df478fa1e66fa2466779fb04e8749cd99983ad1e65567f724601e6652"
+    },
+    {
+      "name": "a7_torso_caster_front_right_02",
+      "group": "caster_front_right",
+      "source_shells": [
+        34
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_02.stl",
+      "sha256": "48d27a8dbe93527451170d105ba46c36f66d4a3982555dd402fcf6cf7c208a04"
+    },
+    {
+      "name": "a7_torso_caster_front_right_03",
+      "group": "caster_front_right",
+      "source_shells": [
+        38
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_03.stl",
+      "sha256": "9e35aa6d1803436cbd5ece5db8bfbfb2c7ded789772235b88e152ac7ddd5cefd"
+    },
+    {
+      "name": "a7_torso_caster_front_right_04",
+      "group": "caster_front_right",
+      "source_shells": [
+        71
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_04.stl",
+      "sha256": "88ee9897c0f28a32224e3a432bf9a4238ab08173968b0a0a77a64c5c508d7811"
+    },
+    {
+      "name": "a7_torso_caster_front_right_05",
+      "group": "caster_front_right",
+      "source_shells": [
+        88
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_05.stl",
+      "sha256": "04f1e635c0b63a806f31128d800d65369ac1c9d2aeb8e26dbbbf7450d1d61fe7"
+    },
+    {
+      "name": "a7_torso_caster_front_right_06",
+      "group": "caster_front_right",
+      "source_shells": [
+        94
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_06.stl",
+      "sha256": "5841999389b028119cc31324a117c86b5ffd3a156b65ceeb85c4bd2b485589f9"
+    },
+    {
+      "name": "a7_torso_caster_front_right_07",
+      "group": "caster_front_right",
+      "source_shells": [
+        108
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_torso_caster_front_right_07.stl",
+      "sha256": "f7b04522ba01794c03392dd8fea0d6484218f8ab53ccfbb668c8e0bd32fda79e"
+    }
+  ]
+}

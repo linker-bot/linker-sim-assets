@@ -1,0 +1,1992 @@
+{
+  "source_mesh": "base_link.STL",
+  "source_sha256": "3d65f26f80151953c0d1e66bbb6ea17fdd1f793c1d4a248074f4d2d9d1f0c6cf",
+  "groups_sha256": "c54550e770cb7f3d2a3af4e0238351152379a4581b476f6075f15a0c74ef3ddf",
+  "source_hull_count": 260,
+  "source_hulls_sha256": "17b98a56151d277eee688fad983bd7af7d4cdcff623281d58e2e1114385f9c2c",
+  "method": "semantic convex unions and conservative native primitives",
+  "planar_thickness_m": 0.0001,
+  "containment_tolerance_m": 1e-08,
+  "envelope_validation": "entire fitted solid within original group union offset; inconclusive fits rejected",
+  "authoring_versions": {
+    "trimesh": "4.11.1",
+    "numpy": "2.3.1",
+    "scipy": "1.17.0"
+  },
+  "unchanged_non_collision_xml_sha256": {
+    "base.urdf": "6921d86d00683b053a330cd5ed7b3927b0b05efeea11e517de73ec6e4876cbc0",
+    "base.mjcf": "e94c2b222b0379aad5df71a9c6e28b2bd29bbda858ec064c1777fcdfb1c62c26"
+  },
+  "collision_count": 127,
+  "mesh_file_count": 93,
+  "parts": [
+    {
+      "name": "a7_lite_torso_upper_body_01",
+      "group": "upper_body",
+      "source_shells": [
+        0
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_01.stl",
+      "sha256": "6a41e88075962dc9202e43a5cee1f02cd05eaf994f03f19f67b6ed63e04602ae"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_02",
+      "group": "upper_body",
+      "source_shells": [
+        1
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_02.stl",
+      "sha256": "97c3d082d4a45d896075af5e221d4488c119990527b80ba68d19dba9abed25d7"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_03",
+      "group": "upper_body",
+      "source_shells": [
+        9,
+        14,
+        15,
+        16,
+        22,
+        27,
+        28,
+        33,
+        38,
+        39,
+        40,
+        50,
+        52,
+        57,
+        60,
+        61,
+        63,
+        65,
+        74,
+        81,
+        82,
+        83,
+        84,
+        86,
+        113,
+        114,
+        115,
+        120,
+        122,
+        123,
+        124,
+        126,
+        127,
+        130,
+        133,
+        134,
+        135,
+        137,
+        139,
+        146,
+        163,
+        164,
+        165,
+        172,
+        214,
+        215,
+        217,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        233,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        248,
+        252
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_03.stl",
+      "sha256": "2d73168d22158ca70070ae98399f4a159508994ae3613f34e84c97b1f9a48723"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_04",
+      "group": "upper_body",
+      "source_shells": [
+        66,
+        103
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_04.stl",
+      "sha256": "f42bb1fcf84bc033236a23e61696eb627c64494a02e33dac35a9153e73ca07ba"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_05",
+      "group": "upper_body",
+      "source_shells": [
+        67,
+        101,
+        166
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_05.stl",
+      "sha256": "6446f7a824a13d39722eeb899cef2ee83915881c6f0537655daadd72d2e48ba5"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_06",
+      "group": "upper_body",
+      "source_shells": [
+        80
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_06.stl",
+      "sha256": "02f13b6e0defa450e37fdceaed48222e081807e9c3e87c34ea0433ebca748881"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_07",
+      "group": "upper_body",
+      "source_shells": [
+        99
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        -0.009368597064167261,
+        -0.12366257607936859,
+        -0.1915532946586609
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.029571342281997204,
+        0.009952783584594727,
+        0.00708499550819397
+      ]
+    },
+    {
+      "name": "a7_lite_torso_upper_body_08",
+      "group": "upper_body",
+      "source_shells": [
+        104,
+        153
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        -0.015008040005341172,
+        0.09778783470392227,
+        -0.1925264075398445
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.0408502290956676,
+        0.017818212509155273,
+        0.00903119146823883
+      ]
+    },
+    {
+      "name": "a7_lite_torso_upper_body_09",
+      "group": "upper_body",
+      "source_shells": [
+        112
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.00029372688023545913,
+        0.1042316780632585,
+        -0.19630762979560243
+      ],
+      "rpy_rad": [
+        -2.8610056343766797,
+        0.06268813001141527,
+        -1.7544479420797157
+      ],
+      "size_m": [
+        0.008009018691581243,
+        0.009498393986508466,
+        0.03645421142048835
+      ]
+    },
+    {
+      "name": "a7_lite_torso_upper_body_10",
+      "group": "upper_body",
+      "source_shells": [
+        125,
+        138
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        -0.037630387776106757,
+        -0.10062444942938331,
+        -0.2670930005753907
+      ],
+      "rpy_rad": [
+        1.3788248386187445,
+        -1.3768940411759076,
+        -1.625208745244954
+      ],
+      "size_m": [
+        0.0018243500146788993,
+        0.01991528866924505,
+        0.07266028238691953
+      ]
+    },
+    {
+      "name": "a7_lite_torso_upper_body_11",
+      "group": "upper_body",
+      "source_shells": [
+        128,
+        192
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_11.stl",
+      "sha256": "cccf0cda2c9c0a7ac711b84b34e7afb2c895ed6dfbaea2a1c248e5f153451b7f"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_12",
+      "group": "upper_body",
+      "source_shells": [
+        129,
+        132,
+        162,
+        193,
+        216,
+        232
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_12.stl",
+      "sha256": "5e8b036d0b6ccf98a3df7292a19ec5e9d083e4ca79297afec921d381f6a3a07a"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_13",
+      "group": "upper_body",
+      "source_shells": [
+        131,
+        140,
+        142,
+        159,
+        251
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_13.stl",
+      "sha256": "d4c4f3a64a8a3c70517985429d03dd9e7dba464e7d6d9ce39e19b388b488b707"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_14",
+      "group": "upper_body",
+      "source_shells": [
+        136,
+        211
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_14.stl",
+      "sha256": "19a3d9be6eeb772697d5a0afb88d3b841a04e422dc20a76c2ef7aa9e53b5e942"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_15",
+      "group": "upper_body",
+      "source_shells": [
+        141,
+        143
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_15.stl",
+      "sha256": "52c338c81c61e4efa4f3020ae43a8ccab3a3033a49d63d37bff44078882771a4"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_16",
+      "group": "upper_body",
+      "source_shells": [
+        144
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_16.stl",
+      "sha256": "af4c12fd33becf3c5ed601a766307f581cf09a4df2174fad51541248160532ba"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_17",
+      "group": "upper_body",
+      "source_shells": [
+        158
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.0028129046848835494,
+        0.09548945031358509,
+        -0.2714340120944397
+      ],
+      "rpy_rad": [
+        -3.1044730420650715,
+        0.1049531748838135,
+        2.0178667661972454
+      ],
+      "size_m": [
+        0.00010000147846775387,
+        0.010966825893804828,
+        0.03607401872638116
+      ]
+    },
+    {
+      "name": "a7_lite_torso_upper_body_18",
+      "group": "upper_body",
+      "source_shells": [
+        171
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_18.stl",
+      "sha256": "43d0de5016956a78d82d42814ec4d88deb8b06754ca303354745a1eb1d89b651"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_19",
+      "group": "upper_body",
+      "source_shells": [
+        178
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.001,
+      "position_m": [
+        0.0008527007769543246,
+        -0.08106781172625281,
+        0.11081007460021608
+      ],
+      "rpy_rad": [
+        0.6910642288228808,
+        -0.13296980125448576,
+        0.27859247155604683
+      ],
+      "size_m": [
+        0.00010054169839237258,
+        0.015559600435444937,
+        0.016988105033159284
+      ]
+    },
+    {
+      "name": "a7_lite_torso_upper_body_20",
+      "group": "upper_body",
+      "source_shells": [
+        179
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_20.stl",
+      "sha256": "9326629b43279a91fbc5cf81490403882f344a1c846d1df9e36e6ab4590da7f3"
+    },
+    {
+      "name": "a7_lite_torso_upper_body_21",
+      "group": "upper_body",
+      "source_shells": [
+        212
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.001,
+      "file": "a7_lite_torso_upper_body_21.stl",
+      "sha256": "1b686b4171f315d3af66461736c93f705b458da4bfbc5d2b3d92bc27813d77e4"
+    },
+    {
+      "name": "a7_lite_torso_column_support",
+      "group": "column_support",
+      "source_shells": [
+        2
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_column_support.stl",
+      "sha256": "4417eadf14705848c88039f40ae4c9369ad082ff31c2760cc69d01d598861ce4"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_01",
+      "group": "head_housing",
+      "source_shells": [
+        3
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_01.stl",
+      "sha256": "85d620cfa6660ce71b8ca0e0c10d390247673a6a3dce6ad31a617616f5b093b3"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_02",
+      "group": "head_housing",
+      "source_shells": [
+        4
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_02.stl",
+      "sha256": "01ad82f91e20b20184b729e86b26994df3a6cba4a81665e2b0b043a6156ca105"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_03",
+      "group": "head_housing",
+      "source_shells": [
+        5,
+        102,
+        180
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_03.stl",
+      "sha256": "d080b05d975a406c397bcbfbb77827d11d69e53b501d1c7fb786befe69a6c690"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_04",
+      "group": "head_housing",
+      "source_shells": [
+        45,
+        47
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00299999862909317,
+        -0.01411393005400896,
+        0.1550000011920929
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.08153197914361954,
+        0.06973313353955746,
+        0.03526213765144348
+      ]
+    },
+    {
+      "name": "a7_lite_torso_head_housing_05",
+      "group": "head_housing",
+      "source_shells": [
+        46,
+        48
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.00299999862909317,
+        -0.014255768619477749,
+        0.26500000804662704
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.08153198659420013,
+        0.06990125216543674,
+        0.03514648973941803
+      ]
+    },
+    {
+      "name": "a7_lite_torso_head_housing_06",
+      "group": "head_housing",
+      "source_shells": [
+        62,
+        85,
+        148,
+        149,
+        150,
+        185,
+        186,
+        188
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_06.stl",
+      "sha256": "6db25213b0379002400d3832e2643a270edb8ae7b9a20b4b47baf7d61ff0a304"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_07",
+      "group": "head_housing",
+      "source_shells": [
+        64
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_07.stl",
+      "sha256": "d395aa7faf4af2cf84bc3e678fa6c9285936e96d0ade499b4bbb60e159dc23bb"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_08",
+      "group": "head_housing",
+      "source_shells": [
+        68,
+        73,
+        147,
+        151,
+        152,
+        187,
+        189,
+        190
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_08.stl",
+      "sha256": "e23cc6f7f7ed5b6d12e2241ffa7e25b923511200faf8f447495769a9360e49cf"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_09",
+      "group": "head_housing",
+      "source_shells": [
+        79
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.021111075510589217,
+        0.03165349829941988,
+        0.15649177134037018
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.04223386063176804,
+        0.012800408527255058,
+        0.014866381883621216
+      ]
+    },
+    {
+      "name": "a7_lite_torso_head_housing_10",
+      "group": "head_housing",
+      "source_shells": [
+        100
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.009368597296997905,
+        0.03633741848170757,
+        0.20590770989656448
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.029571341816335917,
+        0.009952772408723831,
+        0.007084980607032776
+      ]
+    },
+    {
+      "name": "a7_lite_torso_head_housing_11",
+      "group": "head_housing",
+      "source_shells": [
+        161
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.09905481987678154,
+        -0.04349759441612667,
+        0.28921814706665494
+      ],
+      "rpy_rad": [
+        -2.8031876107801366,
+        0.13128687959147012,
+        2.103684700482703
+      ],
+      "size_m": [
+        0.00010000158958733962,
+        0.01163038560291818,
+        0.02941097759010533
+      ]
+    },
+    {
+      "name": "a7_lite_torso_head_housing_12",
+      "group": "head_housing",
+      "source_shells": [
+        173
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_12.stl",
+      "sha256": "059e53e5f35a25043eaf2d935f25635a8cf38f4a349c661b24277d1c448b817c"
+    },
+    {
+      "name": "a7_lite_torso_head_housing_13",
+      "group": "head_housing",
+      "source_shells": [
+        191,
+        210,
+        213,
+        218
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_head_housing_13.stl",
+      "sha256": "4540588087c4082d7c6399c0d193332d4d51ef506981ecdd63337317f6956736"
+    },
+    {
+      "name": "a7_lite_torso_base_plate",
+      "group": "base_plate",
+      "source_shells": [
+        6
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.0,
+        -0.014378421008586884,
+        -1.1480000019073486
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.5,
+        0.5000000149011612,
+        0.003999948501586914
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_01",
+      "group": "base_frame",
+      "source_shells": [
+        7
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.22000643610954285,
+        -0.014436013996601105,
+        -1.1649999618530273
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.060012876987457275,
+        0.5001824349164963,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_02",
+      "group": "base_frame",
+      "source_shells": [
+        8
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.22000643610954285,
+        -0.014320820569992065,
+        -1.1649999618530273
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.060012876987457275,
+        0.5001824498176575,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_03",
+      "group": "base_frame",
+      "source_shells": [
+        10
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -2.3692846298217773e-06,
+        -0.234378419816494,
+        -1.1649999618530273
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.38000476360321045,
+        0.060000017285346985,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_04",
+      "group": "base_frame",
+      "source_shells": [
+        11
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        2.3618340492248535e-06,
+        0.20562158524990082,
+        -1.1649999618530273
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.38000474870204926,
+        0.06000000238418579,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_05",
+      "group": "base_frame",
+      "source_shells": [
+        12
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        2.3618340492248535e-06,
+        0.08985944278538227,
+        -1.1649999618530273
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.38000474870204926,
+        0.05999999865889549,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_06",
+      "group": "base_frame",
+      "source_shells": [
+        13
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -2.3618340492248535e-06,
+        -0.11861627176404,
+        -1.1649999618530273
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.38000474870204926,
+        0.059999994933605194,
+        0.029999971389770508
+      ]
+    },
+    {
+      "name": "a7_lite_torso_base_frame_07",
+      "group": "base_frame",
+      "source_shells": [
+        17
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_07.stl",
+      "sha256": "b8469238cefae4fb58a83700c1d9ba3f398b02ef17096eec44df63a21bf8fd08"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_08",
+      "group": "base_frame",
+      "source_shells": [
+        87
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_08.stl",
+      "sha256": "6454f3195de75a20dfbbc43944b447a4e9c233ccc3253a7719210c8b69193d71"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_09",
+      "group": "base_frame",
+      "source_shells": [
+        88
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_09.stl",
+      "sha256": "f6d80c6209f710d58ebc847cb5685b1a2b71009ef711809dff332d48a096eba9"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_10",
+      "group": "base_frame",
+      "source_shells": [
+        89
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_10.stl",
+      "sha256": "f4e5bc455f7f0bce49a3967c4d2a0fc30148b8ec786171194e9508a772f5acab"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_11",
+      "group": "base_frame",
+      "source_shells": [
+        90
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_11.stl",
+      "sha256": "ce52e76db965ae97ad750fa7e4acb425bc3ab876709b2673e9d9c2ce4f1c73df"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_12",
+      "group": "base_frame",
+      "source_shells": [
+        95,
+        174,
+        184,
+        196,
+        203
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_12.stl",
+      "sha256": "e6f757d33f76e63fbf931a017d61c28b4d016483140bcefe36fdb6444f116f87"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_13",
+      "group": "base_frame",
+      "source_shells": [
+        96,
+        175,
+        181,
+        195,
+        202
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_13.stl",
+      "sha256": "1cb9ef73b88a6abffe02b945c43e5b1a4bbb932378ded5c1832882af4a68473c"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_14",
+      "group": "base_frame",
+      "source_shells": [
+        97,
+        176,
+        182,
+        194,
+        204
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_14.stl",
+      "sha256": "76f4c1ee8b879679e3bdb15dbe5d446abe45b813b367b9c059b33a0f8841dec5"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_15",
+      "group": "base_frame",
+      "source_shells": [
+        98,
+        177,
+        183,
+        197,
+        205
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_15.stl",
+      "sha256": "7114854732faab86f680aad41de5238f4968f1735a1f8b50135990e5501cb48a"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_16",
+      "group": "base_frame",
+      "source_shells": [
+        105
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_16.stl",
+      "sha256": "637048cc4d3d3ac197a31ed62a9530e13862653e5ed047a61c0d2f5aa0b07a62"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_17",
+      "group": "base_frame",
+      "source_shells": [
+        106
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_17.stl",
+      "sha256": "e85973d30b1b027636fc7191fdac3cdaaeb0ef813c9bfb6ccd4bc529af556be6"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_18",
+      "group": "base_frame",
+      "source_shells": [
+        107
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_18.stl",
+      "sha256": "69ed4fba510d413fe60856611efcdb10d826fa7a966f4c430484558a72009e1a"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_19",
+      "group": "base_frame",
+      "source_shells": [
+        108
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_19.stl",
+      "sha256": "13f7917fc64e7a210eabca2369c42a72da4e1d3e4ad1a2f3a67fda00c5e78fb5"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_20",
+      "group": "base_frame",
+      "source_shells": [
+        109
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_20.stl",
+      "sha256": "700d4bc587d0ba5ecb4ea978693c2ab18c392261af4da7444745a526159198fd"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_21",
+      "group": "base_frame",
+      "source_shells": [
+        110
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_21.stl",
+      "sha256": "08ffed942eae14e9247f71fb759a136cda0312eb7c86ec8fa1388f4daa0c7ee2"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_22",
+      "group": "base_frame",
+      "source_shells": [
+        111,
+        259
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_22.stl",
+      "sha256": "b9ee19553fcd5abfe10ee830914144fa95ee0641609a9eacad200eef850d3832"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_23",
+      "group": "base_frame",
+      "source_shells": [
+        116,
+        201,
+        206
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_23.stl",
+      "sha256": "9f0884c0ab7bae117bd27fe5362277b34a1fe4829bfc0017044a992fe2ba4a61"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_24",
+      "group": "base_frame",
+      "source_shells": [
+        117,
+        198,
+        209
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_24.stl",
+      "sha256": "b5efbe691af6d582340b29e65859456c1647dbca89e924fbc37d21124ecd90ec"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_25",
+      "group": "base_frame",
+      "source_shells": [
+        118,
+        199,
+        208
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_25.stl",
+      "sha256": "1e85643bfdc76be5b754a075967fbce24329bfb6cb7d306621ad8d61da0bbdc7"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_26",
+      "group": "base_frame",
+      "source_shells": [
+        119,
+        200,
+        207
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_26.stl",
+      "sha256": "ce76176739e1a2793c1c868cf6d83f0a0434f93bffb8c5138177178f7e295667"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_27",
+      "group": "base_frame",
+      "source_shells": [
+        121,
+        250
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_27.stl",
+      "sha256": "b462bdaf618c65e0275f2635a7cefca7f2b34579ef580b3cfa27ce2bbbeb9491"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_28",
+      "group": "base_frame",
+      "source_shells": [
+        145,
+        160
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_28.stl",
+      "sha256": "25365fc67aefc161ec17f1cc00111de20cb6d7f9be61ad4946ae3ee48e3b06fb"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_29",
+      "group": "base_frame",
+      "source_shells": [
+        154
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_29.stl",
+      "sha256": "e5e7b1a1f23c2c2e404c788bd656b14df101f4b01a2582b40c30cecf64f22b9d"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_30",
+      "group": "base_frame",
+      "source_shells": [
+        155
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_30.stl",
+      "sha256": "54d90b71f5987373aba6864c97f0d0b7d906b5ef9a82ae758ea32738690911da"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_31",
+      "group": "base_frame",
+      "source_shells": [
+        156
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_31.stl",
+      "sha256": "4b5be5cd1975a2c20651b65ea31b23c2d2d90852092ad4368d87f57851a97fc7"
+    },
+    {
+      "name": "a7_lite_torso_base_frame_32",
+      "group": "base_frame",
+      "source_shells": [
+        157
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_base_frame_32.stl",
+      "sha256": "2b3885a1c21857150421a46a04f262d9e4ef473721d11ee554749c095e925270"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_01",
+      "group": "caster_right",
+      "source_shells": [
+        18
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_01.stl",
+      "sha256": "c12006ee2c025f915e7f7b5068dad724e2a39a05ffd77801a0b7339ec2a401c4"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_02",
+      "group": "caster_right",
+      "source_shells": [
+        30
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_02.stl",
+      "sha256": "17977f205f79cd10814e0077275460a50f53b5f442670adb81e55756a1487d07"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_03",
+      "group": "caster_right",
+      "source_shells": [
+        53
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_03.stl",
+      "sha256": "3e2414ccff0d68cfeaf1a385c87a6e8bb20b43ae9a6a923bbfd4599f700b0359"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_04",
+      "group": "caster_right",
+      "source_shells": [
+        56
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_04.stl",
+      "sha256": "ae23ebd16a5ee8ab307baed6e1542c8c9c2ace28ab377bb9e5c4781ef95e412c"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_05",
+      "group": "caster_right",
+      "source_shells": [
+        75
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.03994202986359596,
+        -0.20679428428411484,
+        -1.2639999985694885
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.008015766740066883,
+        0.015033647418022156
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_right_06",
+      "group": "caster_right",
+      "source_shells": [
+        91
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_06.stl",
+      "sha256": "e39824c1fbbc6822fc5a642a7493401723e7179c61c74fe6c8d8869b8380c539"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_07",
+      "group": "caster_right",
+      "source_shells": [
+        234
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_07.stl",
+      "sha256": "9674c9859899b940aa73f478659ac17843fc3c368e731dec3d1f1ddbf3e4aaed"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_08",
+      "group": "caster_right",
+      "source_shells": [
+        235
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_08.stl",
+      "sha256": "55661fd12fe0a7cee30041129bc0c7ec93ba430ab4f16b8c4e17ca003de9e8e5"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_09",
+      "group": "caster_right",
+      "source_shells": [
+        244
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_09.stl",
+      "sha256": "b274af88b4847ed779714a65a90514270f7b91144deb957573dfeef02d34f833"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_10",
+      "group": "caster_right",
+      "source_shells": [
+        247
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_right_10.stl",
+      "sha256": "6e02198f34bcf612c2dfc4b49d54b061f4d3568c807502efd8abe326ba294e15"
+    },
+    {
+      "name": "a7_lite_torso_caster_right_11",
+      "group": "caster_right",
+      "source_shells": [
+        256
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.04900633916258812,
+        -0.09407718852162361,
+        -1.1921532154083252
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.004518777132034302,
+        0.0015296712517738342,
+        0.00116729736328125
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_right_12",
+      "group": "caster_right",
+      "source_shells": [
+        258
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.05099366419017315,
+        -0.09407718852162361,
+        -1.1921532154083252
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.004518773406744003,
+        0.0015296712517738342,
+        0.00116729736328125
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_left_01",
+      "group": "caster_left",
+      "source_shells": [
+        19
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_01.stl",
+      "sha256": "19efaed7a6b17a0626b6c2cd4e496fb2908a561c7ce3d115f57e4cc7cedbc006"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_02",
+      "group": "caster_left",
+      "source_shells": [
+        32
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_02.stl",
+      "sha256": "0c557344f1d5bdeb6b15b4219a5cf3a53cd74e265eece2d6ca364c9291806789"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_03",
+      "group": "caster_left",
+      "source_shells": [
+        54
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_03.stl",
+      "sha256": "b0e670b084b20ac3b0914d94703b9c2a34cde0cd308bde384ee4f8bb1a3b3347"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_04",
+      "group": "caster_left",
+      "source_shells": [
+        58
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_04.stl",
+      "sha256": "10988e8ae7794f26986d16e954391d7bc58aa6248c5bde1eee105b155a36046f"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_05",
+      "group": "caster_left",
+      "source_shells": [
+        78
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.04000000096857548,
+        0.2331215813755989,
+        -1.2639999985694885
+      ],
+      "rpy_rad": [
+        -1.5707963267948963,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.008000026261650117,
+        0.015000000596046448
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_left_06",
+      "group": "caster_left",
+      "source_shells": [
+        94
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_06.stl",
+      "sha256": "814099da42ae3efcd3d221a166f1faa6df3d5dd9d6a9ff736c7ce1060b6853d1"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_07",
+      "group": "caster_left",
+      "source_shells": [
+        236
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_07.stl",
+      "sha256": "ea39a502c36c26e9a78265b19f3db806518f1869a5513cf6c0f600acd9878a1e"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_08",
+      "group": "caster_left",
+      "source_shells": [
+        237
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_08.stl",
+      "sha256": "b93dd863b38ff89e5438f96b611e3421e5348b42e27849db34881938400dc9b8"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_09",
+      "group": "caster_left",
+      "source_shells": [
+        245
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_09.stl",
+      "sha256": "80c07d829fdef556980891a0e83c8adea701c38bdd0936603c201995d96f178e"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_10",
+      "group": "caster_left",
+      "source_shells": [
+        246
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_left_10.stl",
+      "sha256": "0758a940980017529780c3cd722582343cfeca4727cb169279da850fd6cceeb2"
+    },
+    {
+      "name": "a7_lite_torso_caster_left_11",
+      "group": "caster_left",
+      "source_shells": [
+        255
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.05099366419017315,
+        0.05592280812561512,
+        -1.1921532154083252
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.004518773406744003,
+        0.0015296749770641327,
+        0.00116729736328125
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_left_12",
+      "group": "caster_left",
+      "source_shells": [
+        257
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.04900633729994297,
+        0.05592280998826027,
+        -1.1921532154083252
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.004518773406744003,
+        0.0015296712517738342,
+        0.00116729736328125
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_01",
+      "group": "caster_rear",
+      "source_shells": [
+        20
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_rear_01.stl",
+      "sha256": "5828a1a9d2bfa82535a15c2c8678a27641e9d2f42d84a2407d7374fed1009ec7"
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_02",
+      "group": "caster_rear",
+      "source_shells": [
+        31
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_rear_02.stl",
+      "sha256": "99726cbcf4a7ed1b46b8dc8534c02a07b58b5d367488a8068d1893a24256edf9"
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_03",
+      "group": "caster_rear",
+      "source_shells": [
+        55
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_rear_03.stl",
+      "sha256": "758d9fc48b4bf625b7259305d6e7abff312e4a71bafccdd24920c28eb64884b4"
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_04",
+      "group": "caster_rear",
+      "source_shells": [
+        59
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_rear_04.stl",
+      "sha256": "5b4b91ec61fb9610131624210fcb95dab94e33c20e47516635c7d5f8d17b04c2"
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_05",
+      "group": "caster_rear",
+      "source_shells": [
+        77
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2474999949336052,
+        0.03985944576561451,
+        -1.2639999985694885
+      ],
+      "rpy_rad": [
+        -0.0,
+        1.5707963267948966,
+        0.0
+      ],
+      "size_m": [
+        0.008000026261650117,
+        0.015000000596046448
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_06",
+      "group": "caster_rear",
+      "source_shells": [
+        93
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_rear_06.stl",
+      "sha256": "b6199b97e833668dcd46a1634ebad86986f161615f5736a78747753b331efa97"
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_07",
+      "group": "caster_rear",
+      "source_shells": [
+        253
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.054006338119506836,
+        -0.019839326851069927,
+        -1.1905533075332642
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.004518777132034302,
+        0.001529669389128685,
+        0.00116729736328125
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_rear_08",
+      "group": "caster_rear",
+      "source_shells": [
+        254
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.054006338119506836,
+        0.010160672478377819,
+        -1.1905533075332642
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.004518777132034302,
+        0.0015296712517738342,
+        0.00116729736328125
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_front_01",
+      "group": "caster_front",
+      "source_shells": [
+        21
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_front_01.stl",
+      "sha256": "14bcd28cc9eedc4632601e3ca16dfeaeef7f533219e21a29fd21d5631d9b1b6a"
+    },
+    {
+      "name": "a7_lite_torso_caster_front_02",
+      "group": "caster_front",
+      "source_shells": [
+        29
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_front_02.stl",
+      "sha256": "0887ad849258e73954b890f091c8492759b7d09654cae80e568266ab6d24301c"
+    },
+    {
+      "name": "a7_lite_torso_caster_front_03",
+      "group": "caster_front",
+      "source_shells": [
+        49
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_front_03.stl",
+      "sha256": "ce21b54cdf40dbd463efd3187c8dd4f28c3a8aa6c138a376bdc9121dbf54385d"
+    },
+    {
+      "name": "a7_lite_torso_caster_front_04",
+      "group": "caster_front",
+      "source_shells": [
+        51
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_front_04.stl",
+      "sha256": "7e0f3a7a2335934407748d5bcb3f77c3a069ce2df26f9a131c0e37a2802be813"
+    },
+    {
+      "name": "a7_lite_torso_caster_front_05",
+      "group": "caster_front",
+      "source_shells": [
+        76
+      ],
+      "shape": "cylinder",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.19198746234178543,
+        0.025264338590204716,
+        -1.2639999985694885
+      ],
+      "rpy_rad": [
+        -0.0,
+        1.5707963267948966,
+        0.0
+      ],
+      "size_m": [
+        0.008095863275449346,
+        0.01520468294620514
+      ]
+    },
+    {
+      "name": "a7_lite_torso_caster_front_06",
+      "group": "caster_front",
+      "source_shells": [
+        92
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_front_06.stl",
+      "sha256": "8cfa26761fa04d88a05d87dcfbfe8d46babc7c1faabf7428d8d454e8fcf6e807"
+    },
+    {
+      "name": "a7_lite_torso_caster_front_07",
+      "group": "caster_front",
+      "source_shells": [
+        249
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_caster_front_07.stl",
+      "sha256": "033d157777b01535f6aa08fff1392624b38728dfbbe6471d14ded307f4cdfff4"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_left_01",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        23
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_rear_left_01.stl",
+      "sha256": "25c3d23014b0d98e775d074c07da784177a3794587a27d6c8ecc5dcde7f27dd4"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_left_02",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        37
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_rear_left_02.stl",
+      "sha256": "7defec69bc55211cc211c72c7a9017784f27b42ef067fb846c5d80c7ebd7c0cc"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_left_03",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        42,
+        220
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2199999988079071,
+        0.20562158524990082,
+        -1.231015682220459
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.06000000238418579,
+        0.012031316757202148
+      ]
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_left_04",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        72
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2446250021457672,
+        0.1809965819120407,
+        -1.2024999856948853
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010749995708465576,
+        0.010749995708465576,
+        0.04500007629394531
+      ]
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_left_05",
+      "group": "leveling_foot_rear_left",
+      "source_shells": [
+        169
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_rear_left_05.stl",
+      "sha256": "fe5d56421a200ae2e51d3a9b37ff325df7e7d2a55c6adc37edea547d5a71ce29"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_left_01",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        24
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_left_01.stl",
+      "sha256": "913dc6474a5575e47212787ac9b1305ac7ca5573ab4ba4dd7862e5d825ad9cf0"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_left_02",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        35
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_left_02.stl",
+      "sha256": "2b052ea7fd4446b32b209a137093f41e21b147282734d200f3e5660cdf61a3ff"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_left_03",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        44
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_left_03.stl",
+      "sha256": "42cc965d814482d247f4cd3afa749d9b12208b9616019961594ef6d9ed11ec81"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_left_04",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        71
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2446250021457672,
+        0.1809965819120407,
+        -1.2024999856948853
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010749995708465576,
+        0.010749995708465576,
+        0.04500007629394531
+      ]
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_left_05",
+      "group": "leveling_foot_front_left",
+      "source_shells": [
+        170
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_left_05.stl",
+      "sha256": "3b9b416b99a0aaaaf2e510f8a4425842d1185ab647f486e8db36e4d3598588a5"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_right_01",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        25
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_right_01.stl",
+      "sha256": "fb4aa4b1f639f8d0ff2361bf33d63a121620a562ab32dce093d344faa425ce29"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_right_02",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        36
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_right_02.stl",
+      "sha256": "27053bf68ae534bed21f67212ea01dbf2d82f3c192d8ceee9e147fdd00130d52"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_right_03",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        43
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_right_03.stl",
+      "sha256": "da53b3ac7b2290c5fa703b14216037f663d67626605eff2bc9480f7df3eaf4ed"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_right_04",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        69
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.2446250021457672,
+        -0.20975341647863388,
+        -1.2024999856948853
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010749995708465576,
+        0.01075001060962677,
+        0.04500007629394531
+      ]
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_front_right_05",
+      "group": "leveling_foot_front_right",
+      "source_shells": [
+        167
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_front_right_05.stl",
+      "sha256": "2c5e127298ef75a1d2732a25dcf7d0830375d4201b12989688d018b4479de782"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_right_01",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        26
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_rear_right_01.stl",
+      "sha256": "32e0f426d78a2d422ac0d5cc8b3b920ec81aead8270dc3b4943df8783f7c3b77"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_right_02",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        34
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_rear_right_02.stl",
+      "sha256": "d01f45fc9d5c600196e1d3dec26a75abadaf8c9a75d1a208a6db8da2fe8a19b7"
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_right_03",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        41,
+        219
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2199999988079071,
+        -0.234378419816494,
+        -1.231015682220459
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000017285346985,
+        0.012031316757202148
+      ]
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_right_04",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        70
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        -0.2446250021457672,
+        -0.20975341647863388,
+        -1.2024999856948853
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.010749995708465576,
+        0.01075001060962677,
+        0.04500007629394531
+      ]
+    },
+    {
+      "name": "a7_lite_torso_leveling_foot_rear_right_05",
+      "group": "leveling_foot_rear_right",
+      "source_shells": [
+        168
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "a7_lite_torso_leveling_foot_rear_right_05.stl",
+      "sha256": "b1266591df594194e6f375b3e7d698249429117b281a65d0d987c3311b068524"
+    }
+  ]
+}

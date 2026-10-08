@@ -1,7 +1,7 @@
 schema_version: 1
 name: ar5_08_l20lite_r
 composer_version: 0.1.0
-recipe_sha256: 0dca774d9eab671bc20ba8fd52c2ef54d7ae8575c2a116237f535e5add8f277a
+recipe_sha256: 7cfdf6cb128827596c4bc0e498933af38f10257717213cb6e87d366f0f9a56a3
 components:
   arm:
     name: arms/ar5_08
@@ -14,8 +14,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: f54b7ef7b70bfdd3e7a7075c929668b29a6378f0c6b907d96504c61c53c28ab1
-  mjcf_sha256: 1bfa026380c6ad80ec8fc702fc3ef4fe49eb94b14922a4357a284e998ecf5e6d
+  urdf_sha256: 794fd68009ccfbd2aae428a57f2ca08db7e6103582373a9a873a0ce98ce18e73
+  mjcf_sha256: 0dacdaa1f8f5bccf87784aa973366d463514dd60d17fa37d71b7bff20ec1f1db
 joints:
   arm:
   - arm_AR5_5_08R_W4C4A6_joint_1

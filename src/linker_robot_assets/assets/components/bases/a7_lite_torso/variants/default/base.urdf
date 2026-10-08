@@ -44,12 +44,133 @@
         <color rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes/base_link.STL" />
-      </geometry>
-    </collision>
+    <collision name="a7_lite_torso_upper_body_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_04"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_04.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_05"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_05.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_06"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_06.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_07"><origin xyz="-0.00936859706416726 -0.123662576079369 -0.191553294658661" rpy="0 0 0" /><geometry><box size="0.0295713422819972 0.00995278358459473 0.00708499550819397" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_08"><origin xyz="-0.0150080400053412 0.0977878347039223 -0.192526407539845" rpy="0 0 0" /><geometry><box size="0.0408502290956676 0.0178182125091553 0.00903119146823883" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_09"><origin xyz="0.000293726880235459 0.104231678063259 -0.196307629795602" rpy="-2.86100563437668 0.0626881300114153 -1.75444794207972" /><geometry><box size="0.00800901869158124 0.00949839398650847 0.0364542114204884" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_10"><origin xyz="-0.0376303877761068 -0.100624449429383 -0.267093000575391" rpy="1.37882483861874 -1.37689404117591 -1.62520874524495" /><geometry><box size="0.0018243500146789 0.0199152886692451 0.0726602823869195" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_11"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_11.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_12"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_12.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_13"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_13.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_14"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_14.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_15"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_15.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_16"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_16.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_17"><origin xyz="0.00281290468488355 0.0954894503135851 -0.27143401209444" rpy="-3.10447304206507 0.104953174883814 2.01786676619725" /><geometry><box size="0.000100001478467754 0.0109668258938048 0.0360740187263812" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_18"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_18.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_19"><origin xyz="0.000852700776954325 -0.0810678117262528 0.110810074600216" rpy="0.691064228822881 -0.132969801254486 0.278592471556047" /><geometry><box size="0.000100541698392373 0.0155596004354449 0.0169881050331593" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_20"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_20.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_upper_body_21"><geometry><mesh filename="meshes/collision/a7_lite_torso_upper_body_21.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_column_support"><geometry><mesh filename="meshes/collision/a7_lite_torso_column_support.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_04"><origin xyz="0.00299999862909317 -0.014113930054009 0.155000001192093" rpy="0 0 0" /><geometry><box size="0.0815319791436195 0.0697331335395575 0.0352621376514435" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_05"><origin xyz="0.00299999862909317 -0.0142557686194777 0.265000008046627" rpy="0 0 0" /><geometry><box size="0.0815319865942001 0.0699012521654367 0.035146489739418" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_06"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_06.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_07"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_07.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_08"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_08.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_09"><origin xyz="-0.0211110755105892 0.0316534982994199 0.15649177134037" rpy="0 0 0" /><geometry><box size="0.042233860631768 0.0128004085272551 0.0148663818836212" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_10"><origin xyz="-0.0093685972969979 0.0363374184817076 0.205907709896564" rpy="0 0 0" /><geometry><box size="0.0295713418163359 0.00995277240872383 0.00708498060703278" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_11"><origin xyz="-0.0990548198767815 -0.0434975944161267 0.289218147066655" rpy="-2.80318761078014 0.13128687959147 2.1036847004827" /><geometry><box size="0.00010000158958734 0.0116303856029182 0.0294109775901053" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_12"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_12.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_head_housing_13"><geometry><mesh filename="meshes/collision/a7_lite_torso_head_housing_13.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_plate"><origin xyz="0 -0.0143784210085869 -1.14800000190735" rpy="0 0 0" /><geometry><box size="0.5 0.500000014901161 0.00399994850158691" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_01"><origin xyz="-0.220006436109543 -0.0144360139966011 -1.16499996185303" rpy="0 0 0" /><geometry><box size="0.0600128769874573 0.500182434916496 0.0299999713897705" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_02"><origin xyz="0.220006436109543 -0.0143208205699921 -1.16499996185303" rpy="0 0 0" /><geometry><box size="0.0600128769874573 0.500182449817657 0.0299999713897705" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_03"><origin xyz="-2.36928462982178e-06 -0.234378419816494 -1.16499996185303" rpy="0 0 0" /><geometry><box size="0.38000476360321 0.060000017285347 0.0299999713897705" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_04"><origin xyz="2.36183404922485e-06 0.205621585249901 -1.16499996185303" rpy="0 0 0" /><geometry><box size="0.380004748702049 0.0600000023841858 0.0299999713897705" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_05"><origin xyz="2.36183404922485e-06 0.0898594427853823 -1.16499996185303" rpy="0 0 0" /><geometry><box size="0.380004748702049 0.0599999986588955 0.0299999713897705" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_06"><origin xyz="-2.36183404922485e-06 -0.11861627176404 -1.16499996185303" rpy="0 0 0" /><geometry><box size="0.380004748702049 0.0599999949336052 0.0299999713897705" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_07"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_07.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_08"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_08.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_09"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_09.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_10"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_10.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_11"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_11.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_12"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_12.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_13"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_13.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_14"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_14.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_15"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_15.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_16"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_16.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_17"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_17.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_18"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_18.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_19"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_19.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_20"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_20.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_21"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_21.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_22"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_22.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_23"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_23.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_24"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_24.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_25"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_25.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_26"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_26.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_27"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_27.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_28"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_28.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_29"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_29.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_30"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_30.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_31"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_31.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_base_frame_32"><geometry><mesh filename="meshes/collision/a7_lite_torso_base_frame_32.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_04"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_04.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_05"><origin xyz="0.039942029863596 -0.206794284284115 -1.26399999856949" rpy="-1.5707963267949 0 0" /><geometry><cylinder radius="0.00801576674006688" length="0.0150336474180222" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_06"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_06.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_07"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_07.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_08"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_08.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_09"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_09.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_10"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_right_10.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_11"><origin xyz="-0.0490063391625881 -0.0940771885216236 -1.19215321540833" rpy="0 0 0" /><geometry><box size="0.0045187771320343 0.00152967125177383 0.00116729736328125" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_right_12"><origin xyz="0.0509936641901731 -0.0940771885216236 -1.19215321540833" rpy="0 0 0" /><geometry><box size="0.004518773406744 0.00152967125177383 0.00116729736328125" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_04"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_04.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_05"><origin xyz="0.0400000009685755 0.233121581375599 -1.26399999856949" rpy="-1.5707963267949 0 0" /><geometry><cylinder radius="0.00800002626165012" length="0.0150000005960464" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_06"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_06.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_07"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_07.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_08"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_08.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_09"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_09.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_10"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_left_10.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_11"><origin xyz="0.0509936641901731 0.0559228081256151 -1.19215321540833" rpy="0 0 0" /><geometry><box size="0.004518773406744 0.00152967497706413 0.00116729736328125" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_left_12"><origin xyz="-0.049006337299943 0.0559228099882603 -1.19215321540833" rpy="0 0 0" /><geometry><box size="0.004518773406744 0.00152967125177383 0.00116729736328125" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_rear_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_rear_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_rear_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_04"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_rear_04.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_05"><origin xyz="-0.247499994933605 0.0398594457656145 -1.26399999856949" rpy="-0 1.5707963267949 0" /><geometry><cylinder radius="0.00800002626165012" length="0.0150000005960464" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_06"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_rear_06.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_07"><origin xyz="-0.0540063381195068 -0.0198393268510699 -1.19055330753326" rpy="0 0 0" /><geometry><box size="0.0045187771320343 0.00152966938912868 0.00116729736328125" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_rear_08"><origin xyz="-0.0540063381195068 0.0101606724783778 -1.19055330753326" rpy="0 0 0" /><geometry><box size="0.0045187771320343 0.00152967125177383 0.00116729736328125" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_front_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_front_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_front_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_04"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_front_04.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_05"><origin xyz="0.191987462341785 0.0252643385902047 -1.26399999856949" rpy="-0 1.5707963267949 0" /><geometry><cylinder radius="0.00809586327544935" length="0.0152046829462051" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_06"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_front_06.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_caster_front_07"><geometry><mesh filename="meshes/collision/a7_lite_torso_caster_front_07.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_rear_left_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_rear_left_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_03"><origin xyz="-0.219999998807907 0.205621585249901 -1.23101568222046" rpy="0 0 0" /><geometry><box size="0.0600000023841858 0.0600000023841858 0.0120313167572021" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_04"><origin xyz="-0.244625002145767 0.180996581912041 -1.20249998569489" rpy="0 0 0" /><geometry><box size="0.0107499957084656 0.0107499957084656 0.0450000762939453" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_left_05"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_rear_left_05.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_left_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_left_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_left_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_04"><origin xyz="0.244625002145767 0.180996581912041 -1.20249998569489" rpy="0 0 0" /><geometry><box size="0.0107499957084656 0.0107499957084656 0.0450000762939453" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_left_05"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_left_05.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_right_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_right_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_03"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_right_03.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_04"><origin xyz="0.244625002145767 -0.209753416478634 -1.20249998569489" rpy="0 0 0" /><geometry><box size="0.0107499957084656 0.0107500106096268 0.0450000762939453" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_front_right_05"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_front_right_05.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_01"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_rear_right_01.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_02"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_rear_right_02.stl" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_03"><origin xyz="-0.219999998807907 -0.234378419816494 -1.23101568222046" rpy="0 0 0" /><geometry><box size="0.0600000023841858 0.060000017285347 0.0120313167572021" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_04"><origin xyz="-0.244625002145767 -0.209753416478634 -1.20249998569489" rpy="0 0 0" /><geometry><box size="0.0107499957084656 0.0107500106096268 0.0450000762939453" /></geometry></collision>
+    <collision name="a7_lite_torso_leveling_foot_rear_right_05"><geometry><mesh filename="meshes/collision/a7_lite_torso_leveling_foot_rear_right_05.stl" /></geometry></collision>
   </link>
 
   <!-- Mount pads sit at the shoulder-joint origins of the A7_Lite0812

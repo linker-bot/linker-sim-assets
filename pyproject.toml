@@ -20,9 +20,12 @@ dependencies = [
 # Authoring toolchain: composer (`python -m linker_robot_assets.composer.compose`)
 # and validators (`python -m linker_robot_assets.validate_workstation`,
 # `python -m linker_robot_assets.validate_component_mjcf`). Pulls in
-# mujoco for MJCF compile/inertia checks (numpy is a runtime dep above).
+# mujoco for MJCF compile/inertia checks, trimesh/scipy for collision fitting
+# and its geometric regression checks (numpy is a runtime dep above).
 authoring = [
     "mujoco>=3.1",
+    "trimesh>=4.11",
+    "scipy>=1.15",
 ]
 
 # ----------------------------- hatch packaging ---------------------------- #

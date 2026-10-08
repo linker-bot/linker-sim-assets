@@ -147,7 +147,9 @@ class ComponentMeta:
         where = str(path)
         kind = _require(d, "kind", where)
         if kind not in ("arm", "hand", "base", "sensor"):
-            raise SchemaError(f"{where}.kind: must be one of arm|hand|base|sensor, got {kind!r}")
+            raise SchemaError(
+                f"{where}.kind: must be one of arm|hand|base|sensor, got {kind!r}"
+            )
 
         variants_raw = _require(d, "variants", where)
         if not isinstance(variants_raw, dict) or not variants_raw:
@@ -156,7 +158,9 @@ class ComponentMeta:
         for vname, vdata in variants_raw.items():
             if not isinstance(vdata, dict):
                 raise SchemaError(f"{where}.variants.{vname}: must be a mapping")
-            variants[vname] = Variant.from_dict(vname, vdata, f"{where}.variants.{vname}")
+            variants[vname] = Variant.from_dict(
+                vname, vdata, f"{where}.variants.{vname}"
+            )
 
         mount_frames_raw = d.get("mount_frames", {})
         if not isinstance(mount_frames_raw, dict):
@@ -179,7 +183,9 @@ class ComponentMeta:
             raise SchemaError(f"{where}.drive: must be position|velocity|effort")
 
         dg_raw = d.get("default_gains")
-        default_gains = DefaultGains.from_dict(dg_raw, f"{where}.default_gains") if dg_raw else None
+        default_gains = (
+            DefaultGains.from_dict(dg_raw, f"{where}.default_gains") if dg_raw else None
+        )
 
         profiles_raw = d.get("gain_profiles", {})
         if not isinstance(profiles_raw, dict):
@@ -268,6 +274,39 @@ class PhysicsOverride:
 
 
 @dataclass(frozen=True)
+class CollisionExclusion:
+    """One documented installation seam, using component-local role:body names.
+
+    Bodies, not component subtrees, are excluded. Variant placeholders use the
+    same expansion as mount frames; the composer validates the final bodies.
+    """
+
+    body1: str
+    body2: str
+    reason: str
+
+    @staticmethod
+    def from_dict(d: dict, where: str) -> "CollisionExclusion":
+        if not isinstance(d, dict) or set(d) != {"body1", "body2", "reason"}:
+            raise SchemaError(f"{where}: expected body1, body2 and reason")
+        for key in ("body1", "body2"):
+            value = d[key]
+            if (
+                not isinstance(value, str)
+                or value.count(":") != 1
+                or not all(value.split(":"))
+            ):
+                raise SchemaError(f"{where}.{key}: expected 'role:body' syntax")
+        if d["body1"].split(":")[0] == d["body2"].split(":")[0]:
+            raise SchemaError(
+                f"{where}: internal exclusions belong to the component MJCF"
+            )
+        if not isinstance(d["reason"], str) or not d["reason"].strip():
+            raise SchemaError(f"{where}.reason: expected a non-empty explanation")
+        return CollisionExclusion(d["body1"], d["body2"], d["reason"].strip())
+
+
+@dataclass(frozen=True)
 class Recipe:
     """Workstation composition spec."""
 
@@ -279,6 +318,7 @@ class Recipe:
     physics_overrides: dict[str, PhysicsOverride]  # role -> override
     freeze_base: str | None  # role to weld to world, or None for floating root
     source_path: Path
+    collision_exclusions: list[CollisionExclusion] = field(default_factory=list)
 
     @staticmethod
     def load(path: Path) -> "Recipe":
@@ -301,8 +341,7 @@ class Recipe:
         if not isinstance(mounts_raw, list):
             raise SchemaError(f"{where}.mounts: must be a list")
         mounts = [
-            Mount.from_dict(m, f"{where}.mounts[{i}]")
-            for i, m in enumerate(mounts_raw)
+            Mount.from_dict(m, f"{where}.mounts[{i}]") for i, m in enumerate(mounts_raw)
         ]
 
         for m in mounts:
@@ -333,6 +372,25 @@ class Recipe:
                 f"{where}.freeze_base: role '{freeze_base}' not in components"
             )
 
+        exclusions_raw = d.get("collision_exclusions", [])
+        if not isinstance(exclusions_raw, list):
+            raise SchemaError(f"{where}.collision_exclusions: must be a list")
+        exclusions = [
+            CollisionExclusion.from_dict(item, f"{where}.collision_exclusions[{i}]")
+            for i, item in enumerate(exclusions_raw)
+        ]
+        seen: set[frozenset[str]] = set()
+        for exclusion in exclusions:
+            pair = frozenset((exclusion.body1, exclusion.body2))
+            if pair in seen:
+                raise SchemaError(f"{where}.collision_exclusions: duplicate body pair")
+            seen.add(pair)
+            for ref in pair:
+                if ref.split(":", 1)[0] not in components:
+                    raise SchemaError(
+                        f"{where}.collision_exclusions: unknown role in {ref!r}"
+                    )
+
         return Recipe(
             schema_version=int(d.get("schema_version", 1)),
             name=str(_require(d, "name", where)),
@@ -342,6 +400,7 @@ class Recipe:
             physics_overrides=physics_overrides,
             freeze_base=(str(freeze_base) if freeze_base else None),
             source_path=path.resolve(),
+            collision_exclusions=exclusions,
         )
 
 

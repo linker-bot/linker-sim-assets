@@ -1,0 +1,803 @@
+{
+  "source_mesh": "workstation.STL",
+  "source_sha256": "0ce80472ea5cbd9593d034bad53c44f8c4527149f0a0a1936c2d64dc27ec745a",
+  "groups_sha256": "9f869cc599e893a5b9c7a40b8626771e587b23eca7f53fbee9aa1ad339f274ce",
+  "source_hull_count": 52,
+  "source_hulls_sha256": "d42c17d9c257234e35dad8390aefc0d7c20e3ad3eccd27efcd04d8fa4dc2a857",
+  "method": "semantic convex unions and conservative native primitives",
+  "planar_thickness_m": 0.0001,
+  "containment_tolerance_m": 1e-08,
+  "envelope_validation": "entire fitted solid within original group union offset; inconclusive fits rejected",
+  "authoring_versions": {
+    "trimesh": "4.11.1",
+    "numpy": "2.3.1",
+    "scipy": "1.17.0"
+  },
+  "unchanged_non_collision_xml_sha256": {
+    "base.urdf": "65384e90a04ac6e77ed43109bd968fe049cd92f27d5ab4f68c74b0af1da1a161",
+    "base.mjcf": "30a6103d340531eb94d4d085a85520856f2f51e0a07fd9d76eea0052ea36fd91"
+  },
+  "collision_count": 48,
+  "mesh_file_count": 29,
+  "parts": [
+    {
+      "name": "bench_table_tabletop",
+      "group": "tabletop",
+      "source_shells": [
+        0
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_tabletop.stl",
+      "sha256": "5f823a4a8b8d94fa253336251e7346d7cb3b86d1e3fb64de8c8703949770daa2"
+    },
+    {
+      "name": "bench_table_arm_column",
+      "group": "arm_column",
+      "source_shells": [
+        1
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.06341500580310822,
+        0.6251999735832214,
+        0.6971550434827805
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.059999942779541016,
+        0.12000012397766113,
+        1.0800000727176666
+      ]
+    },
+    {
+      "name": "bench_table_front_upper_rail",
+      "group": "front_upper_rail",
+      "source_shells": [
+        2
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.6252000043168664,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.2000001054257154,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_rear_upper_rail",
+      "group": "rear_upper_rail",
+      "source_shells": [
+        3
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        0.6252000043168664,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.2000001054257154,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_rear_lower_rail",
+      "group": "rear_lower_rail",
+      "source_shells": [
+        4
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        0.6251999773085117,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.0800000354647636,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_front_lower_rail",
+      "group": "front_lower_rail",
+      "source_shells": [
+        5
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.6251999773085117,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        1.0800000354647636,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_front_panel",
+      "group": "front_panel",
+      "source_shells": [
+        6
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_front_panel.stl",
+      "sha256": "74180e22f8d18dcaeb613bfef6f57e2abe82b7721c73b1b4f47088b6b01711be"
+    },
+    {
+      "name": "bench_table_front_left_leg_01",
+      "group": "front_left_leg",
+      "source_shells": [
+        7,
+        44
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        1.1952000260353088,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000061988830566,
+        0.6365000046789646
+      ]
+    },
+    {
+      "name": "bench_table_front_left_leg_02",
+      "group": "front_left_leg",
+      "source_shells": [
+        31
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_front_left_leg_02.stl",
+      "sha256": "32e36c4fec8ef704e51377c39f4ff2de78c98802270d1359105b031f43f4515e"
+    },
+    {
+      "name": "bench_table_rear_left_leg_01",
+      "group": "rear_left_leg",
+      "source_shells": [
+        8,
+        45
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        1.1952000260353088,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.060000061988830566,
+        0.6365000046789646
+      ]
+    },
+    {
+      "name": "bench_table_rear_left_leg_02",
+      "group": "rear_left_leg",
+      "source_shells": [
+        30
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_rear_left_leg_02.stl",
+      "sha256": "fbae6fba3988789d80979b1aa84630a57ebc583b5a48be3e32b1d028fa8b73c6"
+    },
+    {
+      "name": "bench_table_front_right_leg_01",
+      "group": "front_right_leg",
+      "source_shells": [
+        9,
+        50
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.05519999749958515,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.05999999865889549,
+        0.6365000046789646
+      ]
+    },
+    {
+      "name": "bench_table_front_right_leg_02",
+      "group": "front_right_leg",
+      "source_shells": [
+        33
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_front_right_leg_02.stl",
+      "sha256": "b41c3d904a4082f41d01e6fa213c1c5cfe821c36d3fb9d76b5bb3c0fa19c4acd"
+    },
+    {
+      "name": "bench_table_rear_right_leg_01",
+      "group": "rear_right_leg",
+      "source_shells": [
+        10,
+        51
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341497838497162,
+        0.05519999749958515,
+        0.37390500120818615
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.05999999865889549,
+        0.6365000046789646
+      ]
+    },
+    {
+      "name": "bench_table_rear_right_leg_02",
+      "group": "rear_right_leg",
+      "source_shells": [
+        32
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_rear_right_leg_02.stl",
+      "sha256": "1f7b5c9cb1b342a15056f476d283ecc43b0b1d86a485bfabba1031d29d129087"
+    },
+    {
+      "name": "bench_table_shelf_left",
+      "group": "shelf_left",
+      "source_shells": [
+        11
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_shelf_left.stl",
+      "sha256": "9f936dabbdce1706bf3e468968fcec4f81e0d835e83701ed44c8ecaf823051ac"
+    },
+    {
+      "name": "bench_table_shelf_right",
+      "group": "shelf_right",
+      "source_shells": [
+        12
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_shelf_right.stl",
+      "sha256": "528eaf05184f6b95bb521f14e7167219b06e11f5686e2a70d21bbc81e5ab0182"
+    },
+    {
+      "name": "bench_table_side_panel_right",
+      "group": "side_panel_right",
+      "source_shells": [
+        13
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_side_panel_right.stl",
+      "sha256": "9a88658948e44661e46d426411d8f94a41d9534d964045f9ea1c58b44821cb7f"
+    },
+    {
+      "name": "bench_table_side_panel_left",
+      "group": "side_panel_left",
+      "source_shells": [
+        14
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_side_panel_left.stl",
+      "sha256": "0d44fd619d1030ecfbaa878cbca801280b44e8405d72e785391fef56eb879e0d"
+    },
+    {
+      "name": "bench_table_upper_rail_left",
+      "group": "upper_rail_left",
+      "source_shells": [
+        15
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        1.1952000260353088,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.060000061988830566,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_lower_rail_left",
+      "group": "lower_rail_left",
+      "source_shells": [
+        16
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        1.1952000260353088,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.060000061988830566,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_upper_rail_right",
+      "group": "upper_rail_right",
+      "source_shells": [
+        17
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.055199998430907726,
+        0.7221550047397614
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.05999999679625034,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_lower_rail_right",
+      "group": "lower_rail_right",
+      "source_shells": [
+        18
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.055199998430907726,
+        0.18715499341487885
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.05999999679625034,
+        0.06000000238418579
+      ]
+    },
+    {
+      "name": "bench_table_shelf_rail_left",
+      "group": "shelf_rail_left",
+      "source_shells": [
+        19
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.7952000200748444,
+        0.2021549940109253
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.06000000238418579,
+        0.030000001192092896
+      ]
+    },
+    {
+      "name": "bench_table_shelf_rail_right",
+      "group": "shelf_rail_right",
+      "source_shells": [
+        20
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.3934149891138077,
+        0.4551999866962433,
+        0.2021549940109253
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.47999998927116394,
+        0.06000000238418579,
+        0.030000001192092896
+      ]
+    },
+    {
+      "name": "bench_table_mount_crossbar",
+      "group": "mount_crossbar",
+      "source_shells": [
+        21
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.00025,
+      "file": "bench_table_mount_crossbar.stl",
+      "sha256": "9de07d60872a5e1cba09e7d7cfa911fc41f533bce234f7902a7a72cbad3a9f67"
+    },
+    {
+      "name": "bench_table_mount_right",
+      "group": "mount_right",
+      "source_shells": [
+        34
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.00025,
+      "file": "bench_table_mount_right.stl",
+      "sha256": "76e592fe09bb73573628aa19233433d45a506fa6e59c039582ae81ce50fdbbae"
+    },
+    {
+      "name": "bench_table_mount_left",
+      "group": "mount_left",
+      "source_shells": [
+        35
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.00025,
+      "file": "bench_table_mount_left.stl",
+      "sha256": "8dd9b21973c72b953cb4839d0f782dc6573824c7713bfad083b784f90cdc88ca"
+    },
+    {
+      "name": "bench_table_caster_rear_left_01",
+      "group": "caster_rear_left",
+      "source_shells": [
+        22
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_01.stl",
+      "sha256": "bb5d51bc6cd3b6149ca51811afb21cc8f5ef07e1e1492f8952d3ec213e3e64c9"
+    },
+    {
+      "name": "bench_table_caster_rear_left_02",
+      "group": "caster_rear_left",
+      "source_shells": [
+        26
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_02.stl",
+      "sha256": "1b1e94a9c38a65cd0638c6945fe6f55dfb553e6f0ef1fd6d3a0035fd224c65c3"
+    },
+    {
+      "name": "bench_table_caster_rear_left_03",
+      "group": "caster_rear_left",
+      "source_shells": [
+        37
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_03.stl",
+      "sha256": "e70e1a69a454ee0df6b004ed7e12849826bdb19dedefa089282c721816e02c04"
+    },
+    {
+      "name": "bench_table_caster_rear_left_04",
+      "group": "caster_rear_left",
+      "source_shells": [
+        43
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_left_04.stl",
+      "sha256": "b40ec19139841f802c375e14c8e4ab41cb7a32c224b11b4d07fc653199c2bc8a"
+    },
+    {
+      "name": "bench_table_caster_rear_left_05",
+      "group": "caster_rear_left",
+      "source_shells": [
+        47
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341498211026192,
+        0.9852000176906586,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.059999994933605194,
+        0.06000000238418579,
+        0.011500000953674316
+      ]
+    },
+    {
+      "name": "bench_table_caster_rear_right_01",
+      "group": "caster_rear_right",
+      "source_shells": [
+        23
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_01.stl",
+      "sha256": "b140a6fc0b002183b591079c108ab6a1b5631f41daa6fc36713769f6822a11e3"
+    },
+    {
+      "name": "bench_table_caster_rear_right_02",
+      "group": "caster_rear_right",
+      "source_shells": [
+        29
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_02.stl",
+      "sha256": "354ea2d490bc59f90c5da81317baee4fae69805f1a27bf28c591c2498ae4f72f"
+    },
+    {
+      "name": "bench_table_caster_rear_right_03",
+      "group": "caster_rear_right",
+      "source_shells": [
+        38
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_03.stl",
+      "sha256": "1a9822fe7d9c45c3f0ecaef8183e5b69f1b3593c2d7b33087746f84464569605"
+    },
+    {
+      "name": "bench_table_caster_rear_right_04",
+      "group": "caster_rear_right",
+      "source_shells": [
+        42
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_rear_right_04.stl",
+      "sha256": "b0e89ca465803403daf6143b61a60fbf5291087d02ef6931f0081abcff4e8599"
+    },
+    {
+      "name": "bench_table_caster_rear_right_05",
+      "group": "caster_rear_right",
+      "source_shells": [
+        49
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.12341498211026192,
+        0.2651999965310097,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.059999994933605194,
+        0.0599999874830246,
+        0.011500000953674316
+      ]
+    },
+    {
+      "name": "bench_table_caster_front_right_01",
+      "group": "caster_front_right",
+      "source_shells": [
+        24
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_01.stl",
+      "sha256": "cd0747bed71fc66280ee3592c5dc4e2b47ce6b12ec084a5af299db0d1d492bc2"
+    },
+    {
+      "name": "bench_table_caster_front_right_02",
+      "group": "caster_front_right",
+      "source_shells": [
+        27
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_02.stl",
+      "sha256": "a9a13ebd023d383b68b05d03c9e7fc44edabc165059bd4c78d5d25875b29c29b"
+    },
+    {
+      "name": "bench_table_caster_front_right_03",
+      "group": "caster_front_right",
+      "source_shells": [
+        36
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_03.stl",
+      "sha256": "14b243adfe8d5ec91f0fd43ce3704542aa6374b6d46feecf731d820f125547be"
+    },
+    {
+      "name": "bench_table_caster_front_right_04",
+      "group": "caster_front_right",
+      "source_shells": [
+        40
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_right_04.stl",
+      "sha256": "097fc7225468c06e1d1502b01bc26b4e8171f5cb470a9b7b0dbc468eba2c870c"
+    },
+    {
+      "name": "bench_table_caster_front_right_05",
+      "group": "caster_front_right",
+      "source_shells": [
+        48
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.2651999965310097,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.0599999874830246,
+        0.011500000953674316
+      ]
+    },
+    {
+      "name": "bench_table_caster_front_left_01",
+      "group": "caster_front_left",
+      "source_shells": [
+        25
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_01.stl",
+      "sha256": "e68ea2fd09f834ff8a4df97ee32d66401a401a16c5ba7f3beeeb529b95728ae5"
+    },
+    {
+      "name": "bench_table_caster_front_left_02",
+      "group": "caster_front_left",
+      "source_shells": [
+        28
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_02.stl",
+      "sha256": "5cc69afc821842dafe1690d23d8b430dc42f86823c3a56a8f3e4e2b6a14b293d"
+    },
+    {
+      "name": "bench_table_caster_front_left_03",
+      "group": "caster_front_left",
+      "source_shells": [
+        39
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_03.stl",
+      "sha256": "8eb5b032830cccd129b2bdadd1cbdce8965a54e9e531fe73675c155d7a5c3a5f"
+    },
+    {
+      "name": "bench_table_caster_front_left_04",
+      "group": "caster_front_left",
+      "source_shells": [
+        41
+      ],
+      "shape": "mesh",
+      "max_added_distance_m": 0.002,
+      "file": "bench_table_caster_front_left_04.stl",
+      "sha256": "4102926abb05314724c7fc37abeac9311138dc8440cc427a811bcd416f0f2324"
+    },
+    {
+      "name": "bench_table_caster_front_left_05",
+      "group": "caster_front_left",
+      "source_shells": [
+        46
+      ],
+      "shape": "box",
+      "max_added_distance_m": 0.002,
+      "position_m": [
+        0.6634149849414825,
+        0.9852000176906586,
+        0.15140500664710999
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        0.06000000238418579,
+        0.06000000238418579,
+        0.011500000953674316
+      ]
+    }
+  ]
+}

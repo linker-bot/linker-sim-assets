@@ -32,12 +32,70 @@
         <color rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="meshes/base_link.STL" />
-      </geometry>
-    </collision>
+    <collision name="a7_torso_upper_body_01"><geometry><mesh filename="meshes/collision/a7_torso_upper_body_01.stl" /></geometry></collision>
+    <collision name="a7_torso_upper_body_02"><geometry><mesh filename="meshes/collision/a7_torso_upper_body_02.stl" /></geometry></collision>
+    <collision name="a7_torso_upper_body_03"><geometry><mesh filename="meshes/collision/a7_torso_upper_body_03.stl" /></geometry></collision>
+    <collision name="a7_torso_upper_body_04"><geometry><mesh filename="meshes/collision/a7_torso_upper_body_04.stl" /></geometry></collision>
+    <collision name="a7_torso_upper_body_05"><geometry><mesh filename="meshes/collision/a7_torso_upper_body_05.stl" /></geometry></collision>
+    <collision name="a7_torso_upper_body_06"><geometry><mesh filename="meshes/collision/a7_torso_upper_body_06.stl" /></geometry></collision>
+    <collision name="a7_torso_upper_body_07"><origin xyz="0.0205880904104561 0.121702436357737 -0.193239189684391" rpy="0 0 0" /><geometry><box size="0.0502374065108597 0.00513970106840134 0.0118521898984909" /></geometry></collision>
+    <collision name="a7_torso_upper_body_08"><origin xyz="0.00681375141721219 -0.0993096455931664 0.0672741234302521" rpy="0 0 0" /><geometry><box size="0.0168008918408304 0.00300748646259308 0.00473126769065857" /></geometry></collision>
+    <collision name="a7_torso_column_support_01"><origin xyz="0 0 -0.586999976076186" rpy="0 0 0" /><geometry><box size="0.0900000035762787 0.0599999986588955 1.11399991624057" /></geometry></collision>
+    <collision name="a7_torso_column_support_02"><geometry><mesh filename="meshes/collision/a7_torso_column_support_02.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_03"><geometry><mesh filename="meshes/collision/a7_torso_column_support_03.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_04"><geometry><mesh filename="meshes/collision/a7_torso_column_support_04.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_05"><geometry><mesh filename="meshes/collision/a7_torso_column_support_05.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_06"><geometry><mesh filename="meshes/collision/a7_torso_column_support_06.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_07"><geometry><mesh filename="meshes/collision/a7_torso_column_support_07.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_08"><geometry><mesh filename="meshes/collision/a7_torso_column_support_08.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_09"><geometry><mesh filename="meshes/collision/a7_torso_column_support_09.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_10"><geometry><mesh filename="meshes/collision/a7_torso_column_support_10.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_11"><geometry><mesh filename="meshes/collision/a7_torso_column_support_11.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_12"><geometry><mesh filename="meshes/collision/a7_torso_column_support_12.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_13"><geometry><mesh filename="meshes/collision/a7_torso_column_support_13.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_14"><geometry><mesh filename="meshes/collision/a7_torso_column_support_14.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_15"><geometry><mesh filename="meshes/collision/a7_torso_column_support_15.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_16"><geometry><mesh filename="meshes/collision/a7_torso_column_support_16.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_17"><geometry><mesh filename="meshes/collision/a7_torso_column_support_17.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_18"><geometry><mesh filename="meshes/collision/a7_torso_column_support_18.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_19"><geometry><mesh filename="meshes/collision/a7_torso_column_support_19.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_20"><geometry><mesh filename="meshes/collision/a7_torso_column_support_20.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_21"><geometry><mesh filename="meshes/collision/a7_torso_column_support_21.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_22"><geometry><mesh filename="meshes/collision/a7_torso_column_support_22.stl" /></geometry></collision>
+    <collision name="a7_torso_column_support_23"><geometry><mesh filename="meshes/collision/a7_torso_column_support_23.stl" /></geometry></collision>
+    <collision name="a7_torso_head_housing_01"><geometry><mesh filename="meshes/collision/a7_torso_head_housing_01.stl" /></geometry></collision>
+    <collision name="a7_torso_head_housing_02"><geometry><mesh filename="meshes/collision/a7_torso_head_housing_02.stl" /></geometry></collision>
+    <collision name="a7_torso_head_housing_03"><geometry><mesh filename="meshes/collision/a7_torso_head_housing_03.stl" /></geometry></collision>
+    <collision name="a7_torso_head_housing_04"><geometry><mesh filename="meshes/collision/a7_torso_head_housing_04.stl" /></geometry></collision>
+    <collision name="a7_torso_base_plate"><geometry><mesh filename="meshes/collision/a7_torso_base_plate.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_01"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_01.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_02"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_02.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_03"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_03.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_04"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_04.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_05"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_05.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_06"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_06.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_left_07"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_left_07.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_01"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_01.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_02"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_02.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_03"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_03.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_04"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_04.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_05"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_05.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_06"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_06.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_left_07"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_left_07.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_01"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_01.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_02"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_02.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_03"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_03.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_04"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_04.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_05"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_05.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_06"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_06.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_rear_right_07"><geometry><mesh filename="meshes/collision/a7_torso_caster_rear_right_07.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_01"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_01.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_02"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_02.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_03"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_03.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_04"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_04.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_05"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_05.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_06"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_06.stl" /></geometry></collision>
+    <collision name="a7_torso_caster_front_right_07"><geometry><mesh filename="meshes/collision/a7_torso_caster_front_right_07.stl" /></geometry></collision>
   </link>
 
   <link name="arm_left_mount" />
