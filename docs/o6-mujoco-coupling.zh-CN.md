@@ -1,16 +1,12 @@
-# O6 在 MuJoCo 中的机械联动
+# O6：保持 2 ms 的 MuJoCo 机械联动
 
-后续排查确认 L6、L20 Lite、L25、L30 也有相同问题，见
-[全部灵巧手的排查结果与通用配置](hand-mujoco-coupling.zh-CN.md)。`o6_coupled`
-仍只处理 O6；新增 `hand_coupled` 处理场景内这五种手型的联动约束。
+`o6_coupled` 通过原生 joint equality 和位置伺服实现主从关节联动，解决
+[#17](https://github.com/linker-bot/linker-sim-assets/issues/17)。无需被动关节电机、
+运行时 qpos 投影、重力补偿或联动回调，每秒仍只积分 500 步。
+这是数值调参方案，未经实物标定。
 
-可选的 `o6_coupled` 配置通过 MuJoCo 的 joint equality 约束，使五个被动
-关节跟随主动关节，解决 [#17](https://github.com/linker-bot/linker-sim-assets/issues/17)
-描述的空载联动异常。它保留现有默认模型，同时提供可直接加载的
-[左手 MJCF](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/left.xml)
-和[右手 MJCF](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/right.xml)。
-
-## 客户如何使用
+直接加载生成的[左手](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/left.xml)
+或[右手](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/right.xml)：
 
 ```python
 import mujoco
@@ -20,69 +16,72 @@ from linker_robot_assets import asset_root
 path = asset_root() / "components/hands/linkerhand_o6/coupled/right.xml"
 model = mujoco.MjModel.from_xml_path(str(path))
 data = mujoco.MjData(model)
-# 顺序：拇指侧摆、拇指屈曲、食指、中指、无名指、小指；单位 rad。
-target = np.array([0, 0.3, 0.8, 0.8, 0.8, 0.8])
-for _ in range(round(5 / model.opt.timestep)):
-    data.ctrl[:] = target * min(data.time, 1.0)  # 1 秒内增加到目标值
+target = np.array([0, .25, .6, .6, .6, .6])
+for _ in range(round(8 / model.opt.timestep)):
+    data.ctrl[:] = target * min(data.time, 1.)
     mujoco.mj_step(model, data)
 ```
 
-无需在每步手动赋值被动 `qpos`、增加被动关节电机或编写联动回调。
-上述单手文件保留位置执行器，`data.ctrl` 的含义仍为目标角度。
+| 参数 | O6 配置 |
+|---|---|
+| timestep | 0.002 s |
+| 主动位置执行器 | kp=600，kv=4.5 |
+| equality solref | -10000000 -63000 |
+| equality solimp | 0.9999 0.9999 0.001 0.5 2 |
+| contact solref | 0.004 1 |
+| contact solimp | 0.95 0.95 0.001 0.5 2 |
+| limit solref / solimp | 0.000125 1 / 0.9999 0.9999 0.001 0.5 2 |
 
-对组合模型，在包含 O6 的手写 `recipe.yaml` 中加入：
+其他求解参数：implicitfast、Newton、iterations=100、tolerance=1e-8、elliptic、
+impratio=10、nativeccd=disable、接触 margin=gap=0。
+力矩上限：侧摆 1 Nm，拇指屈曲左 4 / 右 3.8148 Nm，其余手指 2.55 Nm。
+
+关节 damping=4、frictionloss=0.5、armature=3.4707e-08、质量、惯量、几何、限位和
+联动比例保持源模型值。新增一对与 DemoGrasp 测试一致的碰撞豁免：掌部与拇指
+metacarpals，避免掌部凸碰撞体填满真实拇指根部间隙。其他豁免和碰撞掩码保留。
+
+组合场景的手写 recipe.yaml 可声明：
 
 ```yaml
 mujoco:
   coupling_profile: o6_coupled
 ```
 
-然后运行 `python -m linker_robot_assets.composer.compose <场景目录>`。
-生成器会设置场景内所有 O6 的联动约束，并把配套步长写入最终 `workstation.xml`，
-其他组件的 equality 保持不变。自动派生的 solo recipe 不应手改；可在新目录创建
-自定义 recipe，完整示例见[英文说明](o6-mujoco-coupling.md)。
+再运行 `python -m linker_robot_assets.composer.compose <场景目录>`。
+**此配置在组合场景中也保留 O6 原生位置执行器，O6 的 data.ctrl 输入单位为角度。**
+其他组件仍使用原有力矩执行器；混合机械臂/手模型应分别处理对应的输入。
+这替代了本 PR 早期“全部转换为力矩电机、62.5 µs”的 O6 配置。2 ms 下外部 PD 的
+阻尼不等价于原生位置伺服参与隐式积分的阻尼。未选择配置的现有 recipe 输出不变。
+场景默认步长为 2 ms，可显式缩小，超过 2 ms 会报错；求解器选项影响整个场景。
 
-组合模型仍使用 **motor 力矩执行器**（gear=1），`data.ctrl` 应由应用的位置控制器
-计算为力矩；选择联动配置不会把它改成角度输入。单手组件与组合模型的控制含义
-必须区分。
+接触物体也应设置兼容的参数。MuJoCo 会按 priority/solmix 混合两个 geom 的参数，
+显式 pair 可以覆盖它们；更高优先级物体可能覆盖手上的 solimp。测试中接触双方均
+使用 0.95，不能只改一个实际未生效的 geom。
 
-## 参数、结果与限制
+**验证与边界。** 回归覆盖左右完整手的保持与开合、组合模型、生成一致性与物理参数
+保留。接触验证器使用当前 assets 和记录的 DemoGrasp 姿态构建左右拇指/食指测力台，
+固定基座与拇指侧摆、指尖接触无摩擦平面；保持及松开重接触各运行 30 秒，只按
+最后 5 秒判断，不以瞬态联动误差或穿透峰值判失败。
 
-| 参数 | 原始 O6 | 可选联动配置 |
-|---|---|---|
-| timestep / s | 0.002 | 0.0000625 |
-| equality solref | 0.02 1 | 0.000125 1 |
-| equality solimp | 0.9 0.95 0.001 0.5 2 | 0.9999 0.9999 0.001 0.5 2 |
+MuJoCo 3.14 的普通测力台平均力仍约 25–31 N，末段力标准差低于 1e-5 N；接触
+solimp=0.999 的对照组约为 4.15–6.05 N。当前可复现结果见
+[o6-coupling-validation.json](o6-coupling-validation.json)。早期探索还覆盖了 60 秒保持、
+减小推力、阶跃输入与平面倾斜 ±10°，在 3.8 和 3.14 均验证了候选稳定性。
+0.97 在部分扰动下重新振荡，因此选择了 0.95。
 
-原有 `damping=4`、`frictionloss=0.5`、`armature=3.4707e-08`、连杆惯量、关节限位、
-执行器参数、接触配置与联动比例均保留。MuJoCo 的 equality 是软约束；启用只表示
-参与求解，不保证任意条件下严格满足比例关系。默认 `refsafe` 会将有效时间常数
-限制到至少 `2×timestep`，因此约束参数与步长需要配套。
-
-在 MuJoCo 3.3.7 和 3.8.0 中，原始右手用阶跃位置命令运行 5 秒后，食指
-MCP≈0.799944 rad，DIP 应为≈0.711950 rad，实际只有≈-0.021209 rad。
-采用新配置及上面的 1 秒缓慢输入后，MCP≈0.800012 rad、DIP≈0.712011 rad，
-五条约束全程最大误差约 0.000228 rad。直接阶跃输入仍有约 0.0384 rad 的瞬态峰值。
-
-时间步长影响整个场景，需要原来 **32 倍积分步数**；控制周期应继续按秒计算。
-例如 2 ms 控制周期内应执行 32 个物理步。应用若覆盖 `model.opt.timestep`，必须
-保持兼容设置。recipe 允许显式设置更小步长，选中本配置时会拒绝更大的步长。
-不启用联动配置时，也可单独声明 `mujoco: {timestep: 0.001}`。
-
-这是经过数值测试的仿真配置，**不是实物标定参数**。当前回归测试覆盖空载开合、
-阶跃输入、左右手及组合模型生成，不代表任意抓取、接触载荷均已验证。承载应用
-仍需检查联动误差、关节止挡、接触力及反驱行为；本配置没有添加自锁传动或修改
-碰撞几何，也不证明接触力已经收敛。
-
-## 维护和测试
-
-两个单手文件由原始 XML 和 metadata 生成；修改源文件后运行：
+代价是静态接触柔顺性：3.14 的平均穿透约 0.33–0.96 mm；同样的固定测力台在 3.8
+下食指可达约 2.5 mm。这是持续穿透，不能当作启动瞬态忽略。尚未证明任意
+自由运动物体、多指有摩擦抓持、实物力精度或自锁特性。
 
 ```bash
 python -m linker_robot_assets.o6_coupling
 python -m linker_robot_assets.o6_coupling --check-drift
+python -m linker_robot_assets.validate_hand_coupling --hand o6 --output motion.json
+python -m linker_robot_assets.validate_o6_contact --output contact.json
+python -m linker_robot_assets.validate_o6_contact --recontact --output recontact.json
 PYTHONPATH=src python -m unittest discover -s tests -p test_o6_coupling.py -v
 ```
 
-测试仅通过执行器命令与 `mj_step()` 产生运动，并逐步检查五条联动关系、关节越界、
-警告及重置。它也验证原始物理参数未改变、组合场景保留配套设置及无效配置会报错。
+[其他手型](hand-mujoco-coupling.zh-CN.md) 暂时保留各自的 62.5 µs 配置，随后独立测试
+2 ms 参数。通用 hand_coupled 仍对所有选中手型（包括 O6）使用旧的约束配置；
+需要 O6 新位置伺服/接触方案时选择 o6_coupled。

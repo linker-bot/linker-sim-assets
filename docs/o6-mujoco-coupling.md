@@ -1,20 +1,12 @@
-# O6 mechanical coupling in MuJoCo
+# O6 mechanical coupling at 2 ms
 
-The same issue also affects L6, L20 Lite, L25 and L30. See the
-[all-hand audit and shared profile](hand-mujoco-coupling.md). `o6_coupled` remains
-O6-only; `hand_coupled` applies to all five supported hand types in a scene.
+The optional `o6_coupled` profile fixes passive following with native MuJoCo
+joint equalities and position servos, without reducing the original 2 ms step.
+It addresses [#17](https://github.com/linker-bot/linker-sim-assets/issues/17).
+These are numerical tuning parameters, not hardware calibration.
 
-The optional `o6_coupled` numerical profile makes the five passive joints follow
-the six actively controlled O6 coordinates through MuJoCo joint equalities.
-It addresses [issue #17](https://github.com/linker-bot/linker-sim-assets/issues/17).
-Existing component, unit and workstation defaults remain compatible.
-
-## Load a standalone hand
-
-The package includes complete, directly loadable position-controlled models:
-
-- [Left hand](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/left.xml)
-- [Right hand](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/right.xml)
+Load the generated [left](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/left.xml)
+or [right](../src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/right.xml) model:
 
 ```python
 import mujoco
@@ -24,123 +16,87 @@ from linker_robot_assets import asset_root
 path = asset_root() / "components/hands/linkerhand_o6/coupled/right.xml"
 model = mujoco.MjModel.from_xml_path(str(path))
 data = mujoco.MjData(model)
-# Actuator order: thumb yaw, thumb pitch, index, middle, ring, pinky.
-target = np.array([0, 0.3, 0.8, 0.8, 0.8, 0.8])  # radians
-for _ in range(round(5 / model.opt.timestep)):
-    data.ctrl[:] = target * min(data.time / 1.0, 1.0)  # one-second ramp
+target = np.array([0, .25, .6, .6, .6, .6])  # radians
+for _ in range(round(8 / model.opt.timestep)):
+    data.ctrl[:] = target * min(data.time, 1.)
     mujoco.mj_step(model, data)
 ```
 
-No passive qpos assignment, extra distal motor or per-step coupling code is
-needed. Actuator targets and mechanical joint coordinates are distinct: contact
-may prevent a finger reaching its target while its actual proximal/distal
-coordinates should still satisfy their coupling relationship.
+No passive-joint motor, qpos projection, gravity compensation or coupling callback
+is needed. The step remains 0.002 s: 500 integration steps per simulated second.
 
-## Select the profile in a composed scene
+| Setting | O6 profile |
+|---|---|
+| Position actuator kp / kv | 600 / 4.5 |
+| Equality solref | -10000000 -63000 |
+| Equality solimp | 0.9999 0.9999 0.001 0.5 2 |
+| Contact solref | 0.004 1 |
+| Contact solimp | 0.95 0.95 0.001 0.5 2 |
+| Joint-limit solref / solimp | 0.000125 1 / 0.9999 0.9999 0.001 0.5 2 |
+| Solver | implicitfast, Newton, 100 iterations, tolerance=1e-8 |
+| Contact options | elliptic, impratio=10, nativeccd disabled, margin=gap=0 |
+| Actuator force caps | yaw 1 Nm; thumb left 4 / right 3.8148 Nm; other fingers 2.55 Nm |
 
-Add this to a hand-authored unit/workstation `recipe.yaml` containing O6:
+Joint damping=4, frictionloss=0.5, armature=3.4707e-08, masses, inertias, limits,
+geometry and linkage ratios retain their source values. One additional collision
+exclusion matches the tested DemoGrasp profile: palm versus thumb metacarpals,
+where the convex palm collider fills the thumb-base clearance. Other collision
+exclusions and collision masks are retained.
+
+For hand-authored composed scenes, select:
 
 ```yaml
 mujoco:
   coupling_profile: o6_coupled
 ```
 
-Then regenerate with `python -m linker_robot_assets.composer.compose <directory>`.
-The composer applies the profile to **all O6 hands** in that recipe, preserves
-other components' equalities, and writes the required **scene-wide** timestep
-into `workstation.xml`. Do not edit auto-derived solo recipes: for a custom solo
-scene, create a new directory with this complete recipe instead:
+Run `python -m linker_robot_assets.composer.compose <recipe-directory>`.
+**This profile retains O6 native position actuators in composed scenes:** O6
+`data.ctrl` entries are angles, including in a mixed arm/hand model. Other
+components retain their existing torque motors. This supersedes the earlier
+version of this PR, which converted O6 to torque motors and required 62.5 us.
+External PD damping on torque motors is not equivalent to implicit native servo
+damping at 2 ms. Recipes without this profile retain their previous output.
+The scene-wide timestep defaults to 2 ms; explicit smaller steps are accepted,
+and larger steps are rejected. Solver options affect the whole composed scene.
 
-```yaml
-schema_version: 1
-name: o6_r_coupled
-components:
-  hand:
-    component: hands/linkerhand_o6
-    variant: right
-freeze_base: hand
-mujoco:
-  coupling_profile: o6_coupled
-```
+Set compatible contact parameters on objects as well. MuJoCo combines geom
+parameters using priority/solmix, and explicit contact pairs override them.
+A higher-priority object or pair can override the hand's new contact impedance.
+The regression fixture sets both the fingertip and plate to 0.95.
 
-Pass `--assets-root <asset_root>` if the new directory is outside the usual
-`assets/units/` or `assets/workstations/` layout. The recipe and generated MJCF
-are fingerprinted by the existing manifest and `--check-drift` workflow.
+**Validation and limits.** Tests use only actuator commands and mj_step after
+initialization. Empty-hand motion, hold/open/close, standalone and composed
+hands, source physics preservation and profile scoping are checked. The shipped
+contact validator builds four fixed-base thumb/index plate fixtures from the
+current assets using recorded DemoGrasp poses; thumb yaw is fixed and contacts
+are frictionless. Both contact and release/recontact run for 30 s and are judged
+on the final 5 s, not transient error or penetration peaks.
 
-Composed models keep their existing **torque motors**: `data.ctrl` contains
-torque commands (gear=1), not joint-angle targets. Continue using the application's
-position controller to produce those commands. Selecting this profile does not
-change actuator semantics, gains or effort limits. The standalone files above
-retain their source **position actuators**, for which `data.ctrl` is in radians.
+MuJoCo 3.14.0 nominal fixtures retain approximately 25–31 N of force. Contact
+force standard deviation is below 1e-5 N, versus 4.15–6.05 N with contact
+solimp=0.999 and otherwise identical tuning. Detailed reproducible results are
+in [o6-coupling-validation.json](o6-coupling-validation.json).
+Earlier exploratory tests also covered 60 s holds, reduced loads, step commands
+and planes tilted by ±10 degrees on MuJoCo 3.8.0 and 3.14.0. Those tests motivated
+0.95 rather than 0.97, which could oscillate again after a contact perturbation.
 
-Recipes can also set a timestep without a coupling profile:
-
-```yaml
-mujoco:
-  timestep: 0.001
-```
-
-Component `<option>` settings are intentionally not merged: a timestep affects
-the entire scene and must be selected at scene level. With `o6_coupled`, an
-explicit timestep may be smaller than 0.0000625 s, but a larger value is rejected.
-A profile selection without an O6 component, an unknown profile or an invalid
-timestep is also rejected instead of silently ignoring the request.
-
-## Why these settings
-
-| Setting | Source O6 | `o6_coupled` |
-|---|---|---|
-| Integration timestep / s | 0.002 | 0.0000625 |
-| Joint equality solref | 0.02 1 | 0.000125 1 |
-| Joint equality solimp | 0.9 0.95 0.001 0.5 2 | 0.9999 0.9999 0.001 0.5 2 |
-
-The profile retains damping=4, frictionloss=0.5, armature=3.4707e-08, link
-inertias, joint ranges, contact settings and coupling ratios. Four fingers use
-`q_DIP = 0.89*q_MCP`; thumb ratios retain their side-specific source values.
-
-The original model reproduces the reported failure in MuJoCo 3.3.7 and 3.8.0:
-after five seconds at `[0, .3, .8, .8, .8, .8]`, right index MCP is 0.799944 rad,
-expected DIP is 0.711950 rad, and actual DIP is -0.021209 rad, despite all five
-equalities being active, no contacts and no simulation warnings.
-
-Joint equality constraints are soft. Their force response depends on solver
-parameters as well as the body's dynamics. Setting a smaller `solref` alone
-at the original timestep is insufficient: default `refsafe` limits its time
-constant to at least twice the integration timestep. Merely increasing solver
-iterations, removing gravity/contact, or removing passive friction did not fix
-the original case. Removing passive damping produced unstable transients.
-
-With the profile and the one-second ramp above, both tested MuJoCo versions
-reach index MCP=0.800012 rad and DIP=0.712011 rad at five seconds; maximum
-coupling error across all five joints is 0.000228 rad. An immediate step still
-has a transient peak near 0.0384 rad: this remains a finite-compliance constraint.
-
-The timestep requires **32 times more integration steps** per simulated second.
-Keep command/observation intervals in seconds; e.g. a 2 ms control interval now
-contains 32 physics steps. Applications that override `model.opt.timestep`
-must preserve a compatible value. No exact wall-clock slowdown is promised.
-
-These are numerical simulation settings, **not hardware-calibrated damping,
-friction, inertia or transmission parameters**. The shipped regression covers
-empty-hand motion and profile composition, not all grasp/contact loads. Loaded
-use needs separate validation of coupling error, joint stops, forces and
-transmission backdrive. This profile does not add self-locking or change contact
-geometry, and it does not establish force convergence or hardware accuracy.
-
-## Regeneration and verification
-
-The two standalone files are generated from the original O6 XMLs and metadata;
-do not edit the copies by hand. After changing those sources:
+The tradeoff is finite static contact penetration. The 3.14 fixtures show
+about 0.33–0.96 mm; the same fixed fixtures in 3.8 reach about 2.5 mm.
+Do not confuse this with transient penetration. Full multifinger frictional
+grasping and arbitrary moving objects remain outside the validated scope.
+No hardware force accuracy or self-locking is claimed.
 
 ```bash
 python -m linker_robot_assets.o6_coupling
 python -m linker_robot_assets.o6_coupling --check-drift
+python -m linker_robot_assets.validate_hand_coupling --hand o6 --output motion.json
+python -m linker_robot_assets.validate_o6_contact --output contact.json
+python -m linker_robot_assets.validate_o6_contact --recontact --output recontact.json
 PYTHONPATH=src python -m unittest discover -s tests -p test_o6_coupling.py -v
 ```
 
-The regression runs actual `mj_step()` dynamics for both hands and newly
-composed solo units. It checks opening and closing, all five coupling residuals
-at every physics step, real active/passive motion, warning/reset behavior and
-joint-limit excursions. A separate step-input test bounds the transient.
-Static checks cover source-parameter preservation, full bimanual composition,
-profile scoping, invalid settings and generated-file drift.
+[Other hands](hand-mujoco-coupling.md) currently retain the separate 62.5 us
+`hand_coupled` profile pending their own 2 ms tests. Selecting `hand_coupled`
+uses that legacy equality-only recipe for all hands, including O6; use
+`o6_coupled` for the new O6 position-servo/contact recipe.

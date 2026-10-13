@@ -44,9 +44,16 @@ class HandCouplingTests(unittest.TestCase):
                 model = mujoco.MjModel.from_xml_path(
                     str(component / "coupled" / f"{side}.xml")
                 )
-                result = probe(model, cycle=True)
+                result = probe(
+                    model,
+                    cycle=True,
+                    duration=8 if name == "o6" else None,
+                    steady=name == "o6",
+                )
                 self.assertTrue(result["passed"], result)
-                self.assertAlmostEqual(result["time"], 4.0, places=8)
+                self.assertAlmostEqual(
+                    result["time"], 8.0 if name == "o6" else 4.0, places=8
+                )
                 self.assertLess(result["final_error_rad"], 0.001)
 
     def test_composer_keeps_every_hand_profile_and_motor_semantics(self):
@@ -121,10 +128,18 @@ class HandCouplingTests(unittest.TestCase):
                     "geom_friction",
                     "exclude_signature",
                 ):
+                    if name == "o6" and field in (
+                        "actuator_gainprm",
+                        "actuator_biasprm",
+                        "exclude_signature",
+                    ):
+                        continue
                     np.testing.assert_array_equal(
                         getattr(model, field), getattr(original, field), err_msg=field
                     )
-                self.assertAlmostEqual(model.opt.timestep, 0.0000625)
+                self.assertAlmostEqual(
+                    model.opt.timestep, 0.002 if name == "o6" else 0.0000625
+                )
                 if name == "l30":
                     thumb = model.joint(f"{side[0]}h_thumb_dip").id
                     self.assertIn(thumb, model.actuator_trnid[:, 0])
@@ -165,9 +180,23 @@ class HandCouplingTests(unittest.TestCase):
                 model = mujoco.MjModel.from_xml_path(str(paths.out_mjcf))
                 self.assertEqual(model.neq, 20)
                 self.assertEqual(
-                    int(np.count_nonzero(model.eq_solref[:, 0] == 0.000125)), count
+                    int(
+                        np.count_nonzero(
+                            model.eq_solref[:, 0]
+                            == (-1e7 if profile == "o6_coupled" else 0.000125)
+                        )
+                    ),
+                    count,
                 )
-                self.assertAlmostEqual(model.opt.timestep, 0.0000625)
+                self.assertAlmostEqual(
+                    model.opt.timestep, 0.002 if profile == "o6_coupled" else 0.0000625
+                )
+                if profile == "o6_coupled":
+                    for a, joint_id in enumerate(model.actuator_trnid[:, 0]):
+                        is_o6 = model.joint(int(joint_id)).name.startswith("o6_")
+                        self.assertEqual(
+                            model.actuator_gainprm[a, 0], 600 if is_o6 else 1
+                        )
 
     def test_profile_requires_supported_hand_and_compatible_timestep(self):
         with tempfile.TemporaryDirectory() as directory:

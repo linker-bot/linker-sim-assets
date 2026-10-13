@@ -1,5 +1,11 @@
 # Passive-joint coupling across the hand assets
 
+> **O6 update:** its standalone coupled files and `o6_coupled` now use the
+> [2 ms position-servo/contact profile](o6-mujoco-coupling.md). The 62.5 us
+> shared-profile audit below is historical for O6 and remains the current
+> configuration for the other hands. `hand_coupled` still uses that legacy
+> equality-only configuration for every selected hand, including O6.
+
 All five shipped hand families reproduce substantial passive-joint lag with
 their original MuJoCo solver settings. The opt-in `hand_coupled` profile fixes
 the audited motion for **both sides of L6, O6, L20 Lite, L25 and L30**. It changes

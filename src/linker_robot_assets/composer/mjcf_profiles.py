@@ -10,6 +10,12 @@ import xml.etree.ElementTree as ET
 from collections.abc import Sequence
 
 from .determinism import fmt_float
+from .o6_profile import (
+    O6_SOLREF,
+    O6_TIMESTEP,
+    configure_o6_hand,
+    configure_o6_solver,
+)
 from .schemas import MujocoOptions, SchemaError
 
 COUPLED_HANDS = ("l6", "o6", "l20lite", "l25", "l30")
@@ -30,9 +36,8 @@ def apply_mujoco_options(
     The composer selects only O6 for o6_coupled, or all five tested hand types
     for hand_coupled. Counts are validated against metadata, not assumed to be
     five: L20 Lite has ten passive joints, and L30 has four (its thumb is active).
-    Other components' equalities and all physical/actuator parameters survive.
-    A larger timestep is rejected instead of silently weakening the selected
-    profile through MuJoCo's refsafe time-constant clamp.
+    o6_coupled uses native position servos at 2 ms; hand_coupled retains the
+    earlier 62.5 us equality-only profile. Other components stay scoped out.
     """
     timestep = settings.timestep
     equalities: list[ET.Element] = []
@@ -46,10 +51,11 @@ def apply_mujoco_options(
                 if profile == "o6_coupled"
                 else "hand_coupled requires at least one supported hand component"
             )
-        timestep = HAND_TIMESTEP if timestep is None else timestep
-        if timestep > HAND_TIMESTEP:
+        maximum = O6_TIMESTEP if profile == "o6_coupled" else HAND_TIMESTEP
+        timestep = maximum if timestep is None else timestep
+        if timestep > maximum:
             raise SchemaError(
-                f"{profile} requires timestep <= {HAND_TIMESTEP}; got {timestep}"
+                f"{profile} requires timestep <= {maximum}; got {timestep}"
             )
         for group in mimic_groups:
             joints = set(group)
@@ -68,12 +74,16 @@ def apply_mujoco_options(
                     f"{profile} requires one two-joint equality per declared passive joint"
                 )
             equalities.extend(matches)
+            if profile == "o6_coupled":
+                configure_o6_hand(root, group)
 
     if timestep is not None:
         option = root.find("option")
         if option is None:
             option = ET.SubElement(root, "option")
         option.set("timestep", fmt_float(timestep))
+        if profile == "o6_coupled":
+            configure_o6_solver(option)
     for equality in equalities:
-        equality.set("solref", HAND_SOLREF)
+        equality.set("solref", O6_SOLREF if profile == "o6_coupled" else HAND_SOLREF)
         equality.set("solimp", HAND_SOLIMP)

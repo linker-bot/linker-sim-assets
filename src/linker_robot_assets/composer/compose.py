@@ -212,7 +212,17 @@ def compose(paths: Paths) -> ComposeResult:
         # damping/armature/frictionloss are kept — they model real hardware and
         # are what MuJoCo/mujoco-wasm consumers rely on; Isaac's DriveAPI simply
         # adds to them.
-        rewrite_position_actuators_to_motors(mjcf_root, _joint_effort_limits(urdf_root))
+        # The explicit MuJoCo O6 profile needs implicit native servo damping;
+        # external PD on torque motors is not equivalent at a 2 ms timestep.
+        native_o6 = frozenset(
+            j for c in compiled for j in c.actuated_joints
+            if recipe.mujoco.coupling_profile == "o6_coupled"
+            and c.meta.name == "linkerhand_o6"
+        )
+        rewrite_position_actuators_to_motors(
+            mjcf_root, _joint_effort_limits(urdf_root),
+            preserve_position_joints=native_o6,
+        )
         inject_placeholder_inertials(mjcf_root)
         apply_mujoco_options(
             mjcf_root,

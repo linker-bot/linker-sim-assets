@@ -488,7 +488,8 @@ _PLACEHOLDER_DIAGINERTIA = "1e-9 1e-9 1e-9"
 
 
 def rewrite_position_actuators_to_motors(
-    root: ET.Element, effort_limits: dict[str, str]
+    root: ET.Element, effort_limits: dict[str, str], *,
+    preserve_position_joints: frozenset[str] = frozenset(),
 ) -> None:
     """Replace ``<position>`` servos with torque ``<motor>``s in place.
 
@@ -502,7 +503,7 @@ def rewrite_position_actuators_to_motors(
     if actuator is None:
         return
     for index, act in enumerate(list(actuator)):
-        if act.tag != "position":
+        if act.tag != "position" or act.get("joint") in preserve_position_joints:
             continue
         motor = ET.Element("motor")
         name = act.attrib.get("name")

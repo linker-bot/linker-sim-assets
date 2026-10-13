@@ -54,7 +54,14 @@ def coupling_targets(model: mujoco.MjModel) -> np.ndarray:
     return goals[model.jnt_qposadr[model.actuator_trnid[:, 0]]]
 
 
-def probe(model: mujoco.MjModel, *, cycle: bool = False, motor_gains=None) -> dict:
+def probe(
+    model: mujoco.MjModel,
+    *,
+    cycle: bool = False,
+    motor_gains=None,
+    duration=None,
+    steady=False,
+) -> dict:
     """Check every integration step; stop on warnings or automatic reset.
 
     motor_gains=(kp, kv) is only for composed torque motors, to reproduce the
@@ -75,10 +82,11 @@ def probe(model: mujoco.MjModel, *, cycle: bool = False, motor_gains=None) -> di
     peak_limit = 0.0
     contacts = 0
     peak_parent = np.zeros(model.neq)
-    duration = 4.0 if cycle else 5.0
+    duration = duration if duration is not None else (4.0 if cycle else 5.0)
     steps = round(duration / model.opt.timestep)
     error = np.zeros(model.neq)
     completed = True
+    tail_error = tail_speed = tail_limit = 0.0
     for _ in range(steps):
         scale = min(data.time, 1.0)
         if cycle and data.time >= 2:
@@ -105,12 +113,33 @@ def probe(model: mujoco.MjModel, *, cycle: bool = False, motor_gains=None) -> di
             ),
         )
         contacts = max(contacts, data.ncon)
+        if data.time >= duration - 1:
+            tail_error = max(tail_error, float(abs(error).max()))
+            tail_speed = max(tail_speed, float(abs(data.qvel).max()))
+            tail_limit = max(
+                tail_limit,
+                float(
+                    np.maximum(
+                        model.jnt_range[:, 0] - data.qpos,
+                        data.qpos - model.jnt_range[:, 1],
+                    ).max()
+                ),
+            )
     # Do not pass a stationary model just because both sides remain at zero.
     moved = bool(np.all(peak_parent > 0.1))
     active = bool(np.all(data.eq_active))
     passed = (
         completed and moved and active and peak_error < 0.005 and peak_limit < 0.005
     )
+    if steady:
+        passed = (
+            completed
+            and moved
+            and active
+            and tail_error < 0.001
+            and tail_speed < 0.01
+            and tail_limit < 0.005
+        )
     return {
         "passed": passed,
         "completed": completed,
@@ -124,6 +153,9 @@ def probe(model: mujoco.MjModel, *, cycle: bool = False, motor_gains=None) -> di
         "max_joint_limit_violation_rad": peak_limit,
         "max_contacts": contacts,
         "warnings": data.warning.number.tolist(),
+        "criterion": "final-second" if steady else "full-trajectory",
+        "tail_error_rad": tail_error,
+        "tail_velocity_rad_s": tail_speed,
         "pairs": [
             {
                 "passive": model.joint(int(model.eq_obj1id[e])).name,
@@ -152,7 +184,13 @@ def main(argv: list[str] | None = None) -> int:
         meta = ComponentMeta.load(component / "meta.yaml")
         for side, variant in meta.variants.items():
             path = component / (variant.mjcf if args.source else f"coupled/{side}.xml")
-            result = probe(mujoco.MjModel.from_xml_path(str(path)), cycle=args.cycle)
+            o6 = hand == "o6" and not args.source
+            result = probe(
+                mujoco.MjModel.from_xml_path(str(path)),
+                cycle=args.cycle,
+                duration=8 if o6 else None,
+                steady=o6,
+            )
             row = dict(
                 hand=hand,
                 side=side,

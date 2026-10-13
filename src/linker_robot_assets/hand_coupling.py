@@ -2,8 +2,8 @@
 
     python -m linker_robot_assets.hand_coupling [--check-drift] [--hand l6]
 
-Outputs retain source position actuators, dynamics, ratios and contacts. For
-composed models, select mujoco.coupling_profile=hand_coupled in recipe.yaml.
+O6 uses the tested 2 ms position-servo/contact profile. Other hands retain the
+62.5 us equality-only profile pending separate contact validation.
 """
 
 from __future__ import annotations
@@ -39,7 +39,13 @@ def coupled_mjcf(component: Path, side: str) -> str:
     root.set("model", f"{meta.name}_{side}_coupled")
     passive = [name.format(**variant.vars) for name in meta.mimic_joints]
     apply_mujoco_options(
-        root, MujocoOptions(coupling_profile="hand_coupled"), [passive]
+        root,
+        MujocoOptions(
+            coupling_profile=(
+                "o6_coupled" if meta.name == "linkerhand_o6" else "hand_coupled"
+            )
+        ),
+        [passive],
     )
     root.insert(
         0,
@@ -50,7 +56,7 @@ def coupled_mjcf(component: Path, side: str) -> str:
     )
     # The composer serializer rounds vector attributes to nine significant
     # figures. Preserve the authored axis values exactly in these standalone
-    # variants: only solver settings and file locations should change.
+    # variants; preserve physical geometry exactly.
     ET.indent(root, space="  ")
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'

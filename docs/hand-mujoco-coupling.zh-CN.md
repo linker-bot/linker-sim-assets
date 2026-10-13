@@ -1,5 +1,10 @@
 # 全部灵巧手的 MuJoCo 联动修复
 
+> **O6 更新：** 单手 coupled 文件和 o6_coupled 已采用
+> [2 ms 位置伺服/接触配置](o6-mujoco-coupling.zh-CN.md)。下文 62.5 µs 数据对 O6
+> 属于历史测试，对其他手型仍是当前配置。通用 hand_coupled 仍使用旧的约束配置，
+> 包括其中选中的 O6；其他手型的 2 ms 参数将独立验证。
+
 排查确认：除 O6 外，**L6、L20 Lite、L25、L30 的左右手也存在被动关节跟随异常**。
 现在五种手型均提供可直接加载的 `coupled/left.xml` 和 `coupled/right.xml`，位置在
 `components/hands/linkerhand_<型号>/coupled/`。全部十个文件的链接见

@@ -1,0 +1,445 @@
+{
+  "criterion": "Final 5 s of 30 s; finite, no warnings, maintained contact, force std < 0.1 N, velocity < 0.01 rad/s. Transient peaks are not gates.",
+  "model_sha256": {
+    "left": "85f9d9bf4f77ad3e7507aa90e021b77b0f6b16f1d0750d35eab4d50be4ff48e6",
+    "right": "37811f6a96f6a8220397c0afc13f91f4d804a93abb4827a9a54fd20585d36541"
+  },
+  "tests": {
+    "mujoco_3.8.0_full_suite": 28,
+    "mujoco_3.14.0_o6_and_mixed_scope": 10
+  },
+  "results": [
+    {
+      "kind": "contact",
+      "mujoco": "3.8.0",
+      "rows": [
+        {
+          "side": "left",
+          "finger": "thumb",
+          "fixture_sha256": "2d9d1dbfedbd5bc8b853be5632147685ffe04249612818b89b8dba3eddccb3ba",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 25.615697211341967,
+          "force_std": 5.918268813842368e-12,
+          "coupling_error": 7.533144751437071e-06,
+          "max_velocity": 3.863545865933097e-13,
+          "penetration_mean": 0.0007591267347141158,
+          "angle_ptp": 8.526512829121202e-14,
+          "contact_fraction": 1.0
+        },
+        {
+          "side": "left",
+          "finger": "index",
+          "fixture_sha256": "40dc203691ab468de2aea3fc466fcbbbc2470ec4bf7a4d426ef9785d53f9f2da",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 29.90261614718108,
+          "force_std": 3.552713678800501e-15,
+          "coupling_error": 2.275200896534324e-05,
+          "max_velocity": 1.1356581315931952e-14,
+          "penetration_mean": 0.002541770864609222,
+          "angle_ptp": 0.0,
+          "contact_fraction": 1.0
+        },
+        {
+          "side": "right",
+          "finger": "thumb",
+          "fixture_sha256": "1c2fd6b301b42c254e96e29d2e6d0f3401dc75a9c858551e131b2420faa48908",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 25.083907164001577,
+          "force_std": 8.024487859271128e-13,
+          "coupling_error": 6.781288735546731e-06,
+          "max_velocity": 4.6816324726185656e-14,
+          "penetration_mean": 0.0008007256453262926,
+          "angle_ptp": 1.0269562977782698e-14,
+          "contact_fraction": 1.0
+        },
+        {
+          "side": "right",
+          "finger": "index",
+          "fixture_sha256": "ce7b1572794a00e47d30306235cf8073f13e5c340000da50e046006292cc03ef",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 30.17781343232405,
+          "force_std": 3.552713678800501e-15,
+          "coupling_error": 2.286495365544372e-05,
+          "max_velocity": 1.3064797112186611e-14,
+          "penetration_mean": 0.002566113878055401,
+          "angle_ptp": 0.0,
+          "contact_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "kind": "recontact",
+      "mujoco": "3.8.0",
+      "rows": [
+        {
+          "side": "left",
+          "finger": "thumb",
+          "fixture_sha256": "2d9d1dbfedbd5bc8b853be5632147685ffe04249612818b89b8dba3eddccb3ba",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 25.615693868753407,
+          "force_std": 3.3479998889198524e-05,
+          "coupling_error": 7.543567343892832e-06,
+          "max_velocity": 2.1833357278815652e-06,
+          "penetration_mean": 0.0007591268141335179,
+          "angle_ptp": 4.69469175534698e-07,
+          "contact_fraction": 1.0,
+          "passed": true
+        },
+        {
+          "side": "left",
+          "finger": "index",
+          "fixture_sha256": "40dc203691ab468de2aea3fc466fcbbbc2470ec4bf7a4d426ef9785d53f9f2da",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 29.902616147169063,
+          "force_std": 1.1369841431749983e-10,
+          "coupling_error": 2.275200897405849e-05,
+          "max_velocity": 7.602707999919782e-12,
+          "penetration_mean": 0.0025417708646106,
+          "angle_ptp": 1.2301271112846734e-12,
+          "contact_fraction": 1.0,
+          "passed": true
+        },
+        {
+          "side": "right",
+          "finger": "thumb",
+          "fixture_sha256": "1c2fd6b301b42c254e96e29d2e6d0f3401dc75a9c858551e131b2420faa48908",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 25.083907576370482,
+          "force_std": 1.0086738878190687e-05,
+          "coupling_error": 6.7851287275932926e-06,
+          "max_velocity": 7.505935656091947e-07,
+          "penetration_mean": 0.0008007255077341622,
+          "angle_ptp": 1.1010557610102722e-07,
+          "contact_fraction": 1.0,
+          "passed": true
+        },
+        {
+          "side": "right",
+          "finger": "index",
+          "fixture_sha256": "ce7b1572794a00e47d30306235cf8073f13e5c340000da50e046006292cc03ef",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 30.17781343230661,
+          "force_std": 1.0945814203715954e-10,
+          "coupling_error": 2.2864953672874222e-05,
+          "max_velocity": 6.081005310452198e-12,
+          "penetration_mean": 0.0025661138780555433,
+          "angle_ptp": 1.4120371538695053e-12,
+          "contact_fraction": 1.0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "kind": "contact",
+      "mujoco": "3.14.0",
+      "rows": [
+        {
+          "side": "left",
+          "finger": "thumb",
+          "fixture_sha256": "2d9d1dbfedbd5bc8b853be5632147685ffe04249612818b89b8dba3eddccb3ba",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 26.48592574544127,
+          "force_std": 1.151932978481633e-07,
+          "coupling_error": 7.4547826905413395e-06,
+          "max_velocity": 6.4433944379497555e-09,
+          "penetration_mean": 0.0005898834068958227,
+          "angle_ptp": 1.1500732588487494e-09,
+          "contact_fraction": 1.0
+        },
+        {
+          "side": "left",
+          "finger": "index",
+          "fixture_sha256": "40dc203691ab468de2aea3fc466fcbbbc2470ec4bf7a4d426ef9785d53f9f2da",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 29.917481987144345,
+          "force_std": 2.1189801632245307e-09,
+          "coupling_error": 2.2913970608717804e-05,
+          "max_velocity": 8.456230097447197e-11,
+          "penetration_mean": 0.00086244219387947,
+          "angle_ptp": 2.404026977487206e-11,
+          "contact_fraction": 1.0
+        },
+        {
+          "side": "right",
+          "finger": "thumb",
+          "fixture_sha256": "1c2fd6b301b42c254e96e29d2e6d0f3401dc75a9c858551e131b2420faa48908",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 25.000546596488928,
+          "force_std": 1.298316298832075e-06,
+          "coupling_error": 6.790648451993064e-06,
+          "max_velocity": 6.564860315093885e-08,
+          "penetration_mean": 0.00033213666252854404,
+          "angle_ptp": 1.482636591276787e-08,
+          "contact_fraction": 1.0
+        },
+        {
+          "side": "right",
+          "finger": "index",
+          "fixture_sha256": "ce7b1572794a00e47d30306235cf8073f13e5c340000da50e046006292cc03ef",
+          "completed": true,
+          "recontact": false,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 31.340248560851464,
+          "force_std": 3.6022199624571567e-10,
+          "coupling_error": 2.2622972938701746e-05,
+          "max_velocity": 1.4972094189324208e-11,
+          "penetration_mean": 0.0009553601772837819,
+          "angle_ptp": 3.5691449795649532e-12,
+          "contact_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "kind": "recontact",
+      "mujoco": "3.14.0",
+      "rows": [
+        {
+          "side": "left",
+          "finger": "thumb",
+          "fixture_sha256": "2d9d1dbfedbd5bc8b853be5632147685ffe04249612818b89b8dba3eddccb3ba",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 26.485968409950402,
+          "force_std": 0.001535825704662206,
+          "coupling_error": 7.774850118436039e-06,
+          "max_velocity": 8.373381235032223e-05,
+          "penetration_mean": 0.0005899003944175197,
+          "angle_ptp": 1.5572261948482158e-05,
+          "contact_fraction": 1.0,
+          "passed": true
+        },
+        {
+          "side": "left",
+          "finger": "index",
+          "fixture_sha256": "40dc203691ab468de2aea3fc466fcbbbc2470ec4bf7a4d426ef9785d53f9f2da",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 29.91742679476973,
+          "force_std": 0.00045575965437181593,
+          "coupling_error": 2.3029520808293125e-05,
+          "max_velocity": 1.8712167586974896e-05,
+          "penetration_mean": 0.0008624398126706579,
+          "angle_ptp": 5.319232867617707e-06,
+          "contact_fraction": 1.0,
+          "passed": true
+        },
+        {
+          "side": "right",
+          "finger": "thumb",
+          "fixture_sha256": "1c2fd6b301b42c254e96e29d2e6d0f3401dc75a9c858551e131b2420faa48908",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 25.00067709280995,
+          "force_std": 0.003082944583646919,
+          "coupling_error": 7.634518889354514e-06,
+          "max_velocity": 0.0001498559563752592,
+          "penetration_mean": 0.00033216824338694095,
+          "angle_ptp": 3.444419102577312e-05,
+          "contact_fraction": 1.0,
+          "passed": true
+        },
+        {
+          "side": "right",
+          "finger": "index",
+          "fixture_sha256": "ce7b1572794a00e47d30306235cf8073f13e5c340000da50e046006292cc03ef",
+          "completed": true,
+          "recontact": true,
+          "time": 29.99999999999425,
+          "timestep": 0.002,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "force_mean": 31.340236069265043,
+          "force_std": 0.00012951445262236527,
+          "coupling_error": 2.2656713595303746e-05,
+          "max_velocity": 5.095970063202075e-06,
+          "penetration_mean": 0.0009553583291463065,
+          "angle_ptp": 1.4351860778694103e-06,
+          "contact_fraction": 1.0,
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

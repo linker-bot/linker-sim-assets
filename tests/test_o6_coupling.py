@@ -13,6 +13,8 @@ from linker_robot_assets.composer.compose import compose, resolve_paths
 from linker_robot_assets.composer.mjcf_profiles import apply_mujoco_options
 from linker_robot_assets.composer.schemas import MujocoOptions, SchemaError
 from linker_robot_assets.o6_coupling import coupled_mjcf
+from linker_robot_assets.validate_hand_coupling import probe
+from linker_robot_assets.validate_o6_contact import build_fixture, probe_contact
 
 ASSETS = Path(__file__).resolve().parents[1] / "src/linker_robot_assets/assets"
 O6 = ASSETS / "components/hands/linkerhand_o6"
@@ -49,7 +51,9 @@ class O6CouplingTests(unittest.TestCase):
                 corrected = load(path)
                 self.assertEqual(corrected.nu, 6)
                 self.assertEqual(corrected.neq, 5)
-                self.assertAlmostEqual(corrected.opt.timestep, 0.0000625)
+                self.assertAlmostEqual(corrected.opt.timestep, 0.002)
+                np.testing.assert_array_equal(corrected.actuator_gainprm[:, 0], 600)
+                np.testing.assert_array_equal(corrected.actuator_biasprm[:, 2], -4.5)
                 for field in (
                     "dof_damping",
                     "dof_frictionloss",
@@ -57,8 +61,6 @@ class O6CouplingTests(unittest.TestCase):
                     "body_mass",
                     "body_inertia",
                     "body_ipos",
-                    "actuator_gainprm",
-                    "actuator_biasprm",
                     "actuator_trnid",
                     "jnt_range",
                     "eq_data",
@@ -76,10 +78,10 @@ class O6CouplingTests(unittest.TestCase):
             with self.subTest(side=side):
                 self._exercise(load(O6 / "coupled" / f"{side}.xml"), cycle=True)
 
-    def test_step_command_has_bounded_transient(self):
+    def test_hold_reaches_target_and_settles(self):
         self._exercise(load(O6 / "coupled/right.xml"), cycle=False)
 
-    def test_composed_solo_hands_keep_motors_and_follow_cycle(self):
+    def test_composed_solo_hands_keep_native_servo_and_follow_cycle(self):
         for side in ("l", "r"):
             with self.subTest(side=side), tempfile.TemporaryDirectory() as directory:
                 paths = self._recipe(
@@ -88,25 +90,25 @@ class O6CouplingTests(unittest.TestCase):
                 result = compose(paths)
                 paths.out_mjcf.write_text(result.mjcf_text)
                 model = load(paths.out_mjcf)
-                self.assertAlmostEqual(model.opt.timestep, 0.0000625)
-                np.testing.assert_array_equal(model.actuator_gainprm[:, 0], 1)
-                np.testing.assert_array_equal(model.actuator_biasprm, 0)
-                self._exercise(model, cycle=True, motors=True)
+                self.assertAlmostEqual(model.opt.timestep, 0.002)
+                np.testing.assert_array_equal(model.actuator_gainprm[:, 0], 600)
+                np.testing.assert_array_equal(model.actuator_biasprm[:, 2], -4.5)
+                self._exercise(model, cycle=True)
 
     def test_recipe_profile_applies_to_both_hands_in_full_workstation(self):
         with tempfile.TemporaryDirectory() as directory:
             paths = self._recipe(
                 Path(directory),
                 "ar5_08_o6_bench_bimanual",
-                {"coupling_profile": "o6_coupled", "timestep": 0.00003125},
+                {"coupling_profile": "o6_coupled", "timestep": 0.001},
                 subdir="workstations",
             )
             result = compose(paths)
             paths.out_mjcf.write_text(result.mjcf_text)
             model = load(paths.out_mjcf)
-            self.assertAlmostEqual(model.opt.timestep, 0.00003125)
+            self.assertAlmostEqual(model.opt.timestep, 0.001)
             self.assertEqual(model.neq, 10)
-            np.testing.assert_allclose(model.eq_solref[:, 0], 0.000125)
+            np.testing.assert_allclose(model.eq_solref[:, 0], -1e7)
             np.testing.assert_allclose(model.eq_solimp[:, :2], 0.9999)
             # The generated manifest fingerprints the selected recipe/output.
             self.assertEqual(result.manifest.artifacts.mjcf_sha256, result.mjcf_sha256)
@@ -157,7 +159,7 @@ class O6CouplingTests(unittest.TestCase):
             with self.subTest(settings=settings), self.assertRaises(SchemaError):
                 MujocoOptions.from_dict(settings, "test.mujoco")
         for unit, settings, message in (
-            ("o6_r", {"coupling_profile": "o6_coupled", "timestep": 0.002}, "timestep"),
+            ("o6_r", {"coupling_profile": "o6_coupled", "timestep": 0.004}, "timestep"),
             ("l6_r", {"coupling_profile": "o6_coupled"}, "linkerhand_o6"),
         ):
             with self.subTest(unit=unit), tempfile.TemporaryDirectory() as directory:
@@ -178,47 +180,27 @@ class O6CouplingTests(unittest.TestCase):
         (directory / "recipe.yaml").write_text(yaml.safe_dump(recipe, sort_keys=False))
         return resolve_paths(directory, ASSETS)
 
-    def _exercise(self, model, *, cycle, motors=False):
-        """No qpos writes: commands only, with checks at every integration step."""
-        data = mujoco.MjData(model)
-        active = model.jnt_qposadr[model.eq_obj2id]
-        passive = model.jnt_qposadr[model.eq_obj1id]
-        commanded = model.jnt_qposadr[model.actuator_trnid[:, 0]]
-        targets = np.array([0.0, 0.3, 0.8, 0.8, 0.8, 0.8])
-        peak_error = 0.0
-        max_contact = 0
-        duration = 4.0 if cycle else 2.0
-        for i in range(round(duration / model.opt.timestep)):
-            if cycle:
-                scale = (
-                    min(data.time, 1.0) if data.time < 2 else max(3.0 - data.time, 0.0)
-                )
-            else:
-                scale = 1.0
-            target = targets * scale
-            # Composed models expose torque motors. Apply the same P law as
-            # the component position servos, without powering passive DOFs.
-            data.ctrl[:] = 200 * (target - data.qpos[commanded]) if motors else target
-            mujoco.mj_step(model, data)
-            self.assertFalse(data.warning.number.any(), "Warning or automatic reset")
-            self.assertTrue(np.isfinite(data.qpos).all())
-            residual = data.qpos[passive] - model.eq_data[:, 1] * data.qpos[active]
-            peak_error = max(peak_error, float(abs(residual).max()))
-            max_contact = max(max_contact, data.ncon)
-            self.assertLess(float(np.max(model.jnt_range[:, 0] - data.qpos)), 0.001)
-            self.assertLess(float(np.max(data.qpos - model.jnt_range[:, 1])), 0.001)
-            if i == round(1.9 / model.opt.timestep):
-                # A broken implementation must not pass by keeping both
-                # active and passive joints near zero.
-                self.assertGreater(float(data.qpos[active[1:]].min()), 0.7)
-                self.assertGreater(float(data.qpos[passive[1:]].min()), 0.65)
-        self.assertAlmostEqual(data.time, duration, places=9)
-        self.assertEqual(max_contact, 0)
-        np.testing.assert_array_equal(data.eq_active, [1] * 5)
-        self.assertLess(peak_error, 0.005 if cycle else 0.05)
-        self.assertLess(float(abs(residual).max()), 0.001)
-        expected = np.zeros(6) if cycle else targets
-        np.testing.assert_allclose(data.qpos[commanded], expected, atol=0.005)
+    def _exercise(self, model, *, cycle):
+        result = probe(model, cycle=cycle, duration=8, steady=True)
+        self.assertTrue(result["passed"], result)
+        self.assertAlmostEqual(result["time"], 8.0, places=8)
+        self.assertTrue(all(result["eq_active"]))
+        self.assertLess(result["tail_velocity_rad_s"], 0.01)
+
+    def test_contact_and_recontact_settle_on_both_sides(self):
+        for side in ("left", "right"):
+            for finger in ("thumb", "index"):
+                for recontact in (False, True):
+                    with self.subTest(side=side, finger=finger, recontact=recontact):
+                        model, pose, _ = build_fixture(side, finger)
+                        result = probe_contact(model, pose, recontact=recontact)
+                        self.assertTrue(result["completed"], result)
+                        self.assertFalse(any(result["warnings"]), result)
+                        self.assertGreater(result["force_mean"], 20.0)
+                        self.assertLess(result["force_std"], 0.1, result)
+                        self.assertLess(result["max_velocity"], 0.01, result)
+                        self.assertLess(result["coupling_error"], 0.001, result)
+                        self.assertEqual(result["contact_fraction"], 1.0)
 
 
 if __name__ == "__main__":
