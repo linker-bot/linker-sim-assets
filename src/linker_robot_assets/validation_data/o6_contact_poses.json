@@ -1,0 +1,264 @@
+{
+  "left_thumb": {
+    "side": "left",
+    "finger": "thumb",
+    "prefix": "hand_left_lh_",
+    "root_position": [
+      0.3780125981056904,
+      0.9478880314133894,
+      1.0110259698741577
+    ],
+    "thumb_yaw_fixture_quaternion": [
+      0.6729181508143041,
+      0.6729181508143044,
+      0.21721225173699893,
+      0.21721225173699893
+    ],
+    "tip_world_position": [
+      0.4248185396810834,
+      0.905172728837248,
+      0.9560213414943245
+    ],
+    "tip_world_rotation": [
+      -0.5937431673605937,
+      0.0020918013979086825,
+      0.804651897145295,
+      -0.32963204456064976,
+      0.9116044344014209,
+      -0.24560144620590457,
+      -0.7340379870356686,
+      -0.4110632305942454,
+      -0.5405693794898547
+    ],
+    "root_quaternion": [
+      0.7088503068967675,
+      -0.0002914142035513323,
+      0.7053588029495889,
+      -0.00034145518548145404
+    ],
+    "point_m": [
+      0.46319191081309397,
+      0.896504474831757,
+      0.9331651632074438
+    ],
+    "normal": [
+      -0.8166802720300548,
+      -0.3327830052342073,
+      -0.4714751368886863
+    ],
+    "joints": {
+      "hand_left_lh_thumb_cmc_yaw": 0.6244661625330427,
+      "hand_left_lh_thumb_cmc_pitch": 0.15831368334770832,
+      "hand_left_lh_thumb_ip": 0.29748988986666575,
+      "hand_left_lh_index_mcp_pitch": 0.47433380034042205,
+      "hand_left_lh_index_dip": 0.42208291573434503,
+      "hand_left_lh_middle_mcp_pitch": 0.5510263601170412,
+      "hand_left_lh_middle_dip": 0.4904199055768255,
+      "hand_left_lh_ring_mcp_pitch": 0.5510263979543518,
+      "hand_left_lh_ring_dip": 0.49041984125836025,
+      "hand_left_lh_pinky_mcp_pitch": 0.5510264668388015,
+      "hand_left_lh_pinky_dip": 0.49041971448353483
+    },
+    "source_sha256": "4b1382713f332dd3d456cf363db4fd09ec198db9e1e33848819a2c1a320b1a61",
+    "source_runtime_sha256": "d1350fb6bb810695dd601ac0f06cff1b6aa11958949f0277521f71ee81d28555",
+    "time_s": 8.0000625,
+    "fixture": "Hand base and thumb yaw fixed; pitch/IP coupling remains dynamic.",
+    "fixture_transform_max_error": 5.551115123125783e-16
+  },
+  "left_index": {
+    "side": "left",
+    "finger": "index",
+    "prefix": "hand_left_lh_",
+    "root_position": [
+      0.3780125981056904,
+      0.9478880314133894,
+      1.0110259698741577
+    ],
+    "thumb_yaw_fixture_quaternion": [
+      0.6729181508143041,
+      0.6729181508143044,
+      0.21721225173699893,
+      0.21721225173699893
+    ],
+    "tip_world_position": [
+      0.5117920298084027,
+      0.9218451422239156,
+      0.9971773594999022
+    ],
+    "tip_world_rotation": [
+      -0.7769283644922074,
+      0.052408316365475556,
+      0.6274039247751008,
+      0.04037391680008145,
+      0.9986255378840498,
+      -0.033421279568748574,
+      -0.6282931348420769,
+      -0.0006351862156701756,
+      -0.7779764348929776
+    ],
+    "root_quaternion": [
+      0.7088503068967675,
+      -0.0002914142035513323,
+      0.7053588029495889,
+      -0.00034145518548145404
+    ],
+    "point_m": [
+      0.5174315745758513,
+      0.918973609482161,
+      0.9627845409891187
+    ],
+    "normal": [
+      0.8117243868622426,
+      0.2958563180372303,
+      0.5035598860617968
+    ],
+    "joints": {
+      "hand_left_lh_thumb_cmc_yaw": 0.6244661625330427,
+      "hand_left_lh_thumb_cmc_pitch": 0.15831368334770832,
+      "hand_left_lh_thumb_ip": 0.29748988986666575,
+      "hand_left_lh_index_mcp_pitch": 0.47433380034042205,
+      "hand_left_lh_index_dip": 0.42208291573434503,
+      "hand_left_lh_middle_mcp_pitch": 0.5510263601170412,
+      "hand_left_lh_middle_dip": 0.4904199055768255,
+      "hand_left_lh_ring_mcp_pitch": 0.5510263979543518,
+      "hand_left_lh_ring_dip": 0.49041984125836025,
+      "hand_left_lh_pinky_mcp_pitch": 0.5510264668388015,
+      "hand_left_lh_pinky_dip": 0.49041971448353483
+    },
+    "source_sha256": "4b1382713f332dd3d456cf363db4fd09ec198db9e1e33848819a2c1a320b1a61",
+    "source_runtime_sha256": "d1350fb6bb810695dd601ac0f06cff1b6aa11958949f0277521f71ee81d28555",
+    "time_s": 8.0000625,
+    "fixture_transform_max_error": 0.0
+  },
+  "right_thumb": {
+    "side": "right",
+    "finger": "thumb",
+    "prefix": "hand_right_rh_",
+    "root_position": [
+      0.3779780339371617,
+      0.29794722750004243,
+      1.010915024002956
+    ],
+    "thumb_yaw_fixture_quaternion": [
+      0.9516364822563899,
+      4.692460700241257e-18,
+      1.3126612481375701e-17,
+      -0.30722631013421436
+    ],
+    "tip_world_position": [
+      0.43362343469754994,
+      0.34083594953320745,
+      0.9552960318615481
+    ],
+    "tip_world_rotation": [
+      0.6642228959613196,
+      0.0018854918521244157,
+      0.7475321995748637,
+      -0.30510782358303457,
+      -0.9122272270059194,
+      0.2734057466431801,
+      0.6824347298234331,
+      -0.40968027927832523,
+      -0.6053469321812507
+    ],
+    "root_quaternion": [
+      0.70864305923281,
+      -0.00022777672263452065,
+      0.7055671059162573,
+      -0.00014753943932316327
+    ],
+    "point_m": [
+      0.4637604561819983,
+      0.34972191889155263,
+      0.9317988936149805
+    ],
+    "normal": [
+      -0.8351299270573149,
+      0.2811992276806883,
+      -0.4727420007626026
+    ],
+    "joints": {
+      "hand_right_rh_thumb_cmc_yaw": 0.6245540059871482,
+      "hand_right_rh_thumb_cmc_pitch": 0.1477537246833473,
+      "hand_right_rh_thumb_ip": 0.274769754546738,
+      "hand_right_rh_index_mcp_pitch": 0.45467555976577095,
+      "hand_right_rh_index_dip": 0.4045793967509278,
+      "hand_right_rh_middle_mcp_pitch": 0.5510339455339099,
+      "hand_right_rh_middle_dip": 0.4904023736072296,
+      "hand_right_rh_ring_mcp_pitch": 0.5510339116694752,
+      "hand_right_rh_ring_dip": 0.4904024766178299,
+      "hand_right_rh_pinky_mcp_pitch": 0.5510338226756857,
+      "hand_right_rh_pinky_dip": 0.49040271133118385
+    },
+    "source_sha256": "25972ee7b983d50ec87b7616f80d442aad9e6e4129cc9956e774119443f05b43",
+    "source_runtime_sha256": "10c170c95543fd9052036324fb29dba5d911405ef2a48e78496bc5a42448c149",
+    "time_s": 8.0000625,
+    "fixture": "Hand base and thumb yaw fixed; pitch/IP coupling remains dynamic.",
+    "fixture_transform_max_error": 7.771561172376096e-16
+  },
+  "right_index": {
+    "side": "right",
+    "finger": "index",
+    "prefix": "hand_right_rh_",
+    "root_position": [
+      0.3779780339371617,
+      0.29794722750004243,
+      1.010915024002956
+    ],
+    "thumb_yaw_fixture_quaternion": [
+      0.9516364822563899,
+      4.692460700241257e-18,
+      1.3126612481375701e-17,
+      -0.30722631013421436
+    ],
+    "tip_world_position": [
+      0.5119751824635458,
+      0.3239880062719219,
+      0.9976416021804915
+    ],
+    "tip_world_rotation": [
+      -0.7534661033919344,
+      -0.052447744924617956,
+      0.6553915357186864,
+      -0.04007018010012754,
+      0.9986233822380167,
+      0.033848502392995,
+      -0.6562645897091501,
+      -0.0007579576686444177,
+      -0.7545304591559273
+    ],
+    "root_quaternion": [
+      0.70864305923281,
+      -0.00022777672263452065,
+      0.7055671059162573,
+      -0.00014753943932316327
+    ],
+    "point_m": [
+      0.5190765255453398,
+      0.32801745844117935,
+      0.9637982647660726
+    ],
+    "normal": [
+      0.8233525487452062,
+      -0.27522046018745333,
+      0.4963308158567021
+    ],
+    "joints": {
+      "hand_right_rh_thumb_cmc_yaw": 0.6245540059871482,
+      "hand_right_rh_thumb_cmc_pitch": 0.1477537246833473,
+      "hand_right_rh_thumb_ip": 0.274769754546738,
+      "hand_right_rh_index_mcp_pitch": 0.45467555976577095,
+      "hand_right_rh_index_dip": 0.4045793967509278,
+      "hand_right_rh_middle_mcp_pitch": 0.5510339455339099,
+      "hand_right_rh_middle_dip": 0.4904023736072296,
+      "hand_right_rh_ring_mcp_pitch": 0.5510339116694752,
+      "hand_right_rh_ring_dip": 0.4904024766178299,
+      "hand_right_rh_pinky_mcp_pitch": 0.5510338226756857,
+      "hand_right_rh_pinky_dip": 0.49040271133118385
+    },
+    "source_sha256": "25972ee7b983d50ec87b7616f80d442aad9e6e4129cc9956e774119443f05b43",
+    "source_runtime_sha256": "10c170c95543fd9052036324fb29dba5d911405ef2a48e78496bc5a42448c149",
+    "time_s": 8.0000625,
+    "fixture_transform_max_error": 0.0
+  }
+}
