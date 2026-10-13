@@ -6,7 +6,6 @@ messages are explicit — a broken meta file should say which field is wrong.
 
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Literal
@@ -308,32 +307,6 @@ class CollisionExclusion:
 
 
 @dataclass(frozen=True)
-class MujocoOptions:
-    """Explicit scene-level settings; component options are not inherited."""
-
-    timestep: float | None = None
-    coupling_profile: str | None = None
-
-    @staticmethod
-    def from_dict(d: dict, where: str) -> "MujocoOptions":
-        if not isinstance(d, dict) or set(d) - {"timestep", "coupling_profile"}:
-            raise SchemaError(f"{where}: expected timestep and/or coupling_profile")
-        timestep = d.get("timestep")
-        if "timestep" in d:
-            if isinstance(timestep, bool) or not isinstance(timestep, (int, float)):
-                raise SchemaError(f"{where}.timestep: expected a finite positive number")
-            if not math.isfinite(timestep) or timestep <= 0:
-                raise SchemaError(f"{where}.timestep: expected a finite positive number")
-            timestep = float(timestep)
-        profile = d.get("coupling_profile")
-        if "coupling_profile" in d and profile not in ("o6_coupled", "hand_coupled"):
-            raise SchemaError(
-                f"{where}.coupling_profile: expected 'o6_coupled' or 'hand_coupled'"
-            )
-        return MujocoOptions(timestep=timestep, coupling_profile=profile)
-
-
-@dataclass(frozen=True)
 class Recipe:
     """Workstation composition spec."""
 
@@ -346,7 +319,6 @@ class Recipe:
     freeze_base: str | None  # role to weld to world, or None for floating root
     source_path: Path
     collision_exclusions: list[CollisionExclusion] = field(default_factory=list)
-    mujoco: MujocoOptions = field(default_factory=MujocoOptions)
 
     @staticmethod
     def load(path: Path) -> "Recipe":
@@ -429,7 +401,6 @@ class Recipe:
             freeze_base=(str(freeze_base) if freeze_base else None),
             source_path=path.resolve(),
             collision_exclusions=exclusions,
-            mujoco=MujocoOptions.from_dict(d.get("mujoco", {}), f"{where}.mujoco"),
         )
 
 

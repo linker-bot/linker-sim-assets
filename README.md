@@ -19,15 +19,6 @@ This package ships:
 
 Both `units/` and `workstations/` hold composed, loadable `workstation.urdf` + `workstation.xml` (MJCF) + `manifest.yaml`.
 
-L6, O6, L20 Lite, L25 and L30 each ship directly loadable position-controlled
-`coupled/left.xml` and `coupled/right.xml` under their hand component directory.
-O6 uses the [2 ms position-servo/contact profile](docs/o6-mujoco-coupling.md)
-([中文](docs/o6-mujoco-coupling.zh-CN.md)); select `mujoco.coupling_profile: o6_coupled`
-to retain O6 position actuators in composed scenes too. Other hands currently
-use the earlier 62.5 µs [shared coupling profile](docs/hand-mujoco-coupling.md)
-([中文](docs/hand-mujoco-coupling.zh-CN.md)), selected with `hand_coupled`.
-These are numerical profiles, not hardware-calibrated parameters.
-
 AR5_08 L6/O6 units now include the shared physical flange. Optional Gemini 335L
 wrist assemblies and the reusable top ZED module are described in
 [Camera assemblies](docs/camera-assemblies.md) / [相机装配](docs/camera-assemblies.zh-CN.md).

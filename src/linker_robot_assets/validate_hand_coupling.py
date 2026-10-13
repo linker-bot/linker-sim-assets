@@ -1,12 +1,12 @@
 """Audit every shipped hand's passive following using only ctrl and mj_step.
 
     python -m linker_robot_assets.validate_hand_coupling --output results.json
-    python -m linker_robot_assets.validate_hand_coupling --source
+    python -m linker_robot_assets.validate_hand_coupling --hand o6 --cycle
 
 Default: a one-second ramp, then hold, for five simulated seconds. --cycle
 closes over one second, holds, opens over one second, and holds (four seconds).
---source audits the original models and intentionally fails while their default
-soft equalities remain unsuitable. This is a motion check, not calibration.
+O6 is checked over eight seconds against final-second stability criteria.
+This audits the default component files; it is not hardware calibration.
 """
 
 from __future__ import annotations
@@ -20,7 +20,6 @@ import mujoco
 import numpy as np
 
 from . import asset_root
-from .composer.mjcf_profiles import COUPLED_HANDS
 from .composer.schemas import ComponentMeta
 
 
@@ -173,18 +172,19 @@ def probe(
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--assets-root", type=Path, default=asset_root())
-    parser.add_argument("--hand", choices=COUPLED_HANDS, action="append")
-    parser.add_argument("--source", action="store_true")
+    parser.add_argument(
+        "--hand", choices=("l6", "o6", "l20lite", "l25", "l30"), action="append"
+    )
     parser.add_argument("--cycle", action="store_true")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
     rows = []
-    for hand in args.hand or COUPLED_HANDS:
+    for hand in args.hand or ("l6", "o6", "l20lite", "l25", "l30"):
         component = args.assets_root / "components/hands" / f"linkerhand_{hand}"
         meta = ComponentMeta.load(component / "meta.yaml")
         for side, variant in meta.variants.items():
-            path = component / (variant.mjcf if args.source else f"coupled/{side}.xml")
-            o6 = hand == "o6" and not args.source
+            path = component / variant.mjcf
+            o6 = hand == "o6"
             result = probe(
                 mujoco.MjModel.from_xml_path(str(path)),
                 cycle=args.cycle,
@@ -194,7 +194,6 @@ def main(argv: list[str] | None = None) -> int:
             row = dict(
                 hand=hand,
                 side=side,
-                source=args.source,
                 model=str(path.relative_to(args.assets_root)),
                 sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                 **result,

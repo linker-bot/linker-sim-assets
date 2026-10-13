@@ -36,7 +36,6 @@ from .mjcf_ops import (
     inject_placeholder_inertials,
     rewrite_position_actuators_to_motors,
 )
-from .mjcf_profiles import COUPLED_COMPONENTS, apply_mujoco_options
 from .schemas import (
     Artifacts,
     ComponentMeta,
@@ -212,28 +211,8 @@ def compose(paths: Paths) -> ComposeResult:
         # damping/armature/frictionloss are kept — they model real hardware and
         # are what MuJoCo/mujoco-wasm consumers rely on; Isaac's DriveAPI simply
         # adds to them.
-        # The explicit MuJoCo O6 profile needs implicit native servo damping;
-        # external PD on torque motors is not equivalent at a 2 ms timestep.
-        native_o6 = frozenset(
-            j for c in compiled for j in c.actuated_joints
-            if recipe.mujoco.coupling_profile == "o6_coupled"
-            and c.meta.name == "linkerhand_o6"
-        )
-        rewrite_position_actuators_to_motors(
-            mjcf_root, _joint_effort_limits(urdf_root),
-            preserve_position_joints=native_o6,
-        )
+        rewrite_position_actuators_to_motors(mjcf_root, _joint_effort_limits(urdf_root))
         inject_placeholder_inertials(mjcf_root)
-        apply_mujoco_options(
-            mjcf_root,
-            recipe.mujoco,
-            [
-                c.mimic_joints for c in compiled
-                if c.meta.name == "linkerhand_o6"
-                or (recipe.mujoco.coupling_profile == "hand_coupled"
-                    and c.meta.name in COUPLED_COMPONENTS)
-            ],
-        )
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),
             recipe_name=recipe.name,
@@ -241,8 +220,6 @@ def compose(paths: Paths) -> ComposeResult:
         )
         mjcf_sha = sha256_bytes(mjcf_text.encode("utf-8"))
     else:
-        if recipe.mujoco.timestep is not None or recipe.mujoco.coupling_profile is not None:
-            raise SchemaError("Recipe declares mujoco settings but a component has no MJCF")
         print(
             "[compose] skipping workstation.xml (component MJCFs not yet authored):",
             file=sys.stderr,

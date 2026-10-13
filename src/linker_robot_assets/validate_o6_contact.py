@@ -3,7 +3,7 @@
     python -m linker_robot_assets.validate_o6_contact --output contact.json
 
 Recorded fixture poses originate from the DemoGrasp 2026-10-08 diagnostics.
-Geometry and numerical parameters are loaded from the current coupled assets.
+Geometry and numerical parameters are loaded from the default component assets.
 The thumb yaw is fixtured; flexion and its passive joint remain dynamic.
 """
 
@@ -17,12 +17,11 @@ import mujoco
 import numpy as np
 
 from . import asset_root
-from .composer.o6_profile import O6_CONTACT_SOLIMP, O6_CONTACT_SOLREF
 
 
 def build_fixture(side, finger, *, assets_root=None):
     component = (assets_root or asset_root()) / "components/hands/linkerhand_o6"
-    path = component / "coupled" / f"{side}.xml"
+    path = component / f"linkerhand_o6_{side}.xml"
     root = ET.parse(path).getroot()
     root.find("compiler").set("meshdir", str(component / "meshes"))
     poses = json.loads(
@@ -88,8 +87,8 @@ def build_fixture(side, finger, *, assets_root=None):
         conaffinity="1",
         condim="1",
         friction="0 0 0",
-        solref=O6_CONTACT_SOLREF,
-        solimp=O6_CONTACT_SOLIMP,
+        solref="0.004 1",
+        solimp="0.95 0.95 0.001 0.5 2",
     )
     xml = ET.tostring(root, encoding="unicode")
     model = mujoco.MjModel.from_xml_string(xml)

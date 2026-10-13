@@ -18,11 +18,11 @@ components:
   hand_left:
     name: hands/linkerhand_o6
     variant: left
-    sha256: 0544e93dda920cb765cec24a33593eab67b243bd5f946e3f97fa9adeaae37ef4
+    sha256: 55a72934709f2d5817912549e4f380a0fbfeaa625a6c1281cb80cecb652bf053
   hand_right:
     name: hands/linkerhand_o6
     variant: right
-    sha256: d1edceccabf65b41911e1dc882b2d058001f1af2222800654b9c0068cad05136
+    sha256: a259c6545921d87f22c03d8c569470c1b55d99c2722e0981e0addbec04f569d0
   top_camera:
     name: sensors/workstation_zed2i
     variant: default
@@ -39,7 +39,7 @@ artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
   urdf_sha256: d03a0f553ed27d5a5bd876194b97193188c2fc058617f94d27ccda48cdeb6df8
-  mjcf_sha256: 3756d4fd0196f7fe3be8600b1cfb3998dab2cc27fa506159dd5f72e981584641
+  mjcf_sha256: 90cbc54a172832fdb790b5003cbed1f4419922e91d6c310df4f2c55bb2060e6b
 joints:
   base: []
   arm_left:

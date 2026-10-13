@@ -10,7 +10,7 @@ components:
   hand:
     name: hands/linkerhand_o6
     variant: right
-    sha256: d1edceccabf65b41911e1dc882b2d058001f1af2222800654b9c0068cad05136
+    sha256: a259c6545921d87f22c03d8c569470c1b55d99c2722e0981e0addbec04f569d0
   flange:
     name: attachments/ar5_08_l6_o6_flange
     variant: default
@@ -19,7 +19,7 @@ artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
   urdf_sha256: d584b177bb74e7570a07a5ce574fa065be0f9a19aca73754f9c83b0d1e5e083c
-  mjcf_sha256: 33bdae0af4b94bf5ec0f5e603141dff35f3fb867ecda66b5d51a4fed57d914a6
+  mjcf_sha256: 64ca82f18c77ff2470e906bdb9d3fe8fbe7a1b4a56388f0562194ebbf55ad1fa
 joints:
   arm:
   - arm_AR5_5_08R_W4C4A6_joint_1
