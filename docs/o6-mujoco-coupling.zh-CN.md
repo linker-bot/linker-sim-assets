@@ -1,5 +1,9 @@
 # O6 在 MuJoCo 中的机械联动
 
+后续排查确认 L6、L20 Lite、L25、L30 也有相同问题，见
+[全部灵巧手的排查结果与通用配置](hand-mujoco-coupling.zh-CN.md)。`o6_coupled`
+仍只处理 O6；新增 `hand_coupled` 处理场景内这五种手型的联动约束。
+
 可选的 `o6_coupled` 配置通过 MuJoCo 的 joint equality 约束，使五个被动
 关节跟随主动关节，解决 [#17](https://github.com/linker-bot/linker-sim-assets/issues/17)
 描述的空载联动异常。它保留现有默认模型，同时提供可直接加载的

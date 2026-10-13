@@ -1,5 +1,9 @@
 # O6 mechanical coupling in MuJoCo
 
+The same issue also affects L6, L20 Lite, L25 and L30. See the
+[all-hand audit and shared profile](hand-mujoco-coupling.md). `o6_coupled` remains
+O6-only; `hand_coupled` applies to all five supported hand types in a scene.
+
 The optional `o6_coupled` numerical profile makes the five passive joints follow
 the six actively controlled O6 coordinates through MuJoCo joint equalities.
 It addresses [issue #17](https://github.com/linker-bot/linker-sim-assets/issues/17).

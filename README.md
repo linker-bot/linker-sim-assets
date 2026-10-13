@@ -19,14 +19,14 @@ This package ships:
 
 Both `units/` and `workstations/` hold composed, loadable `workstation.urdf` + `workstation.xml` (MJCF) + `manifest.yaml`.
 
-O6 MuJoCo users can select directly loadable position-controlled
-[`coupled/left.xml`](src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/left.xml)
-or [`coupled/right.xml`](src/linker_robot_assets/assets/components/hands/linkerhand_o6/coupled/right.xml)
-to improve passive-joint following. These opt-in files retain the source joint
-dynamics and use a finer timestep with stronger mechanical equalities.
-For composed scenes, select the same profile in the recipe. See
-[O6 coupling](docs/o6-mujoco-coupling.md) / [O6 关节联动](docs/o6-mujoco-coupling.zh-CN.md)
-for control semantics, verification and the 32× integration-step cost.
+L6, O6, L20 Lite, L25 and L30 each ship directly loadable position-controlled
+`coupled/left.xml` and `coupled/right.xml` under their hand component directory.
+These opt-in files retain source dynamics and use a finer timestep with stronger
+mechanical equalities. Composed scenes select `mujoco.coupling_profile: hand_coupled`.
+See [hand coupling and audit results](docs/hand-mujoco-coupling.md) /
+[灵巧手联动与排查结果](docs/hand-mujoco-coupling.zh-CN.md) for all ten models,
+control semantics and the 32× integration-step cost. The original O6-only
+`o6_coupled` profile and generator entry point remain supported.
 
 AR5_08 L6/O6 units now include the shared physical flange. Optional Gemini 335L
 wrist assemblies and the reusable top ZED module are described in

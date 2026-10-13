@@ -326,8 +326,10 @@ class MujocoOptions:
                 raise SchemaError(f"{where}.timestep: expected a finite positive number")
             timestep = float(timestep)
         profile = d.get("coupling_profile")
-        if "coupling_profile" in d and profile != "o6_coupled":
-            raise SchemaError(f"{where}.coupling_profile: expected 'o6_coupled'")
+        if "coupling_profile" in d and profile not in ("o6_coupled", "hand_coupled"):
+            raise SchemaError(
+                f"{where}.coupling_profile: expected 'o6_coupled' or 'hand_coupled'"
+            )
         return MujocoOptions(timestep=timestep, coupling_profile=profile)
 
 

@@ -167,7 +167,7 @@ class O6CouplingTests(unittest.TestCase):
         root = ET.parse(O6 / "linkerhand_o6_right.xml").getroot()
         names = [e.get("joint1") for e in root.findall("equality/joint")]
         root.find("equality").remove(root.find("equality/joint"))
-        with self.assertRaisesRegex(SchemaError, "five"):
+        with self.assertRaisesRegex(SchemaError, "declared"):
             apply_mujoco_options(
                 root, MujocoOptions(coupling_profile="o6_coupled"), [names]
             )

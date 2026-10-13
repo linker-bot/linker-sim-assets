@@ -36,7 +36,7 @@ from .mjcf_ops import (
     inject_placeholder_inertials,
     rewrite_position_actuators_to_motors,
 )
-from .mjcf_profiles import apply_mujoco_options
+from .mjcf_profiles import COUPLED_COMPONENTS, apply_mujoco_options
 from .schemas import (
     Artifacts,
     ComponentMeta,
@@ -217,7 +217,12 @@ def compose(paths: Paths) -> ComposeResult:
         apply_mujoco_options(
             mjcf_root,
             recipe.mujoco,
-            [c.mimic_joints for c in compiled if c.meta.name == "linkerhand_o6"],
+            [
+                c.mimic_joints for c in compiled
+                if c.meta.name == "linkerhand_o6"
+                or (recipe.mujoco.coupling_profile == "hand_coupled"
+                    and c.meta.name in COUPLED_COMPONENTS)
+            ],
         )
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),
