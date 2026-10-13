@@ -1,5 +1,7 @@
 # Passive-joint coupling across the hand assets
 
+[O6 2 ms transfer tests on other hands / 其他手型复测](other-hands-2ms-validation.md)
+
 > **O6 update:** its standalone coupled files and `o6_coupled` now use the
 > [2 ms position-servo/contact profile](o6-mujoco-coupling.md). The 62.5 us
 > shared-profile audit below is historical for O6 and remains the current

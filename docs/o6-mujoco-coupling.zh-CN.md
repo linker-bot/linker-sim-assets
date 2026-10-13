@@ -82,6 +82,5 @@ python -m linker_robot_assets.validate_o6_contact --recontact --output recontact
 PYTHONPATH=src python -m unittest discover -s tests -p test_o6_coupling.py -v
 ```
 
-[其他手型](hand-mujoco-coupling.zh-CN.md) 暂时保留各自的 62.5 µs 配置，随后独立测试
-2 ms 参数。通用 hand_coupled 仍对所有选中手型（包括 O6）使用旧的约束配置；
+[其他手型](hand-mujoco-coupling.zh-CN.md) 暂时保留各自的 62.5 µs 配置，[2 ms 迁移测试](other-hands-2ms-validation.md)未全部通过。通用 hand_coupled 仍对所有选中手型（包括 O6）使用旧的约束配置；
 需要 O6 新位置伺服/接触方案时选择 o6_coupled。

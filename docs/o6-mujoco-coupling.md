@@ -97,6 +97,6 @@ PYTHONPATH=src python -m unittest discover -s tests -p test_o6_coupling.py -v
 ```
 
 [Other hands](hand-mujoco-coupling.md) currently retain the separate 62.5 us
-`hand_coupled` profile pending their own 2 ms tests. Selecting `hand_coupled`
+`hand_coupled` profile after [separate 2 ms transfer tests](other-hands-2ms-validation.md). Selecting `hand_coupled`
 uses that legacy equality-only recipe for all hands, including O6; use
 `o6_coupled` for the new O6 position-servo/contact recipe.
