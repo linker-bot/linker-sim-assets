@@ -36,6 +36,7 @@ from .mjcf_ops import (
     inject_placeholder_inertials,
     rewrite_position_actuators_to_motors,
 )
+from .mjcf_profiles import apply_mujoco_options
 from .schemas import (
     Artifacts,
     ComponentMeta,
@@ -213,6 +214,11 @@ def compose(paths: Paths) -> ComposeResult:
         # adds to them.
         rewrite_position_actuators_to_motors(mjcf_root, _joint_effort_limits(urdf_root))
         inject_placeholder_inertials(mjcf_root)
+        apply_mujoco_options(
+            mjcf_root,
+            recipe.mujoco,
+            [c.mimic_joints for c in compiled if c.meta.name == "linkerhand_o6"],
+        )
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),
             recipe_name=recipe.name,
@@ -220,6 +226,8 @@ def compose(paths: Paths) -> ComposeResult:
         )
         mjcf_sha = sha256_bytes(mjcf_text.encode("utf-8"))
     else:
+        if recipe.mujoco.timestep is not None or recipe.mujoco.coupling_profile is not None:
+            raise SchemaError("Recipe declares mujoco settings but a component has no MJCF")
         print(
             "[compose] skipping workstation.xml (component MJCFs not yet authored):",
             file=sys.stderr,
