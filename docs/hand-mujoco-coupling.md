@@ -1,17 +1,12 @@
 # Passive-joint coupling across the hand assets
 
-[O6 2 ms transfer tests on other hands / 其他手型复测](other-hands-2ms-validation.md)
+The opt-in `hand_coupled` profile configures mechanical joint equalities for
+both sides of L6, O6, L20 Lite, L25 and L30. It changes the scene timestep and
+the selected equality solver parameters.
 
-> **O6 update:** its standalone coupled files and `o6_coupled` now use the
-> [2 ms position-servo/contact profile](o6-mujoco-coupling.md). The 62.5 us
-> shared-profile audit below is historical for O6 and remains the current
-> configuration for the other hands. `hand_coupled` still uses that legacy
-> equality-only configuration for every selected hand, including O6.
-
-All five shipped hand families reproduce substantial passive-joint lag with
-their original MuJoCo solver settings. The opt-in `hand_coupled` profile fixes
-the audited motion for **both sides of L6, O6, L20 Lite, L25 and L30**. It changes
-only the timestep and the selected mechanical equality solver parameters.
+O6 standalone coupled files and `o6_coupled` use the separate
+[2 ms position-servo/contact profile](o6-mujoco-coupling.md). `hand_coupled`
+uses the 62.5 µs equality-only profile for every selected hand, including O6.
 
 ## Models and usage
 
@@ -36,7 +31,8 @@ data = mujoco.MjData(model)
 ```
 
 The component files keep their **position actuators**. Joint names, actuator
-order, limits and gains come from that hand's source model; do not reuse O6's
+order and limits come from that hand's source model. O6 uses its profile gains;
+do not reuse O6's
 six-element control vector for the other hand families. No passive qpos writes,
 extra motors, or coupling callback is needed. L20 Lite's two followers per
 finger and side-specific ratios are preserved. L30's thumb DIP is **active**;
@@ -58,38 +54,15 @@ commands with its controller. This setting does not change actuator semantics.
 L30 has no auto-derived solo unit, but can be composed from a custom recipe in
 the same way as the other hand components.
 
-Existing mount and component-compiler compatibility rules still apply. The
-mixed-scene regression combines O6, L25 and L20 Lite; the coupling profile does
-not resolve unrelated conflicts between component URDF compiler declarations.
+Existing mount and component-compiler compatibility rules still apply; the
+coupling profile does not resolve unrelated component compiler conflicts.
 
 The O6-only `mujoco.coupling_profile: o6_coupled` still selects only O6 in mixed
 scenes. Existing recipes without either profile retain their current output.
-`mujoco.timestep` can explicitly select a smaller timestep; with either coupling
-profile, larger values than 0.0000625 s are rejected.
+`mujoco.timestep` can explicitly select a smaller timestep. The maximum is
+0.0000625 s for `hand_coupled` and 0.002 s for `o6_coupled`.
 
-## Matched audit results
-
-The comparison starts each model at its source default pose, ramps the equality
-parent targets for one second, and holds to five simulated seconds. For each
-parent, the target is half its compatible upper limit (including all follower
-limits), capped at 0.6 rad. Unrelated axes remain at zero. Source and corrected
-models use identical commands, gravity, contacts and physical parameters. This
-range-aware protocol differs from the earlier [O6-only reproduction](o6-mujoco-coupling.md).
-
-MuJoCo 3.8.0 results, with coupling residuals measured at **every physics step**:
-
-| Hand | Source final maximum error, left / right (rad) | Corrected full-trajectory maximum, left / right (rad) |
-|---|---|---|
-| L6 | 0.578584 / 0.578592 | 0.000002755 / 0.000002755 |
-| O6 | 0.521750 / 0.521754 | 0.000170615 / 0.000170663 |
-| L20 Lite | 0.763226 / 0.787545 | 0.000108111 / 0.000120527 |
-| L25 | 0.601786 / 0.599422 | 0.000326305 / 0.000261586 |
-| L30 | 0.590923 / 0.590856 | 0.000303702 / 0.000293091 |
-
-All ten corrected ramp/hold runs finish without warnings. All constraints
-remain enabled. L6 has one existing self-contact in these motions; its source
-still fails when contacts are disabled in a separate causal control. The other
-eight models have no contacts in this audit. Collision settings are not changed.
+## Shared profile parameters
 
 The common settings are:
 
@@ -99,7 +72,7 @@ The common settings are:
 <!-- solref="0.000125 1" solimp="0.9999 0.9999 0.001 0.5 2" -->
 ```
 
-The original hand dynamics are retained, including L6 damping=5 and its
+The shared profile retains the original hand dynamics, including L6 damping=5 and its
 kp/kv=20/2 servos, versus damping=4 and kp/kv=200/0 in the other component
 MJCFs. The profile preserves frictionloss, armature, masses, inertias, ranges,
 ratios, actuators and collision exclusions. No assumption of five passive
@@ -108,15 +81,13 @@ joints is applied to L20 Lite or L30.
 MuJoCo equalities are soft. Default solver settings permit large errors for
 these dynamics; enabling a constraint alone does not enforce an exact angle
 ratio. The time constant and timestep must be selected together because default
-`refsafe` clamps the former to at least twice the latter. These profiles require
+`refsafe` clamps the former to at least twice the latter. The shared 62.5 µs profile requires
 **32 times more integration steps per simulated second**. Keep control intervals
 in seconds and do not overwrite the model timestep with the original 2 ms.
 
-These results are numerical motion validation, **not hardware calibration**.
-The tests cover moderate ramp/hold and opening/closing, and O6's earlier bounded
-step response. They do not certify full-range or arbitrary contact-loaded
-grasps, abrupt input on every hand, contact-force convergence or self-locking.
-Those need task-specific validation of linkage, stops, forces and backdrive.
+These are numerical simulation settings, **not hardware calibration**.
+Grasping applications need task-specific validation of linkage, stops, contact
+forces and backdrive. The profile does not add self-locking.
 
 ## Reproduce and maintain
 

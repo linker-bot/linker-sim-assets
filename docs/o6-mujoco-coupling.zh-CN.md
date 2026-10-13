@@ -37,7 +37,7 @@ impratio=10、nativeccd=disable、接触 margin=gap=0。
 力矩上限：侧摆 1 Nm，拇指屈曲左 4 / 右 3.8148 Nm，其余手指 2.55 Nm。
 
 关节 damping=4、frictionloss=0.5、armature=3.4707e-08、质量、惯量、几何、限位和
-联动比例保持源模型值。新增一对与 DemoGrasp 测试一致的碰撞豁免：掌部与拇指
+联动比例保持源模型值。新增一对碰撞豁免：掌部与拇指
 metacarpals，避免掌部凸碰撞体填满真实拇指根部间隙。其他豁免和碰撞掩码保留。
 
 组合场景的手写 recipe.yaml 可声明：
@@ -50,28 +50,16 @@ mujoco:
 再运行 `python -m linker_robot_assets.composer.compose <场景目录>`。
 **此配置在组合场景中也保留 O6 原生位置执行器，O6 的 data.ctrl 输入单位为角度。**
 其他组件仍使用原有力矩执行器；混合机械臂/手模型应分别处理对应的输入。
-这替代了本 PR 早期“全部转换为力矩电机、62.5 µs”的 O6 配置。2 ms 下外部 PD 的
+2 ms 下外部 PD 的
 阻尼不等价于原生位置伺服参与隐式积分的阻尼。未选择配置的现有 recipe 输出不变。
 场景默认步长为 2 ms，可显式缩小，超过 2 ms 会报错；求解器选项影响整个场景。
 
 接触物体也应设置兼容的参数。MuJoCo 会按 priority/solmix 混合两个 geom 的参数，
-显式 pair 可以覆盖它们；更高优先级物体可能覆盖手上的 solimp。测试中接触双方均
-使用 0.95，不能只改一个实际未生效的 geom。
+显式 pair 可以覆盖它们；更高优先级物体可能覆盖手上的 solimp。需要使用这组接触
+参数时，应确保双方或显式 pair 的配置让 0.95 实际生效。
 
-**验证与边界。** 回归覆盖左右完整手的保持与开合、组合模型、生成一致性与物理参数
-保留。接触验证器使用当前 assets 和记录的 DemoGrasp 姿态构建左右拇指/食指测力台，
-固定基座与拇指侧摆、指尖接触无摩擦平面；保持及松开重接触各运行 30 秒，只按
-最后 5 秒判断，不以瞬态联动误差或穿透峰值判失败。
-
-MuJoCo 3.14 的普通测力台平均力仍约 25–31 N，末段力标准差低于 1e-5 N；接触
-solimp=0.999 的对照组约为 4.15–6.05 N。当前可复现结果见
-[o6-coupling-validation.json](o6-coupling-validation.json)。早期探索还覆盖了 60 秒保持、
-减小推力、阶跃输入与平面倾斜 ±10°，在 3.8 和 3.14 均验证了候选稳定性。
-0.97 在部分扰动下重新振荡，因此选择了 0.95。
-
-代价是静态接触柔顺性：3.14 的平均穿透约 0.33–0.96 mm；同样的固定测力台在 3.8
-下食指可达约 2.5 mm。这是持续穿透，不能当作启动瞬态忽略。尚未证明任意
-自由运动物体、多指有摩擦抓持、实物力精度或自锁特性。
+接触配置允许有限的静态穿透，需要结合应用中的物体和载荷检查其适用性。
+这些数值参数不代表实物力精度，也不添加自锁特性。
 
 ```bash
 python -m linker_robot_assets.o6_coupling
@@ -82,5 +70,6 @@ python -m linker_robot_assets.validate_o6_contact --recontact --output recontact
 PYTHONPATH=src python -m unittest discover -s tests -p test_o6_coupling.py -v
 ```
 
-[其他手型](hand-mujoco-coupling.zh-CN.md) 暂时保留各自的 62.5 µs 配置，[2 ms 迁移测试](other-hands-2ms-validation.md)未全部通过。通用 hand_coupled 仍对所有选中手型（包括 O6）使用旧的约束配置；
+[其他手型](hand-mujoco-coupling.zh-CN.md) 使用 62.5 µs 配置。通用 hand_coupled
+对所有选中手型（包括 O6）使用该约束配置；
 需要 O6 新位置伺服/接触方案时选择 o6_coupled。

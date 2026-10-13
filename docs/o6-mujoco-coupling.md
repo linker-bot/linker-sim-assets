@@ -39,7 +39,7 @@ is needed. The step remains 0.002 s: 500 integration steps per simulated second.
 
 Joint damping=4, frictionloss=0.5, armature=3.4707e-08, masses, inertias, limits,
 geometry and linkage ratios retain their source values. One additional collision
-exclusion matches the tested DemoGrasp profile: palm versus thumb metacarpals,
+exclusion covers the palm versus thumb metacarpals,
 where the convex palm collider fills the thumb-base clearance. Other collision
 exclusions and collision masks are retained.
 
@@ -53,8 +53,7 @@ mujoco:
 Run `python -m linker_robot_assets.composer.compose <recipe-directory>`.
 **This profile retains O6 native position actuators in composed scenes:** O6
 `data.ctrl` entries are angles, including in a mixed arm/hand model. Other
-components retain their existing torque motors. This supersedes the earlier
-version of this PR, which converted O6 to torque motors and required 62.5 us.
+components retain their existing torque motors.
 External PD damping on torque motors is not equivalent to implicit native servo
 damping at 2 ms. Recipes without this profile retain their previous output.
 The scene-wide timestep defaults to 2 ms; explicit smaller steps are accepted,
@@ -63,29 +62,11 @@ and larger steps are rejected. Solver options affect the whole composed scene.
 Set compatible contact parameters on objects as well. MuJoCo combines geom
 parameters using priority/solmix, and explicit contact pairs override them.
 A higher-priority object or pair can override the hand's new contact impedance.
-The regression fixture sets both the fingertip and plate to 0.95.
+Set both contact surfaces to 0.95 when they should use this contact profile.
 
-**Validation and limits.** Tests use only actuator commands and mj_step after
-initialization. Empty-hand motion, hold/open/close, standalone and composed
-hands, source physics preservation and profile scoping are checked. The shipped
-contact validator builds four fixed-base thumb/index plate fixtures from the
-current assets using recorded DemoGrasp poses; thumb yaw is fixed and contacts
-are frictionless. Both contact and release/recontact run for 30 s and are judged
-on the final 5 s, not transient error or penetration peaks.
-
-MuJoCo 3.14.0 nominal fixtures retain approximately 25–31 N of force. Contact
-force standard deviation is below 1e-5 N, versus 4.15–6.05 N with contact
-solimp=0.999 and otherwise identical tuning. Detailed reproducible results are
-in [o6-coupling-validation.json](o6-coupling-validation.json).
-Earlier exploratory tests also covered 60 s holds, reduced loads, step commands
-and planes tilted by ±10 degrees on MuJoCo 3.8.0 and 3.14.0. Those tests motivated
-0.95 rather than 0.97, which could oscillate again after a contact perturbation.
-
-The tradeoff is finite static contact penetration. The 3.14 fixtures show
-about 0.33–0.96 mm; the same fixed fixtures in 3.8 reach about 2.5 mm.
-Do not confuse this with transient penetration. Full multifinger frictional
-grasping and arbitrary moving objects remain outside the validated scope.
-No hardware force accuracy or self-locking is claimed.
+The contact profile permits finite static penetration as part of its compliance.
+Check its suitability for the objects and loads in the application. It does not
+establish hardware force accuracy or self-locking.
 
 ```bash
 python -m linker_robot_assets.o6_coupling
@@ -97,6 +78,6 @@ PYTHONPATH=src python -m unittest discover -s tests -p test_o6_coupling.py -v
 ```
 
 [Other hands](hand-mujoco-coupling.md) currently retain the separate 62.5 us
-`hand_coupled` profile after [separate 2 ms transfer tests](other-hands-2ms-validation.md). Selecting `hand_coupled`
+`hand_coupled` profile. Selecting `hand_coupled`
 uses that legacy equality-only recipe for all hands, including O6; use
 `o6_coupled` for the new O6 position-servo/contact recipe.
