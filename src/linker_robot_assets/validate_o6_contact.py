@@ -2,7 +2,9 @@
 
     python -m linker_robot_assets.validate_o6_contact --output contact.json
 
-Recorded fixture poses originate from the DemoGrasp 2026-10-08 diagnostics.
+The right fixtures originate from DemoGrasp 2026-10-08 diagnostics; the thumb
+plate follows its 1014 anchor shift. Left fixtures reflect the right setup in Y
+to exercise the new mirrored geometry under equivalent physical contact.
 Geometry and numerical parameters are loaded from the default component assets.
 The thumb yaw is fixtured; flexion and its passive joint remain dynamic.
 """

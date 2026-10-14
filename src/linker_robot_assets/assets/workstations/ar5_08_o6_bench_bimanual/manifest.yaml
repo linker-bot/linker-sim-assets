@@ -1,7 +1,7 @@
 schema_version: 1
 name: ar5_08_o6_bench_bimanual
 composer_version: 0.1.0
-recipe_sha256: 05b28e25d05881740950339f55d60ef816b9a73b4da1e70ed47523ca194040a1
+recipe_sha256: 80463062e882956fd8b3ac15964ccc74f4d9c981161733d05f81acd2dae31c77
 components:
   base:
     name: bases/bench_table
@@ -18,11 +18,11 @@ components:
   hand_left:
     name: hands/linkerhand_o6
     variant: left
-    sha256: 55a72934709f2d5817912549e4f380a0fbfeaa625a6c1281cb80cecb652bf053
+    sha256: 593489073a33ff911cf3f6255be7801512f85cea7ebd4ae6affd8536ee7f4481
   hand_right:
     name: hands/linkerhand_o6
     variant: right
-    sha256: a259c6545921d87f22c03d8c569470c1b55d99c2722e0981e0addbec04f569d0
+    sha256: efe36f96676af332e639adfae3b2f5b9a5ae27266975d0b84c23ac2928c76e6e
   top_camera:
     name: sensors/workstation_zed2i
     variant: default
@@ -38,8 +38,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: d03a0f553ed27d5a5bd876194b97193188c2fc058617f94d27ccda48cdeb6df8
-  mjcf_sha256: 90cbc54a172832fdb790b5003cbed1f4419922e91d6c310df4f2c55bb2060e6b
+  urdf_sha256: 7288972acd6789ef3ae33b500f6402ee2da948d00c1189e229c9d79c5a823139
+  mjcf_sha256: fc37e947b9e494d0d6e3537b2b93ad4865eb26a44f3268852f9be8f811d4da08
 joints:
   base: []
   arm_left:
