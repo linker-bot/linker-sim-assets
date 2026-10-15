@@ -96,8 +96,8 @@ class CameraAssemblyTests(unittest.TestCase):
 
     def test_o6_bending_allows_a_combined_route_without_changing_limits(self):
         # These are two verified examples, not a task controller or a universal
-        # safe-angle table. The left and right mounting/hand geometry differs.
-        for side, pitch, yaw in (("l", 0.5, 0.26), ("r", 0.57, 1.2)):
+        # safe-angle table. Re-sampled for the mirrored 1014 structure.
+        for side, pitch, yaw in (("l", 0.57, 0.45), ("r", 0.57, 0.45)):
             m = model(f"ar5_08_o6_gemini335l_{side}")
             d = mujoco.MjData(m)
             route = [(0, p) for p in np.linspace(0, pitch, 51)]
@@ -106,6 +106,18 @@ class CameraAssemblyTests(unittest.TestCase):
                 with self.subTest(side=side, yaw=y, pitch=p):
                     forward_hand(m, d, side, y, p)
                     self.assertEqual(attachment_contacts(m, d), [])
+
+    def test_o6_previous_wide_thumb_route_is_still_collidable(self):
+        for side in ("l", "r"):
+            m = model(f"ar5_08_o6_gemini335l_{side}")
+            d = mujoco.MjData(m)
+            forward_hand(m, d, side, 1.2, 0.57)
+            self.assertTrue(
+                any(
+                    "camera_camera_link" in names
+                    for names, _ in attachment_contacts(m, d)
+                )
+            )
 
     def test_top_module_optics_and_inertia_are_in_the_mesh_frame(self):
         m = model("workstation_zed2i")

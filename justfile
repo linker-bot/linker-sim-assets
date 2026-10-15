@@ -13,3 +13,10 @@ build-base-collisions:
 
 check-base-collisions:
     {{python}} scripts/build_base_collisions.py --check a7_torso a7_lite_torso p7_torso bench_table
+
+# Reimport only from the pinned hardware delivery and PR #18 component snapshot.
+build-o6-1014 source baseline:
+    {{python}} scripts/build_o6_1014.py --source-dir "{{source}}" --baseline-dir "{{baseline}}"
+
+check-o6:
+    PYTHONPATH=src {{python}} -m unittest tests.test_o6_structure tests.test_o6_coupling tests.test_camera_assemblies -v

@@ -41,7 +41,7 @@ mounts:
     rpy: [0.0, 0.0, 0.0]
   - child: hand_left:wrist_mount
     parent: arm_left:tool0
-    xyz: [-0.028, 0.0, -0.0525]   # A7_Lite0812 vendor TCP (link l9)
+    xyz: [-0.0280000146928, 5.39697429237e-14, -0.0505000000001]   # A7_Lite0812 vendor TCP (link l9)
     rpy: [3.1416, 0.0, -1.5708]
   - child: hand_right:wrist_mount
     parent: arm_right:tool0

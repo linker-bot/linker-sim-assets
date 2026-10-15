@@ -7,7 +7,8 @@ Language: [English](camera-assemblies.md) | [中文](camera-assemblies.zh-CN.md)
 and 133 g Gemini 335L camera: 206.5 g total per wrist, or 162 g above the flange-only
 unit. Select each arm's unit independently for no/left/right/both cameras.
 There are no bracket-only units. Installing a physical camera is independent of
-enabling image rendering. Existing joint names, limits, mimic and actuator order remain intact.
+enabling image rendering. Adding attachments preserves the selected hand component's
+joint names, limits, mimic and actuator order.
 
 ## Mounts and inertia
 
@@ -18,11 +19,11 @@ The source CAD is in millimetres; committed meshes are in metres. Provenance fil
 record source hashes, baked transforms, known masses and inertia approximations.
 
 The large flange face seats at arm `tool0`; its 2 mm pilot enters the arm recess.
-The hand seat is +22.5 mm along tool0 Z. O6 left's root is on its seating plane;
-O6 right's plane is +2 mm from its root, so the net root translations are 22.5 and
-20.5 mm respectively. L6 gets the same seating distance, with a +2° X correction
-for the right hand's tilted source seating plane. The hand's internal joint frames
-are unchanged. These are physical assembly corrections, not new task TCP offsets.
+The hand seat is +22.5 mm along tool0 Z. Both O6 1014_v4 seating planes are
++2 mm from their roots, so both root translations are 20.5 mm. The old left
+22.5 mm root translation no longer applies. L6 gets the same seating distance, with a +2° X correction
+for the right hand's tilted source seating plane. Mounting preserves the selected hand component's internal joint frames;
+the O6 component revision itself is described below. These are physical assembly corrections, not new task TCP offsets.
 
 At standard mechanical zero, the specified flange holes are above and the camera
 is below, looking toward the hand underside. The flange clocking is left −90°,
@@ -40,14 +41,16 @@ configuration; adding mass does not enable gravity.
 
 ## O6 thumb motion restriction
 
-The hardware owner confirmed this assembly matches the real installation.
+The hardware owner confirmed the previous assembly. The 1014 hand retains these
+attachments, but its complete trajectory still needs renewed hardware confirmation.
 With this Gemini 335L bracket, some sideways thumb motions while straight hit the
 camera. Bending must be coordinated with sideways rotation. This is a restriction
 of the current physical assembly, not a collision-filter defect.
 
-The original joint limits remain unchanged and thumb-camera contact remains enabled.
+The 1014 joint limits are retained and thumb-camera contact remains enabled.
 Do not infer safety from independent joint limits or assume that bending unlocks
-the entire sideways range. Left/right geometry differs. Check the complete coupled
+the entire sideways range. Hand geometry is mirrored; attachment approximations
+still require separate checks on both sides. Check the complete coupled
 trajectory, including mimic joints, fingers, camera and bracket. The regression
 tests contain colliding and collision-free examples; their angles are not a task
 controller, a general safe-region table, or a hardware safety guarantee. Reassess
@@ -99,3 +102,33 @@ Normal regeneration uses committed normalized meshes. The tests compile every
 asset and check drift, frame parity, mass/actuation, optical baselines, and real
 MuJoCo contact on both prohibited and feasible thumb routes. Isaac backend,
 camera-following, and planning coverage are validated in the simulator repository.
+
+## O6 1014_v4 migration
+
+The 1014_v4 hand has mirrored kinematics and geometry. Both palm seating planes are
+2 mm above the hand root; AR5_08 root translation is now 20.5 mm on both sides,
+replacing the old left/right 22.5/20.5 mm pair. This follows the delivered meshes
+and existing flange datum, not a new hardware measurement. Other left-hand recipes
+compensate 2 mm along local hand Z while retaining their own seating plane/orientation.
+
+The hardware mass is adopted as requested: palm 237.4 g, thumb 64.02 g, other fingers
+68.56 g, totaling 369.98 g/hand. Delivered COM/right inertia tensors are used; left
+ixy/iyz are reflected correctly. Numerical validity and coordinate checks are not
+independent inertia measurements. PR #18 component kp=600/kv=4.5, force caps, passive
+dynamics and coupling settings remain unchanged. Composed models retain torque motors
+and application controller gains are not retuned. Thumb yaw limit is 1.36 rad on both
+sides, with thumb mimic 1.86. The new pitch frame is shared by URDF and MJCF.
+
+Left Y reflection is baked into meshes with corrected winding. Baseline right simplified
+colliders are transformed and mirrored; the changed thumb metacarpal uses a new convex
+hull. Each hand has 8,390 collision triangles versus 242,886 in the delivery. Hulls fill
+concavities and do not represent exact CAD contact. The old right pitch=0.57/yaw=1.2
+route now hits the camera. Regression examples bend to pitch=0.57 before yaw=0.45 on
+both sides and still check straight-thumb yaw=0.3 contact; these are not safe-angle tables.
+The new structure has not undergone renewed physical trajectory confirmation.
+
+All six units/five workstations are regenerated; older tasks must pin their previous
+asset revision. The component `provenance_1014.json` records source/output hashes and
+coordinate transforms. Reimport with `scripts/build_o6_1014.py --source-dir
+<1014-delivery> --baseline-dir <a8c0d475-o6-component>`, recompose affected recipes,
+and run `just test`. Both source directories must be unmodified.

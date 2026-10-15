@@ -1,0 +1,496 @@
+{
+  "revision": "1014_v4",
+  "baseline_commit": "a8c0d475d6d56c03c67cb6ab33c398f5b7463c02",
+  "hardware_sources": {
+    "o6_left/linkerhand_o6_left--1014_v4.urdf": "6d4ec7c22f8d8ceda3781fe8fc6ef23e9db4bb17982c6872686c75371f79ded6",
+    "o6_right/linkerhand_o6_right--1014_v4.urdf": "849e2d8600d537a30da9895c7b256af252fafe0cc62009a389321472e7881698",
+    "o6_right/meshes/base_Link/hand_base_link.glb": "fb865b35d6a47e67ae602b75318502e3f7d52ce74ea4a5acdb5141a6bc4fc0fe",
+    "o6_right/meshes/thumb_metacarpals_base2/thumb_metacarpals_base2-1014.STL": "347449092c38e7ebb2e79791616711d655f94608da6a07e00d12ce561bf65f2a",
+    "o6_right/meshes/thumb_metacarpals/thumb_metacarpals-1014.STL": "18e772b4308be5d18d0b55de79f8528e3a3fcbb394a36d726e4b3aab88cef0e0",
+    "o6_right/meshes/thumb_distal/thumb_distal-1014.STL": "5644dcbc45be1cd48228e8192035e6d0d273b0e4cd67a4f5e635e197650112be",
+    "o6_right/meshes/index_proximal/index_proximal.glb": "5e8637ebac72bdba986abfe868177cf7a275bd630c82f0beff92a688a8fea6f9",
+    "o6_right/meshes/index_distal/index_distal.glb": "1037ad1690af756ba4dc756213a8aef80d36f808cb6c99b06a929d77dbdfdfff",
+    "o6_right/meshes/middle_proximal/middle_proximal.glb": "5e8637ebac72bdba986abfe868177cf7a275bd630c82f0beff92a688a8fea6f9",
+    "o6_right/meshes/middle_distal/middle_distal.glb": "1037ad1690af756ba4dc756213a8aef80d36f808cb6c99b06a929d77dbdfdfff",
+    "o6_right/meshes/ring_proximal/ring_proximal.glb": "5e8637ebac72bdba986abfe868177cf7a275bd630c82f0beff92a688a8fea6f9",
+    "o6_right/meshes/ring_distal/ring_distal.glb": "1037ad1690af756ba4dc756213a8aef80d36f808cb6c99b06a929d77dbdfdfff",
+    "o6_right/meshes/pinky_proximal/pinky_proximal.glb": "5e8637ebac72bdba986abfe868177cf7a275bd630c82f0beff92a688a8fea6f9",
+    "o6_right/meshes/pinky_distal/pinky_distal.glb": "1037ad1690af756ba4dc756213a8aef80d36f808cb6c99b06a929d77dbdfdfff"
+  },
+  "baseline_sources": {
+    "meshes/collision/rh_hand_base_link_col.obj": "950256595e5ed688497f7c2ec3497e4dcb6aebcbc3003f04cdb7206a4544f735",
+    "meshes/collision/rh_thumb_metacarpals_base2_col.obj": "af952f2c65e485a25dde81263f537cbc3ae6f1e45d2f37ad7bf028220f51173f",
+    "meshes/collision/rh_thumb_metacarpals_col.obj": "c98568fe94183c4db1cf051c9437561dc8aaaefd1cea023766b2084e2f97aad3",
+    "meshes/collision/rh_thumb_distal_col.obj": "f27ac8eff49b66323353fe2453322c83d04429aea35496d05682a347d0b20fa5",
+    "meshes/collision/rh_index_proximal_col.obj": "44ead045e36b6cb3a888a0e36a332256467aa7fe9ff2b2dc0613b6d17ed4f9ca",
+    "meshes/collision/rh_index_distal_col.obj": "dd28beec0257e758fd2235fc6b42d5b84c4280b90f0723318a85e044bfacf552",
+    "meshes/collision/rh_middle_proximal_col.obj": "44ead045e36b6cb3a888a0e36a332256467aa7fe9ff2b2dc0613b6d17ed4f9ca",
+    "meshes/collision/rh_middle_distal_col.obj": "dd28beec0257e758fd2235fc6b42d5b84c4280b90f0723318a85e044bfacf552",
+    "meshes/collision/rh_ring_proximal_col.obj": "44ead045e36b6cb3a888a0e36a332256467aa7fe9ff2b2dc0613b6d17ed4f9ca",
+    "meshes/collision/rh_ring_distal_col.obj": "dd28beec0257e758fd2235fc6b42d5b84c4280b90f0723318a85e044bfacf552",
+    "meshes/collision/rh_pinky_proximal_col.obj": "44ead045e36b6cb3a888a0e36a332256467aa7fe9ff2b2dc0613b6d17ed4f9ca",
+    "meshes/collision/rh_pinky_distal_col.obj": "dd28beec0257e758fd2235fc6b42d5b84c4280b90f0723318a85e044bfacf552",
+    "linkerhand_o6_left.xml": "3d50feb0597d15a600f2be9ceedfdfe3f288a603a2a22cf0ac0f084f8cc45f85",
+    "linkerhand_o6_right.xml": "a421903f8f8ed498f33909d2b86e3b182a5b7e51abbcbf30acc198aa58250caa",
+    "linkerhand_o6_left.urdf": "09864cfe9168fd058dfe3c5f496fd3592f012b8f874e19788986c07cef06065e",
+    "linkerhand_o6_right.urdf": "cbd15e10d563637d3c0fe6f9e65031b07af8316ab3e399664b427e2dd183a662"
+  },
+  "mass_kg_each": 0.36998,
+  "inertia_policy": "Use hardware masses/COM/right tensors; reflect left ixy/iyz. These supplied values are not independently measured here.",
+  "controller_policy": "Keep PR #18 component gains, force caps, options, passive dynamics and constraint/contact settings; no application gain changes.",
+  "mesh_policy": "Metres; bake left Y reflection with winding correction; GLB visual and OBJ visual/collision; no negative runtime mesh scales.",
+  "baseline_right_to_new_local": {
+    "hand_base_link": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "thumb_metacarpals_base2": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "thumb_metacarpals": [
+      [
+        -1.490728826001744e-06,
+        0.9999999999932541,
+        3.3571063875199914e-06,
+        1.3010426069826053e-18
+      ],
+      [
+        -0.9999999999988891,
+        -1.4907288260566264e-06,
+        -2.502287733958402e-12,
+        0.0
+      ],
+      [
+        2.50224357675729e-12,
+        -3.3571063875615523e-06,
+        0.9999999999943652,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "thumb_distal": [
+      [
+        -1.490728826001744e-06,
+        0.9999999999932541,
+        3.3571063875199914e-06,
+        1.46673825376269e-07
+      ],
+      [
+        -0.9999999999988891,
+        -1.4907288260566264e-06,
+        -2.502287733958402e-12,
+        -1.0932747762648631e-13
+      ],
+      [
+        2.50224357675729e-12,
+        -3.3571063875615523e-06,
+        0.9999999999943652,
+        -2.4619195571062846e-13
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "index_proximal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "index_distal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "middle_proximal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "middle_distal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ring_proximal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "ring_distal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pinky_proximal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pinky_distal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "meshes": {
+    "hand_base_link": {
+      "source_visual_faces": 126828,
+      "collision_faces": 458,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "thumb_metacarpals_base2": {
+      "source_visual_faces": 13612,
+      "collision_faces": 410,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "thumb_metacarpals": {
+      "source_visual_faces": 11372,
+      "collision_faces": 3028,
+      "collision_method": "Convex hull of 1014 thumb metacarpal; fills concavities, no hidden mesh decimation."
+    },
+    "thumb_distal": {
+      "source_visual_faces": 16414,
+      "collision_faces": 454,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "index_proximal": {
+      "source_visual_faces": 7032,
+      "collision_faces": 522,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "index_distal": {
+      "source_visual_faces": 11633,
+      "collision_faces": 488,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "middle_proximal": {
+      "source_visual_faces": 7032,
+      "collision_faces": 522,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "middle_distal": {
+      "source_visual_faces": 11633,
+      "collision_faces": 488,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "ring_proximal": {
+      "source_visual_faces": 7032,
+      "collision_faces": 522,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "ring_distal": {
+      "source_visual_faces": 11633,
+      "collision_faces": 488,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "pinky_proximal": {
+      "source_visual_faces": 7032,
+      "collision_faces": 522,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    },
+    "pinky_distal": {
+      "source_visual_faces": 11633,
+      "collision_faces": 488,
+      "collision_method": "Reuse baseline right simplified collider in the corresponding 1014 local frame."
+    }
+  },
+  "outputs": {
+    "linkerhand_o6_left.urdf": "e1e42ccd1ff55a28153acb025046f42d810ac97367f7bbfdaebe042d01cd75ba",
+    "linkerhand_o6_left.xml": "3d0ca932028277620c234b984d2dd570fc9d8d82311db988e53ab4618485b643",
+    "linkerhand_o6_right.urdf": "6ad8cca6ff8a385086eb3b805cd9c8df3b05ee96edfcc8b6ab92fc6ce0ce1838",
+    "linkerhand_o6_right.xml": "378c0e580a42fad32f4110bfbf39b6db5c8e05cb786b2a043191c8b9d5960010",
+    "meshes/collision/lh_hand_base_link_col.obj": "88f95d9bc1aa9690f6bfe4a1d00dd0ab307545aea37f569fae91413fd47deb95",
+    "meshes/collision/lh_index_distal_col.obj": "350dd8a432b04296743a751fb3b8955d30c63536c16ad08538189fa49963acba",
+    "meshes/collision/lh_index_proximal_col.obj": "a36d25be2513ba81e9ce13ca155f5fdaa6b5d1d99941b1ab66fd70befee37503",
+    "meshes/collision/lh_middle_distal_col.obj": "514d9fa4124ffe7121c1a9849c38f54c1831ab9d3c6317ee7823479ea16c80ed",
+    "meshes/collision/lh_middle_proximal_col.obj": "ed07c40c7fb1af17aa9e3183e8a1e663373e228aa9322c13d72793a6072a2254",
+    "meshes/collision/lh_pinky_distal_col.obj": "74e68c052cbd35b248217ceee6bab9800c5758133d7f5b27e99ceabfba99f663",
+    "meshes/collision/lh_pinky_proximal_col.obj": "9ea4869809981c6c445154cd25dfc515a0e708718f6d9ac703e0994b73878613",
+    "meshes/collision/lh_ring_distal_col.obj": "e93ec73f4d9a9b29ef854b5e9829f4fe7892def703769b6d7178f64b492a7424",
+    "meshes/collision/lh_ring_proximal_col.obj": "fa096fc099cd68350ffb370447078f194f3f70c7d0a0dc30ad4725beff25d5ef",
+    "meshes/collision/lh_thumb_distal_col.obj": "d7cdebf41a1074465a80a0700fc17f224dbb2e5ccc42af3f309f2d0d5303173a",
+    "meshes/collision/lh_thumb_metacarpals_base2_col.obj": "3ad2077d62c4216b8447eb46e895811cabf6c4ce6bb156f450e43422269b5322",
+    "meshes/collision/lh_thumb_metacarpals_col.obj": "e3310195ac506d3f8d43a25b1535004f0301b2b37fbf005f8a385e47fa283163",
+    "meshes/collision/rh_hand_base_link_col.obj": "8fa12e4df9812facda08688f490cc3b5b2f1bc61d98c952863887c1ba82f9391",
+    "meshes/collision/rh_index_distal_col.obj": "e9adc67731936b5b9aa3037923b986f57c73f03b3daf053ee9274d4a5624732d",
+    "meshes/collision/rh_index_proximal_col.obj": "04ca7beb9f362959912b2277369f5b7c425ca7154d4d91c9a554ba755321b646",
+    "meshes/collision/rh_middle_distal_col.obj": "d2236460a23133e1a87a94d9397629ec70a072e32399244a44531e8d23be7f1d",
+    "meshes/collision/rh_middle_proximal_col.obj": "276390b3f0e8884ab1ddb95337d45bd1fff8bf8ad70813edd8b3b0a536346170",
+    "meshes/collision/rh_pinky_distal_col.obj": "9e7bddf879ff6968e189d52979b5788c7ab7f93c2fa1d7a4abcf5d53f80cae1f",
+    "meshes/collision/rh_pinky_proximal_col.obj": "03dca4ef5618d2fafd44e31240e6ad4f9326ebfbf6bc68c78a46f0452356f071",
+    "meshes/collision/rh_ring_distal_col.obj": "d9509c5e4b2b6b7290978e1ce0d801102f6ad067c170654c7989a75b9034bc4d",
+    "meshes/collision/rh_ring_proximal_col.obj": "2830cad9c173b5088f8548a6bb33ee26f2d0d6dc0402241736a3c92270c90454",
+    "meshes/collision/rh_thumb_distal_col.obj": "ab4596610317477b388a6dc87ef74e6c1c56f9162ed41e3f8c0141fd68a5ab71",
+    "meshes/collision/rh_thumb_metacarpals_base2_col.obj": "a1bf0bca4e3f346dacfc33a52f08907ae970e512be3ac9e484effe83d81db3ea",
+    "meshes/collision/rh_thumb_metacarpals_col.obj": "4599b0641fafd2e60720317ee7b76fae0c13bfb1ba028daebacb449489e8e3ca",
+    "meshes/visual/lh_hand_base_link_vis.glb": "4d8e0fefa1fe35d1c036f3189a8127c6015a7107f3239c873af62cfe23c07a85",
+    "meshes/visual/lh_hand_base_link_vis.obj": "72f52c0470a58c1e610d77bfd79079d893abb936cf6616d07a89600559dd5efe",
+    "meshes/visual/lh_index_distal_vis.glb": "4c9a324fa0c6d6e5c4a5093e61899b7da07f4aadbe6743b1ba6c1060608feaba",
+    "meshes/visual/lh_index_distal_vis.obj": "233b103232c99e6ff7edfc4a24650333415d2c8464cc1c975875403a28a6b660",
+    "meshes/visual/lh_index_proximal_vis.glb": "12e7159635a03cc01beca984544b1d2dbda2b607f5a3ea7abdf48214690b6f57",
+    "meshes/visual/lh_index_proximal_vis.obj": "7c6dd2212ff6962e58a5e0c6b29956d39a22a1537ace277c76756c3bf70c7d7a",
+    "meshes/visual/lh_middle_distal_vis.glb": "4c9a324fa0c6d6e5c4a5093e61899b7da07f4aadbe6743b1ba6c1060608feaba",
+    "meshes/visual/lh_middle_distal_vis.obj": "233b103232c99e6ff7edfc4a24650333415d2c8464cc1c975875403a28a6b660",
+    "meshes/visual/lh_middle_proximal_vis.glb": "12e7159635a03cc01beca984544b1d2dbda2b607f5a3ea7abdf48214690b6f57",
+    "meshes/visual/lh_middle_proximal_vis.obj": "7c6dd2212ff6962e58a5e0c6b29956d39a22a1537ace277c76756c3bf70c7d7a",
+    "meshes/visual/lh_pinky_distal_vis.glb": "4c9a324fa0c6d6e5c4a5093e61899b7da07f4aadbe6743b1ba6c1060608feaba",
+    "meshes/visual/lh_pinky_distal_vis.obj": "233b103232c99e6ff7edfc4a24650333415d2c8464cc1c975875403a28a6b660",
+    "meshes/visual/lh_pinky_proximal_vis.glb": "12e7159635a03cc01beca984544b1d2dbda2b607f5a3ea7abdf48214690b6f57",
+    "meshes/visual/lh_pinky_proximal_vis.obj": "7c6dd2212ff6962e58a5e0c6b29956d39a22a1537ace277c76756c3bf70c7d7a",
+    "meshes/visual/lh_ring_distal_vis.glb": "4c9a324fa0c6d6e5c4a5093e61899b7da07f4aadbe6743b1ba6c1060608feaba",
+    "meshes/visual/lh_ring_distal_vis.obj": "233b103232c99e6ff7edfc4a24650333415d2c8464cc1c975875403a28a6b660",
+    "meshes/visual/lh_ring_proximal_vis.glb": "12e7159635a03cc01beca984544b1d2dbda2b607f5a3ea7abdf48214690b6f57",
+    "meshes/visual/lh_ring_proximal_vis.obj": "7c6dd2212ff6962e58a5e0c6b29956d39a22a1537ace277c76756c3bf70c7d7a",
+    "meshes/visual/lh_thumb_distal_vis.glb": "e02f6bc9defd645d1fc3098a92dfcb17df37aa296e59abdcab6f52db408bd0c7",
+    "meshes/visual/lh_thumb_distal_vis.obj": "ad7da43b412797e93a1b388465838cd543bd9a584a13ff410260cfa1528b481d",
+    "meshes/visual/lh_thumb_metacarpals_base2_vis.glb": "125e3b02bc266a3e85681a8f24e8f26f53011df2626b63ed708ac4d6ebe27488",
+    "meshes/visual/lh_thumb_metacarpals_base2_vis.obj": "14062a77bacdd32967a4e0a8564cb3f30eeb6a8e0e17af9a29bfee4a329b0ec7",
+    "meshes/visual/lh_thumb_metacarpals_vis.glb": "fa031401f23b4d0dd6bfc5e4a2a83328c8a83f602e29abefa8d54c5266b657ea",
+    "meshes/visual/lh_thumb_metacarpals_vis.obj": "bbe206201658ab9916f5aae5c0b9552382d9a6063bff645f6598a013aaee5d6a",
+    "meshes/visual/rh_hand_base_link_vis.glb": "fc65466cd58247561f6dfdcee0e0e956264f723861dc1a6a773bd6f2d2000a20",
+    "meshes/visual/rh_hand_base_link_vis.obj": "27f37185f08d9a815aba16c134289c5917e5044d59b1f371d47cbe0bf169640f",
+    "meshes/visual/rh_index_distal_vis.glb": "7b14078a59a09b0d548263884d7f758b56eb248ac0265e39bc926e6df049056b",
+    "meshes/visual/rh_index_distal_vis.obj": "215e0923900707a709d9091e3c5acbe0fff6dd451e7fef41dd9ce7828270088c",
+    "meshes/visual/rh_index_proximal_vis.glb": "017f0fc83b53b4feaad815ee91739236857ace6c796145be629043962b0594dc",
+    "meshes/visual/rh_index_proximal_vis.obj": "e0f7f38845941be38c7592d88e3658e848ec16511e00d3e974c445b39adb358a",
+    "meshes/visual/rh_middle_distal_vis.glb": "7b14078a59a09b0d548263884d7f758b56eb248ac0265e39bc926e6df049056b",
+    "meshes/visual/rh_middle_distal_vis.obj": "215e0923900707a709d9091e3c5acbe0fff6dd451e7fef41dd9ce7828270088c",
+    "meshes/visual/rh_middle_proximal_vis.glb": "017f0fc83b53b4feaad815ee91739236857ace6c796145be629043962b0594dc",
+    "meshes/visual/rh_middle_proximal_vis.obj": "e0f7f38845941be38c7592d88e3658e848ec16511e00d3e974c445b39adb358a",
+    "meshes/visual/rh_pinky_distal_vis.glb": "7b14078a59a09b0d548263884d7f758b56eb248ac0265e39bc926e6df049056b",
+    "meshes/visual/rh_pinky_distal_vis.obj": "215e0923900707a709d9091e3c5acbe0fff6dd451e7fef41dd9ce7828270088c",
+    "meshes/visual/rh_pinky_proximal_vis.glb": "017f0fc83b53b4feaad815ee91739236857ace6c796145be629043962b0594dc",
+    "meshes/visual/rh_pinky_proximal_vis.obj": "e0f7f38845941be38c7592d88e3658e848ec16511e00d3e974c445b39adb358a",
+    "meshes/visual/rh_ring_distal_vis.glb": "7b14078a59a09b0d548263884d7f758b56eb248ac0265e39bc926e6df049056b",
+    "meshes/visual/rh_ring_distal_vis.obj": "215e0923900707a709d9091e3c5acbe0fff6dd451e7fef41dd9ce7828270088c",
+    "meshes/visual/rh_ring_proximal_vis.glb": "017f0fc83b53b4feaad815ee91739236857ace6c796145be629043962b0594dc",
+    "meshes/visual/rh_ring_proximal_vis.obj": "e0f7f38845941be38c7592d88e3658e848ec16511e00d3e974c445b39adb358a",
+    "meshes/visual/rh_thumb_distal_vis.glb": "7d050d973a80c100ae0348166fde360f916878e33c5bf479cd6013d7d747bb3d",
+    "meshes/visual/rh_thumb_distal_vis.obj": "5a89ae3a0d2dd63094fa74ec6e3f9158a12119d111bf92d0eba738d217e8cf55",
+    "meshes/visual/rh_thumb_metacarpals_base2_vis.glb": "a801733855cc0528e0640c60a79f7a069499aca23111dff78a7b4a1a05e64707",
+    "meshes/visual/rh_thumb_metacarpals_base2_vis.obj": "2ea68b3dc86cb2f508fb1a2a0e107e85f14f4195d81288010da851956a5c928d",
+    "meshes/visual/rh_thumb_metacarpals_vis.glb": "c3124987c9321711c9f18758dda363a7cb1698a84da62e8dbe84b620ad361cce",
+    "meshes/visual/rh_thumb_metacarpals_vis.obj": "61d720c33730ab19a7a7be24aedb2c21934d46eb3076a5457c372ce1c956621d"
+  }
+}

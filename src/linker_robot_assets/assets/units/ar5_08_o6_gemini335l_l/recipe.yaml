@@ -26,7 +26,7 @@ mounts:
   rpy: [0, 0, -1.5707963267948966]
 - child: hand:wrist_mount
   parent: flange:hand_mount
-  xyz: [0, 0, 0]
+  xyz: [0, 0, -0.002]
   rpy: [0, 0, 3.141592653589793]
 - child: bracket:flange_mount
   parent: flange:bracket_mount
