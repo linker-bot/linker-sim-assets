@@ -152,43 +152,43 @@
   <worldbody>
     <body name="arm_AR5_5_08L_W4C4A6_base" pos="0 0 0" gravcomp="1">
       <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_base" euler="0 0 0" />
-      <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_base" euler="0 0 0" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+      <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_base" euler="0 0 0" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
       <site name="arm_base_mount" pos="0 0 0" />
       <body name="arm_AR5_5_08L_W4C4A6_link1" pos="0 0 0" euler="0 0 0" gravcomp="1">
         <inertial pos="-0.000184 0.001568 0.172804" mass="2.166" fullinertia="0.00332249 0.00260904 0.00317691 0.00000032 -0.00000048 -0.00001486" />
         <joint name="arm_AR5_5_08L_W4C4A6_joint_1" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" />
         <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link1" />
-        <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link1" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+        <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link1" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
         <body name="arm_AR5_5_08L_W4C4A6_link2" pos="0 0 0.1745" gravcomp="1">
           <inertial pos="-0.000017 0.001795 0.106689" mass="1.903" fullinertia="0.00779803 0.00674819 0.00305507 0.00000248 -0.00000226 -0.00049283" />
           <joint name="arm_AR5_5_08L_W4C4A6_joint_2" type="hinge" axis="0 1 0" range="-2.0944 2.0944" damping="0" frictionloss="0" armature="0.01" />
           <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link2" />
-          <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link2" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+          <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link2" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
           <body name="arm_AR5_5_08L_W4C4A6_link3" pos="0 0 0.332" gravcomp="1">
             <inertial pos="0.008227 -0.001273 -0.020611" mass="1.845" fullinertia="0.00641285 0.00591595 0.00276583 0.00000909 0.00034765 -0.00002314" />
             <joint name="arm_AR5_5_08L_W4C4A6_joint_3" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" />
             <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link3" />
-            <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link3" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+            <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link3" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
             <body name="arm_AR5_5_08L_W4C4A6_link4" pos="0.0105 0 0" gravcomp="1">
               <inertial pos="-0.009242 -0.002172 0.084042" mass="1.037" fullinertia="0.00294639 0.00244447 0.00140961 -0.00002418 -0.00012203 0.00022029" />
               <joint name="arm_AR5_5_08L_W4C4A6_joint_4" type="hinge" axis="0 1 0" range="-1.0472 2.5307" damping="0" frictionloss="0" armature="0.01" />
               <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link4" />
-              <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link4" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+              <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link4" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
               <body name="arm_AR5_5_08L_W4C4A6_link5" pos="-0.0105 0 0.278" gravcomp="1">
                 <inertial pos="-0.000756 0.000723 -0.086764" mass="1.279" fullinertia="0.00241349 0.00200246 0.00158693 -0.00003807 -0.00004536 0.00006623" />
                 <joint name="arm_AR5_5_08L_W4C4A6_joint_5" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" />
                 <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link5" />
-                <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link5" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+                <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link5" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
                 <body name="arm_AR5_5_08L_W4C4A6_link6" pos="0 0 0" gravcomp="1">
                   <inertial pos="-0.005104 0.000251 0.000056" mass="0.906" fullinertia="0.00061429 0.00074781 0.00075897 -0.00000088 0.00000104 -0.00000047" />
                   <joint name="arm_AR5_5_08L_W4C4A6_joint_6" type="hinge" axis="0 1 0" range="-1.047197551196598 1.047197551196598" damping="0" frictionloss="0" armature="0.01" />
                   <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link6" />
-                  <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link6" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+                  <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link6" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
                   <body name="arm_AR5_5_08L_W4C4A6_link7" pos="0 0 0" gravcomp="1">
                     <inertial pos="-0.001562 -0.000366 0.05392" mass="0.33" fullinertia="0.00046062 0.00068652 0.00043943 0.00000269 0.00003859 -0.00000095" />
                     <joint name="arm_AR5_5_08L_W4C4A6_joint_7" type="hinge" axis="1 0 0" range="-1.047197551196598 1.047197551196598" damping="0" frictionloss="0" armature="0.01" />
                     <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link7" />
-                    <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link7" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+                    <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link7" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
                     <body name="arm_AR5_5_08L_W4C4A6_tcp" pos="0 0 0.09" gravcomp="1">
                       <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
                       <site name="arm_tool0" pos="0 0 0" />
@@ -196,54 +196,54 @@
                         <inertial pos="-2.09481995286e-07 0.000516304562215 0.00898841629518" mass="0.044499999" fullinertia="1.20223116926e-05 1.21254820463e-05 1.82919370911e-05 -2.1573478613e-10 -4.98366122213e-11 -7.51965808466e-08" />
                         <geom class="flange_visual" mesh="flange_flange_plate" rgba="0.25 0.28 0.32 1" />
                         <geom class="flange_visual" mesh="flange_flange_adapter" rgba="0.25 0.28 0.32 1" />
-                        <geom class="flange_collision" mesh="flange_collision_000" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_001" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_002" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_003" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_004" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_005" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_006" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_007" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_008" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_009" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_010" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_011" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_012" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_013" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_014" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_015" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_016" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_017" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_018" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_019" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_020" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_021" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_022" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_023" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_024" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_025" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_026" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_027" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_028" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_029" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_030" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_031" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_032" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_033" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_034" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_035" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_036" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_037" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_038" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_039" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_040" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_041" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_042" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_043" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_044" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_045" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_046" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                        <geom class="flange_collision" mesh="flange_collision_047" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+                        <geom class="flange_collision" mesh="flange_collision_000" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_001" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_002" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_003" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_004" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_005" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_006" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_007" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_008" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_009" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_010" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_011" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_012" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_013" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_014" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_015" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_016" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_017" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_018" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_019" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_020" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_021" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_022" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_023" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_024" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_025" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_026" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_027" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_028" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_029" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_030" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_031" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_032" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_033" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_034" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_035" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_036" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_037" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_038" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_039" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_040" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_041" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_042" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_043" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_044" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_045" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_046" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <geom class="flange_collision" mesh="flange_collision_047" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
                         <body name="flange_hand_mount" pos="0 0 0.0225" euler="0 0 0" gravcomp="1">
                           <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
                           <site name="flange_hand_mount" pos="0 0 0" size="0.001" />
@@ -325,37 +325,37 @@
                         <body name="bracket_bracket_link" pos="0 0 0" gravcomp="1">
                           <inertial pos="-0.0170487660201 0.0186601157923 0.0113802096453" mass="0.028999999" fullinertia="2.85171737126e-05 1.38172566519e-05 4.09646461979e-05 4.30768571317e-06 -6.26627363413e-07 3.65694809287e-07" />
                           <geom class="bracket_visual" mesh="bracket_bracket" rgba="0.25 0.28 0.32 1" />
-                          <geom class="bracket_collision" mesh="bracket_collision_000" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_001" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_002" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_003" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_004" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_005" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_006" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_007" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_008" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_009" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_010" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_011" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_012" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_013" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_014" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_015" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_016" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_017" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_018" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_019" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_020" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_021" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_022" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
-                          <geom class="bracket_collision" mesh="bracket_collision_023" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+                          <geom class="bracket_collision" mesh="bracket_collision_000" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_001" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_002" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_003" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_004" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_005" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_006" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_007" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_008" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_009" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_010" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_011" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_012" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_013" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_014" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_015" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_016" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_017" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_018" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_019" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_020" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_021" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_022" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <geom class="bracket_collision" mesh="bracket_collision_023" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
                           <body name="bracket_camera_mount" pos="-0.0454344910202 -0.027500000734 0.0374074526432" euler="0 -1.2217304764 3.14159265359" gravcomp="1">
                             <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
                             <site name="bracket_camera_mount" pos="0 0 0" size="0.001" />
                             <body name="camera_camera_link" pos="0 0 0" gravcomp="1">
                               <inertial pos="-0.00833106297068 -0.0474999989383 -4.47034835815e-06" mass="0.132999995" fullinertia="0.00017981969092 1.87769051006e-05 0.0001799143384 -8.37768720529e-21 -6.43257477066e-22 -2.52803256488e-21" />
                               <geom class="camera_visual" mesh="camera_gemini335l" rgba="0.25 0.28 0.32 1" />
-                              <geom class="camera_collision" mesh="camera_collision_000" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0" />
+                              <geom class="camera_collision" mesh="camera_collision_000" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
                               <body name="camera_depth_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
                                 <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
                                 <site name="camera_depth_optical" pos="0 0 0" size="0.001" />

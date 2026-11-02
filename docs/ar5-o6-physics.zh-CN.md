@@ -15,7 +15,7 @@ AR5/AR5_08 的 J6/J7 限角是另一项模型修正：左右组件 URDF/MJCF 和
 
 关节 frictionloss=0。联动比例保持拇指1.86、四指0.89；equality 的 solref=(0.002,1)、solimp=(0.999,0.999,0.001,0.5,2)。机械臂根下所有本体、法兰、相机架、相机和光学帧设置 gravcomp=1；世界重力仍为(0,0,-9.81)，供任务物体使用。几何、质量惯量、安装变换和碰撞排除保持原样。这些是仿真选型值，不是真机额定参数。
 
-这些组合的所有碰撞 geom 使用 condim=4、solref=(0.004,1)、margin=0、priority=0、solmix=1。手部 friction=(4,0,0)、solimp=(0.95,0.95,0.001,0.5,2)；机械臂、附件、基座 friction=(1,0,0)、solimp=(0.9,0.95,0.001,0.5,2)。视觉 geom 仍不参与碰撞。原机器人 gap=0 显式保留，包括此前继承的零值；仿真0.0001 m回退仅用于未显式作者化的场景资产。
+这些组合的所有碰撞 geom 使用 condim=4、solref=(0.004,1)、margin=0、priority=0、solmix=1。手部 friction=(4,0,0)、solimp=(0.95,0.95,0.001,0.5,2)；机械臂、附件、基座 friction=(1,0,0)、solimp=(0.9,0.95,0.001,0.5,2)。视觉 geom 仍不参与碰撞。保留原机器人 gap=0，包括继承值；该生成步骤不覆盖资产作者化的 gap。仿真0.0001 m回退仅用于未显式作者化的场景资产。
 
 MJCF 场景设置为 timestep=1/480秒、implicitfast、Newton求解器、iterations=100、ls_iterations=50、elliptic、impratio=100。cone/impratio为场景级。MuJoCo求解器名称Newton与 **Newton碰撞库** 是不同概念；普通MuJoCo直接加载仍使用自己的碰撞实现，不能据此保证复现Newton运行时的多点接触和抓取效果。
 

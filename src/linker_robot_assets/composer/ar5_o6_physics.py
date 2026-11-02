@@ -98,6 +98,5 @@ def apply_ar5_o6_physics(root: ET.Element, compiled: list[CompiledComponent]) ->
             priority="0",
             solmix="1",
         )
-        # Match the original robot MJCF's zero gap, including inherited zero.
-        # The simulator's 0.1 mm fallback applies only to unauthored scene assets.
-        geom.attrib.setdefault("gap", "0")
+        # Leave gap untouched, including values inherited from default classes.
+        # Current robot geoms compile to zero; the runtime fallback is separate.

@@ -29,7 +29,8 @@ All collision geoms in these assemblies use condim=4, solref `(0.004, 1)`,
 margin=0, priority=0 and solmix=1. Hand geoms use friction `(4, 0, 0)` and solimp
 `(0.95, 0.95, 0.001, 0.5, 2)`; arm/accessory/base geoms use `(1, 0, 0)` and
 `(0.9, 0.95, 0.001, 0.5, 2)`. Visual geoms remain non-collidable. Original robot
-geom gap=0 is explicit, including previously inherited zero. The simulator uses
+geom gap=0 is retained, including inherited values; this transform does not
+override an asset-authored gap. The simulator uses
 0.0001 m only as the fallback for otherwise unauthored scene assets.
 
 MJCF scene options are timestep=1/480 s, implicitfast, Newton solver,
