@@ -10,11 +10,11 @@ components:
   arm_left:
     name: arms/ar5
     variant: left
-    sha256: ce0865bb1ca8496dc03261e6c59e8283bb4e13e7e01258e7d2f0bbdd6dbd8e38
+    sha256: 290a335f8173da22a661688f7f8d089e0e341feb2946b654bf749ddfc89cf24e
   arm_right:
     name: arms/ar5
     variant: right
-    sha256: 0086a6679c92a084d2431a489e2c0fd05cc2791c1cf9fa0a2bf500cc11331d49
+    sha256: 85ef7282157142e302b385606357f03d2342924ef941d0a942ee703e08c180a4
   hand_left:
     name: hands/linkerhand_l6
     variant: left
@@ -30,8 +30,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 471a931128e9afec5a55a6be14b995b4509bf043ae8606d94bbe60d7eabb6af4
-  mjcf_sha256: 799379af9d80fb830fa6cc02006aafc964439f6a4451f69bcf3bbc03d35adace
+  urdf_sha256: fe6e9fefb860d400da39c0f49f286714bcaf1365b4368eb10fe6121d9eae626d
+  mjcf_sha256: 557515312bafc87f70ebd68c39d1e50c1edd4295b8b0a9ac2449165b897f1549
 joints:
   base: []
   arm_left:

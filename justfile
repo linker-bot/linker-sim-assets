@@ -20,3 +20,7 @@ build-o6-1014 source baseline:
 
 check-o6:
     PYTHONPATH=src {{python}} -m unittest tests.test_o6_structure tests.test_o6_coupling tests.test_camera_assemblies -v
+
+# Recompose every maintained recipe after changing components or physics sources.
+compose:
+    @for recipe in src/linker_robot_assets/assets/units/*/recipe.yaml src/linker_robot_assets/assets/workstations/*/recipe.yaml; do PYTHONPATH=src {{python}} -m linker_robot_assets.composer.compose "$(dirname "$recipe")" || exit; done

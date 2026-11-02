@@ -29,6 +29,7 @@ from pathlib import Path
 import yaml
 
 from . import COMPOSER_VERSION
+from .ar5_o6_physics import apply_ar5_o6_physics
 from .determinism import serialize
 from .mjcf_ops import (
     check_mjcf_availability,
@@ -207,11 +208,12 @@ def compose(paths: Paths) -> ComposeResult:
         # Match linker-sim-isaac's authored convention so the composed MJCF
         # loads as a stable PhysX/Newton articulation: torque motors (from the
         # URDF effort limits) instead of position servos, and a placeholder
-        # inertial on every massless frame body. Native joint
-        # damping/armature/frictionloss are kept — they model real hardware and
-        # are what MuJoCo/mujoco-wasm consumers rely on; Isaac's DriveAPI simply
-        # adds to them.
+        # inertial on every massless frame body. Keep component passive
+        # dynamics unless the recipe selects the assembly configuration below.
+        # Runtime drives are separate from these native joint properties.
         rewrite_position_actuators_to_motors(mjcf_root, _joint_effort_limits(urdf_root))
+        if recipe.mjcf_physics == "ar5_o6":
+            apply_ar5_o6_physics(mjcf_root, compiled)
         inject_placeholder_inertials(mjcf_root)
         mjcf_text = _add_header_comment(
             serialize(mjcf_root, indent="  ", xml_declaration=True),

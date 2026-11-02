@@ -319,6 +319,7 @@ class Recipe:
     freeze_base: str | None  # role to weld to world, or None for floating root
     source_path: Path
     collision_exclusions: list[CollisionExclusion] = field(default_factory=list)
+    mjcf_physics: str | None = None
 
     @staticmethod
     def load(path: Path) -> "Recipe":
@@ -391,6 +392,10 @@ class Recipe:
                         f"{where}.collision_exclusions: unknown role in {ref!r}"
                     )
 
+        mjcf_physics = d.get("mjcf_physics")
+        if mjcf_physics not in (None, "ar5_o6"):
+            raise SchemaError(f"{where}.mjcf_physics: expected ar5_o6 or omission")
+
         return Recipe(
             schema_version=int(d.get("schema_version", 1)),
             name=str(_require(d, "name", where)),
@@ -401,6 +406,7 @@ class Recipe:
             freeze_base=(str(freeze_base) if freeze_base else None),
             source_path=path.resolve(),
             collision_exclusions=exclusions,
+            mjcf_physics=mjcf_physics,
         )
 
 

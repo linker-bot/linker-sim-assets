@@ -1766,7 +1766,7 @@
   <joint name="arm_left_AR5_5_07L_W4C4A2_joint_6" type="revolute">
     <parent link="arm_left_AR5_5_07L_W4C4A2_link5" />
     <child link="arm_left_AR5_5_07L_W4C4A2_link6" />
-    <limit effort="19" lower="-1.0472" upper="1.0472" velocity="4.1887902047863905" />
+    <limit effort="19" lower="-1.047197551196598" upper="1.047197551196598" velocity="4.1887902047863905" />
     <dynamics damping="4.748679" friction="1.322494" />
     <axis xyz="0 1 0" />
     <origin rpy="0 0 0" xyz="0 0 0" />
@@ -1774,7 +1774,7 @@
   <joint name="arm_left_AR5_5_07L_W4C4A2_joint_7" type="revolute">
     <parent link="arm_left_AR5_5_07L_W4C4A2_link6" />
     <child link="arm_left_AR5_5_07L_W4C4A2_link7" />
-    <limit effort="19" lower="-1.0472" upper="1.0472" velocity="4.1887902047863905" />
+    <limit effort="19" lower="-1.047197551196598" upper="1.047197551196598" velocity="4.1887902047863905" />
     <dynamics damping="3.667978" friction="0.926051" />
     <axis xyz="1 0 0" />
     <origin rpy="0 0 0" xyz="0 0 0" />
@@ -1827,7 +1827,7 @@
   <joint name="arm_right_AR5_5_07R_W4C4A2_joint_6" type="revolute">
     <parent link="arm_right_AR5_5_07R_W4C4A2_link5" />
     <child link="arm_right_AR5_5_07R_W4C4A2_link6" />
-    <limit effort="19" lower="-1.0472" upper="1.0472" velocity="4.1887902047863905" />
+    <limit effort="19" lower="-1.047197551196598" upper="1.047197551196598" velocity="4.1887902047863905" />
     <dynamics damping="4.748679" friction="1.322494" />
     <axis xyz="0 1 0" />
     <origin rpy="0 0 0" xyz="0 0 0" />
@@ -1835,7 +1835,7 @@
   <joint name="arm_right_AR5_5_07R_W4C4A2_joint_7" type="revolute">
     <parent link="arm_right_AR5_5_07R_W4C4A2_link6" />
     <child link="arm_right_AR5_5_07R_W4C4A2_link7" />
-    <limit effort="19" lower="-1.0472" upper="1.0472" velocity="4.1887902047863905" />
+    <limit effort="19" lower="-1.047197551196598" upper="1.047197551196598" velocity="4.1887902047863905" />
     <dynamics damping="3.667978" friction="0.926051" />
     <axis xyz="1 0 0" />
     <origin rpy="0 0 0" xyz="0 0 0" />

@@ -50,3 +50,5 @@ collision_exclusions:
 - body1: bracket:bracket_link
   body2: camera:camera_link
   reason: Camera mounting surface touches its bracket.
+# Native assembly physics; virtual motors remain simulator-owned.
+mjcf_physics: ar5_o6

@@ -68,3 +68,5 @@ collision_exclusions:
 - body1: base:workstation_link
   body2: top_camera:camera_base_link
   reason: Top stand is bolted to the bench crossbar; camera housing remains collidable.
+# Native assembly physics; virtual motors remain simulator-owned.
+mjcf_physics: ar5_o6

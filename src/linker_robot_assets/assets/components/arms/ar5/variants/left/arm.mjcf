@@ -72,7 +72,7 @@
                   <inertial pos="0.005405999999999999 0.000612 -3.9e-05" mass="0.93"
                             fullinertia="0.00072078 0.00085153 0.00090205 -0.00000217 0.00000108 0.00000048"/>
                   <joint name="AR5_5_07L_W4C4A2_joint_6" type="hinge" axis="0 1 0"
-                         range="-1.0472 1.0472" damping="4.748679" frictionloss="0.0" armature="0.01"/>
+                         range="-1.047197551196598 1.047197551196598" damping="4.748679" frictionloss="0.0" armature="0.01"/>
                   <geom class="arm_ar5_visual" mesh="ar5_link6"/>
                   <geom class="arm_ar5_collision" mesh="ar5_link6"/>
 
@@ -80,7 +80,7 @@
                     <inertial pos="-0.00277 0.000316 0.054881" mass="0.33"
                               fullinertia="0.00051942 0.00079132 0.00045886 -0.00000052 0.00003721 0.00000265"/>
                     <joint name="AR5_5_07L_W4C4A2_joint_7" type="hinge" axis="1 0 0"
-                           range="-1.0472 1.0472" damping="3.667978" frictionloss="0.0" armature="0.01"/>
+                           range="-1.047197551196598 1.047197551196598" damping="3.667978" frictionloss="0.0" armature="0.01"/>
                     <geom class="arm_ar5_visual" mesh="ar5_link7"/>
                     <geom class="arm_ar5_collision" mesh="ar5_link7"/>
 
@@ -103,8 +103,8 @@
     <position name="AR5_5_07L_W4C4A2_joint_3_act" joint="AR5_5_07L_W4C4A2_joint_3" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" forcerange="-66 66"/>
     <position name="AR5_5_07L_W4C4A2_joint_4_act" joint="AR5_5_07L_W4C4A2_joint_4" kp="1000" kv="4" ctrlrange="-1.0472 2.5307" forcerange="-66 66"/>
     <position name="AR5_5_07L_W4C4A2_joint_5_act" joint="AR5_5_07L_W4C4A2_joint_5" kp="1000" kv="4" ctrlrange="-3.1067 3.1067" forcerange="-19 19"/>
-    <position name="AR5_5_07L_W4C4A2_joint_6_act" joint="AR5_5_07L_W4C4A2_joint_6" kp="1000" kv="4" ctrlrange="-1.0472 1.0472" forcerange="-19 19"/>
-    <position name="AR5_5_07L_W4C4A2_joint_7_act" joint="AR5_5_07L_W4C4A2_joint_7" kp="1000" kv="4" ctrlrange="-1.0472 1.0472" forcerange="-19 19"/>
+    <position name="AR5_5_07L_W4C4A2_joint_6_act" joint="AR5_5_07L_W4C4A2_joint_6" kp="1000" kv="4" ctrlrange="-1.047197551196598 1.047197551196598" forcerange="-19 19"/>
+    <position name="AR5_5_07L_W4C4A2_joint_7_act" joint="AR5_5_07L_W4C4A2_joint_7" kp="1000" kv="4" ctrlrange="-1.047197551196598 1.047197551196598" forcerange="-19 19"/>
   </actuator>
 
   <contact>
