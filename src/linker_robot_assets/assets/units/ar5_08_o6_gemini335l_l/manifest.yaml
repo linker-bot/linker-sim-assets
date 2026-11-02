@@ -1,12 +1,12 @@
 schema_version: 1
 name: ar5_08_o6_gemini335l_l
 composer_version: 0.1.0
-recipe_sha256: 2f109a567ce9f25abfb99e03171ac1d9a9ee7c7df78f7f0ab931a460d09160da
+recipe_sha256: b8c5576998045413a741024fcee0260c680f33c3e70169afdebb8ba071ff5ce4
 components:
   arm:
     name: arms/ar5_08
     variant: left
-    sha256: 71220a669aa3a2c75f43b1b2d1de15890678116a48b4c63e63d7ee56f36f4d53
+    sha256: 9eb7c303c96f9bcaf770ee103494f3a91a519f14ea5dcb2883537e141305c023
   hand:
     name: hands/linkerhand_o6
     variant: left
@@ -26,8 +26,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: da9ae1b7613f98feaa461b5237d74f6141f29d2db65fd1ce2cfa57f8c5eea51a
-  mjcf_sha256: b4d5a64f80a1b334fc90e2066a768bcbcfff417b3736e311eac94be59023a031
+  urdf_sha256: a1e4b0cf54f5cbf5d039719941a4548b858a055a14fa2303cbef5119ce57777c
+  mjcf_sha256: c5dfd3ee53ffc158d2feba6e2247b1bd788b5412c5376d1d63ad6f540bd94439
 joints:
   arm:
   - arm_AR5_5_08L_W4C4A6_joint_1

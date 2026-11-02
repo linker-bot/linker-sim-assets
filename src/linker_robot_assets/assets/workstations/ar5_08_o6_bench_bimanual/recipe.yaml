@@ -83,3 +83,5 @@ collision_exclusions:
   body2: hand_right:rh_hand_base_link
   reason: Small adapter seating face and hand locating boss; other hand links remain
     collidable.
+# Native assembly physics; virtual motors remain simulator-owned.
+mjcf_physics: ar5_o6

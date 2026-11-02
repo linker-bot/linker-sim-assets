@@ -1,7 +1,7 @@
 schema_version: 1
 name: ar5_08_o6_bench_bimanual
 composer_version: 0.1.0
-recipe_sha256: 80463062e882956fd8b3ac15964ccc74f4d9c981161733d05f81acd2dae31c77
+recipe_sha256: 01b5f6ec48b12720ce2489fd350572d35ab6df2fa708706ca2655d933648ccc4
 components:
   base:
     name: bases/bench_table
@@ -10,11 +10,11 @@ components:
   arm_left:
     name: arms/ar5_08
     variant: left
-    sha256: 71220a669aa3a2c75f43b1b2d1de15890678116a48b4c63e63d7ee56f36f4d53
+    sha256: 9eb7c303c96f9bcaf770ee103494f3a91a519f14ea5dcb2883537e141305c023
   arm_right:
     name: arms/ar5_08
     variant: right
-    sha256: 8f7bb4f3cf4347e77bc953da7e2fd5baac06bfb5f55ea66e5ad0c49b5434b01a
+    sha256: 507e61bfe5011986e57fe4e1fd4d771aa045b575630604651da6cba7d83cfa20
   hand_left:
     name: hands/linkerhand_o6
     variant: left
@@ -38,8 +38,8 @@ components:
 artifacts:
   urdf: workstation.urdf
   mjcf: workstation.xml
-  urdf_sha256: 7288972acd6789ef3ae33b500f6402ee2da948d00c1189e229c9d79c5a823139
-  mjcf_sha256: fc37e947b9e494d0d6e3537b2b93ad4865eb26a44f3268852f9be8f811d4da08
+  urdf_sha256: a4ed7b6e7c810da4ccfee43c4b62e2bb262bc20832f35a8b782515aa40db141c
+  mjcf_sha256: 772c7a4f96238997228cc830b7433d30e1359f8ea05a01560f274716aaef618d
 joints:
   base: []
   arm_left:

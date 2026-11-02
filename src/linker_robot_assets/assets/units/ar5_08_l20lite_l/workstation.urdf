@@ -679,14 +679,14 @@
   <joint name="arm_AR5_5_08L_W4C4A6_joint_6" type="revolute">
     <parent link="arm_AR5_5_08L_W4C4A6_link5" />
     <child link="arm_AR5_5_08L_W4C4A6_link6" />
-    <limit effort="19" lower="-0.9599" upper="0.9599" velocity="4.1887902047863905" />
+    <limit effort="19" lower="-1.047197551196598" upper="1.047197551196598" velocity="4.1887902047863905" />
     <axis xyz="0 1 0" />
     <origin rpy="0 0 0" xyz="0 0 0" />
   </joint>
   <joint name="arm_AR5_5_08L_W4C4A6_joint_7" type="revolute">
     <parent link="arm_AR5_5_08L_W4C4A6_link6" />
     <child link="arm_AR5_5_08L_W4C4A6_link7" />
-    <limit effort="19" lower="-0.9599" upper="0.9599" velocity="4.1887902047863905" />
+    <limit effort="19" lower="-1.047197551196598" upper="1.047197551196598" velocity="4.1887902047863905" />
     <axis xyz="1 0 0" />
     <origin rpy="0 0 0" xyz="0 0 0" />
   </joint>
