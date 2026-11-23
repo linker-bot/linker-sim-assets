@@ -137,8 +137,9 @@ uv run --group test pytest
 
 CI 在 MuJoCo 3.17.0 和 4.0.1 上运行测试，并构建、安装 `linker-lw-v0` 包。
 
-网格：每个连杆一个 `.obj`，即 `meshes/visual/<link>_vis.obj`，配一个 `.mtl`，每个机器人一张 `palette.png`
-（颜色是指向调色板的纹理坐标，因此 URDF 工具和 MuJoCo 显示相同的颜色）；碰撞网格在
+网格：每个连杆一个 `.obj`，即 `meshes/visual/<link>_vis.obj`，配一个 `.mtl`；每个机器人一张
+`<robot>_palette.png`。颜色是指向调色板的纹理坐标，因此 URDF 工具和 MuJoCo 显示相同的颜色。调色板以机器人
+命名，这样把纹理收集到同一目录的工具（如 USD 转换器）不会让不同机器人的调色板互相覆盖。碰撞网格为
 `meshes/collision/<link>_col.obj`。不使用 STL、glTF 或其他格式。
 
 ## 许可证

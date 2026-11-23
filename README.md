@@ -153,9 +153,11 @@ uv run --group test pytest
 
 CI runs it on MuJoCo 3.17.0 and 4.0.1, with the package `linker-lw-v0` built and installed.
 
-Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj` with an `.mtl` and one `palette.png`
-per robot (colours are texture coordinates into the palette, so URDF tools and MuJoCo show the same
-colours); collision meshes in `meshes/collision/<link>_col.obj`. No STL, glTF or other formats.
+Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj`, with an `.mtl` and one
+`<robot>_palette.png` per robot. Colours are texture coordinates into the palette, so URDF tools and
+MuJoCo show the same colours. The palette is named after its robot so that tools which gather
+textures into one folder (USD converters) keep the robots' palettes apart. Collision meshes are
+`meshes/collision/<link>_col.obj`. No STL, glTF or other formats.
 
 ## Licence
 

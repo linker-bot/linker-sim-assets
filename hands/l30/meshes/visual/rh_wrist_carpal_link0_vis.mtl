@@ -1,4 +1,4 @@
 newmtl rh_wrist_carpal_link0
 Kd 1 1 1
 Ks 0 0 0
-map_Kd palette.png
+map_Kd l30_palette.png

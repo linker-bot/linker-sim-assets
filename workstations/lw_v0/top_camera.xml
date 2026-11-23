@@ -14,7 +14,7 @@
     <mesh name="sensor_camera_hull" file="meshes/collision/zed2i_camera_col.obj" />
     <mesh name="sensor_camera_base_link" file="meshes/visual/zed2i_camera_base_link_vis.obj" />
     <mesh name="sensor_camera" file="meshes/visual/zed2i_camera_vis.obj" />
-    <texture name="lw_v0_palette" type="2d" file="meshes/visual/palette.png" />
+    <texture name="lw_v0_palette" type="2d" file="meshes/visual/lw_v0_palette.png" />
     <material name="zed2i_camera_base_link" texture="lw_v0_palette" metallic="0" roughness="0.6" />
     <material name="zed2i_camera" texture="lw_v0_palette" metallic="0" roughness="0.4" />
   </asset>
