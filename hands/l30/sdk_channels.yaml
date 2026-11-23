@@ -1,0 +1,32 @@
+# LinkerHand L30: the hand SDK's joint vector, mapped to this hand's URDF/MJCF joints.
+#
+# convention linear-fit-v0: an SDK value of 100 is the joint's lower limit and 0 its
+# upper limit, linear in between. Limits are the joint limits in l30_left/right.urdf.
+# "{S}" in a joint name is `l` for the left hand and `r` for the right hand.
+schema_version: 1
+convention: linear-fit-v0
+
+# SDK channel index -> actuated joint. L30 has 17 active DoF: wrist 1, thumb 4 (all
+# independent) and 3 for each of the four fingers.
+channels:
+  - "{S}h_wrist_pitch"
+  - "{S}h_thumb_cmc_yaw"
+  - "{S}h_thumb_cmc_roll"
+  - "{S}h_thumb_mcp"
+  - "{S}h_thumb_dip"
+  - "{S}h_index_mcp_roll"
+  - "{S}h_index_mcp_pitch"
+  - "{S}h_index_pip"
+  - "{S}h_middle_mcp_roll"
+  - "{S}h_middle_mcp_pitch"
+  - "{S}h_middle_pip"
+  - "{S}h_ring_mcp_roll"
+  - "{S}h_ring_mcp_pitch"
+  - "{S}h_ring_pip"
+  - "{S}h_pinky_mcp_roll"
+  - "{S}h_pinky_mcp_pitch"
+  - "{S}h_pinky_pip"
+
+# Per-joint [lower, upper] range to use instead of the URDF limit. Empty: the URDF
+# limits are the range the SDK uses.
+clip_overrides: {}

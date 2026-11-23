@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="left">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="arm_arm_ar5_08_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="arm_arm_ar5_08_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+    <default class="hand_hand_linkerhand_o6_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="hand_hand_linkerhand_o6_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+    <default class="hand_hand_linkerhand_o6_joint">
+      <joint armature="3.4707e-08" damping="4.0" frictionloss="0.5" />
+    </default>
+    <default class="flange_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="flange_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+    <default class="bracket_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="bracket_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+    <default class="camera_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="camera_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="flange_flange_link_mount_hull" file="meshes/collision/flange_link_col.obj" />
+    <mesh name="bracket_bracket_link_mount_hull" file="meshes/collision/left_bracket_link_col.obj" />
+    <mesh name="arm_ar5_08_base_hull" file="meshes/collision/AR5_5_08L_W4C4A6_base_col.obj" />
+    <mesh name="arm_ar5_08_link1_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link1_col.obj" />
+    <mesh name="arm_ar5_08_link2_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link2_col.obj" />
+    <mesh name="arm_ar5_08_link3_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link3_col.obj" />
+    <mesh name="arm_ar5_08_link4_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link4_col.obj" />
+    <mesh name="arm_ar5_08_link5_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link5_col.obj" />
+    <mesh name="arm_ar5_08_link6_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link6_col.obj" />
+    <mesh name="arm_ar5_08_link7_hull" file="meshes/collision/AR5_5_08L_W4C4A6_link7_col.obj" />
+    <mesh name="hand_hand_base_col_hull" file="../../hands/o6/meshes/collision/lh_hand_base_link_col.obj" />
+    <mesh name="hand_thumb_metacarpals_base2_col_hull" file="../../hands/o6/meshes/collision/lh_thumb_metacarpals_base2_col.obj" />
+    <mesh name="hand_thumb_metacarpals_col_hull" file="../../hands/o6/meshes/collision/lh_thumb_metacarpals_col.obj" />
+    <mesh name="hand_thumb_distal_col_hull" file="../../hands/o6/meshes/collision/lh_thumb_distal_col.obj" />
+    <mesh name="hand_index_proximal_col_hull" file="../../hands/o6/meshes/collision/lh_index_proximal_col.obj" />
+    <mesh name="hand_index_distal_col_hull" file="../../hands/o6/meshes/collision/lh_index_distal_col.obj" />
+    <mesh name="hand_middle_proximal_col_hull" file="../../hands/o6/meshes/collision/lh_middle_proximal_col.obj" />
+    <mesh name="hand_middle_distal_col_hull" file="../../hands/o6/meshes/collision/lh_middle_distal_col.obj" />
+    <mesh name="hand_ring_proximal_col_hull" file="../../hands/o6/meshes/collision/lh_ring_proximal_col.obj" />
+    <mesh name="hand_ring_distal_col_hull" file="../../hands/o6/meshes/collision/lh_ring_distal_col.obj" />
+    <mesh name="hand_pinky_proximal_col_hull" file="../../hands/o6/meshes/collision/lh_pinky_proximal_col.obj" />
+    <mesh name="hand_pinky_distal_col_hull" file="../../hands/o6/meshes/collision/lh_pinky_distal_col.obj" />
+    <mesh name="camera_collision_000_hull" file="meshes/collision/gemini335l_camera_link_col.obj" />
+    <mesh name="arm_ar5_08_base" file="meshes/visual/AR5_5_08L_W4C4A6_base_vis.obj" />
+    <mesh name="arm_ar5_08_link1" file="meshes/visual/AR5_5_08L_W4C4A6_link1_vis.obj" />
+    <mesh name="arm_ar5_08_link2" file="meshes/visual/AR5_5_08L_W4C4A6_link2_vis.obj" />
+    <mesh name="arm_ar5_08_link3" file="meshes/visual/AR5_5_08L_W4C4A6_link3_vis.obj" />
+    <mesh name="arm_ar5_08_link4" file="meshes/visual/AR5_5_08L_W4C4A6_link4_vis.obj" />
+    <mesh name="arm_ar5_08_link5" file="meshes/visual/AR5_5_08L_W4C4A6_link5_vis.obj" />
+    <mesh name="arm_ar5_08_link6" file="meshes/visual/AR5_5_08L_W4C4A6_link6_vis.obj" />
+    <mesh name="arm_ar5_08_link7" file="meshes/visual/AR5_5_08L_W4C4A6_link7_vis.obj" />
+    <mesh name="flange_link" file="meshes/visual/flange_link_vis.obj" />
+    <mesh name="hand_hand_base_vis" file="../../hands/o6/meshes/visual/lh_hand_base_link_vis.obj" />
+    <mesh name="hand_thumb_metacarpals_base2_vis" file="../../hands/o6/meshes/visual/lh_thumb_metacarpals_base2_vis.obj" />
+    <mesh name="hand_thumb_metacarpals_vis" file="../../hands/o6/meshes/visual/lh_thumb_metacarpals_vis.obj" />
+    <mesh name="hand_thumb_distal_vis" file="../../hands/o6/meshes/visual/lh_thumb_distal_vis.obj" />
+    <mesh name="hand_index_proximal_vis" file="../../hands/o6/meshes/visual/lh_index_proximal_vis.obj" />
+    <mesh name="hand_index_distal_vis" file="../../hands/o6/meshes/visual/lh_index_distal_vis.obj" />
+    <mesh name="hand_middle_proximal_vis" file="../../hands/o6/meshes/visual/lh_middle_proximal_vis.obj" />
+    <mesh name="hand_middle_distal_vis" file="../../hands/o6/meshes/visual/lh_middle_distal_vis.obj" />
+    <mesh name="hand_ring_proximal_vis" file="../../hands/o6/meshes/visual/lh_ring_proximal_vis.obj" />
+    <mesh name="hand_ring_distal_vis" file="../../hands/o6/meshes/visual/lh_ring_distal_vis.obj" />
+    <mesh name="hand_pinky_proximal_vis" file="../../hands/o6/meshes/visual/lh_pinky_proximal_vis.obj" />
+    <mesh name="hand_pinky_distal_vis" file="../../hands/o6/meshes/visual/lh_pinky_distal_vis.obj" />
+    <mesh name="bracket_bracket" file="meshes/visual/left_bracket_link_vis.obj" />
+    <mesh name="camera_gemini335l" file="meshes/visual/gemini335l_camera_link_vis.obj" />
+    <texture name="lw_v0_palette" type="2d" file="meshes/visual/palette.png" />
+    <texture name="o6_palette" type="2d" file="../../hands/o6/meshes/visual/palette.png" />
+    <material name="AR5_5_08L_W4C4A6_base" texture="lw_v0_palette" metallic="0.05" roughness="0.58" />
+    <material name="AR5_5_08L_W4C4A6_link1" texture="lw_v0_palette" metallic="0.05" roughness="0.58" />
+    <material name="AR5_5_08L_W4C4A6_link2" texture="lw_v0_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link3" texture="lw_v0_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link4" texture="lw_v0_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link5" texture="lw_v0_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link6" texture="lw_v0_palette" metallic="0.05" roughness="0.58" />
+    <material name="AR5_5_08L_W4C4A6_link7" texture="lw_v0_palette" metallic="0.05" roughness="0.58" />
+    <material name="flange_link" texture="lw_v0_palette" metallic="0.8" roughness="0.3" />
+    <material name="lh_hand_base_link" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_thumb_metacarpals_base2" texture="o6_palette" metallic="0.3" roughness="0.56" />
+    <material name="lh_thumb_metacarpals" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_thumb_distal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_index_proximal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_index_distal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_middle_proximal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_middle_distal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_ring_proximal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_ring_distal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_pinky_proximal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="lh_pinky_distal" texture="o6_palette" metallic="0.22" roughness="0.55" />
+    <material name="left_bracket_link" texture="lw_v0_palette" metallic="0" roughness="0.5" />
+    <material name="gemini335l_camera_link" texture="lw_v0_palette" metallic="0" roughness="0.5" />
+  </asset>
+  <worldbody>
+    <body name="arm_AR5_5_08L_W4C4A6_base" pos="0 0 0" gravcomp="1">
+      <inertial pos="-3.32756117005828e-05 -5.336332348134862e-05 0.05327725576477859" quat="0.9907496273073473 -0.003299931537009728 0.0029587459669429845 0.13563013037119376" mass="1.9851084670032253" diaginertia="0.002841170573611531 0.002806933388088207 0.0023093132100751356" />
+      <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_base" material="AR5_5_08L_W4C4A6_base" />
+      <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_base_hull" euler="0 0 0" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <site name="arm_base_mount" pos="0 0 0" />
+      <body name="arm_AR5_5_08L_W4C4A6_link1" pos="0 0 0" euler="0 0 0" gravcomp="1">
+        <inertial pos="-0.000184 0.001568 0.172804" mass="2.166" fullinertia="0.00332249 0.00260904 0.00317691 0.00000032 -0.00000048 -0.00001486" />
+        <joint name="arm_AR5_5_08L_W4C4A6_joint_1" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+        <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link1" material="AR5_5_08L_W4C4A6_link1" />
+        <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link1_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+        <body name="arm_AR5_5_08L_W4C4A6_link2" pos="0 0 0.1745" gravcomp="1">
+          <inertial pos="-0.000017 0.001795 0.106689" mass="1.903" fullinertia="0.00779803 0.00674819 0.00305507 0.00000248 -0.00000226 -0.00049283" />
+          <joint name="arm_AR5_5_08L_W4C4A6_joint_2" type="hinge" axis="0 1 0" range="-2.0944 2.0944" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+          <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link2" material="AR5_5_08L_W4C4A6_link2" />
+          <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link2_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+          <body name="arm_AR5_5_08L_W4C4A6_link3" pos="0 0 0.332" gravcomp="1">
+            <inertial pos="0.008227 -0.001273 -0.020611" mass="1.845" fullinertia="0.00641285 0.00591595 0.00276583 0.00000909 0.00034765 -0.00002314" />
+            <joint name="arm_AR5_5_08L_W4C4A6_joint_3" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+            <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link3" material="AR5_5_08L_W4C4A6_link3" />
+            <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link3_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+            <body name="arm_AR5_5_08L_W4C4A6_link4" pos="0.0105 0 0" gravcomp="1">
+              <inertial pos="-0.009242 -0.002172 0.084042" mass="1.037" fullinertia="0.00294639 0.00244447 0.00140961 -0.00002418 -0.00012203 0.00022029" />
+              <joint name="arm_AR5_5_08L_W4C4A6_joint_4" type="hinge" axis="0 1 0" range="-1.0472 2.5307" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+              <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link4" material="AR5_5_08L_W4C4A6_link4" />
+              <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link4_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+              <body name="arm_AR5_5_08L_W4C4A6_link5" pos="-0.0105 0 0.278" gravcomp="1">
+                <inertial pos="-0.000756 0.000723 -0.086764" mass="1.279" fullinertia="0.00241349 0.00200246 0.00158693 -0.00003807 -0.00004536 0.00006623" />
+                <joint name="arm_AR5_5_08L_W4C4A6_joint_5" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-100 100" />
+                <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link5" material="AR5_5_08L_W4C4A6_link5" />
+                <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link5_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                <body name="arm_AR5_5_08L_W4C4A6_link6" pos="0 0 0" gravcomp="1">
+                  <inertial pos="-0.005104 0.000251 0.000056" mass="0.906" fullinertia="0.00061429 0.00074781 0.00075897 -0.00000088 0.00000104 -0.00000047" />
+                  <joint name="arm_AR5_5_08L_W4C4A6_joint_6" type="hinge" axis="0 1 0" range="-1.047197551196598 1.047197551196598" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-100 100" />
+                  <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link6" material="AR5_5_08L_W4C4A6_link6" />
+                  <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link6_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                  <body name="arm_AR5_5_08L_W4C4A6_link7" pos="0 0 0" gravcomp="1">
+                    <inertial pos="-0.001562 -0.000366 0.05392" mass="0.33" fullinertia="0.00046062 0.00068652 0.00043943 0.00000269 0.00003859 -0.00000095" />
+                    <joint name="arm_AR5_5_08L_W4C4A6_joint_7" type="hinge" axis="1 0 0" range="-1.5707963267948966 1.5707963267948966" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-100 100" />
+                    <geom class="arm_arm_ar5_08_visual" mesh="arm_ar5_08_link7" material="AR5_5_08L_W4C4A6_link7" />
+                    <geom class="arm_arm_ar5_08_collision" mesh="arm_ar5_08_link7_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                    <body name="arm_AR5_5_08L_W4C4A6_tcp" pos="0 0 0.09" gravcomp="1">
+                      <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
+                      <site name="arm_tool0" pos="0 0 0" />
+                      <body name="flange_flange_link" pos="0 0 0" euler="0 0 -1.57079633" gravcomp="1">
+                        <inertial pos="-2.09481995286e-07 0.000516304562215 0.00898841629518" mass="0.044499999" fullinertia="1.20223116926e-05 1.21254820463e-05 1.82919370911e-05 -2.1573478613e-10 -4.98366122213e-11 -7.51965808466e-08" />
+                        <geom class="flange_visual" mesh="flange_link" material="flange_link" />
+                        <geom class="flange_collision" mesh="flange_flange_link_mount_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                        <body name="flange_hand_mount" pos="0 0 0.0225" euler="0 0 0" gravcomp="1">
+                          <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                          <site name="flange_hand_mount" pos="0 0 0" size="0.001" />
+                          <body name="hand_lh_hand_base_link" pos="0 0 -0.002" euler="0 0 3.14159265" gravcomp="1">
+                            <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_hand_base_vis" material="lh_hand_base_link" />
+                            <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_hand_base_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                            <site name="hand_wrist_mount" pos="0 0 0" />
+                            <body name="hand_lh_thumb_metacarpals_base2" pos="0.010457 -0.022975 0.030794" quat="1 0 0 0" gravcomp="1">
+                              <joint name="hand_lh_thumb_cmc_yaw" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="-0 -0 1" range="0.0 1.36" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0" actuatorfrclimited="true" actuatorfrcrange="-10 10" />
+                              <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_thumb_metacarpals_base2_vis" material="lh_thumb_metacarpals_base2" />
+                              <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_thumb_metacarpals_base2_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                              <body name="hand_lh_thumb_metacarpals" pos="0.0061649 -0.010678 -0.004891" quat="0.80983484251221 0.526478796956433 0.141069913928281 0.216995123430915" gravcomp="1">
+                                <joint name="hand_lh_thumb_cmc_pitch" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="-1 -0 -0" range="0.0 0.58" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-60 60" />
+                                <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_thumb_metacarpals_vis" material="lh_thumb_metacarpals" />
+                                <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_thumb_metacarpals_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                                <body name="hand_lh_thumb_distal" pos="0 0.0037776 0.045368" quat="1 0 0 0" gravcomp="1">
+                                  <joint name="hand_lh_thumb_ip" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="-1 -0 -0" range="0.0 1.08" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0.4" />
+                                  <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_thumb_distal_vis" material="lh_thumb_distal" />
+                                  <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_thumb_distal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                                  <inertial mass="0.0142" pos="-4.4744e-07 -0.0041369 0.02301" fullinertia="2.2781763396e-06 2.4286781082e-06 5.1587318224e-07 -4.6616481069e-12 3.010221407e-11 1.3376426045e-07" />
+                                </body>
+                                <inertial mass="0.04724" pos="-1.84622133177631e-05 0.000164684333964604 0.022696504519568" fullinertia="7.2358317019e-06 4.5390480908e-06 3.7252650599e-06 -2.532551649e-09 -1.7874737118e-09 4.802304328e-07" />
+                              </body>
+                              <inertial mass="0.00258" pos="0.00162795738393474 -0.0027667197833771 -0.00184227725602705" fullinertia="9.7974575996e-08 8.9844836854e-08 5.37172594e-08 7.3138244367e-09 4.5379328624e-09 -6.9226596212e-09" />
+                            </body>
+                            <body name="hand_lh_index_proximal" pos="0.0024758 -0.02419 0.098779" quat="0.999657323373 0.0261770095069796 0 0" gravcomp="1">
+                              <joint name="hand_lh_index_mcp_pitch" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.6" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-60 60" />
+                              <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_index_proximal_vis" material="lh_index_proximal" />
+                              <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_index_proximal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                              <body name="hand_lh_index_distal" pos="-0.0052516 -0 0.036625" quat="1 0 0 0" gravcomp="1">
+                                <joint name="hand_lh_index_dip" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.43" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0.4" />
+                                <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_index_distal_vis" material="lh_index_distal" />
+                                <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_index_distal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                                <inertial mass="0.00632" pos="0.00658986616416549 5.13855642059191e-06 0.0194393600039178" fullinertia="1.68896e-07 1.91417e-07 6.51218e-08 7.23157e-12 -5.99162e-08 -1.1082e-10" />
+                              </body>
+                              <inertial mass="0.01082" pos="-0.00208656556336452 2.53838713251686e-06 0.0172734941980264" fullinertia="3.53128e-07 3.62322e-07 1.13645e-07 -2.21942e-11 -5.72262e-08 2.49015e-10" />
+                            </body>
+                            <body name="hand_lh_middle_proximal" pos="0.00052576 -0.00634 0.1027" quat="1 0 0 0" gravcomp="1">
+                              <joint name="hand_lh_middle_mcp_pitch" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.6" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-60 60" />
+                              <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_middle_proximal_vis" material="lh_middle_proximal" />
+                              <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_middle_proximal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                              <body name="hand_lh_middle_distal" pos="-0.0052516 -0 0.036625" quat="1 0 0 0" gravcomp="1">
+                                <joint name="hand_lh_middle_dip" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.43" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0.4" />
+                                <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_middle_distal_vis" material="lh_middle_distal" />
+                                <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_middle_distal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                                <inertial mass="0.00632" pos="0.00658986516319194 5.10862924271716e-06 0.0194393315699782" fullinertia="1.68897e-07 1.91417e-07 6.51221e-08 7.18465e-12 -5.99163e-08 -1.10269e-10" />
+                              </body>
+                              <inertial mass="0.01082" pos="-0.00208660654138235 2.56918180119303e-06 0.0172735011723351" fullinertia="3.53128e-07 3.62323e-07 1.13646e-07 -2.25449e-11 -5.7226e-08 2.48906e-10" />
+                            </body>
+                            <body name="hand_lh_ring_proximal" pos="0.0010258 0.011135 0.098767" quat="0.999657323373 -0.0261770095069796 0 0" gravcomp="1">
+                              <joint name="hand_lh_ring_mcp_pitch" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.6" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-60 60" />
+                              <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_ring_proximal_vis" material="lh_ring_proximal" />
+                              <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_ring_proximal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                              <body name="hand_lh_ring_distal" pos="-0.0052516 -0 0.036625" quat="1 0 0 0" gravcomp="1">
+                                <joint name="hand_lh_ring_dip" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.43" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0.4" />
+                                <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_ring_distal_vis" material="lh_ring_distal" />
+                                <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_ring_distal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                                <inertial mass="0.00632" pos="0.00658986648895491 5.05883528165163e-06 0.019439397215532" fullinertia="1.68895e-07 1.91416e-07 6.51217e-08 7.11364e-12 -5.99163e-08 -1.09335e-10" />
+                              </body>
+                              <inertial mass="0.01082" pos="-0.00208667931345812 2.63000419462034e-06 0.0172734926448377" fullinertia="3.53129e-07 3.62324e-07 1.13647e-07 -2.32215e-11 -5.72256e-08 2.48472e-10" />
+                            </body>
+                            <body name="hand_lh_pinky_proximal" pos="0.0024758 0.028372 0.092741" quat="0.999048231670989 -0.0436191562856228 0 0" gravcomp="1">
+                              <joint name="hand_lh_pinky_mcp_pitch" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.6" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-60 60" />
+                              <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_pinky_proximal_vis" material="lh_pinky_proximal" />
+                              <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_pinky_proximal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                              <body name="hand_lh_pinky_distal" pos="-0.0052516 -0 0.036625" quat="1 0 0 0" gravcomp="1">
+                                <joint name="hand_lh_pinky_dip" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 1 0" range="0.0 1.43" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0.4" />
+                                <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_pinky_distal_vis" material="lh_pinky_distal" />
+                                <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_pinky_distal_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
+                                <inertial mass="0.00632" pos="0.00658987588903027 5.03087534178825e-06 0.0194394491065091" fullinertia="1.68894e-07 1.91415e-07 6.51216e-08 7.1137e-12 -5.99164e-08 -1.08691e-10" />
+                              </body>
+                              <inertial mass="0.01082" pos="-0.00208673599799501 2.68062251165824e-06 0.0172734848131236" fullinertia="3.5313e-07 3.62324e-07 1.13648e-07 -2.37682e-11 -5.72252e-08 2.48138e-10" />
+                            </body>
+                            <inertial mass="0.2374" pos="-0.00157788568070457 -0.00034876725935859 0.0538452219801211" fullinertia="5.6375e-05 3.5983e-05 2.4649e-05 3.31172e-07 -4.21137e-07 -8.37956e-07" />
+                          </body>
+                        </body>
+                        <site name="flange_arm_mount" pos="0 0 0" size="0.001" />
+                        <site name="flange_bracket_mount" pos="0 0 0" size="0.001" />
+                        <body name="bracket_bracket_link" pos="0 0 0" gravcomp="1">
+                          <inertial pos="-0.0170487660201 0.0186601157923 0.0113802096453" mass="0.028999999" fullinertia="2.85171737126e-05 1.38172566519e-05 4.09646461979e-05 4.30768571317e-06 -6.26627363413e-07 3.65694809287e-07" />
+                          <geom class="bracket_visual" mesh="bracket_bracket" material="left_bracket_link" />
+                          <geom class="bracket_collision" mesh="bracket_bracket_link_mount_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                          <body name="bracket_camera_mount" pos="-0.0454344910202 -0.027500000734 0.0374074526432" euler="0 -1.2217304764 3.14159265359" gravcomp="1">
+                            <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                            <site name="bracket_camera_mount" pos="0 0 0" size="0.001" />
+                            <body name="camera_camera_link" pos="0 0 0" gravcomp="1">
+                              <inertial pos="-0.00833106297068 -0.0474999989383 -4.47034835815e-06" mass="0.132999995" fullinertia="0.00017981969092 1.87769051006e-05 0.0001799143384 -8.37768720529e-21 -6.43257477066e-22 -2.52803256488e-21" />
+                              <geom class="camera_visual" mesh="camera_gemini335l" material="gemini335l_camera_link" />
+                              <geom class="camera_collision" mesh="camera_collision_000_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                              <body name="camera_depth_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
+                                <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                                <site name="camera_depth_optical" pos="0 0 0" size="0.001" />
+                                <camera name="camera_depth_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="640 627.8742308" principalpixel="0 0" />
+                              </body>
+                              <body name="camera_rgb_frame" pos="0 -0.02375 0" euler="0.0010157 0 0" gravcomp="1">
+                                <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                                <body name="camera_rgb_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
+                                  <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                                  <site name="camera_rgb_optical" pos="0 0 0" size="0.001" />
+                                  <camera name="camera_rgb_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="596.8096551 593.0243874" principalpixel="0 0" />
+                                </body>
+                              </body>
+                              <body name="camera_right_ir_frame" pos="0 -0.095 0" euler="0 0 0" gravcomp="1">
+                                <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                                <body name="camera_right_ir_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
+                                  <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+                                  <site name="camera_right_ir_optical" pos="0 0 0" size="0.001" />
+                                </body>
+                              </body>
+                              <site name="camera_base_mount" pos="0 0 0" size="0.001" />
+                            </body>
+                          </body>
+                          <site name="bracket_flange_mount" pos="0 0 0" size="0.001" />
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="arm_AR5_5_08L_W4C4A6_joint_1_drive" joint="arm_AR5_5_08L_W4C4A6_joint_1" kp="16000" kv="614.2237548828125" />
+    <position name="arm_AR5_5_08L_W4C4A6_joint_2_drive" joint="arm_AR5_5_08L_W4C4A6_joint_2" kp="16000" kv="613.7109985351562" />
+    <position name="arm_AR5_5_08L_W4C4A6_joint_3_drive" joint="arm_AR5_5_08L_W4C4A6_joint_3" kp="16000" kv="603.791015625" />
+    <position name="arm_AR5_5_08L_W4C4A6_joint_4_drive" joint="arm_AR5_5_08L_W4C4A6_joint_4" kp="16000" kv="600.3331298828125" />
+    <position name="arm_AR5_5_08L_W4C4A6_joint_5_drive" joint="arm_AR5_5_08L_W4C4A6_joint_5" kp="16000" kv="604.13671875" />
+    <position name="arm_AR5_5_08L_W4C4A6_joint_6_drive" joint="arm_AR5_5_08L_W4C4A6_joint_6" kp="16000" kv="604.7486572265625" />
+    <position name="arm_AR5_5_08L_W4C4A6_joint_7_drive" joint="arm_AR5_5_08L_W4C4A6_joint_7" kp="16000" kv="603.66796875" />
+    <position name="hand_lh_thumb_cmc_yaw_drive" joint="hand_lh_thumb_cmc_yaw" kp="600" kv="24" />
+    <position name="hand_lh_thumb_cmc_pitch_drive" joint="hand_lh_thumb_cmc_pitch" kp="2500" kv="40" />
+    <position name="hand_lh_index_mcp_pitch_drive" joint="hand_lh_index_mcp_pitch" kp="1250" kv="40" />
+    <position name="hand_lh_middle_mcp_pitch_drive" joint="hand_lh_middle_mcp_pitch" kp="1250" kv="40" />
+    <position name="hand_lh_ring_mcp_pitch_drive" joint="hand_lh_ring_mcp_pitch" kp="1250" kv="40" />
+    <position name="hand_lh_pinky_mcp_pitch_drive" joint="hand_lh_pinky_mcp_pitch" kp="1250" kv="40" />
+  </actuator>
+  <equality>
+    <joint name="hand_lh_couple_thumb" joint1="hand_lh_thumb_ip" joint2="hand_lh_thumb_cmc_pitch" polycoef="0.0 1.86 0 0 0" solref="0.002 1" solimp="0.999 0.999 0.001 0.5 2" />
+    <joint name="hand_lh_couple_index" joint1="hand_lh_index_dip" joint2="hand_lh_index_mcp_pitch" polycoef="0.0 0.89 0 0 0" solref="0.002 1" solimp="0.999 0.999 0.001 0.5 2" />
+    <joint name="hand_lh_couple_middle" joint1="hand_lh_middle_dip" joint2="hand_lh_middle_mcp_pitch" polycoef="0.0 0.89 0 0 0" solref="0.002 1" solimp="0.999 0.999 0.001 0.5 2" />
+    <joint name="hand_lh_couple_ring" joint1="hand_lh_ring_dip" joint2="hand_lh_ring_mcp_pitch" polycoef="0.0 0.89 0 0 0" solref="0.002 1" solimp="0.999 0.999 0.001 0.5 2" />
+    <joint name="hand_lh_couple_pinky" joint1="hand_lh_pinky_dip" joint2="hand_lh_pinky_mcp_pitch" polycoef="0.0 0.89 0 0 0" solref="0.002 1" solimp="0.999 0.999 0.001 0.5 2" />
+  </equality>
+  <contact>
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link1" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link3" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_base" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="arm_AR5_5_08L_W4C4A6_link2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="arm_AR5_5_08L_W4C4A6_link3" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="arm_AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="arm_AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="arm_AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link1" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="arm_AR5_5_08L_W4C4A6_link3" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="arm_AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="arm_AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="arm_AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link2" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="arm_AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="arm_AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="arm_AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link3" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="arm_AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="arm_AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link4" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="arm_AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link5" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="arm_AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link6" body2="camera_camera_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="flange_flange_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_hand_base_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_thumb_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_index_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_index_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_middle_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_middle_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_ring_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_ring_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_pinky_proximal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="hand_lh_pinky_distal" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="bracket_bracket_link" />
+    <exclude body1="arm_AR5_5_08L_W4C4A6_link7" body2="camera_camera_link" />
+    <exclude body1="flange_flange_link" body2="hand_lh_hand_base_link" />
+    <exclude body1="flange_flange_link" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="flange_flange_link" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="flange_flange_link" body2="hand_lh_thumb_distal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_index_proximal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_index_distal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_middle_proximal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_middle_distal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_ring_proximal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_ring_distal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_pinky_proximal" />
+    <exclude body1="flange_flange_link" body2="hand_lh_pinky_distal" />
+    <exclude body1="flange_flange_link" body2="bracket_bracket_link" />
+    <exclude body1="flange_flange_link" body2="camera_camera_link" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_thumb_metacarpals_base2" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_thumb_distal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_index_proximal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_index_distal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_middle_proximal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_middle_distal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_ring_proximal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_ring_distal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_pinky_proximal" />
+    <exclude body1="hand_lh_hand_base_link" body2="hand_lh_pinky_distal" />
+    <exclude body1="hand_lh_hand_base_link" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_hand_base_link" body2="camera_camera_link" />
+    <exclude body1="hand_lh_thumb_metacarpals_base2" body2="hand_lh_thumb_metacarpals" />
+    <exclude body1="hand_lh_thumb_metacarpals_base2" body2="hand_lh_thumb_distal" />
+    <exclude body1="hand_lh_thumb_metacarpals_base2" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_thumb_metacarpals_base2" body2="camera_camera_link" />
+    <exclude body1="hand_lh_thumb_metacarpals" body2="hand_lh_thumb_distal" />
+    <exclude body1="hand_lh_thumb_metacarpals" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_thumb_metacarpals" body2="camera_camera_link" />
+    <exclude body1="hand_lh_thumb_distal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_thumb_distal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_index_proximal" body2="hand_lh_index_distal" />
+    <exclude body1="hand_lh_index_proximal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_index_proximal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_index_distal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_index_distal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_middle_proximal" body2="hand_lh_middle_distal" />
+    <exclude body1="hand_lh_middle_proximal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_middle_proximal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_middle_distal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_middle_distal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_ring_proximal" body2="hand_lh_ring_distal" />
+    <exclude body1="hand_lh_ring_proximal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_ring_proximal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_ring_distal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_ring_distal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_pinky_proximal" body2="hand_lh_pinky_distal" />
+    <exclude body1="hand_lh_pinky_proximal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_pinky_proximal" body2="camera_camera_link" />
+    <exclude body1="hand_lh_pinky_distal" body2="bracket_bracket_link" />
+    <exclude body1="hand_lh_pinky_distal" body2="camera_camera_link" />
+    <exclude body1="bracket_bracket_link" body2="camera_camera_link" />
+  </contact>
+</mujoco>

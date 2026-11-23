@@ -1,0 +1,16 @@
+linker-sim-assets
+Copyright 2026 Linkerbot (Beijing) Technology Co., Ltd.
+
+This product includes camera meshes from the cameras' makers, under the Apache License,
+Version 2.0. Each was moved into LW-v0's camera body frame, given one flat colour and
+written as OBJ; the geometry is otherwise unchanged.
+
+- Orbbec Gemini 335L: workstations/lw_v0/meshes/visual/gemini335l_camera_link_vis.obj
+  from orbbec_description/meshes/gemini335L_336L/base_link.STL in
+  https://github.com/orbbec/OrbbecSDK_ROS2 (branch v2-main, commit ffba347c)
+  Copyright 2023 Orbbec 3D Technology, Inc.
+
+- Stereolabs ZED 2i: workstations/lw_v0/meshes/visual/zed2i_camera_vis.obj
+  from meshes/zed2i.stl in https://github.com/stereolabs/zed-ros2-description
+  (commit 22468247)
+  Copyright 2026 Stereolabs
