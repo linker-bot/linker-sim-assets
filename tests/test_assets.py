@@ -6,6 +6,7 @@
 - every referenced file exists, and every file in a `meshes/` folder is referenced
 - the mesh rule: `.obj` + `.mtl` + one palette PNG per robot, named after it, nothing else
 - each hand's `sdk_channels.yaml` names every actuated joint exactly once
+- the controller data (`hands/o6/motor.yaml`, `arms/ar5_08/controller.yaml`) fits the robot files
 
 The URDF is read here by its own rules (URDF spec), not through MuJoCo's URDF importer.
 """
@@ -304,13 +305,61 @@ def test_sdk_channels_name_each_actuated_joint_once(hand, side):
         assert sorted(names) == driven, f"{key}: {sorted(set(names) ^ set(driven))}"
 
 
+# ---------------------------------------------------------------- controller data
+
+
+@pytest.mark.parametrize("side", ["left", "right"])
+def test_o6_motor_fits_the_hand(side):
+    """motor.yaml's shafts are the O6's driven joints; its torque budget fits each drive."""
+    spec = yaml.safe_load((ROOT / "hands/o6/motor.yaml").read_text())
+    shafts = [j.replace("{S}", side[0]) for j in spec["shafts"]]
+    for path, prefix in ((ROOT / f"hands/o6/o6_{side}.xml", ""), (ROOT / "workstations/lw_v0/lw_v0.xml", f"{side}/hand_")):
+        model = mujoco.MjModel.from_xml_path(str(path))
+        driven = {model.joint(model.actuator_trnid[u, 0]).name for u in range(model.nu)}
+        assert {prefix + s for s in shafts} <= driven and len(shafts) == len(set(shafts)) == 6
+        for i, shaft in enumerate(shafts):
+            joint = model.joint(prefix + shaft).id
+            actuator = next(u for u in range(model.nu) if model.actuator_trnid[u, 0] == joint)
+            # The motor can never push harder than the drive between shaft and finger.
+            assert spec["advancing_cap"][i] <= model.jnt_actfrcrange[joint][1], shaft
+            # The drive's damping includes the motor's output damping (any rest is passive).
+            assert spec["output_damping"][i] <= -model.actuator_biasprm[actuator][2], shaft
+    for key in ("advancing_cap", "output_damping", "viscosity"):
+        assert len(spec[key]) == 6 and min(spec[key]) > 0, key
+    assert spec["motor_stiffness"] > 0 and spec["speed_limit"] > 0
+
+
+@pytest.mark.parametrize("side", ["left", "right"])
+def test_arm_controller_fits_the_arm(side):
+    """controller.yaml names the AR5_08's seven joints; the wrist octagon is convex and its
+    bounding box is the J6/J7 ranges in the robot files."""
+    spec = yaml.safe_load((ROOT / "arms/ar5_08/controller.yaml").read_text())
+    joints = [j.replace("{S}", side[0].upper()) for j in spec["joints"]]
+    model = mujoco.MjModel.from_xml_path(str(ROOT / "workstations/lw_v0/lw_v0.xml"))
+    for key in ("max_velocity", "max_acceleration", "max_jerk"):
+        assert len(spec[key]) == len(joints) == 7 and min(spec[key]) > 0, key
+    for j in joints:
+        assert model.jnt_type[model.joint(f"{side}/arm_{j}").id] == int(mujoco.mjtJoint.mjJNT_HINGE)
+    region = spec["wrist_region"]
+    assert [j.replace("{S}", side[0].upper()) for j in region["joints"]] == joints[5:7]
+    v = np.radians(np.asarray(region["vertices_deg"], float))
+    edges = np.roll(v, -1, axis=0) - v
+    nxt = np.roll(edges, -1, axis=0)
+    turns = edges[:, 0] * nxt[:, 1] - edges[:, 1] * nxt[:, 0]  # 2-D cross product
+    assert (turns < 0).all() or (turns > 0).all(), "the wrist region must be convex"
+    for k, j in enumerate(joints[5:7]):
+        lo, hi = model.jnt_range[model.joint(f"{side}/arm_{j}").id]
+        np.testing.assert_allclose((v[:, k].min(), v[:, k].max()), (lo, hi), atol=1e-9, err_msg=j)
+
+
 # ---------------------------------------------------------------- the data package (when installed)
 
 
 def package_files():
     """What `linker-lw-v0` must hold: the files LW-v0's MJCF and URDF load, and the O6's SDK map."""
     ws = ROOT / "workstations/lw_v0"
-    files = {*ws.glob("*.xml"), *ws.glob("*.urdf"), ROOT / "hands/o6/sdk_channels.yaml"}
+    files = {*ws.glob("*.xml"), *ws.glob("*.urdf"), ROOT / "hands/o6/sdk_channels.yaml",
+             ROOT / "hands/o6/motor.yaml", ROOT / "arms/ar5_08/controller.yaml"}
     for p in ws.glob("*.xml"):
         files |= mjcf_references(p)
     for p in ws.glob("*.urdf"):

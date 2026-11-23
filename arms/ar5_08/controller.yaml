@@ -1,0 +1,28 @@
+# AR5_08 arm: the limits its controller (xCore SDK) puts on joint motion.
+#
+# URDF and MJCF cannot hold these: MuJoCo has no velocity, acceleration or jerk limits, and a
+# URDF joint has one velocity limit and no joint-pair region. linker-sim and linker-lab apply
+# them in their arm action (README, "Robot controllers"). Source: the xCore SDK's motion
+# profile and wrist region for the left and right AR5_08, which are identical.
+#
+# "{S}" in a joint name is L for the left arm and R for the right arm. In LW-v0 the names
+# carry the unit prefix: left/arm_AR5_5_08L_W4C4A6_joint_1.
+schema_version: 1
+
+joints:            # J1..J7, the order of every list below
+  - "AR5_5_08{S}_W4C4A6_joint_1"
+  - "AR5_5_08{S}_W4C4A6_joint_2"
+  - "AR5_5_08{S}_W4C4A6_joint_3"
+  - "AR5_5_08{S}_W4C4A6_joint_4"
+  - "AR5_5_08{S}_W4C4A6_joint_5"
+  - "AR5_5_08{S}_W4C4A6_joint_6"
+  - "AR5_5_08{S}_W4C4A6_joint_7"
+max_velocity: [0.39, 0.32, 0.39, 0.39, 0.49, 0.49, 0.49]   # rad/s
+max_acceleration: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0]   # rad/s^2
+max_jerk: [40.0, 40.0, 40.0, 40.0, 40.0, 40.0, 40.0]   # rad/s^3
+
+# (J6, J7) must stay inside this convex octagon; vertices in order, in degrees. The J6 and J7
+# ranges in the URDF/MJCF (±60°, ±90°) are its bounding box.
+wrist_region:
+  joints: ["AR5_5_08{S}_W4C4A6_joint_6", "AR5_5_08{S}_W4C4A6_joint_7"]
+  vertices_deg: [[-23, 90], [23, 90], [60, 49], [60, -49], [23, -90], [-23, -90], [-60, -49], [-60, 49]]
