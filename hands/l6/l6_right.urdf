@@ -1,32 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <robot name="hand">
-  <material name="black">
-    <color rgba="0.0 0.0 0.0 1.0" />
-  </material>
-  <material name="blue">
-    <color rgba="0.0 0.0 0.8 1.0" />
-  </material>
-  <material name="green">
-    <color rgba="0.0 0.8 0.0 1.0" />
-  </material>
-  <material name="grey">
-    <color rgba="0.2 0.2 0.2 1.0" />
-  </material>
-  <material name="orange">
-    <color rgba="1.0 0.423529411765 0.0392156862745 1.0" />
-  </material>
-  <material name="brown">
-    <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0" />
-  </material>
-  <material name="red">
-    <color rgba="0.8 0.0 0.0 1.0" />
-  </material>
-  <material name="white">
-    <color rgba="1.0 1.0 1.0 1.0" />
-  </material>
-  <material name="Beige">
-    <color rgba="1.0 0.784 0.5765 1.0" />
-  </material>
   <link name="rh_hand_base_link">
     <inertial>
       <origin xyz="0.0019900000 0.0009100000 0.0583810000" rpy="0 0 0" />
@@ -38,9 +11,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_hand_base_link_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -60,9 +30,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_thumb_metacarpals_base1_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -90,9 +57,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_thumb_metacarpals_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -120,9 +84,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_thumb_distal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -137,7 +98,6 @@
       <geometry>
         <box size="0.0001 0.0001 0.0001" />
       </geometry>
-      <material name="white" />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -175,9 +135,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_index_proximal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -205,9 +162,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_index_distal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -222,7 +176,6 @@
       <geometry>
         <box size="0.0001 0.0001 0.0001" />
       </geometry>
-      <material name="white" />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -260,9 +213,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_middle_proximal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -290,9 +240,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_middle_distal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -307,7 +254,6 @@
       <geometry>
         <box size="0.0001 0.0001 0.0001" />
       </geometry>
-      <material name="white" />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -345,9 +291,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_ring_proximal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -375,9 +318,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_ring_distal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -392,7 +332,6 @@
       <geometry>
         <box size="0.0001 0.0001 0.0001" />
       </geometry>
-      <material name="white" />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -430,9 +369,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_pinky_proximal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -460,9 +396,6 @@
       <geometry>
         <mesh filename="meshes/visual/rh_pinky_distal_vis.obj" />
       </geometry>
-      <material name="">
-        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
-      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -477,7 +410,6 @@
       <geometry>
         <box size="0.0001 0.0001 0.0001" />
       </geometry>
-      <material name="white" />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />

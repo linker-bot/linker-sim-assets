@@ -98,7 +98,8 @@ Each hand folder has `<hand>_left.urdf`, `<hand>_left.xml`, the same for the rig
 - **O6**: the hand of LW-v0, standalone: the same drives, contact settings, collision hulls,
   couplings and solver options as in LW-v0.
 - **L6, L20 Lite, L25, L30**: carried over from v0.4.0 unchanged in content. They collide with
-  convex hulls of their visual meshes, and have one flat colour each.
+  convex hulls of their visual meshes. They are uncoloured (one neutral grey) until we have their
+  real colours, as we do for the O6.
 
 ### SDK channels
 

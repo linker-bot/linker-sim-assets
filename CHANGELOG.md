@@ -17,7 +17,8 @@ and MJCF with its meshes, edited directly.
 - **Hands** (`hands/{o6,l6,l20lite,l25,l30}/`): URDF + MJCF per side and `sdk_channels.yaml`.
   - O6: LW-v0's hand (drives, contact, collision hulls, couplings) as a standalone robot, coloured.
     This changes the standalone O6's physics from v0.4.0's.
-  - L6, L20 Lite, L25, L30: unchanged in content, renamed; one flat colour each. L30's actuators
+  - L6, L20 Lite, L25, L30: unchanged in content, renamed; neutral grey until their real colours
+    are known (v0.4.0's URDF colours were not matched to the products). L30's actuators
     now follow its joint order (ctrl order changed).
 - **Package** `linker-lw-v0`: LW-v0's files for Python products (`importlib.resources`),
   installed from this repository at a tag; not on PyPI.

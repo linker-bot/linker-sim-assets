@@ -9,7 +9,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_hand_base_link_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -25,7 +24,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_thumb_metacarpals_base1_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -41,7 +39,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_thumb_metacarpals_base2_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -57,7 +54,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_thumb_metacarpals_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -73,7 +69,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_thumb_proximal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -89,7 +84,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_thumb_distal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -105,7 +99,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_index_metacarpals_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -121,7 +114,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_index_proximal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -137,7 +129,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_index_middle_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -153,7 +144,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_index_distal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -169,7 +159,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_middle_metacarpals_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -185,7 +174,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_middle_proximal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -201,7 +189,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_middle_middle_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -217,7 +204,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_middle_distal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -233,7 +219,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_ring_metacarpals_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -249,7 +234,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_ring_proximal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -265,7 +249,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_ring_middle_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -281,7 +264,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_ring_distal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -297,7 +279,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_pinky_metacarpals_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -313,7 +294,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_pinky_proximal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -329,7 +309,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_pinky_middle_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -345,7 +324,6 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry><mesh filename="meshes/visual/lh_pinky_distal_vis.obj" /></geometry>
-      <material name=""><color rgba="1 1 1 1" /></material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
