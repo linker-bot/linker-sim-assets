@@ -1,0 +1,32 @@
+# LinkerHand L6: the hand SDK's joint vector, mapped to this hand's URDF/MJCF joints.
+#
+# convention linear-fit-v0: an SDK value of 100 is the joint's lower limit and 0 its
+# upper limit, linear in between. Limits are the joint limits in l6_left/right.urdf.
+# "{S}" in a joint name is `l` for the left hand and `r` for the right hand.
+schema_version: 1
+convention: linear-fit-v0
+
+# SDK channel index -> actuated joint. The L6 hardware sends the two thumb DoFs as
+# (cmc_pitch, cmc_roll), the opposite of their order in the URDF and MJCF.
+channels:
+  - "{S}h_thumb_cmc_pitch"
+  - "{S}h_thumb_cmc_roll"
+  - "{S}h_index_mcp_pitch"
+  - "{S}h_middle_mcp_pitch"
+  - "{S}h_ring_mcp_pitch"
+  - "{S}h_pinky_mcp_pitch"
+
+# Channel order of early devices (UMI-Dex glove SDK, "umi-dex_legacy"): the same six
+# joints, permuted by a wiring difference that was never changed on that hardware.
+# Per SDK index: 0 index, 1 thumb swing, 2 thumb, 3 pinky, 4 ring, 5 middle.
+legacy_channels:
+  - "{S}h_index_mcp_pitch"
+  - "{S}h_thumb_cmc_roll"
+  - "{S}h_thumb_cmc_pitch"
+  - "{S}h_pinky_mcp_pitch"
+  - "{S}h_ring_mcp_pitch"
+  - "{S}h_middle_mcp_pitch"
+
+# Per-joint [lower, upper] range to use instead of the URDF limit. Empty: the URDF
+# limits are the range the SDK uses.
+clip_overrides: {}

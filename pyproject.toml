@@ -1,38 +1,36 @@
+# Builds the data package `linker-lw-v0` (import name `linker_lw_v0`): LW-v0's files, no code.
+# Released from CI on a tag `v<version>` (.github/workflows/ci.yml).
 [build-system]
-requires = ["hatchling>=1.24"]
+requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "linker-robot-assets"
-version = "0.1.0"
-description = "Bundled robot assets (URDF / MJCF / meshes) + composer + validators."
+name = "linker-lw-v0"
+version = "0.5.0"
+description = "LW-v0, Linkerbot's two-arm camera workstation, as MJCF and URDF with meshes (data only)"
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
-# Runtime dependencies — what `from linker_robot_assets import ...` needs.
-# numpy is required by `linker_robot_assets.decoders.hand` (Phase 4 public
-# API). Composer + validators have heavier deps; those go in [authoring].
-dependencies = [
-    "pyyaml>=6.0",
-    "numpy>=1.24",
-]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10"
+dependencies = []
 
-[project.optional-dependencies]
-# Authoring toolchain: composer (`python -m linker_robot_assets.composer.compose`)
-# and validators (`python -m linker_robot_assets.validate_workstation`,
-# `python -m linker_robot_assets.validate_component_mjcf`). Pulls in
-# mujoco for MJCF compile/inertia checks, trimesh/scipy for collision fitting
-# and its geometric regression checks (numpy is a runtime dep above).
-authoring = [
-    "mujoco>=3.1",
-    "trimesh>=4.11",
-    "scipy>=1.15",
-]
+[project.urls]
+Repository = "https://github.com/linker-bot/linker-sim-assets"
 
-# ----------------------------- hatch packaging ---------------------------- #
-# Default packages = ["src/linker_robot_assets"] — that captures the entire
-# package tree, including the bundled `assets/` data dir (sibling of
-# __init__.py). Mesh binaries (.STL, .obj, …) are tracked via git LFS at
-# the repo root; CI must `git lfs pull` before `python -m build`.
-
+# The files lw_v0.xml and lw_v0.urdf load, at their repository paths under linker_lw_v0/, and
+# the O6 hand's SDK channel map. Find them with importlib.resources.files("linker_lw_v0").
 [tool.hatch.build.targets.wheel]
-packages = ["src/linker_robot_assets"]
+bypass-selection = true
+
+[tool.hatch.build.targets.wheel.force-include]
+"workstations/lw_v0" = "linker_lw_v0/workstations/lw_v0"
+"hands/o6/meshes" = "linker_lw_v0/hands/o6/meshes"
+"hands/o6/sdk_channels.yaml" = "linker_lw_v0/hands/o6/sdk_channels.yaml"
+
+[tool.hatch.build.targets.sdist]
+include = ["workstations/lw_v0", "hands/o6/meshes", "hands/o6/sdk_channels.yaml", "LICENSE", "NOTICE", "README.md"]
+
+# The test environment: `uv run --group test pytest`. CI runs it on both MuJoCo versions the
+# products use (linker-lab 3.17.0, linker-sim 4.0.1).
+[dependency-groups]
+test = ["pytest>=8", "numpy>=1.24", "pyyaml>=6", "mujoco>=3.17"]

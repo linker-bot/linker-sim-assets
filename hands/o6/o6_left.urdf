@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<robot name="o6_left">
+  <link name="lh_hand_base_link">
+    <inertial><origin xyz="-0.001577885681 -0.0003487672594 0.05384522198" rpy="-0.07278313919 0.01371007853 0.01679286943"/><mass value="0.2374"/><inertia ixx="5.638633685e-05" ixy="0" ixz="0" iyy="3.60382079e-05" iyz="0" izz="2.458245525e-05"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_hand_base_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_hand_base_link_col.obj"/></geometry></collision>
+  </link>
+  <link name="lh_thumb_metacarpals_base2">
+    <inertial><origin xyz="0.001627957384 -0.002766719783 -0.001842277256" rpy="-0.2395267799 -0.009018239688 0.5273090546"/><mass value="0.00258"/><inertia ixx="1.022808323e-07" ixy="0" ixz="0" iyy="8.756125803e-08" iyz="0" izz="5.16945819e-08"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_thumb_metacarpals_base2_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_thumb_metacarpals_base2_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_thumb_cmc_yaw" type="revolute"><parent link="lh_hand_base_link"/><child link="lh_thumb_metacarpals_base2"/><origin xyz="0.010457 -0.022975 0.030794" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="0" upper="1.36" effort="10" velocity="1"/><dynamics damping="0" friction="0"/></joint>
+  <link name="lh_thumb_metacarpals">
+    <inertial><origin xyz="-1.846221332e-05 0.000164684334 0.02269650452" rpy="0.4339398076 0.0006535536809 -0.001055480726"/><mass value="0.04724"/><inertia ixx="7.235835543e-06" ixy="0" ixz="0" iyy="4.761582697e-06" iyz="0" izz="3.502726612e-06"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_thumb_metacarpals_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_thumb_metacarpals_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_thumb_cmc_pitch" type="revolute"><parent link="lh_thumb_metacarpals_base2"/><child link="lh_thumb_metacarpals"/><origin xyz="0.0061649 -0.010678 -0.004891" rpy="1.1529 0 0.5236"/><axis xyz="-1 0 0"/><limit lower="0" upper="0.58" effort="60" velocity="1"/><dynamics damping="4" friction="0"/></joint>
+  <link name="lh_thumb_distal">
+    <inertial><origin xyz="-4.4744e-07 -0.0041369 0.02301" rpy="-1.82481496e-05 -0.0694802439 1.570812388"/><mass value="0.0142"/><inertia ixx="2.437987066e-06" ixy="0" ixz="0" iyy="2.27817634e-06" iyz="0" izz="5.065642237e-07"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_thumb_distal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_thumb_distal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_thumb_ip" type="revolute"><parent link="lh_thumb_metacarpals"/><child link="lh_thumb_distal"/><origin xyz="0 0.0037776 0.045368" rpy="0 0 0"/><axis xyz="-1 0 0"/><limit lower="0" upper="1.08" effort="0" velocity="1.86"/><dynamics damping="0.4" friction="0"/><mimic joint="lh_thumb_cmc_pitch" multiplier="1.86" offset="0"/></joint>
+  <link name="lh_index_proximal">
+    <inertial><origin xyz="-0.002086565563 2.538387133e-06 0.0172734942" rpy="-0.003689880854 0.2228833403 -0.02080527153"/><mass value="0.01082"/><inertia ixx="3.661015252e-07" ixy="0" ixz="0" iyy="3.6232066e-07" iyz="0" izz="1.006728149e-07"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_index_proximal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_index_proximal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_index_mcp_pitch" type="revolute"><parent link="lh_hand_base_link"/><child link="lh_index_proximal"/><origin xyz="0.0024758 -0.02419 0.098779" rpy="0.05236 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.6" effort="60" velocity="1"/><dynamics damping="4" friction="0"/></joint>
+  <link name="lh_index_distal">
+    <inertial><origin xyz="0.006589866164 5.138556421e-06 0.01943936" rpy="0.004317899835 0.4285246287 0.01192247138"/><mass value="0.00632"/><inertia ixx="1.962699412e-07" ixy="0" ixz="0" iyy="1.914164915e-07" iyz="0" izz="3.774836736e-08"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_index_distal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_index_distal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_index_dip" type="revolute"><parent link="lh_index_proximal"/><child link="lh_index_distal"/><origin xyz="-0.0052516 0 0.036625" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.43" effort="0" velocity="0.89"/><dynamics damping="0.4" friction="0"/><mimic joint="lh_index_mcp_pitch" multiplier="0.89" offset="0"/></joint>
+  <link name="lh_middle_proximal">
+    <inertial><origin xyz="-0.002086606541 2.569181801e-06 0.01727350117" rpy="-0.003710897027 0.2228831259 -0.02089715952"/><mass value="0.01082"/><inertia ixx="3.661015011e-07" ixy="0" ixz="0" iyy="3.623216463e-07" iyz="0" izz="1.006738526e-07"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_middle_proximal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_middle_proximal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_middle_mcp_pitch" type="revolute"><parent link="lh_hand_base_link"/><child link="lh_middle_proximal"/><origin xyz="0.00052576 -0.00634 0.1027" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.6" effort="60" velocity="1"/><dynamics damping="4" friction="0"/></joint>
+  <link name="lh_middle_distal">
+    <inertial><origin xyz="0.006589865163 5.108629243e-06 0.01943933157" rpy="0.004294471962 0.4285235912 0.01185858462"/><mass value="0.00632"/><inertia ixx="1.962708899e-07" ixy="0" ixz="0" iyy="1.914164969e-07" iyz="0" izz="3.774871325e-08"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_middle_distal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_middle_distal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_middle_dip" type="revolute"><parent link="lh_middle_proximal"/><child link="lh_middle_distal"/><origin xyz="-0.0052516 0 0.036625" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.43" effort="0" velocity="0.89"/><dynamics damping="0.4" friction="0"/><mimic joint="lh_middle_mcp_pitch" multiplier="0.89" offset="0"/></joint>
+  <link name="lh_ring_proximal">
+    <inertial><origin xyz="-0.002086679313 2.630004195e-06 0.01727349264" rpy="-0.003747031983 0.2228811615 -0.02105086341"/><mass value="0.01082"/><inertia ixx="3.661023518e-07" ixy="0" ixz="0" iyy="3.623226221e-07" iyz="0" izz="1.006750261e-07"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_ring_proximal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_ring_proximal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_ring_mcp_pitch" type="revolute"><parent link="lh_hand_base_link"/><child link="lh_ring_proximal"/><origin xyz="0.0010258 0.011135 0.098767" rpy="-0.05236 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.6" effort="60" velocity="1"/><dynamics damping="4" friction="0"/></joint>
+  <link name="lh_ring_distal">
+    <inertial><origin xyz="0.006589866489 5.058835282e-06 0.01943939722" rpy="0.004258025926 0.4285277437 0.01175793471"/><mass value="0.00632"/><inertia ixx="1.962691565e-07" ixy="0" ixz="0" iyy="1.914155055e-07" iyz="0" izz="3.7748038e-08"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_ring_distal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_ring_distal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_ring_dip" type="revolute"><parent link="lh_ring_proximal"/><child link="lh_ring_distal"/><origin xyz="-0.0052516 0 0.036625" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.43" effort="0" velocity="0.89"/><dynamics damping="0.4" friction="0"/><mimic joint="lh_ring_mcp_pitch" multiplier="0.89" offset="0"/></joint>
+  <link name="lh_pinky_proximal">
+    <inertial><origin xyz="-0.002086735998 2.680622512e-06 0.01727348481" rpy="-0.00377517974 0.2228793266 -0.02117063271"/><mass value="0.01082"/><inertia ixx="3.661031978e-07" ixy="0" ixz="0" iyy="3.623226028e-07" iyz="0" izz="1.006761994e-07"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_pinky_proximal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_pinky_proximal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_pinky_mcp_pitch" type="revolute"><parent link="lh_hand_base_link"/><child link="lh_pinky_proximal"/><origin xyz="0.0024758 0.028372 0.092741" rpy="-0.087266 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.6" effort="60" velocity="1"/><dynamics damping="4" friction="0"/></joint>
+  <link name="lh_pinky_distal">
+    <inertial><origin xyz="0.006589875889 5.030875342e-06 0.01943944911" rpy="0.004236482212 0.4285305001 0.01169685419"/><mass value="0.00632"/><inertia ixx="1.962683818e-07" ixy="0" ixz="0" iyy="1.914145105e-07" iyz="0" izz="3.774770772e-08"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/lh_pinky_distal_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/lh_pinky_distal_col.obj"/></geometry></collision>
+  </link>
+  <joint name="lh_pinky_dip" type="revolute"><parent link="lh_pinky_proximal"/><child link="lh_pinky_distal"/><origin xyz="-0.0052516 0 0.036625" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.43" effort="0" velocity="0.89"/><dynamics damping="0.4" friction="0"/><mimic joint="lh_pinky_mcp_pitch" multiplier="0.89" offset="0"/></joint>
+</robot>
