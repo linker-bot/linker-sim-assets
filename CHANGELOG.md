@@ -19,7 +19,8 @@ and MJCF with its meshes, edited directly.
     This changes the standalone O6's physics from v0.4.0's.
   - L6, L20 Lite, L25, L30: unchanged in content, renamed; one flat colour each. L30's actuators
     now follow its joint order (ctrl order changed).
-- **Package** `linker-lw-v0`: LW-v0's files for Python products (`importlib.resources`).
+- **Package** `linker-lw-v0`: LW-v0's files for Python products (`importlib.resources`),
+  installed from this repository at a tag; not on PyPI.
 - **Removed** (still at tag `v0.4.0`): the composer, recipes, units, manifests, validators, the
   `linker_robot_assets` Python package, the other arms (AR5, A7, A7 Lite, P7), torsos, the bench
   table, the standalone camera and attachment components, and every other workstation.

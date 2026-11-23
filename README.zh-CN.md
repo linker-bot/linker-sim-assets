@@ -20,7 +20,7 @@
 | --- | --- |
 | MuJoCo | `workstations/lw_v0/lw_v0.xml`（整个工作站），或单个部件：`left.xml`、`right.xml`、`top_camera.xml`、`support.xml`。灵巧手：`hands/<hand>/<hand>_<side>.xml` |
 | ROS、Isaac Sim、PyBullet、Drake、viser 等 URDF 工具 | `workstations/lw_v0/lw_v0.urdf`，或 `hands/<hand>/<hand>_<side>.urdf` |
-| Python（linker-sim、linker-lab） | `pip install linker-lw-v0`，然后 `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
+| Python（linker-sim、linker-lab） | 从本仓库的某个标签安装 `linker-lw-v0`，例如在 `pyproject.toml` 中写 `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.5.0"`；然后 `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
 
 `linker-lw-v0` 包含 LW-v0 的文件（路径与本仓库相同）、它用到的 O6 网格，以及
 `hands/o6/sdk_channels.yaml`。包中没有代码。其他文件请克隆本仓库或下载 ZIP。
@@ -135,7 +135,7 @@ LW-v0 保留了两个产品验证时的几何。以下问题推迟到后续工�
 uv run --group test pytest
 ```
 
-CI 在 MuJoCo 3.17.0 和 4.0.1 上运行测试；打 `v<version>` 标签时发布 `linker-lw-v0`。
+CI 在 MuJoCo 3.17.0 和 4.0.1 上运行测试，并构建、安装 `linker-lw-v0` 包。
 
 网格：每个连杆一个 `.obj`，即 `meshes/visual/<link>_vis.obj`，配一个 `.mtl`，每个机器人一张 `palette.png`
 （颜色是指向调色板的纹理坐标，因此 URDF 工具和 MuJoCo 显示相同的颜色）；碰撞网格在

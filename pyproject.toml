@@ -1,5 +1,7 @@
 # Builds the data package `linker-lw-v0` (import name `linker_lw_v0`): LW-v0's files, no code.
-# Released from CI on a tag `v<version>` (.github/workflows/ci.yml).
+# Products install it from this repository at a tag `v<version>`:
+#   "linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v<version>"
+# (uv.lock pins the commit). It is not published to PyPI.
 [build-system]
 requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"

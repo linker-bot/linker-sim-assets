@@ -20,7 +20,7 @@ at a time, after each has been verified in our simulators.
 | --- | --- |
 | MuJoCo | `workstations/lw_v0/lw_v0.xml` (the whole station), or one part: `left.xml`, `right.xml`, `top_camera.xml`, `support.xml`. A hand: `hands/<hand>/<hand>_<side>.xml` |
 | ROS, Isaac Sim, PyBullet, Drake, viser and other URDF tools | `workstations/lw_v0/lw_v0.urdf`, or `hands/<hand>/<hand>_<side>.urdf` |
-| Python (linker-sim, linker-lab) | `pip install linker-lw-v0`, then `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
+| Python (linker-sim, linker-lab) | The package `linker-lw-v0` from this repository at a tag, e.g. in `pyproject.toml`: `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.5.0"`; then `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
 
 The package `linker-lw-v0` holds LW-v0's files at the same paths as this repository, the O6's
 meshes it uses, and `hands/o6/sdk_channels.yaml`. It contains no code. Everything else: clone the
@@ -150,7 +150,7 @@ mesh format, and the SDK channel files:
 uv run --group test pytest
 ```
 
-CI runs it on MuJoCo 3.17.0 and 4.0.1, and on a tag `v<version>` publishes `linker-lw-v0`.
+CI runs it on MuJoCo 3.17.0 and 4.0.1, with the package `linker-lw-v0` built and installed.
 
 Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj` with an `.mtl` and one `palette.png`
 per robot (colours are texture coordinates into the palette, so URDF tools and MuJoCo show the same
