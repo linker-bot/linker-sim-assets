@@ -37,7 +37,7 @@
     <mesh name="thumb_metacarpals_base1" file="lh_thumb_metacarpals_base1_vis.obj"/>
     <mesh name="thumb_proximal" file="lh_thumb_proximal_vis.obj"/>
     <mesh name="thumb_distal" file="lh_thumb_distal_vis.obj"/>
-    <texture name="palette" type="2d" file="palette.png"/>
+    <texture name="palette" type="2d" file="l30_palette.png"/>
     <material name="palette" texture="palette"/>
   </asset>
 

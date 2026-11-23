@@ -3,7 +3,7 @@
   <compiler angle="radian" autolimits="true" />
   <asset>
     <mesh name="support_visual" file="meshes/visual/workstation_table_vis.obj" />
-    <texture name="lw_v0_palette" type="2d" file="meshes/visual/palette.png" />
+    <texture name="lw_v0_palette" type="2d" file="meshes/visual/lw_v0_palette.png" />
     <material name="workstation_table" texture="lw_v0_palette" metallic="0" roughness="0.6" />
   </asset>
   <worldbody>

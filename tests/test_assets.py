@@ -4,7 +4,7 @@
 - each URDF describes the same robot as its MJCF: links, joints (type, axis, range, effort where
   the MJCF limits force), couplings, masses, inertias, link poses at the home pose, mesh files
 - every referenced file exists, and every file in a `meshes/` folder is referenced
-- the mesh rule: `.obj` + `.mtl` + one palette PNG per visual folder, nothing else
+- the mesh rule: `.obj` + `.mtl` + one palette PNG per robot, named after it, nothing else
 - each hand's `sdk_channels.yaml` names every actuated joint exactly once
 
 The URDF is read here by its own rules (URDF spec), not through MuJoCo's URDF importer.
@@ -264,7 +264,10 @@ def test_mesh_rule():
     assert not others, f"formats outside the mesh rule: {others}"
 
     for folder in sorted({f.parent for f in files if f.parent.name == "visual"}):
-        assert sorted(p.name for p in folder.glob("*.png")) == ["palette.png"], rel(folder)
+        # Named after the robot: tools that gather textures into one folder (USD converters)
+        # would otherwise overwrite one robot's palette with another's.
+        palette = f"{folder.parents[1].name}_palette.png"
+        assert sorted(p.name for p in folder.glob("*.png")) == [palette], rel(folder)
         for obj in folder.glob("*.obj"):
             assert obj.name.endswith("_vis.obj"), rel(obj)
             text = obj.read_text()
@@ -274,7 +277,7 @@ def test_mesh_rule():
             faces = re.findall(r"^f (.+)$", text, re.M)
             assert faces and all(c.count("/") == 1 for f in faces for c in f.split()), f"{rel(obj)}: f v/vt only"
             mtl = (folder / (obj.stem + ".mtl")).read_text()
-            assert re.findall(r"^map_Kd (.+)$", mtl, re.M) == ["palette.png"], rel(obj)
+            assert re.findall(r"^map_Kd (.+)$", mtl, re.M) == [palette], rel(obj)
     for folder in sorted({f.parent for f in files if f.parent.name == "collision"}):
         for obj in folder.glob("*"):
             assert obj.name.endswith("_col.obj"), rel(obj)

@@ -36,7 +36,7 @@
     <mesh name="pinky_proximal" file="rh_pinky_proximal_vis.obj"/>
     <mesh name="pinky_middle" file="rh_pinky_middle_vis.obj"/>
     <mesh name="pinky_distal" file="rh_pinky_distal_vis.obj"/>
-    <texture name="palette" type="2d" file="palette.png"/>
+    <texture name="palette" type="2d" file="l20lite_palette.png"/>
     <material name="palette" texture="palette"/>
   </asset>
 

@@ -14,7 +14,7 @@
     <mesh name="sensor_camera_hull" file="meshes/collision/zed2i_camera_col.obj" />
     <mesh name="sensor_camera_base_link" file="meshes/visual/zed2i_camera_base_link_vis.obj" />
     <mesh name="sensor_camera" file="meshes/visual/zed2i_camera_vis.obj" />
-    <texture name="lw_v0_palette" type="2d" file="meshes/visual/palette.png" />
+    <texture name="lw_v0_palette" type="2d" file="meshes/visual/lw_v0_palette.png" />
     <material name="zed2i_camera_base_link" texture="lw_v0_palette" metallic="0" roughness="0.6" />
     <material name="zed2i_camera" texture="lw_v0_palette" metallic="0" roughness="0.4" />
   </asset>
@@ -30,7 +30,7 @@
         <geom class="sensor_base_bench_table_collision" mesh="sensor_camera_hull" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
         <body name="sensor_left_optical" pos="0.424482884898387 -0.150393718032133 -0.0524849102286918" euler="-0.543269873358381 -1.26599037580869 1.57079632679491">
           <site name="sensor_left_optical" pos="0 0 0" size="0.001" />
-          <camera name="sensor_left_optical" quat="0 1 0 0" resolution="1280 720" sensorsize="1280 720" focalpixel="448.1328245 514.1332824" principalpixel="0 0" />
+          <camera name="sensor_left_optical" quat="0 1 0 0" resolution="1280 720" sensorsize="1280 720" focalpixel="448.1328244542143 514.1332824271612" principalpixel="0 0" />
           <inertial pos="0 0 0" mass="1e-9" diaginertia="1e-06 1e-06 1e-06" />
         </body>
         <body name="sensor_right_optical" pos="0.424482884898386 -0.114380749356771 0.0619837129131432" euler="-0.543269873358381 -1.26599037580869 1.57079632679491">

@@ -1,4 +1,4 @@
 newmtl lh_ring_distal
 Kd 1 1 1
 Ks 0 0 0
-map_Kd palette.png
+map_Kd l20lite_palette.png

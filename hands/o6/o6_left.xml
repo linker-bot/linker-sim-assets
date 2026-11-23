@@ -39,7 +39,7 @@
     <mesh name="ring_distal_vis" file="meshes/visual/lh_ring_distal_vis.obj" />
     <mesh name="pinky_proximal_vis" file="meshes/visual/lh_pinky_proximal_vis.obj" />
     <mesh name="pinky_distal_vis" file="meshes/visual/lh_pinky_distal_vis.obj" />
-    <texture name="o6_palette" type="2d" file="meshes/visual/palette.png" />
+    <texture name="o6_palette" type="2d" file="meshes/visual/o6_palette.png" />
     <material name="lh_hand_base_link" texture="o6_palette" metallic="0.22" roughness="0.55" />
     <material name="lh_thumb_metacarpals_base2" texture="o6_palette" metallic="0.3" roughness="0.56" />
     <material name="lh_thumb_metacarpals" texture="o6_palette" metallic="0.22" roughness="0.55" />

@@ -98,7 +98,8 @@ Each hand folder has `<hand>_left.urdf`, `<hand>_left.xml`, the same for the rig
 - **O6**: the hand of LW-v0, standalone: the same drives, contact settings, collision hulls,
   couplings and solver options as in LW-v0.
 - **L6, L20 Lite, L25, L30**: carried over from v0.4.0 unchanged in content. They collide with
-  convex hulls of their visual meshes, and have one flat colour each.
+  convex hulls of their visual meshes. They are uncoloured (one neutral grey) until we have their
+  real colours, as we do for the O6.
 
 ### SDK channels
 
@@ -152,9 +153,11 @@ uv run --group test pytest
 
 CI runs it on MuJoCo 3.17.0 and 4.0.1, with the package `linker-lw-v0` built and installed.
 
-Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj` with an `.mtl` and one `palette.png`
-per robot (colours are texture coordinates into the palette, so URDF tools and MuJoCo show the same
-colours); collision meshes in `meshes/collision/<link>_col.obj`. No STL, glTF or other formats.
+Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj`, with an `.mtl` and one
+`<robot>_palette.png` per robot. Colours are texture coordinates into the palette, so URDF tools and
+MuJoCo show the same colours. The palette is named after its robot so that tools which gather
+textures into one folder (USD converters) keep the robots' palettes apart. Collision meshes are
+`meshes/collision/<link>_col.obj`. No STL, glTF or other formats.
 
 ## Licence
 
