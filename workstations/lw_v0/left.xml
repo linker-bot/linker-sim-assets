@@ -249,14 +249,14 @@
                               <body name="camera_depth_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
                                 <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
                                 <site name="camera_depth_optical" pos="0 0 0" size="0.001" />
-                                <camera name="camera_depth_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="640 627.8742308" principalpixel="0 0" />
+                                <camera name="camera_depth_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="640.0000000000001 627.8742308469962" principalpixel="0 0" />
                               </body>
                               <body name="camera_rgb_frame" pos="0 -0.02375 0" euler="0.0010157 0 0" gravcomp="1">
                                 <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
                                 <body name="camera_rgb_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
                                   <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
                                   <site name="camera_rgb_optical" pos="0 0 0" size="0.001" />
-                                  <camera name="camera_rgb_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="596.8096551 593.0243874" principalpixel="0 0" />
+                                  <camera name="camera_rgb_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="596.8096551281035 593.024387405096" principalpixel="0 0" />
                                 </body>
                               </body>
                               <body name="camera_right_ir_frame" pos="0 -0.095 0" euler="0 0 0" gravcomp="1">
