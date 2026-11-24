@@ -2,6 +2,12 @@
 
 The version is the git tag; the `linker-lw-v0` package carries the same version.
 
+## Unreleased
+
+- `hands/o6/motor.yaml` and `arms/ar5_08/controller.yaml`: the O6 motor's constants and the
+  AR5_08 controller's limits as data (until now written in linker-sim's and linker-lab's
+  code); README "Robot controllers" writes out both models. In `linker-lw-v0`.
+
 ## 0.5.0 (unreleased)
 
 The repository now holds robot files, not tools: LW-v0 and five LinkerHand models, each as URDF

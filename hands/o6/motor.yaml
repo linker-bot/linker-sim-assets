@@ -1,0 +1,25 @@
+# LinkerHand O6: the motor behind each driven joint, which URDF and MJCF cannot describe.
+#
+# Each of the six driven joints is moved by a motor through a non-backdrivable gear: the motor
+# shaft moves toward its target, at most at speed_limit and only as far as its torque budget
+# allows against the finger's load, and an external load can stop it but never push it back.
+# The finger follows the shaft through the transmission's compliance: the joint's position
+# drive in the MJCF (<position kp kv>, capped by the joint's actuatorfrcrange). README,
+# "Robot controllers", writes out the model; linker-sim and linker-lab implement it.
+#
+# "{S}" in a joint name is l for the left hand and r for the right hand.
+schema_version: 1
+model: non-backdrivable-shaft-v0
+
+shafts:            # the driven joints, the order of every list below
+  - "{S}h_thumb_cmc_pitch"
+  - "{S}h_thumb_cmc_yaw"
+  - "{S}h_index_mcp_pitch"
+  - "{S}h_middle_mcp_pitch"
+  - "{S}h_ring_mcp_pitch"
+  - "{S}h_pinky_mcp_pitch"
+motor_stiffness: 600.0                                   # N·m/rad: drive torque per radian of shaft error
+advancing_cap: [5.0, 3.0, 5.0, 5.0, 5.0, 5.0]            # N·m: the motor's torque budget for moving the shaft
+output_damping: [40.0, 20.0, 40.0, 40.0, 40.0, 40.0]     # N·m·s/rad: damping between shaft and joint
+viscosity: [20.0, 20.0, 4.2, 4.2, 4.2, 4.2]              # N·m·s/rad: viscous loss of motor and gear
+speed_limit: 1.0                                         # rad/s: maximum shaft speed

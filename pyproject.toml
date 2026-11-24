@@ -19,8 +19,8 @@ dependencies = []
 [project.urls]
 Repository = "https://github.com/linker-bot/linker-sim-assets"
 
-# The files lw_v0.xml and lw_v0.urdf load, at their repository paths under linker_lw_v0/, and
-# the O6 hand's SDK channel map. Find them with importlib.resources.files("linker_lw_v0").
+# The files lw_v0.xml and lw_v0.urdf load, at their repository paths under linker_lw_v0/, the
+# O6 hand's SDK channel map and motor constants, and the AR5_08's controller limits. Find them with importlib.resources.files("linker_lw_v0").
 [tool.hatch.build.targets.wheel]
 bypass-selection = true
 
@@ -28,9 +28,12 @@ bypass-selection = true
 "workstations/lw_v0" = "linker_lw_v0/workstations/lw_v0"
 "hands/o6/meshes" = "linker_lw_v0/hands/o6/meshes"
 "hands/o6/sdk_channels.yaml" = "linker_lw_v0/hands/o6/sdk_channels.yaml"
+"hands/o6/motor.yaml" = "linker_lw_v0/hands/o6/motor.yaml"
+"arms/ar5_08/controller.yaml" = "linker_lw_v0/arms/ar5_08/controller.yaml"
 
 [tool.hatch.build.targets.sdist]
-include = ["workstations/lw_v0", "hands/o6/meshes", "hands/o6/sdk_channels.yaml", "LICENSE", "NOTICE", "README.md"]
+include = ["workstations/lw_v0", "hands/o6/meshes", "hands/o6/sdk_channels.yaml", "hands/o6/motor.yaml",
+           "arms/ar5_08/controller.yaml", "LICENSE", "NOTICE", "README.md"]
 
 # The test environment: `uv run --group test pytest`. CI runs it on both MuJoCo versions the
 # products use (linker-lab 3.17.0, linker-sim 4.0.1).

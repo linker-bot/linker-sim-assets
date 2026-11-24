@@ -23,7 +23,7 @@
 | Python（linker-sim、linker-lab） | 从本仓库的某个标签安装 `linker-lw-v0`，例如在 `pyproject.toml` 中写 `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.5.0"`；然后 `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
 
 `linker-lw-v0` 包含 LW-v0 的文件（路径与本仓库相同）、它用到的 O6 网格，以及
-`hands/o6/sdk_channels.yaml`。包中没有代码。其他文件请克隆本仓库或下载 ZIP。
+`hands/o6/sdk_channels.yaml`、`motor.yaml` 以及 `arms/ar5_08/controller.yaml`。包中没有代码。其他文件请克隆本仓库或下载 ZIP。
 
 `lw_v0.xml` 用 MuJoCo 的 `<attach>` 放置四个部件。每个部件是一个关节链：机械臂部件包括机械臂、法兰、
 灵巧手、相机支架和腕部相机。不支持 `<attach>` 的仿真器可以分别加载各部件，并按 `lw_v0.xml` 中的位姿放置。
@@ -82,6 +82,38 @@ URDF 无法表达以下内容，因此它们只在 MJCF 中：
 - 碰撞形状：凸包，即抓取策略训练时使用的形状；不是视觉网格。
 - 颜色：由硬件团队对照产品照片匹配，不是制造商的色号。
 - 相机外壳：制造商自己的网格（见 NOTICE）。
+
+## 机器人控制器
+
+真实的机械臂和灵巧手在指令与关节之间都有控制器。它们的行为不在 URDF 或 MJCF 中，这两种文件只描述机构和
+位置驱动。常数在数据文件中；linker-sim 和 linker-lab 实现了这两个模型。**只加载 MJCF 的仿真器只有驱动、
+没有这些控制器：** 手指会以 60 N·m 驱动所允许的速度到达目标，比真实的手快得多、力量也大得多。
+
+### O6 灵巧手电机（`hands/o6/motor.yaml`，模型 `non-backdrivable-shaft-v0`）
+
+每个驱动关节由一根电机轴通过不可反驱的减速器带动。电机轴位置就是关节驱动的目标：MJCF 的 `<position>`
+驱动（刚度 `Kp`、阻尼 `kv`）把关节拉向它，耦合关节通过 `<equality>` 跟随。每条指令（周期 `dt`；我们的
+产品中为 1/60 s）对每根轴 `s`，目标 `t`（限制在关节范围内）、测得的关节位置 `q` 及其上一次的值 `q0`：
+
+```
+v      = (q - q0) / dt                                         关节速度
+tau    = clamp(motor_stiffness * (t - s), ±advancing_cap)       电机力矩
+load   = (tau - Kp * (s - (q + dt*v)) + output_damping * v)
+         / (Kp + (output_damping + viscosity) / dt)               该力矩对抗手指负载所能前进的步长
+free   = min(dt * speed_limit, dt * |tau| / (viscosity + passive))  空载电机的步长
+step   = sign(tau) * min(max(sign(tau) * load, 0), |t - s|, free)  永不后退，永不越过 t
+s      = s + step
+```
+
+`passive` 是电机轴感受到的被动阻尼：关节自身的阻尼，加上驱动 `kv` 中不属于电机 `output_damping` 的部分，
+再加上每个耦合关节的阻尼乘以其耦合比的平方（例如拇指屈曲：4 + 0.4 × 1.86² = 5.38384）。两条指令之间，
+驱动目标从旧的轴位置线性移动到新的轴位置，并加上速度前馈 `output_damping / Kp × step / dt`，使驱动不落后于电机轴。
+
+### AR5_08 机械臂控制器（`arms/ar5_08/controller.yaml`）
+
+xCore 控制器让关节沿时间最优、限制加加速度的轨迹运动，不超过各关节的 `max_velocity`、`max_acceleration`
+和 `max_jerk`；一次运动中所有关节同时到达。它让 (J6, J7) 保持在凸八边形 `wrist_region` 内，该八边形的
+包围盒就是 URDF/MJCF 中 J6/J7 的范围。驱动的力矩上限（J1–J4 120 N·m，J5–J7 100 N·m）在 MJCF 中。
 
 ## 灵巧手
 
