@@ -69,13 +69,13 @@
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/visual/lh_hand_base_link_vis.obj"/></geometry></visual>
     <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/collision/lh_hand_base_link_col.obj"/></geometry></collision>
   </link>
-  <joint name="left/hand_lh_hand_base_link_fixed" type="fixed"><parent link="left/flange_hand_mount"/><child link="left/hand_lh_hand_base_link"/><origin xyz="0 0 -0.002" rpy="0 0 3.14159265"/></joint>
+  <joint name="left/hand_lh_hand_base_link_fixed" type="fixed"><parent link="left/flange_hand_mount"/><child link="left/hand_lh_hand_base_link"/><origin xyz="0 0 -0.002" rpy="0 0 3.141592654"/></joint>
   <link name="left/hand_lh_thumb_metacarpals_base2">
     <inertial><origin xyz="0.001627957384 -0.002766719783 -0.001842277256" rpy="-0.2395267799 -0.009018239688 0.5273090546"/><mass value="0.00258"/><inertia ixx="1.022808323e-07" ixy="0" ixz="0" iyy="8.756125803e-08" iyz="0" izz="5.16945819e-08"/></inertial>
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/visual/lh_thumb_metacarpals_base2_vis.obj"/></geometry></visual>
     <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/collision/lh_thumb_metacarpals_base2_col.obj"/></geometry></collision>
   </link>
-  <joint name="left/hand_lh_thumb_cmc_yaw" type="revolute"><parent link="left/hand_lh_hand_base_link"/><child link="left/hand_lh_thumb_metacarpals_base2"/><origin xyz="0.010457 -0.022975 0.030794" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="0" upper="1.36" effort="10" velocity="1"/><dynamics damping="0" friction="0"/></joint>
+  <joint name="left/hand_lh_thumb_cmc_yaw" type="revolute"><parent link="left/hand_lh_hand_base_link"/><child link="left/hand_lh_thumb_metacarpals_base2"/><origin xyz="0.010457 -0.022975 0.030794" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="0" upper="1.36" effort="10" velocity="1"/><dynamics damping="4" friction="0"/></joint>
   <link name="left/hand_lh_thumb_metacarpals">
     <inertial><origin xyz="-1.846221332e-05 0.000164684334 0.02269650452" rpy="0.4339398076 0.0006535536809 -0.001055480726"/><mass value="0.04724"/><inertia ixx="7.235835543e-06" ixy="0" ixz="0" iyy="4.761582697e-06" iyz="0" izz="3.502726612e-06"/></inertial>
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/visual/lh_thumb_metacarpals_vis.obj"/></geometry></visual>
@@ -239,13 +239,13 @@
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/visual/rh_hand_base_link_vis.obj"/></geometry></visual>
     <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/collision/rh_hand_base_link_col.obj"/></geometry></collision>
   </link>
-  <joint name="right/hand_rh_hand_base_link_fixed" type="fixed"><parent link="right/flange_hand_mount"/><child link="right/hand_rh_hand_base_link"/><origin xyz="0 0 -0.002" rpy="0 0 -3.14159265"/></joint>
+  <joint name="right/hand_rh_hand_base_link_fixed" type="fixed"><parent link="right/flange_hand_mount"/><child link="right/hand_rh_hand_base_link"/><origin xyz="0 0 -0.002" rpy="0 0 3.141592654"/></joint>
   <link name="right/hand_rh_thumb_metacarpals_base2">
     <inertial><origin xyz="0.001627957384 0.002766719783 -0.001842277256" rpy="0.2395267799 -0.009018239688 -0.5273090546"/><mass value="0.00258"/><inertia ixx="1.022808323e-07" ixy="0" ixz="0" iyy="8.756125803e-08" iyz="0" izz="5.16945819e-08"/></inertial>
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/visual/rh_thumb_metacarpals_base2_vis.obj"/></geometry></visual>
     <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/collision/rh_thumb_metacarpals_base2_col.obj"/></geometry></collision>
   </link>
-  <joint name="right/hand_rh_thumb_cmc_yaw" type="revolute"><parent link="right/hand_rh_hand_base_link"/><child link="right/hand_rh_thumb_metacarpals_base2"/><origin xyz="0.010457 0.022975 0.030794" rpy="0 0 0"/><axis xyz="0 0 -1"/><limit lower="0" upper="1.36" effort="10" velocity="1"/><dynamics damping="0" friction="0"/></joint>
+  <joint name="right/hand_rh_thumb_cmc_yaw" type="revolute"><parent link="right/hand_rh_hand_base_link"/><child link="right/hand_rh_thumb_metacarpals_base2"/><origin xyz="0.010457 0.022975 0.030794" rpy="0 0 0"/><axis xyz="0 0 -1"/><limit lower="0" upper="1.36" effort="10" velocity="1"/><dynamics damping="4" friction="0"/></joint>
   <link name="right/hand_rh_thumb_metacarpals">
     <inertial><origin xyz="-1.846221332e-05 -0.000164684334 0.02269650452" rpy="-0.4339398076 0.0006535536809 0.001055480726"/><mass value="0.04724"/><inertia ixx="7.235835543e-06" ixy="0" ixz="0" iyy="4.761582697e-06" iyz="0" izz="3.502726612e-06"/></inertial>
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../hands/o6/meshes/visual/rh_thumb_metacarpals_vis.obj"/></geometry></visual>

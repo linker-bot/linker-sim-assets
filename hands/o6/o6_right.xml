@@ -59,7 +59,7 @@
       <geom class="hand_linkerhand_o6_collision" mesh="hand_base_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
       <site name="wrist_mount" pos="0 0 0" />
       <body name="rh_thumb_metacarpals_base2" pos="0.010457 0.022975 0.030794" quat="1 0 0 0" gravcomp="1">
-        <joint name="rh_thumb_cmc_yaw" class="hand_linkerhand_o6_joint" type="hinge" axis="0 0 -1" range="0 1.36" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0" actuatorfrclimited="true" actuatorfrcrange="-10 10" />
+        <joint name="rh_thumb_cmc_yaw" class="hand_linkerhand_o6_joint" type="hinge" axis="0 0 -1" range="0 1.36" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-10 10" />
         <geom class="hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="thumb_metacarpals_base2_vis" material="rh_thumb_metacarpals_base2" />
         <geom class="hand_linkerhand_o6_collision" mesh="thumb_metacarpals_base2_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
         <body name="rh_thumb_metacarpals" pos="0.0061649 0.010678 -0.004891" quat="0.80983484251221 -0.526478796956433 0.141069913928281 -0.216995123430915" gravcomp="1">
@@ -128,7 +128,7 @@
     </body>
   </worldbody>
   <actuator>
-    <position name="rh_thumb_cmc_yaw_drive" joint="rh_thumb_cmc_yaw" kp="600" kv="24" />
+    <position name="rh_thumb_cmc_yaw_drive" joint="rh_thumb_cmc_yaw" kp="600" kv="20" />
     <position name="rh_thumb_cmc_pitch_drive" joint="rh_thumb_cmc_pitch" kp="2500" kv="40" />
     <position name="rh_index_mcp_pitch_drive" joint="rh_index_mcp_pitch" kp="1250" kv="40" />
     <position name="rh_middle_mcp_pitch_drive" joint="rh_middle_mcp_pitch" kp="1250" kv="40" />
