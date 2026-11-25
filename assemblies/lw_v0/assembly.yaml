@@ -1,0 +1,33 @@
+# LW-v0 (Linker Workstation v0): the parts each unit is made of, and where each part sits.
+#
+# MJCF can't say this: an <attach> can't place a model inside a body of another attached model.
+# So tools/assemble.py writes the units (left.xml, right.xml, top_camera.xml) and lw_v0.urdf
+# from this file and the component files it names. lw_v0.xml (edited by hand) places the units
+# in the station and holds the solver options and the home keyframe.
+#
+# Per unit, `parts` in order: the first part is the unit's root; every other part goes on the
+# `mount` frame of a part before it (named with that part's prefix). Every name in a part gets the
+# part's prefix. `parts_collide: false` excludes contacts between bodies of different parts; each
+# part's own file keeps its own rule.
+units:
+  left:
+    parts_collide: false   # the arm, flange, hand, bracket and camera never touch each other
+    parts:
+      arm:     {file: ../../arms/ar5_08/ar5_08_left.xml,                          prefix: arm_}
+      flange:  {file: ../../flanges/ar5_08_o6/ar5_08_o6.xml,                      prefix: flange_, mount: arm_mount_flange}
+      hand:    {file: ../../hands/o6/o6_left.xml,                                 prefix: hand_, mount: flange_mount_hand}
+      bracket: {file: ../../brackets/gemini335l_wrist/gemini335l_wrist_left.xml,  prefix: bracket_, mount: flange_mount_bracket}
+      camera:  {file: ../../cameras/gemini335l/gemini335l.xml,                    prefix: camera_, mount: bracket_mount_camera}
+  right:
+    parts_collide: false
+    parts:
+      arm:     {file: ../../arms/ar5_08/ar5_08_right.xml,                         prefix: arm_}
+      flange:  {file: ../../flanges/ar5_08_o6/ar5_08_o6.xml,                      prefix: flange_, mount: arm_mount_flange}
+      hand:    {file: ../../hands/o6/o6_right.xml,                                prefix: hand_, mount: flange_mount_hand}
+      bracket: {file: ../../brackets/gemini335l_wrist/gemini335l_wrist_right.xml, prefix: bracket_, mount: flange_mount_bracket}
+      camera:  {file: ../../cameras/gemini335l/gemini335l.xml,                    prefix: camera_, mount: bracket_mount_camera}
+  top_camera:
+    parts_collide: true    # both parts are fixed to the column; MuJoCo never collides two fixed bodies
+    parts:
+      bracket: {file: ../../brackets/zed2i_column/zed2i_column.xml, prefix: sensor_}
+      camera:  {file: ../../cameras/zed2i/zed2i.xml,                prefix: sensor_, mount: sensor_mount_camera}

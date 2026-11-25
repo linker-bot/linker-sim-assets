@@ -1,53 +1,54 @@
 <?xml version="1.0"?>
+<!-- Written by tools/assemble.py from lw_v0.xml: the same robot. Edit the MJCF, not this file. -->
 <robot name="lw_v0">
   <link name="world">
   </link>
   <link name="left/arm_AR5_5_08L_W4C4A6_base">
     <inertial><origin xyz="-3.32756117e-05 -5.336332348e-05 0.05327725576" rpy="-0.005736384127 0.006757944656 0.2720821904"/><mass value="1.985108467"/><inertia ixx="0.002841170574" ixy="0" ixz="0" iyy="0.002806933388" iyz="0" izz="0.00230931321"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_base_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_base_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_base_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_base_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_base_fixed" type="fixed"><parent link="world"/><child link="left/arm_AR5_5_08L_W4C4A6_base"/><origin xyz="0 0.09 0" rpy="-1.5707 0 0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link1">
     <inertial><origin xyz="-0.000184 0.001568 0.172804" rpy="1.59694021 0.003350007487 0.000518298902"/><mass value="2.166"/><inertia ixx="0.003322491774" ixy="0" ixz="0" iyy="0.003177296948" iyz="0" izz="0.002608651278"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link1_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link1_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link1_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link1_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_1" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_base"/><child link="left/arm_AR5_5_08L_W4C4A6_link1"/><origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="-3.1067" upper="3.1067" effort="120" velocity="0.39"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link2">
     <inertial><origin xyz="-1.7e-05 0.001795 0.106689" rpy="-0.1304039716 0.0007589674355 0.002718522206"/><mass value="1.903"/><inertia ixx="0.007798038457" ixy="0" ixz="0" iyy="0.006812817024" iyz="0" izz="0.002990434519"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link2_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link2_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link2_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link2_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_2" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_link1"/><child link="left/arm_AR5_5_08L_W4C4A6_link2"/><origin xyz="0 0 0.1745" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="-2.0944" upper="2.0944" effort="120" velocity="0.32"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link3">
     <inertial><origin xyz="0.008227 -0.001273 -0.020611" rpy="-0.008731149823 -0.09410258475 0.01303323884"/><mass value="1.845"/><inertia ixx="0.006445782939" ixy="0" ixz="0" iyy="0.005916040145" iyz="0" izz="0.002732806916"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link3_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link3_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link3_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link3_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_3" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_link2"/><child link="left/arm_AR5_5_08L_W4C4A6_link3"/><origin xyz="0 0 0.332" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="-3.1067" upper="3.1067" effort="120" velocity="0.39"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link4">
     <inertial><origin xyz="-0.009242 -0.002172 0.084042" rpy="0.1906458757 0.09035069607 -0.08562161677"/><mass value="1.037"/><inertia ixx="0.002959561649" ixy="0" ixz="0" iyy="0.002484529386" iyz="0" izz="0.001356378965"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link4_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link4_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link4_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link4_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_4" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_link3"/><child link="left/arm_AR5_5_08L_W4C4A6_link4"/><origin xyz="0.0105 0 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="-1.0472" upper="2.5307" effort="120" velocity="0.39"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link5">
     <inertial><origin xyz="-0.000756 0.000723 -0.086764" rpy="0.1438696993 0.06207325125 -0.1007027591"/><mass value="1.279"/><inertia ixx="0.002420170387" ixy="0" ixz="0" iyy="0.002007901111" iyz="0" izz="0.001574808502"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link5_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link5_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link5_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link5_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_5" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_link4"/><child link="left/arm_AR5_5_08L_W4C4A6_link5"/><origin xyz="-0.0105 0 0.278" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="-3.1067" upper="3.1067" effort="100" velocity="0.49"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link6">
     <inertial><origin xyz="-0.005104 0.000251 5.6e-05" rpy="-1.737439879 -1.527581495 -1.397740692"/><mass value="0.906"/><inertia ixx="0.0007589977638" ixy="0" ixz="0" iyy="0.0007477954662" iyz="0" izz="0.0006142767699"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link6_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link6_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link6_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link6_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_6" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_link5"/><child link="left/arm_AR5_5_08L_W4C4A6_link6"/><origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="-1.047197551" upper="1.047197551" effort="100" velocity="0.49"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_link7">
     <inertial><origin xyz="-0.001562 -0.000366 0.05392" rpy="-0.6516374954 0.002039260762 1.559238994"/><mass value="0.33"/><inertia ixx="0.000686553028" ixy="0" ixz="0" iyy="0.0004900305916" iyz="0" izz="0.0004099863803"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08L_W4C4A6_link7_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08L_W4C4A6_link7_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08L_W4C4A6_link7_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08L_W4C4A6_link7_col.obj"/></geometry></collision>
   </link>
   <joint name="left/arm_AR5_5_08L_W4C4A6_joint_7" type="revolute"><parent link="left/arm_AR5_5_08L_W4C4A6_link6"/><child link="left/arm_AR5_5_08L_W4C4A6_link7"/><origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="1 0 0"/><limit lower="-1.570796327" upper="1.570796327" effort="100" velocity="0.49"/><dynamics damping="0" friction="0"/></joint>
   <link name="left/arm_AR5_5_08L_W4C4A6_tcp">
@@ -56,8 +57,8 @@
   <joint name="left/arm_AR5_5_08L_W4C4A6_tcp_fixed" type="fixed"><parent link="left/arm_AR5_5_08L_W4C4A6_link7"/><child link="left/arm_AR5_5_08L_W4C4A6_tcp"/><origin xyz="0 0 0.09" rpy="0 0 0"/></joint>
   <link name="left/flange_flange_link">
     <inertial><origin xyz="-2.094819953e-07 0.0005163045622 0.008988416295" rpy="-1.568063355 -1.558604283 -1.571413769"/><mass value="0.044499999"/><inertia ixx="1.829285394e-05" ixy="0" ixz="0" iyy="1.212456566e-05" iyz="0" izz="1.202231123e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/flange_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/flange_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../flanges/ar5_08_o6/meshes/visual/flange_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../flanges/ar5_08_o6/meshes/collision/flange_link_col.obj"/></geometry></collision>
   </link>
   <joint name="left/flange_flange_link_fixed" type="fixed"><parent link="left/arm_AR5_5_08L_W4C4A6_tcp"/><child link="left/flange_flange_link"/><origin xyz="0 0 0" rpy="0 0 -1.57079633"/></joint>
   <link name="left/flange_hand_mount">
@@ -138,8 +139,8 @@
   <joint name="left/hand_lh_pinky_dip" type="revolute"><parent link="left/hand_lh_pinky_proximal"/><child link="left/hand_lh_pinky_distal"/><origin xyz="-0.0052516 0 0.036625" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.43" effort="0" velocity="0.89"/><dynamics damping="0.4" friction="0"/><mimic joint="left/hand_lh_pinky_mcp_pitch" multiplier="0.89" offset="0"/></joint>
   <link name="left/bracket_bracket_link">
     <inertial><origin xyz="-0.01704876602 0.01866011579 0.01138020965" rpy="-1.184728989 -1.522280791 3.021542869"/><mass value="0.028999999"/><inertia ixx="4.099697872e-05" ixy="0" ixz="0" iyy="2.966360178e-05" iyz="0" izz="1.263849606e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/left_bracket_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/left_bracket_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../brackets/gemini335l_wrist/meshes/visual/left_bracket_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../brackets/gemini335l_wrist/meshes/collision/left_bracket_link_col.obj"/></geometry></collision>
   </link>
   <joint name="left/bracket_bracket_link_fixed" type="fixed"><parent link="left/flange_flange_link"/><child link="left/bracket_bracket_link"/><origin xyz="0 0 0" rpy="0 0 0"/></joint>
   <link name="left/bracket_camera_mount">
@@ -148,8 +149,8 @@
   <joint name="left/bracket_camera_mount_fixed" type="fixed"><parent link="left/bracket_bracket_link"/><child link="left/bracket_camera_mount"/><origin xyz="-0.04543449102 -0.02750000073 0.03740745264" rpy="0 -1.221730476 -3.141592654"/></joint>
   <link name="left/camera_camera_link">
     <inertial><origin xyz="-0.008331062971 -0.04749999894 -4.470348358e-06" rpy="0 -1.570796327 1.570796327"/><mass value="0.132999995"/><inertia ixx="0.0001799143384" ixy="0" ixz="0" iyy="0.0001798196909" iyz="0" izz="1.87769051e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/gemini335l_camera_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/gemini335l_camera_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../cameras/gemini335l/meshes/visual/gemini335l_camera_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../cameras/gemini335l/meshes/collision/gemini335l_camera_link_col.obj"/></geometry></collision>
   </link>
   <joint name="left/camera_camera_link_fixed" type="fixed"><parent link="left/bracket_camera_mount"/><child link="left/camera_camera_link"/><origin xyz="0 0 0" rpy="0 0 0"/></joint>
   <link name="left/camera_depth_optical">
@@ -174,50 +175,50 @@
   <joint name="left/camera_right_ir_optical_fixed" type="fixed"><parent link="left/camera_right_ir_frame"/><child link="left/camera_right_ir_optical"/><origin xyz="0 0 0" rpy="-1.570796327 0 -1.570796327"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_base">
     <inertial><origin xyz="-3.32756117e-05 -5.336332348e-05 0.05327725576" rpy="-0.005736384127 0.006757944656 0.2720821904"/><mass value="1.985108467"/><inertia ixx="0.002841170574" ixy="0" ixz="0" iyy="0.002806933388" iyz="0" izz="0.00230931321"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_base_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_base_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_base_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_base_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_base_fixed" type="fixed"><parent link="world"/><child link="right/arm_AR5_5_08R_W4C4A6_base"/><origin xyz="0 -0.09 0" rpy="1.5707 0 0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link1">
     <inertial><origin xyz="0.000186 -0.001543 0.172784" rpy="1.544112367 -0.003346854636 0.000481908357"/><mass value="2.166"/><inertia ixx="0.003293741746" ixy="0" ixz="0" iyy="0.003148567652" iyz="0" izz="0.002587670602"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link1_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link1_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link1_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link1_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_1" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_base"/><child link="right/arm_AR5_5_08R_W4C4A6_link1"/><origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="-3.1067" upper="3.1067" effort="120" velocity="0.39"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link2">
     <inertial><origin xyz="1.7e-05 -0.001795 0.106691" rpy="0.1304021144 -0.0007589523819 0.002718522369"/><mass value="1.903"/><inertia ixx="0.007798278457" ixy="0" ixz="0" iyy="0.006813057405" iyz="0" izz="0.002990544138"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link2_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link2_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link2_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link2_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_2" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_link1"/><child link="right/arm_AR5_5_08R_W4C4A6_link2"/><origin xyz="0 0 0.1745" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="-2.0944" upper="2.0944" effort="120" velocity="0.32"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link3">
     <inertial><origin xyz="0.009022 0.0009 -0.019936" rpy="0.01156499331 -0.08137184008 0.0350608603"/><mass value="1.845"/><inertia ixx="0.006380916591" ixy="0" ixz="0" iyy="0.005816054267" iyz="0" izz="0.002666189142"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link3_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link3_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link3_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link3_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_3" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_link2"/><child link="right/arm_AR5_5_08R_W4C4A6_link3"/><origin xyz="0 0 0.332" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="-3.1067" upper="3.1067" effort="120" velocity="0.39"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link4">
     <inertial><origin xyz="-0.009272 0.002169 0.084042" rpy="-0.1907277085 0.08817328405 0.08601852898"/><mass value="1.037"/><inertia ixx="0.002958753971" ixy="0" ixz="0" iyy="0.002484537055" iyz="0" izz="0.001356698974"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link4_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link4_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link4_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link4_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_4" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_link3"/><child link="right/arm_AR5_5_08R_W4C4A6_link4"/><origin xyz="0.0105 0 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="-1.0472" upper="2.5307" effort="120" velocity="0.39"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link5">
     <inertial><origin xyz="-0.000776 -0.000804 -0.086734" rpy="-0.139879665 0.0597717312 0.1088778322"/><mass value="1.279"/><inertia ixx="0.002416642662" ixy="0" ixz="0" iyy="0.002005444649" iyz="0" izz="0.001571232689"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link5_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link5_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link5_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link5_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_5" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_link4"/><child link="right/arm_AR5_5_08R_W4C4A6_link5"/><origin xyz="-0.0105 0 0.278" rpy="0 0 0"/><axis xyz="0 0 1"/><limit lower="-3.1067" upper="3.1067" effort="100" velocity="0.49"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link6">
     <inertial><origin xyz="-0.005059 -0.00025 -5.5e-05" rpy="-1.41665183 -1.527567163 -1.731612257"/><mass value="0.906"/><inertia ixx="0.0007605867866" ixy="0" ixz="0" iyy="0.000749415918" iyz="0" izz="0.0006148572954"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link6_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link6_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link6_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link6_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_6" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_link5"/><child link="right/arm_AR5_5_08R_W4C4A6_link6"/><origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="-1.047197551" upper="1.047197551" effort="100" velocity="0.49"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_link7">
     <inertial><origin xyz="-0.00122 0.000673 0.053984" rpy="-0.6614017652 -0.01566890767 1.579713694"/><mass value="0.33"/><inertia ixx="0.0006870701651" ixy="0" ixz="0" iyy="0.000491834938" iyz="0" izz="0.000407904897"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/AR5_5_08R_W4C4A6_link7_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/AR5_5_08R_W4C4A6_link7_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/visual/AR5_5_08R_W4C4A6_link7_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../arms/ar5_08/meshes/collision/AR5_5_08R_W4C4A6_link7_col.obj"/></geometry></collision>
   </link>
   <joint name="right/arm_AR5_5_08R_W4C4A6_joint_7" type="revolute"><parent link="right/arm_AR5_5_08R_W4C4A6_link6"/><child link="right/arm_AR5_5_08R_W4C4A6_link7"/><origin xyz="0 0 0" rpy="0 0 0"/><axis xyz="1 0 0"/><limit lower="-1.570796327" upper="1.570796327" effort="100" velocity="0.49"/><dynamics damping="0" friction="0"/></joint>
   <link name="right/arm_AR5_5_08R_W4C4A6_tcp">
@@ -226,8 +227,8 @@
   <joint name="right/arm_AR5_5_08R_W4C4A6_tcp_fixed" type="fixed"><parent link="right/arm_AR5_5_08R_W4C4A6_link7"/><child link="right/arm_AR5_5_08R_W4C4A6_tcp"/><origin xyz="0 0 0.09" rpy="0 0 0"/></joint>
   <link name="right/flange_flange_link">
     <inertial><origin xyz="-2.094819953e-07 0.0005163045622 0.008988416295" rpy="-1.568063355 -1.558604283 -1.571413769"/><mass value="0.044499999"/><inertia ixx="1.829285394e-05" ixy="0" ixz="0" iyy="1.212456566e-05" iyz="0" izz="1.202231123e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/flange_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/flange_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../flanges/ar5_08_o6/meshes/visual/flange_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../flanges/ar5_08_o6/meshes/collision/flange_link_col.obj"/></geometry></collision>
   </link>
   <joint name="right/flange_flange_link_fixed" type="fixed"><parent link="right/arm_AR5_5_08R_W4C4A6_tcp"/><child link="right/flange_flange_link"/><origin xyz="0 0 0" rpy="0 0 1.57079633"/></joint>
   <link name="right/flange_hand_mount">
@@ -308,8 +309,8 @@
   <joint name="right/hand_rh_pinky_dip" type="revolute"><parent link="right/hand_rh_pinky_proximal"/><child link="right/hand_rh_pinky_distal"/><origin xyz="-0.0052516 0 0.036625" rpy="0 0 0"/><axis xyz="0 1 0"/><limit lower="0" upper="1.43" effort="0" velocity="0.89"/><dynamics damping="0.4" friction="0"/><mimic joint="right/hand_rh_pinky_mcp_pitch" multiplier="0.89" offset="0"/></joint>
   <link name="right/bracket_bracket_link">
     <inertial><origin xyz="-0.01704678173 -0.0186586594 0.01138041122" rpy="-1.956841585 -1.522289307 -3.021518131"/><mass value="0.028999999"/><inertia ixx="4.100022908e-05" ixy="0" ixz="0" iyy="2.966599809e-05" iyz="0" izz="1.263939978e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/right_bracket_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/right_bracket_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../brackets/gemini335l_wrist/meshes/visual/right_bracket_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../brackets/gemini335l_wrist/meshes/collision/right_bracket_link_col.obj"/></geometry></collision>
   </link>
   <joint name="right/bracket_bracket_link_fixed" type="fixed"><parent link="right/flange_flange_link"/><child link="right/bracket_bracket_link"/><origin xyz="0 0 0" rpy="0 0 0"/></joint>
   <link name="right/bracket_camera_mount">
@@ -318,8 +319,8 @@
   <joint name="right/bracket_camera_mount_fixed" type="fixed"><parent link="right/bracket_bracket_link"/><child link="right/bracket_camera_mount"/><origin xyz="-0.04543449102 -0.06750000076 0.03740745264" rpy="0 -1.221730476 -3.141592654"/></joint>
   <link name="right/camera_camera_link">
     <inertial><origin xyz="-0.008331062971 -0.04749999894 -4.470348358e-06" rpy="0 -1.570796327 1.570796327"/><mass value="0.132999995"/><inertia ixx="0.0001799143384" ixy="0" ixz="0" iyy="0.0001798196909" iyz="0" izz="1.87769051e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/gemini335l_camera_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/gemini335l_camera_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../cameras/gemini335l/meshes/visual/gemini335l_camera_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../cameras/gemini335l/meshes/collision/gemini335l_camera_link_col.obj"/></geometry></collision>
   </link>
   <joint name="right/camera_camera_link_fixed" type="fixed"><parent link="right/bracket_camera_mount"/><child link="right/camera_camera_link"/><origin xyz="0 0 0" rpy="0 0 0"/></joint>
   <link name="right/camera_depth_optical">
@@ -344,27 +345,27 @@
   <joint name="right/camera_right_ir_optical_fixed" type="fixed"><parent link="right/camera_right_ir_frame"/><child link="right/camera_right_ir_optical"/><origin xyz="0 0 0" rpy="-1.570796327 0 -1.570796327"/></joint>
   <link name="top_camera/sensor_camera_base_link">
     <inertial><origin xyz="0.05387736953 -0.03384369038 0.04044317171" rpy="-0.3497846198 -1.242921944 1.554166579"/><mass value="0.120253079"/><inertia ixx="0.0003603896647" ixy="0" ixz="0" iyy="0.0002533941314" iyz="0" izz="0.0001553143898"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/zed2i_camera_base_link_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/zed2i_camera_base_link_col.obj"/></geometry></collision>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../brackets/zed2i_column/meshes/visual/zed2i_camera_base_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../brackets/zed2i_column/meshes/collision/zed2i_camera_base_link_col.obj"/></geometry></collision>
   </link>
   <joint name="top_camera/sensor_camera_base_link_fixed" type="fixed"><parent link="world"/><child link="top_camera/sensor_camera_base_link"/><origin xyz="-0.0302850177 0.0447000213 0.0301550226" rpy="-1.570796327 0 -1.570796327"/></joint>
   <link name="top_camera/sensor_camera">
-    <inertial><origin xyz="0.4355839067 -0.1145179098 -0.0008737979703" rpy="-0.2643208192 -0.1535761077 -0.5144403046"/><mass value="0.1702301562"/><inertia ixx="0.0003906033227" ixy="0" ixz="0" iyy="0.0003829209898" iyz="0" izz="3.256628803e-05"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/zed2i_camera_vis.obj"/></geometry></visual>
-    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/zed2i_camera_col.obj"/></geometry></collision>
+    <inertial><origin xyz="0.005883031237 -1.88114726e-05 8.277464171e-06" rpy="-1.569770888 -1.562370321 3.140567062"/><mass value="0.1702301562"/><inertia ixx="0.0003906033227" ixy="0" ixz="0" iyy="0.0003829209898" iyz="0" izz="3.256628803e-05"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../cameras/zed2i/meshes/visual/zed2i_camera_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../cameras/zed2i/meshes/collision/zed2i_camera_col.obj"/></geometry></collision>
   </link>
-  <joint name="top_camera/sensor_camera_fixed" type="fixed"><parent link="top_camera/sensor_camera_base_link"/><child link="top_camera/sensor_camera"/><origin xyz="0.0802 0.1931398537 -0.2758514761" rpy="-1.265990376 -0.643554018 -1.570796327"/></joint>
+  <joint name="top_camera/sensor_camera_fixed" type="fixed"><parent link="top_camera/sensor_camera_base_link"/><child link="top_camera/sensor_camera"/><origin xyz="0.04497998518 -0.09537429765 0.07048422584" rpy="-3.6656762e-06 -0.3839209422 1.570808561"/></joint>
   <link name="top_camera/sensor_left_optical">
     <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="1e-09"/><inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/></inertial>
   </link>
-  <joint name="top_camera/sensor_left_optical_fixed" type="fixed"><parent link="top_camera/sensor_camera"/><child link="top_camera/sensor_left_optical"/><origin xyz="0.4244828849 -0.150393718 -0.05248491023" rpy="-0.5432698734 -1.265990376 1.570796327"/></joint>
+  <joint name="top_camera/sensor_left_optical_fixed" type="fixed"><parent link="top_camera/sensor_camera"/><child link="top_camera/sensor_left_optical"/><origin xyz="0.02765829698 0.05997967017 0.0001905187281" rpy="-1.570744834 -9.166928726e-07 -1.57080767"/></joint>
   <link name="top_camera/sensor_right_optical">
     <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="1e-09"/><inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/></inertial>
   </link>
-  <joint name="top_camera/sensor_right_optical_fixed" type="fixed"><parent link="top_camera/sensor_camera"/><child link="top_camera/sensor_right_optical"/><origin xyz="0.4244828849 -0.1143807494 0.06198371291" rpy="-0.5432698734 -1.265990376 1.570796327"/></joint>
+  <joint name="top_camera/sensor_right_optical_fixed" type="fixed"><parent link="top_camera/sensor_camera"/><child link="top_camera/sensor_right_optical"/><origin xyz="0.02765693576 -0.06002032814 0.0001906287312" rpy="-1.570744834 -9.166928726e-07 -1.57080767"/></joint>
   <link name="support/support">
     <inertial><origin xyz="0.3 0 -0.75" rpy="0 0 0"/><mass value="100"/><inertia ixx="2" ixy="0" ixz="0" iyy="2" iyz="0" izz="2"/></inertial>
-    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/workstation_table_vis.obj"/></geometry></visual>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="../../supports/lw_v0/meshes/visual/workstation_table_vis.obj"/></geometry></visual>
     <collision><origin xyz="0.3422 -0.0003 -0.8848" rpy="0 0 0"/><geometry><box size="0.625 1.25 0.77"/></geometry></collision>
     <collision><origin xyz="-0.0003 -0.0003 -0.59" rpy="0 0 0"/><geometry><box size="0.06 0.12 1.1"/></geometry></collision>
     <collision><origin xyz="-0.0003 -0.0003 0.0002" rpy="1.5708 0 0"/><geometry><box size="0.06 0.12 0.178"/></geometry></collision>

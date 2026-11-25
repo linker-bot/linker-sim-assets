@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Written by tools/assemble.py from gemini335l_wrist_left.xml: the same robot. Edit the MJCF, not this file. -->
+<robot name="gemini335l_wrist_left">
+  <link name="bracket_link">
+    <inertial><origin xyz="-0.01704876602 0.01866011579 0.01138020965" rpy="-1.184728989 -1.522280791 3.021542869"/><mass value="0.028999999"/><inertia ixx="4.099697872e-05" ixy="0" ixz="0" iyy="2.966360178e-05" iyz="0" izz="1.263849606e-05"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/left_bracket_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/left_bracket_link_col.obj"/></geometry></collision>
+  </link>
+  <link name="camera_mount">
+    <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="1e-09"/><inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/></inertial>
+  </link>
+  <joint name="camera_mount_fixed" type="fixed"><parent link="bracket_link"/><child link="camera_mount"/><origin xyz="-0.04543449102 -0.02750000073 0.03740745264" rpy="0 -1.221730476 -3.141592654"/></joint>
+</robot>

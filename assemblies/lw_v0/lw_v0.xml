@@ -1,4 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
+<!-- LW-v0, edited by hand: places its units (written by tools/assemble.py from assembly.yaml) and the
+     support, and holds the solver options and the home keyframe. -->
 <mujoco model="lw_v0">
   <compiler angle="radian" />
   <option timestep="0.0020833333333333333" integrator="implicitfast" solver="Newton" iterations="30" ls_iterations="50" cone="elliptic" impratio="10" />

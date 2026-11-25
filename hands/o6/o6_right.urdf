@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- Written by tools/assemble.py from o6_right.xml: the same robot. Edit the MJCF, not this file. -->
 <robot name="o6_right">
   <link name="rh_hand_base_link">
     <inertial><origin xyz="-0.001577885681 0.0003487672594 0.05384522198" rpy="0.07278313919 0.01371007853 -0.01679286943"/><mass value="0.2374"/><inertia ixx="5.638633685e-05" ixy="0" ixz="0" iyy="3.60382079e-05" iyz="0" izz="2.458245525e-05"/></inertial>
