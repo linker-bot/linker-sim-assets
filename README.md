@@ -98,9 +98,9 @@ constants are data files; linker-sim and linker-lab implement both models. **A s
 loads only the MJCF has the drives without these controllers:** the fingers reach their
 targets as fast as their 60 N·m drives allow, much faster and harder than the real hand.
 
-### O6 hand motor (`hands/o6/motor.yaml`, model `non-backdrivable-shaft-v1`)
+### O6 hand motor (`hands/o6/motor.yaml`, model `geared-shaft-v1`)
 
-Each driven joint is moved by a motor shaft through a non-backdrivable gear. The shaft is
+Each driven joint is moved by a motor shaft through a self-locking gear. The shaft is
 the joint drive's target: the MJCF `<position>` drive (stiffness `Kp`, damping `kv`) pulls
 the joint toward it, and the coupled joints follow through `<equality>`. Once per command
 (period `dt`; 1/60 s in our products), for each shaft `s` with target `t` (clamped to the
@@ -128,7 +128,7 @@ Each physics step the target is then kept within the drive's force limit (the jo
 that torque (`q` and `qdot` measured at that step). A drive is then never asked for more than
 it can give. Without this step, on MuJoCo 4 a drive held at its limit loses its implicit
 damping and oscillates at the limit, and the motor model above, which reads that oscillation
-as a load, stops the shaft for good: the finger no longer opens. (`v1`; `v0` had no such step.)
+as a load, stops the shaft for good: the finger no longer opens. (New in 0.6.0.)
 
 ### AR5_08 arm controller (`arms/ar5_08/controller.yaml`)
 
