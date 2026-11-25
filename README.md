@@ -107,6 +107,7 @@ joints with limits, couplings as `mimic`, damping and friction. In it:
 - Collision shapes: convex hulls, the shapes the grasping policies were trained with; not the
   visual meshes.
 - Colours: matched to product photos by the hardware team, not to manufacturers' colour codes.
+  The table's work surface is an anti-static mat's green (`#2E7D5B`), chosen by us, not measured.
 - Camera bodies: the makers' own meshes (see NOTICE).
 
 ## Robot controllers
