@@ -2,7 +2,7 @@
 
 The version is the git tag; the `linker-lw-v0` package carries the same version.
 
-## Unreleased (0.6.0)
+## 0.6.0
 
 **Physics change** (the O6 standalone and LW-v0's hands):
 
@@ -27,7 +27,7 @@ products that read 0.5.0's model name refuse this one.
   AR5_08 controller's limits as data (until now written in linker-sim's and linker-lab's
   code); README "Robot controllers" writes out both models. In `linker-lw-v0`.
 
-## 0.5.0 (unreleased)
+## 0.5.0
 
 The repository now holds robot files, not tools: LW-v0 and five LinkerHand models, each as URDF
 and MJCF with its meshes, edited directly.
