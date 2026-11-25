@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="ar5_08_o6">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="ar5_08_o6_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="ar5_08_o6_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="flange_link_col" file="meshes/collision/flange_link_col.obj" />
+    <mesh name="flange_link_vis" file="meshes/visual/flange_link_vis.obj" />
+    <texture name="ar5_08_o6_palette" type="2d" file="meshes/visual/ar5_08_o6_palette.png" />
+    <material name="flange_link" texture="ar5_08_o6_palette" metallic="0.8" roughness="0.3" />
+  </asset>
+  <worldbody>
+    <body name="flange_link" gravcomp="1">
+      <inertial pos="-2.09481995286e-07 0.000516304562215 0.00898841629518" mass="0.044499999" fullinertia="1.20223116926e-05 1.21254820463e-05 1.82919370911e-05 -2.1573478613e-10 -4.98366122213e-11 -7.51965808466e-08" />
+      <geom class="ar5_08_o6_visual" mesh="flange_link_vis" material="flange_link" />
+      <geom class="ar5_08_o6_collision" mesh="flange_link_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <body name="hand_mount" pos="0 0 0.0225" euler="0 0 0" gravcomp="1">
+        <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+        <site name="hand_mount" pos="0 0 0" size="0.001" />
+        <frame name="mount_hand" pos="0 0 -0.002" quat="0 0 0 1" />
+      </body>
+      <site name="arm_mount" pos="0 0 0" size="0.001" />
+      <site name="bracket_mount" pos="0 0 0" size="0.001" />
+      <frame name="mount_bracket" pos="0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

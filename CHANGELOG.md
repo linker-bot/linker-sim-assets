@@ -2,6 +2,29 @@
 
 The version is the git tag; the `linker-lw-v0` package carries the same version.
 
+## Unreleased (0.7.0)
+
+**Parts and assemblies; no physics change.** LW-v0 is now built from parts, each a robot of its
+own with its MJCF, URDF and meshes: `arms/ar5_08/` (left, right), `flanges/ar5_08_o6/` (one for
+both sides), `brackets/gemini335l_wrist/` (left, right), `brackets/zed2i_column/`,
+`cameras/gemini335l/`, `cameras/zed2i/`, `supports/lw_v0/` and `hands/o6/`.
+
+- **Moved:** `workstations/lw_v0/` → `assemblies/lw_v0/`; the meshes into their parts' folders.
+  Products change one path (`importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0"`).
+  Body, joint, site, camera, drive and coupling names are unchanged.
+- **Written, not edited:** `assemblies/lw_v0/{left,right,top_camera}.xml`, `lw_v0.urdf` and each
+  part's URDF are written by `tools/assemble.py` from the parts and `assembly.yaml`; CI checks
+  they are current.
+- **The same physics:** LW-v0 compiles to the same model as 0.6.0 on MuJoCo 3.17.0 and 4.0.1
+  (bodies, joints, drives, couplings, contacts, exclusions, collision shapes, options, keyframe).
+  It is frozen in `tests/verified/lw_v0.json`.
+- **ZED 2i body frame on the camera:** `top_camera/sensor_camera`'s frame was 0.43 m from the
+  camera; it is now the maker's camera frame (x forward, y left, z up). The camera's numbers in
+  the files change (its mount, inertia frame, optical frames, collision mesh); in the world
+  nothing moves (within 1e-8 m: the collision mesh's single-precision vertices).
+- **Palettes:** one per part, `<folder>_palette.png`; colours unchanged.
+- [MOUNTS.md](MOUNTS.md): every mount frame, its axes and the parts that fit it.
+
 ## 0.6.0
 
 **Physics change** (the O6 standalone and LW-v0's hands):

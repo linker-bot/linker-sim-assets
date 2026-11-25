@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Written by tools/assemble.py from ar5_08_o6.xml: the same robot. Edit the MJCF, not this file. -->
+<robot name="ar5_08_o6">
+  <link name="flange_link">
+    <inertial><origin xyz="-2.094819953e-07 0.0005163045622 0.008988416295" rpy="-1.568063355 -1.558604283 -1.571413769"/><mass value="0.044499999"/><inertia ixx="1.829285394e-05" ixy="0" ixz="0" iyy="1.212456566e-05" iyz="0" izz="1.202231123e-05"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/flange_link_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/flange_link_col.obj"/></geometry></collision>
+  </link>
+  <link name="hand_mount">
+    <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="1e-09"/><inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/></inertial>
+  </link>
+  <joint name="hand_mount_fixed" type="fixed"><parent link="flange_link"/><child link="hand_mount"/><origin xyz="0 0 0.0225" rpy="0 0 0"/></joint>
+</robot>

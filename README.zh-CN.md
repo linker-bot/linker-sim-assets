@@ -6,8 +6,9 @@
 
 | 目录 | 机器人 | 我们是否已仿真验证 |
 | --- | --- | --- |
-| [`workstations/lw_v0/`](workstations/lw_v0) | **LW-v0**：两台 AR5_08 机械臂配 LinkerHand O6 灵巧手、腕部相机（奥比中光 Gemini 335L）、顶部相机（Stereolabs ZED 2i）和工作台 | 是：[linker-sim](https://github.com/linker-bot/linker-sim)（MuJoCo 4.0.1）和 linker-lab（Isaac Lab，MuJoCo 3.17） |
+| [`assemblies/lw_v0/`](assemblies/lw_v0) | **LW-v0**：两台 AR5_08 机械臂配 LinkerHand O6 灵巧手、腕部相机（奥比中光 Gemini 335L）、顶部相机（Stereolabs ZED 2i）和工作台 | 是：[linker-sim](https://github.com/linker-bot/linker-sim)（MuJoCo 4.0.1）和 linker-lab（Isaac Lab，MuJoCo 3.17） |
 | [`hands/o6/`](hands/o6) | LinkerHand O6，左手和右手 | 是，作为 LW-v0 的一部分（同一只手） |
+| [`arms/ar5_08/`](arms/ar5_08)、[`flanges/`](flanges)、[`brackets/`](brackets)、[`cameras/`](cameras)、[`supports/lw_v0/`](supports/lw_v0) | LW-v0 的其他部件，每个都是一个独立的机器人：AR5_08 机械臂（左、右）、机械臂到 O6 的法兰、相机支架、Gemini 335L 和 ZED 2i 相机、带机械臂立柱的工作台 | 是，作为 LW-v0 的部件 |
 | [`hands/l6/`](hands/l6)、[`l20lite/`](hands/l20lite)、[`l25/`](hands/l25)、[`l30/`](hands/l30) | LinkerHand L6、L20 Lite、L25、L30 | 否（见[尚未验证](#尚未验证)） |
 
 其他机器人（AR5、A7、A7 Lite、P7 机械臂，躯干，其他工作站）在标签
@@ -18,24 +19,40 @@
 
 | 你使用 | 加载 |
 | --- | --- |
-| MuJoCo | `workstations/lw_v0/lw_v0.xml`（整个工作站），或单个部件：`left.xml`、`right.xml`、`top_camera.xml`、`support.xml`。灵巧手：`hands/<hand>/<hand>_<side>.xml` |
-| ROS、Isaac Sim、PyBullet、Drake、viser 等 URDF 工具 | `workstations/lw_v0/lw_v0.urdf`，或 `hands/<hand>/<hand>_<side>.urdf` |
-| Python（linker-sim、linker-lab） | 从本仓库的某个标签安装 `linker-lw-v0`，例如在 `pyproject.toml` 中写 `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.5.0"`；然后 `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
+| MuJoCo | `assemblies/lw_v0/lw_v0.xml`（整个工作站），或单个单元：`left.xml`、`right.xml`、`top_camera.xml`。单独加载一个部件：该部件目录中的 `.xml`，例如 `arms/ar5_08/ar5_08_left.xml`、`hands/<hand>/<hand>_<side>.xml` |
+| ROS、Isaac Sim、PyBullet、Drake、viser 等 URDF 工具 | `assemblies/lw_v0/lw_v0.urdf`，或某个部件的 `.urdf`，例如 `hands/<hand>/<hand>_<side>.urdf` |
+| Python（linker-sim、linker-lab） | 从本仓库的某个标签安装 `linker-lw-v0`，例如在 `pyproject.toml` 中写 `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.7.0"`；然后 `importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0/lw_v0.xml"` |
 
 `linker-lw-v0` 包含 LW-v0 的文件（路径与本仓库相同）、它用到的 O6 网格，以及
 `hands/o6/sdk_channels.yaml`、`motor.yaml` 以及 `arms/ar5_08/controller.yaml`。包中没有代码。其他文件请克隆本仓库或下载 ZIP。
 
-`lw_v0.xml` 用 MuJoCo 的 `<attach>` 放置四个部件。每个部件是一个关节链：机械臂部件包括机械臂、法兰、
-灵巧手、相机支架和腕部相机。不支持 `<attach>` 的仿真器可以分别加载各部件，并按 `lw_v0.xml` 中的位姿放置。
+`lw_v0.xml` 用 MuJoCo 的 `<attach>` 放置四个单元：`left.xml`、`right.xml`（各为一个关节链：机械臂、
+法兰、灵巧手、相机支架和腕部相机）、`top_camera.xml`（装在立柱支架上的 ZED 2i）以及工作台。不支持
+`<attach>` 的仿真器可以分别加载各单元，并按 `lw_v0.xml` 中的位姿自行放置。
+
+## 部件和装配体
+
+每个部件都是一个独立的机器人，有自己的 MJCF、URDF 和网格，可以单独加载：机械臂、灵巧手、法兰、支架、
+相机、工作台。部件的根刚体位于其自身原点；在另一个部件连接的位置，它有一个空的坐标系 `mount_<child>`
+（安装坐标系），由父部件决定子部件的位置。[MOUNTS.md](MOUNTS.md) 列出每个安装坐标系、它的坐标轴以及能装在
+上面的部件。每项信息只存在于一个文件中：LW-v0 中的 O6 就是 `hands/o6/o6_<side>.xml`，而不是它的副本。
+
+装配体（`assemblies/lw_v0/`）由部件组成，通过两个手工编辑的文件描述：`assembly.yaml` 列出每个单元的部件、
+它们的名称前缀以及各自装在哪个安装坐标系上；`lw_v0.xml` 放置各单元，并包含求解器选项和初始姿态关键帧。
+MJCF 无法把一个部件放进另一个已连接的部件内部，因此由 `tools/assemble.py` 生成各单元（`left.xml`、
+`right.xml`、`top_camera.xml`）和 `lw_v0.urdf`：它把每个部件的 XML 复制到其安装坐标系中，给名称加上前缀，
+并在 `parts_collide: false` 时让同一单元中的不同部件互不碰撞。该工具本身不含任何物理参数；生成的单元编译后
+与 MuJoCo 自身的组合方式（`MjSpec`）得到的结果完全相同。生成的文件已提交到仓库，因此无需运行任何程序即可加载。
 
 ## 坐标系和单位
 
 - 米、千克、秒、弧度。每个网格都在其连杆坐标系中，单位为米。
 - LW-v0 的世界坐标系：原点在两个机械臂底座之间、立柱顶部；x 朝前（朝向工作台，即腕部相机的视野方向），
   y 指向左臂，z 朝上。台面在 z = -0.5 m，地面在 z = -1.267 m（工作台脚底）。
-- 名称：在 `lw_v0.xml` 中，每个名称都带有部件前缀（`left/`、`right/`、`top_camera/`、`support/`），
-  例如 `left/arm_AR5_5_08L_W4C4A6_joint_1`、`left/hand_lh_index_mcp_pitch`。`lw_v0.urdf` 使用相同的名称。
-  灵巧手自己的文件使用手的名称（`lh_index_mcp_pitch`）。
+- 名称：在 `lw_v0.xml` 中，每个名称都以其单元和部件作为前缀（`left/` + `arm_`、`flange_`、`hand_`、
+  `bracket_`、`camera_`；`top_camera/` + `sensor_`；`support/`），例如
+  `left/arm_AR5_5_08L_W4C4A6_joint_1`、`left/hand_lh_index_mcp_pitch`。`lw_v0.urdf` 使用相同的名称。
+  部件自己的文件使用部件自身的名称（`lh_index_mcp_pitch`）。
 
 ## LW-v0
 
@@ -46,7 +63,7 @@
 | 初始姿态 | `lw_v0.xml` 中的关键帧 `home` |
 | 物理 | 480 Hz（`timestep` 1/480 s）、implicitfast 积分器、Newton 求解器、椭圆摩擦锥；见 `lw_v0.xml` 的 `<option>` |
 
-相机（部件文件中的 `<camera>`；相机沿其光学坐标系的 +z 方向观察，图像 x 向右、y 向下，与 OpenCV 相同）：
+相机（相机部件中的 `<camera>`；相机沿其光学坐标系的 +z 方向观察，图像 x 向右、y 向下，与 OpenCV 相同）：
 
 | 相机 | 型号 | 分辨率 | fx, fy（像素） | 真机帧率 |
 | --- | --- | --- | --- | --- |
@@ -63,7 +80,7 @@ URDF 无法表达以下内容，因此它们只在 MJCF 中：
 - 驱动及其增益（`<position kp kv>`）、电枢惯量（armature）
 - 重力补偿：所有机器人刚体都开启重力补偿（`gravcomp="1"`）
 - 接触参数：摩擦、`condim`、`solref`、`solimp`、`margin`、`gap`；哪些刚体对之间不碰撞
-  （`<contact><exclude>`）：一个机械臂部件内部只有不同手指之间会碰撞
+  （`<contact><exclude>`）：一个机械臂单元内部只有不同手指之间会碰撞
 - 灵巧手耦合的刚度（`<equality>`）；URDF 的 `mimic` 只有比例
 - 求解器选项、初始姿态关键帧和相机内参
 
@@ -164,9 +181,17 @@ LW-v0 保留了两个产品验证时的几何。以下问题推迟到后续工�
 
 ## 贡献者须知
 
-直接编辑 URDF 和 MJCF；没有生成器。`tests/test_assets.py` 检查：每个 MJCF 都能编译；每个 URDF 与其 MJCF
-一致（关节、耦合、质量、惯量、初始姿态下的连杆位姿、网格文件）；每个被引用的文件都存在，且每个网格都被
-使用；网格格式；以及 SDK 通道文件：
+编辑部件的 MJCF、`assembly.yaml` 和装配体的场景文件（`lw_v0.xml`）；然后生成其余文件：
+
+```
+uv run --group test python tools/assemble.py
+```
+
+它会重写每个装配体的单元和 URDF，以及装配体用到的每个部件的 URDF（四种尚未验证的灵巧手保留各自的 URDF）。
+不要编辑生成的文件：每个生成的文件开头都有一条注释说明这一点；如果它们与工具生成的结果不同，CI 会失败。
+`tests/test_assets.py` 检查：每个 MJCF 都能编译；每个 URDF 与其 MJCF 一致（关节、耦合、质量、惯量、初始
+姿态下的连杆位姿、网格文件）；每个被引用的文件都存在，且每个网格都被使用；网格格式；SDK 通道和控制器文件；
+生成的文件是最新的，且与 MuJoCo 自身的组合结果相同；以及 LW-v0 的物理仍与验证时一致：
 
 ```
 uv run --group test pytest
@@ -174,9 +199,13 @@ uv run --group test pytest
 
 CI 在 MuJoCo 3.17.0 和 4.0.1 上运行测试，并构建、安装 `linker-lw-v0` 包。
 
-网格：每个连杆一个 `.obj`，即 `meshes/visual/<link>_vis.obj`，配一个 `.mtl`；每个机器人一张
-`<robot>_palette.png`。颜色是指向调色板的纹理坐标，因此 URDF 工具和 MuJoCo 显示相同的颜色。调色板以机器人
-命名，这样把纹理收集到同一目录的工具（如 USD 转换器）不会让不同机器人的调色板互相覆盖。碰撞网格为
+**已验证的装配体是冻结的。** `tests/verified/lw_v0.json` 是 LW-v0 在初始姿态下、世界坐标系中编译后的物理
+（刚体、关节、驱动、耦合、接触、碰撞形状、选项）。改变它的部件修改会使测试失败。如果这一改变是有意的，
+请重新生成该文件（`python tools/verified.py lw_v0`），并在同一次修改中给机器人一个新版本号；或者新建一个装配体。
+
+网格：每个连杆一个 `.obj`，即 `meshes/visual/<link>_vis.obj`，配一个 `.mtl`；每个部件或机器人一张
+`<folder>_palette.png`。颜色是指向调色板的纹理坐标，因此 URDF 工具和 MuJoCo 显示相同的颜色。调色板以其所在
+目录命名，这样把纹理收集到同一目录的工具（如 USD 转换器）不会让不同的调色板互相覆盖。碰撞网格为
 `meshes/collision/<link>_col.obj`。不使用 STL、glTF 或其他格式。
 
 ## 许可证

@@ -44,4 +44,6 @@ jobs:
           path: dist/
       - run: uv venv --python 3.12
       - run: uv pip install --group test "mujoco==${{ matrix.mujoco }}" dist/*.whl
+      - name: The written files are what tools/assemble.py writes
+        run: .venv/bin/python tools/assemble.py --check
       - run: .venv/bin/python -m pytest -q -rs

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- Written by tools/assemble.py from zed2i.xml: the same robot. Edit the MJCF, not this file. -->
+<robot name="zed2i">
+  <link name="camera">
+    <inertial><origin xyz="0.005883031237 -1.88114726e-05 8.277464171e-06" rpy="-1.569770888 -1.562370321 3.140567062"/><mass value="0.1702301562"/><inertia ixx="0.0003906033227" ixy="0" ixz="0" iyy="0.0003829209898" iyz="0" izz="3.256628803e-05"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/zed2i_camera_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/collision/zed2i_camera_col.obj"/></geometry></collision>
+  </link>
+  <link name="left_optical">
+    <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="1e-09"/><inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/></inertial>
+  </link>
+  <joint name="left_optical_fixed" type="fixed"><parent link="camera"/><child link="left_optical"/><origin xyz="0.02765829698 0.05997967017 0.0001905187281" rpy="-1.570744834 -9.166928726e-07 -1.57080767"/></joint>
+  <link name="right_optical">
+    <inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="1e-09"/><inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/></inertial>
+  </link>
+  <joint name="right_optical_fixed" type="fixed"><parent link="camera"/><child link="right_optical"/><origin xyz="0.02765693576 -0.06002032814 0.0001906287312" rpy="-1.570744834 -9.166928726e-07 -1.57080767"/></joint>
+</robot>

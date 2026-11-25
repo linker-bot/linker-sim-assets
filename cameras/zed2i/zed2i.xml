@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="zed2i">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="zed2i_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="zed2i_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="zed2i_camera_col" file="meshes/collision/zed2i_camera_col.obj" />
+    <mesh name="zed2i_camera_vis" file="meshes/visual/zed2i_camera_vis.obj" />
+    <texture name="zed2i_palette" type="2d" file="meshes/visual/zed2i_palette.png" />
+    <material name="zed2i_camera" texture="zed2i_palette" metallic="0" roughness="0.4" />
+  </asset>
+  <worldbody>
+    <body name="camera">
+      <inertial pos="0.00588303123659471 -1.8811472602465714e-05 8.277464171469845e-06" mass="0.170230156191785" fullinertia="0.00038292153519216195 3.2566288054752786e-05 0.0003906027773006867 -6.689775240918137e-11 -6.472828213740936e-08 3.093537394534995e-09" />
+      <geom class="zed2i_visual" mesh="zed2i_camera_vis" material="zed2i_camera" />
+      <geom class="zed2i_collision" mesh="zed2i_camera_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <body name="left_optical" pos="0.02765829697528989 0.059979670172410744 0.0001905187280706747" quat="0.5000098080290507 -0.49998451991354875 0.4999897331308525 -0.5000159382312819">
+        <site name="left_optical" pos="0 0 0" size="0.001" />
+        <camera name="left_optical" quat="0 1 0 0" resolution="1280 720" sensorsize="1280 720" focalpixel="448.1328244542143 514.1332824271612" principalpixel="0 0" />
+        <inertial pos="0 0 0" mass="1e-9" diaginertia="1e-06 1e-06 1e-06" />
+      </body>
+      <body name="right_optical" pos="0.027656935762132285 -0.0600203281398186 0.00019062873121336067" quat="0.5000098080290507 -0.49998451991354875 0.4999897331308525 -0.5000159382312819">
+        <site name="right_optical" pos="0 0 0" size="0.001" />
+        <inertial pos="0 0 0" mass="1e-9" diaginertia="1e-06 1e-06 1e-06" />
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

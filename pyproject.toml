@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "linker-lw-v0"
-version = "0.6.0"
+version = "0.7.0"
 description = "LW-v0, Linkerbot's two-arm camera workstation, as MJCF and URDF with meshes (data only)"
 readme = "README.md"
 license = "Apache-2.0"
@@ -19,21 +19,38 @@ dependencies = []
 [project.urls]
 Repository = "https://github.com/linker-bot/linker-sim-assets"
 
-# The files lw_v0.xml and lw_v0.urdf load, at their repository paths under linker_lw_v0/, the
-# O6 hand's SDK channel map and motor constants, and the AR5_08's controller limits. Find them with importlib.resources.files("linker_lw_v0").
+# The files lw_v0.xml and lw_v0.urdf load (the scene, its written units and the components'
+# meshes), the O6 hand's SDK channel map and motor constants, and the AR5_08's controller limits,
+# at their repository paths under linker_lw_v0/. Find them with importlib.resources.files("linker_lw_v0").
 [tool.hatch.build.targets.wheel]
 bypass-selection = true
 
 [tool.hatch.build.targets.wheel.force-include]
-"workstations/lw_v0" = "linker_lw_v0/workstations/lw_v0"
+"assemblies/lw_v0/lw_v0.xml" = "linker_lw_v0/assemblies/lw_v0/lw_v0.xml"
+"assemblies/lw_v0/left.xml" = "linker_lw_v0/assemblies/lw_v0/left.xml"
+"assemblies/lw_v0/right.xml" = "linker_lw_v0/assemblies/lw_v0/right.xml"
+"assemblies/lw_v0/top_camera.xml" = "linker_lw_v0/assemblies/lw_v0/top_camera.xml"
+"assemblies/lw_v0/lw_v0.urdf" = "linker_lw_v0/assemblies/lw_v0/lw_v0.urdf"
+"supports/lw_v0/support.xml" = "linker_lw_v0/supports/lw_v0/support.xml"
+"supports/lw_v0/meshes" = "linker_lw_v0/supports/lw_v0/meshes"
+"arms/ar5_08/meshes" = "linker_lw_v0/arms/ar5_08/meshes"
+"arms/ar5_08/controller.yaml" = "linker_lw_v0/arms/ar5_08/controller.yaml"
+"flanges/ar5_08_o6/meshes" = "linker_lw_v0/flanges/ar5_08_o6/meshes"
+"brackets/gemini335l_wrist/meshes" = "linker_lw_v0/brackets/gemini335l_wrist/meshes"
+"brackets/zed2i_column/meshes" = "linker_lw_v0/brackets/zed2i_column/meshes"
+"cameras/gemini335l/meshes" = "linker_lw_v0/cameras/gemini335l/meshes"
+"cameras/zed2i/meshes" = "linker_lw_v0/cameras/zed2i/meshes"
 "hands/o6/meshes" = "linker_lw_v0/hands/o6/meshes"
 "hands/o6/sdk_channels.yaml" = "linker_lw_v0/hands/o6/sdk_channels.yaml"
 "hands/o6/motor.yaml" = "linker_lw_v0/hands/o6/motor.yaml"
-"arms/ar5_08/controller.yaml" = "linker_lw_v0/arms/ar5_08/controller.yaml"
 
 [tool.hatch.build.targets.sdist]
-include = ["workstations/lw_v0", "hands/o6/meshes", "hands/o6/sdk_channels.yaml", "hands/o6/motor.yaml",
-           "arms/ar5_08/controller.yaml", "LICENSE", "NOTICE", "README.md"]
+include = ["assemblies/lw_v0/lw_v0.xml", "assemblies/lw_v0/left.xml", "assemblies/lw_v0/right.xml",
+           "assemblies/lw_v0/top_camera.xml", "assemblies/lw_v0/lw_v0.urdf", "supports/lw_v0/support.xml",
+           "supports/lw_v0/meshes", "arms/ar5_08/meshes", "arms/ar5_08/controller.yaml", "flanges/ar5_08_o6/meshes",
+           "brackets/gemini335l_wrist/meshes", "brackets/zed2i_column/meshes", "cameras/gemini335l/meshes",
+           "cameras/zed2i/meshes", "hands/o6/meshes", "hands/o6/sdk_channels.yaml", "hands/o6/motor.yaml",
+           "LICENSE", "NOTICE", "README.md"]
 
 # The test environment: `uv run --group test pytest`. CI runs it on both MuJoCo versions the
 # products use (linker-lab 3.17.0, linker-sim 4.0.1).

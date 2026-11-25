@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- Written by tools/assemble.py from support.xml: the same robot. Edit the MJCF, not this file. -->
+<robot name="support">
+  <link name="support">
+    <inertial><origin xyz="0.3 0 -0.75" rpy="0 0 0"/><mass value="100"/><inertia ixx="2" ixy="0" ixz="0" iyy="2" iyz="0" izz="2"/></inertial>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><mesh filename="meshes/visual/workstation_table_vis.obj"/></geometry></visual>
+    <collision><origin xyz="0.3422 -0.0003 -0.8848" rpy="0 0 0"/><geometry><box size="0.625 1.25 0.77"/></geometry></collision>
+    <collision><origin xyz="-0.0003 -0.0003 -0.59" rpy="0 0 0"/><geometry><box size="0.06 0.12 1.1"/></geometry></collision>
+    <collision><origin xyz="-0.0003 -0.0003 0.0002" rpy="1.5708 0 0"/><geometry><box size="0.06 0.12 0.178"/></geometry></collision>
+  </link>
+</robot>

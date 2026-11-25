@@ -22,3 +22,6 @@ dist/
 .DS_Store
 .claude/
 CLAUDE.md
+
+# MuJoCo writes its warnings here (the tests attach parts that carry solver options).
+MUJOCO_LOG.TXT

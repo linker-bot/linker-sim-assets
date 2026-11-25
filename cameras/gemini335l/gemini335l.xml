@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="gemini335l">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="gemini335l_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="gemini335l_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="gemini335l_camera_link_col" file="meshes/collision/gemini335l_camera_link_col.obj" />
+    <mesh name="gemini335l_camera_link_vis" file="meshes/visual/gemini335l_camera_link_vis.obj" />
+    <texture name="gemini335l_palette" type="2d" file="meshes/visual/gemini335l_palette.png" />
+    <material name="gemini335l_camera_link" texture="gemini335l_palette" metallic="0" roughness="0.5" />
+  </asset>
+  <worldbody>
+    <body name="camera_link" gravcomp="1">
+      <inertial pos="-0.00833106297068 -0.0474999989383 -4.47034835815e-06" mass="0.132999995" fullinertia="0.00017981969092 1.87769051006e-05 0.0001799143384 -8.37768720529e-21 -6.43257477066e-22 -2.52803256488e-21" />
+      <geom class="gemini335l_visual" mesh="gemini335l_camera_link_vis" material="gemini335l_camera_link" />
+      <geom class="gemini335l_collision" mesh="gemini335l_camera_link_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <body name="depth_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
+        <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+        <site name="depth_optical" pos="0 0 0" size="0.001" />
+        <camera name="depth_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="640.0000000000001 627.8742308469962" principalpixel="0 0" />
+      </body>
+      <body name="rgb_frame" pos="0 -0.02375 0" euler="0.0010157 0 0" gravcomp="1">
+        <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+        <body name="rgb_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
+          <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+          <site name="rgb_optical" pos="0 0 0" size="0.001" />
+          <camera name="rgb_optical" quat="0 1 0 0" resolution="1280 800" sensorsize="1280 800" focalpixel="596.8096551281035 593.024387405096" principalpixel="0 0" />
+        </body>
+      </body>
+      <body name="right_ir_frame" pos="0 -0.095 0" euler="0 0 0" gravcomp="1">
+        <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+        <body name="right_ir_optical" pos="0 0 0" euler="-1.57079632679 0 -1.57079632679" gravcomp="1">
+          <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+          <site name="right_ir_optical" pos="0 0 0" size="0.001" />
+        </body>
+      </body>
+      <site name="base_mount" pos="0 0 0" size="0.001" />
+    </body>
+  </worldbody>
+</mujoco>
