@@ -2,7 +2,26 @@
 
 The version is the git tag; the `linker-lw-v0` package carries the same version.
 
-## Unreleased
+## Unreleased (0.6.0)
+
+**Physics change** (the O6 standalone and LW-v0's hands):
+
+- **Thumb yaw passive damping on the joint:** `lh/rh_thumb_cmc_yaw` joint `damping` 0 → 4, its
+  drive's `kv` 24 → 20. The real passive damping is 4; until now it sat inside the drive
+  (24 = the motor's output damping 20 + 4), so it vanished whenever the drive's 10 N·m limit
+  saturated (fast moves, pressing an object). On the joint it always acts. The motor model's
+  derived passive damping is 4 either way (README "Robot controllers").
+- **Hand mount at exactly π:** LW-v0's hand bodies sit on the flange with `quat="0 0 0 1"`
+  instead of the rounded `euler="0 0 ±3.14159265"` (+ left, − right); each hand moves by
+  3.6 nrad and both sides now use the same rotation. The URDF writes π to 10 digits.
+- URDFs regenerated from the MJCF (`o6_left/right.urdf`, `lw_v0.urdf`).
+
+**O6 motor model `geared-shaft-v1`** (`hands/o6/motor.yaml`; README "Robot controllers"):
+each physics step the drive's target is kept so the drive's torque stays 1 N·m within its force
+limit, as the products already do for the arm. On MuJoCo 4 a drive held at its limit loses its
+implicit damping (MuJoCo 4.0.0) and oscillates there; the motor model read that as a load and
+stopped the finger for good. The constants are unchanged; the model has a new name, so
+products that read 0.5.0's model name refuse this one.
 
 - `hands/o6/motor.yaml` and `arms/ar5_08/controller.yaml`: the O6 motor's constants and the
   AR5_08 controller's limits as data (until now written in linker-sim's and linker-lab's

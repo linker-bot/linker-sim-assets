@@ -160,12 +160,12 @@
                         <body name="flange_hand_mount" pos="0 0 0.0225" euler="0 0 0" gravcomp="1">
                           <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
                           <site name="flange_hand_mount" pos="0 0 0" size="0.001" />
-                          <body name="hand_rh_hand_base_link" pos="0 0 -0.002" euler="0 0 -3.14159265" gravcomp="1">
+                          <body name="hand_rh_hand_base_link" pos="0 0 -0.002" quat="0 0 0 1" gravcomp="1">
                             <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_hand_base_vis" material="rh_hand_base_link" />
                             <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_hand_base_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
                             <site name="hand_wrist_mount" pos="0 0 0" />
                             <body name="hand_rh_thumb_metacarpals_base2" pos="0.010457 0.022975 0.030794" quat="1 0 0 0" gravcomp="1">
-                              <joint name="hand_rh_thumb_cmc_yaw" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 0 -1" range="0 1.36" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="0" actuatorfrclimited="true" actuatorfrcrange="-10 10" />
+                              <joint name="hand_rh_thumb_cmc_yaw" class="hand_hand_linkerhand_o6_joint" type="hinge" axis="0 0 -1" range="0 1.36" solreflimit="0.000125 1" solimplimit="0.9999 0.9999 0.001 0.5 2" armature="0.001" frictionloss="0" damping="4" actuatorfrclimited="true" actuatorfrcrange="-10 10" />
                               <geom class="hand_hand_linkerhand_o6_visual" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" mesh="hand_thumb_metacarpals_base2_vis" material="rh_thumb_metacarpals_base2" />
                               <geom class="hand_hand_linkerhand_o6_collision" mesh="hand_thumb_metacarpals_base2_col_hull" solref="0.004 1" solimp="0.95 0.95 0.001 0.5 2" margin="0" gap="0" friction="4 0 0" condim="4" priority="0" solmix="1" />
                               <body name="hand_rh_thumb_metacarpals" pos="0.0061649 0.010678 -0.004891" quat="0.80983484251221 -0.526478796956433 0.141069913928281 -0.216995123430915" gravcomp="1">
@@ -290,7 +290,7 @@
     <position name="arm_AR5_5_08R_W4C4A6_joint_5_drive" joint="arm_AR5_5_08R_W4C4A6_joint_5" kp="16000" kv="604.13671875" />
     <position name="arm_AR5_5_08R_W4C4A6_joint_6_drive" joint="arm_AR5_5_08R_W4C4A6_joint_6" kp="16000" kv="604.7486572265625" />
     <position name="arm_AR5_5_08R_W4C4A6_joint_7_drive" joint="arm_AR5_5_08R_W4C4A6_joint_7" kp="16000" kv="603.66796875" />
-    <position name="hand_rh_thumb_cmc_yaw_drive" joint="hand_rh_thumb_cmc_yaw" kp="600" kv="24" />
+    <position name="hand_rh_thumb_cmc_yaw_drive" joint="hand_rh_thumb_cmc_yaw" kp="600" kv="20" />
     <position name="hand_rh_thumb_cmc_pitch_drive" joint="hand_rh_thumb_cmc_pitch" kp="2500" kv="40" />
     <position name="hand_rh_index_mcp_pitch_drive" joint="hand_rh_index_mcp_pitch" kp="1250" kv="40" />
     <position name="hand_rh_middle_mcp_pitch_drive" joint="hand_rh_middle_mcp_pitch" kp="1250" kv="40" />
