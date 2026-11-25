@@ -7,11 +7,17 @@
 - the mesh rule: `.obj` + `.mtl` + one palette PNG per robot, named after it, nothing else
 - each hand's `sdk_channels.yaml` names every actuated joint exactly once
 - the controller data (`hands/o6/motor.yaml`, `arms/ar5_08/controller.yaml`) fits the robot files
+- the files `tools/assemble.py` writes are current, and its units compile to exactly what MuJoCo's
+  own composition (`MjSpec` attach) gives
+- each verified assembly still has the physics frozen in `tests/verified/<name>.json`
+- each assembly's `assembly.yaml` and scene name the same units; `MOUNTS.md` lists every mount
 
 The URDF is read here by its own rules (URDF spec), not through MuJoCo's URDF importer.
 """
 
+import json
 import re
+import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -21,9 +27,16 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-MJCF = sorted([*ROOT.glob("workstations/*/*.xml"), *ROOT.glob("hands/*/*.xml")])
-PAIRS = sorted(p for p in [*ROOT.glob("workstations/*/*.urdf"), *ROOT.glob("hands/*/*.urdf")])
+sys.path.insert(0, str(ROOT / "tools"))
+import assemble  # noqa: E402
+import verified  # noqa: E402
+
+KINDS = ("arms", "hands", "flanges", "brackets", "cameras", "supports", "assemblies")  # one folder per robot or part
+MJCF = sorted(p for k in KINDS for p in ROOT.glob(f"{k}/*/*.xml"))
+PAIRS = sorted(p for k in KINDS for p in ROOT.glob(f"{k}/*/*.urdf"))
 HANDS = sorted(p.parent for p in ROOT.glob("hands/*/sdk_channels.yaml"))
+ASSEMBLIES = sorted(p.parent for p in ROOT.glob("assemblies/*/assembly.yaml"))
+LW_V0 = ROOT / "assemblies/lw_v0/lw_v0.xml"
 ASSET_FILES = {".xml", ".urdf", ".yaml", ".obj", ".mtl", ".png"}
 
 
@@ -254,20 +267,20 @@ def test_every_reference_exists_and_every_mesh_is_used():
     refs = all_references()
     missing = sorted(str(f) for f in refs if not f.exists())
     assert not missing, missing
-    files = {f.resolve() for f in [*ROOT.glob("workstations/*/meshes/**/*"), *ROOT.glob("hands/*/meshes/**/*")] if f.is_file()}
+    files = {f.resolve() for k in KINDS for f in ROOT.glob(f"{k}/*/meshes/**/*") if f.is_file()}
     unused = sorted(rel(f) for f in files - refs)
     assert not unused, unused
 
 
 def test_mesh_rule():
-    files = [f for f in [*ROOT.glob("workstations/**/*"), *ROOT.glob("hands/**/*")] if f.is_file()]
+    files = [f for k in KINDS for f in ROOT.glob(f"{k}/**/*") if f.is_file()]
     others = sorted(rel(f) for f in files if f.suffix not in ASSET_FILES)
     assert not others, f"formats outside the mesh rule: {others}"
 
     for folder in sorted({f.parent for f in files if f.parent.name == "visual"}):
         # Named after the robot: tools that gather textures into one folder (USD converters)
         # would otherwise overwrite one robot's palette with another's.
-        palette = f"{folder.parents[1].name}_palette.png"
+        palette = f"{folder.parents[1].name}_palette.png"  # unique: folder names are unique
         assert sorted(p.name for p in folder.glob("*.png")) == [palette], rel(folder)
         for obj in folder.glob("*.obj"):
             assert obj.name.endswith("_vis.obj"), rel(obj)
@@ -313,7 +326,7 @@ def test_o6_motor_fits_the_hand(side):
     """motor.yaml's shafts are the O6's driven joints; its torque budget fits each drive."""
     spec = yaml.safe_load((ROOT / "hands/o6/motor.yaml").read_text())
     shafts = [j.replace("{S}", side[0]) for j in spec["shafts"]]
-    for path, prefix in ((ROOT / f"hands/o6/o6_{side}.xml", ""), (ROOT / "workstations/lw_v0/lw_v0.xml", f"{side}/hand_")):
+    for path, prefix in ((ROOT / f"hands/o6/o6_{side}.xml", ""), (LW_V0, f"{side}/hand_")):
         model = mujoco.MjModel.from_xml_path(str(path))
         driven = {model.joint(model.actuator_trnid[u, 0]).name for u in range(model.nu)}
         assert {prefix + s for s in shafts} <= driven and len(shafts) == len(set(shafts)) == 6
@@ -335,7 +348,7 @@ def test_arm_controller_fits_the_arm(side):
     bounding box is the J6/J7 ranges in the robot files."""
     spec = yaml.safe_load((ROOT / "arms/ar5_08/controller.yaml").read_text())
     joints = [j.replace("{S}", side[0].upper()) for j in spec["joints"]]
-    model = mujoco.MjModel.from_xml_path(str(ROOT / "workstations/lw_v0/lw_v0.xml"))
+    model = mujoco.MjModel.from_xml_path(str(LW_V0))
     for key in ("max_velocity", "max_acceleration", "max_jerk"):
         assert len(spec[key]) == len(joints) == 7 and min(spec[key]) > 0, key
     for j in joints:
@@ -356,14 +369,13 @@ def test_arm_controller_fits_the_arm(side):
 
 
 def package_files():
-    """What `linker-lw-v0` must hold: the files LW-v0's MJCF and URDF load, and the O6's SDK map."""
-    ws = ROOT / "workstations/lw_v0"
-    files = {*ws.glob("*.xml"), *ws.glob("*.urdf"), ROOT / "hands/o6/sdk_channels.yaml",
-             ROOT / "hands/o6/motor.yaml", ROOT / "arms/ar5_08/controller.yaml"}
-    for p in ws.glob("*.xml"):
-        files |= mjcf_references(p)
-    for p in ws.glob("*.urdf"):
-        files |= {(p.parent / m.get("filename")).resolve() for m in ET.parse(p).iter("mesh")}
+    """What `linker-lw-v0` must hold: the files LW-v0's MJCF and URDF load, the O6's SDK map and
+    motor constants, and the arm's controller limits."""
+    folder = LW_V0.parent
+    loaded = [LW_V0, folder / "lw_v0.urdf"]
+    files = {*loaded, ROOT / "hands/o6/sdk_channels.yaml", ROOT / "hands/o6/motor.yaml",
+             ROOT / "arms/ar5_08/controller.yaml", *mjcf_references(LW_V0)}
+    files |= {(folder / m.get("filename")).resolve() for m in ET.parse(folder / "lw_v0.urdf").iter("mesh")}
     for f in list(files):
         if f.suffix == ".obj":
             files |= obj_references(f)
@@ -377,11 +389,109 @@ def test_installed_package():
 
     if importlib.util.find_spec("linker_lw_v0") is None:
         pytest.skip("linker-lw-v0 is not installed")
-    installed = Path(str(importlib.resources.files("linker_lw_v0") / "workstations")).parent
+    installed = Path(str(importlib.resources.files("linker_lw_v0") / "assemblies")).parent
     assert installed.resolve() != ROOT
     packaged = {p.relative_to(installed) for p in installed.rglob("*") if p.is_file() and "__pycache__" not in p.parts}
     assert packaged == package_files(), sorted(packaged ^ package_files())
     for p in packaged:
         assert (installed / p).read_bytes() == (ROOT / p).read_bytes(), p
-    model = mujoco.MjModel.from_xml_path(str(installed / "workstations/lw_v0/lw_v0.xml"))
+    model = mujoco.MjModel.from_xml_path(str(installed / "assemblies/lw_v0/lw_v0.xml"))
     assert model.nkey and model.key("home")
+
+
+# ---------------------------------------------------------------- assemblies
+
+
+def test_written_files_are_current():
+    """`tools/assemble.py --check`: writing the units and URDFs again gives the same bytes."""
+    changed, _ = assemble.assemble(check=True)
+    assert not changed, f"out of date, run python tools/assemble.py: {changed}"
+
+
+def _units(folder):
+    return yaml.safe_load((folder / "assembly.yaml").read_text())["units"]
+
+
+@pytest.mark.parametrize("folder", ASSEMBLIES, ids=rel)
+def test_assembly_yaml_and_scene_name_the_same_units(folder):
+    scene = ET.parse(folder / f"{folder.name}.xml").getroot()
+    loaded = {m.get("name"): m.get("file") for m in scene.iter("model")}
+    units = _units(folder)
+    assert {u: f"{u}.xml" for u in units} == {n: f for n, f in loaded.items() if f == f"{n}.xml"}
+    attached = {a.get("model") for a in scene.iter("attach")}
+    assert attached == set(loaded), "every unit is placed once"
+
+
+def _composed(folder, name, unit):
+    """The unit as MuJoCo itself composes it: each part attached into its mount frame."""
+    spec = None
+    for part in unit["parts"].values():
+        child = mujoco.MjSpec.from_file(str((folder / part["file"]).resolve()))
+        if spec is None:
+            spec = mujoco.MjSpec()
+            spec.modelname = name
+            for key in ("degree", "autolimits", "discardvisual", "eulerseq"):
+                setattr(spec.compiler, key, getattr(child.compiler, key))
+            spec.worldbody.add_frame().attach_body(child.worldbody.first_body(), part["prefix"], "")
+            colliders = {}
+        else:
+            spec.frame(part["mount"]).attach_body(child.worldbody.first_body(), part["prefix"], "")
+        alone = mujoco.MjModel.from_xml_path(str((folder / part["file"]).resolve()))
+        colliders[part["prefix"] + part["file"]] = [
+            part["prefix"] + alone.body(alone.geom_bodyid[g]).name for g in range(alone.ngeom)
+            if alone.geom_contype[g] or alone.geom_conaffinity[g]]
+    if not unit["parts_collide"]:
+        groups = list(colliders.values())
+        for i, a in enumerate(groups):
+            for b in groups[i + 1:]:
+                for b1 in dict.fromkeys(a):
+                    for b2 in dict.fromkeys(b):
+                        spec.add_exclude(bodyname1=b1, bodyname2=b2)
+    return spec.compile()
+
+
+@pytest.mark.filterwarnings("ignore:Attach conflict")  # the parts' solver options, which the tool drops
+@pytest.mark.parametrize("folder,name", [(f, n) for f in ASSEMBLIES for n in _units(f)], ids=lambda x: getattr(x, "name", x))
+def test_unit_is_mujocos_own_composition(folder, name):
+    """The written unit compiles to the same model as MuJoCo's MjSpec composition of its parts
+    (visual geoms, meshes, materials and names of assets aside)."""
+    written = mujoco.MjModel.from_xml_path(str(folder / f"{name}.xml"))
+    composed = _composed(folder, name, _units(folder)[name])
+    for objtype, n in ((mujoco.mjtObj.mjOBJ_BODY, "nbody"), (mujoco.mjtObj.mjOBJ_JOINT, "njnt"),
+                       (mujoco.mjtObj.mjOBJ_ACTUATOR, "nu"), (mujoco.mjtObj.mjOBJ_EQUALITY, "neq"),
+                       (mujoco.mjtObj.mjOBJ_SITE, "nsite"), (mujoco.mjtObj.mjOBJ_CAMERA, "ncam")):
+        assert ([mujoco.mj_id2name(written, objtype, i) for i in range(getattr(written, n))]
+                == [mujoco.mj_id2name(composed, objtype, i) for i in range(getattr(composed, n))]), objtype
+    for prefix in ("body_", "jnt_", "dof_", "actuator_", "eq_", "site_", "cam_"):
+        for key in dir(written):
+            a = getattr(written, key)
+            if key.startswith(prefix) and isinstance(a, np.ndarray) and key not in (
+                    "body_geomnum", "body_geomadr", "body_bvhadr", "body_bvhnum", "dof_length"):
+                np.testing.assert_array_equal(a, getattr(composed, key), err_msg=key)
+    assert set(written.exclude_signature.tolist()) == set(composed.exclude_signature.tolist())
+    cw, cc = ([g for g in range(m.ngeom) if m.geom_contype[g] or m.geom_conaffinity[g]] for m in (written, composed))
+    assert len(cw) == len(cc)
+    for key in ("geom_type", "geom_bodyid", "geom_pos", "geom_quat", "geom_size", "geom_friction", "geom_solref",
+                "geom_solimp", "geom_condim", "geom_margin", "geom_gap", "geom_priority", "geom_solmix"):
+        np.testing.assert_array_equal(getattr(written, key)[cw], getattr(composed, key)[cc], err_msg=key)
+
+
+@pytest.mark.parametrize("folder", ASSEMBLIES, ids=rel)
+def test_verified_assembly_is_unchanged(folder):
+    """The assembly's compiled physics (world frame, home pose) is what was verified. A change
+    here needs a new version: rewrite the file with `python tools/verified.py <name>`."""
+    frozen = ROOT / "tests" / "verified" / f"{folder.name}.json"
+    assert frozen.exists(), f"{folder.name} is not verified; tests/verified/{frozen.name} is missing"
+    now = json.loads(json.dumps(verified.summary(folder / f"{folder.name}.xml")))
+    problems = verified.differences(json.loads(frozen.read_text()), now)
+    assert not problems, "\n".join(problems[:20])
+
+
+def test_mounts_md_lists_every_mount():
+    """MOUNTS.md names every mount frame of every component."""
+    text = (ROOT / "MOUNTS.md").read_text()
+    mounts = {(p.relative_to(ROOT).parent.as_posix(), f.get("name")) for p in MJCF
+              for f in ET.parse(p).iter("frame") if (f.get("name") or "").startswith("mount_")}
+    assert mounts
+    missing = sorted(f"{folder}: {name}" for folder, name in mounts if f"`{name}`" not in text or f"`{folder}" not in text)
+    assert not missing, missing
