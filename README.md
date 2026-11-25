@@ -6,8 +6,9 @@ Robot files from Linkerbot for your own simulator: URDF and MJCF with their mesh
 
 | Folder | Robot | Simulated by us |
 | --- | --- | --- |
-| [`workstations/lw_v0/`](workstations/lw_v0) | **LW-v0**: two AR5_08 arms with LinkerHand O6 hands, wrist cameras (Orbbec Gemini 335L), a top camera (Stereolabs ZED 2i) and the table | Yes: [linker-sim](https://github.com/linker-bot/linker-sim) (MuJoCo 4.0.1) and linker-lab (Isaac Lab, MuJoCo 3.17) |
+| [`assemblies/lw_v0/`](assemblies/lw_v0) | **LW-v0**: two AR5_08 arms with LinkerHand O6 hands, wrist cameras (Orbbec Gemini 335L), a top camera (Stereolabs ZED 2i) and the table | Yes: [linker-sim](https://github.com/linker-bot/linker-sim) (MuJoCo 4.0.1) and linker-lab (Isaac Lab, MuJoCo 3.17) |
 | [`hands/o6/`](hands/o6) | LinkerHand O6, left and right | Yes, as part of LW-v0 (the same hand) |
+| [`arms/ar5_08/`](arms/ar5_08), [`flanges/`](flanges), [`brackets/`](brackets), [`cameras/`](cameras), [`supports/lw_v0/`](supports/lw_v0) | The other parts of LW-v0, each a robot of its own: the AR5_08 arm (left, right), the arm-to-O6 flange, the camera brackets, the Gemini 335L and ZED 2i cameras, the table with the arm column | Yes, as parts of LW-v0 |
 | [`hands/l6/`](hands/l6), [`l20lite/`](hands/l20lite), [`l25/`](hands/l25), [`l30/`](hands/l30) | LinkerHand L6, L20 Lite, L25, L30 | No (see [Not yet verified](#not-yet-verified)) |
 
 Other robots (the AR5, A7, A7 Lite and P7 arms, torsos, other workstations) are at tag
@@ -18,17 +19,35 @@ at a time, after each has been verified in our simulators.
 
 | You use | Load |
 | --- | --- |
-| MuJoCo | `workstations/lw_v0/lw_v0.xml` (the whole station), or one part: `left.xml`, `right.xml`, `top_camera.xml`, `support.xml`. A hand: `hands/<hand>/<hand>_<side>.xml` |
-| ROS, Isaac Sim, PyBullet, Drake, viser and other URDF tools | `workstations/lw_v0/lw_v0.urdf`, or `hands/<hand>/<hand>_<side>.urdf` |
-| Python (linker-sim, linker-lab) | The package `linker-lw-v0` from this repository at a tag, e.g. in `pyproject.toml`: `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.5.0"`; then `importlib.resources.files("linker_lw_v0") / "workstations/lw_v0/lw_v0.xml"` |
+| MuJoCo | `assemblies/lw_v0/lw_v0.xml` (the whole station), or one unit: `left.xml`, `right.xml`, `top_camera.xml`. One part alone: its folder's `.xml`, e.g. `arms/ar5_08/ar5_08_left.xml`, `hands/<hand>/<hand>_<side>.xml` |
+| ROS, Isaac Sim, PyBullet, Drake, viser and other URDF tools | `assemblies/lw_v0/lw_v0.urdf`, or a part's `.urdf`, e.g. `hands/<hand>/<hand>_<side>.urdf` |
+| Python (linker-sim, linker-lab) | The package `linker-lw-v0` from this repository at a tag, e.g. in `pyproject.toml`: `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.7.0"`; then `importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0/lw_v0.xml"` |
 
 The package `linker-lw-v0` holds LW-v0's files at the same paths as this repository, the O6's
 meshes it uses, `hands/o6/sdk_channels.yaml` and `motor.yaml`, and `arms/ar5_08/controller.yaml`. It contains no code. Everything else: clone the
 repository or download its ZIP.
 
-`lw_v0.xml` places the four parts with MuJoCo's `<attach>`. Each part is one articulation: an arm
-part is arm, flange, hand, camera bracket and wrist camera. A simulator without `<attach>` can load
-the parts and place them at the poses in `lw_v0.xml` itself.
+`lw_v0.xml` places four units with MuJoCo's `<attach>`: `left.xml`, `right.xml` (each one
+articulation: arm, flange, hand, camera bracket and wrist camera), `top_camera.xml` (the ZED 2i
+on its column bracket) and the support. A simulator without `<attach>` can load the units and
+place them at the poses in `lw_v0.xml` itself.
+
+## Parts and assemblies
+
+Each part is a robot of its own, with its MJCF, URDF and meshes, and loads alone: an arm, a
+hand, a flange, a bracket, a camera, the support. A part's root body sits at its own origin;
+where another part attaches it has an empty frame `mount_<child>`, so the parent decides where
+the child sits. [MOUNTS.md](MOUNTS.md) lists every mount, its axes and the parts that fit it.
+Every fact is in one file: the O6 in LW-v0 is `hands/o6/o6_<side>.xml`, not a copy.
+
+An assembly (`assemblies/lw_v0/`) is built from parts by two files edited by hand:
+`assembly.yaml` lists each unit's parts, their name prefixes and the mount each goes on; `lw_v0.xml`
+places the units and holds the solver options and the home keyframe. MJCF can't place a part
+inside another attached part, so `tools/assemble.py` writes the units (`left.xml`, `right.xml`,
+`top_camera.xml`) and `lw_v0.urdf`: it copies each part's XML into its mount frame, prefixes the
+names, and with `parts_collide: false` keeps different parts of a unit from colliding. It holds no
+physics; the units compile to exactly what MuJoCo's own composition (`MjSpec`) gives. The written
+files are committed, so you can load them without running anything.
 
 ## Frames and units
 
@@ -36,10 +55,10 @@ the parts and place them at the poses in `lw_v0.xml` itself.
 - LW-v0's world frame: origin between the two arm bases, on top of the column; x forward (towards
   the table and the wrist cameras' view), y to the left arm, z up. The table top is at z = -0.5 m,
   the floor at z = -1.267 m (the table's feet).
-- Names: in `lw_v0.xml` every name has its part as prefix (`left/`, `right/`, `top_camera/`,
-  `support/`), e.g. `left/arm_AR5_5_08L_W4C4A6_joint_1`, `left/hand_lh_index_mcp_pitch`.
-  `lw_v0.urdf` uses the same names. A hand's own files use the hand's names
-  (`lh_index_mcp_pitch`).
+- Names: in `lw_v0.xml` every name has its unit and part as prefix (`left/` + `arm_`, `flange_`,
+  `hand_`, `bracket_`, `camera_`; `top_camera/` + `sensor_`; `support/`), e.g.
+  `left/arm_AR5_5_08L_W4C4A6_joint_1`, `left/hand_lh_index_mcp_pitch`. `lw_v0.urdf` uses the same
+  names. A part's own files use its own names (`lh_index_mcp_pitch`).
 
 ## LW-v0
 
@@ -50,7 +69,7 @@ the parts and place them at the poses in `lw_v0.xml` itself.
 | Home pose | Keyframe `home` in `lw_v0.xml` |
 | Physics | 480 Hz (`timestep` 1/480 s), implicit-fast, Newton solver, elliptic friction cone; in `<option>` of `lw_v0.xml` |
 
-Cameras (`<camera>` in the part files; the camera looks along its optical body's +z, image x right,
+Cameras (`<camera>` in the camera parts; the camera looks along its optical body's +z, image x right,
 y down, as in OpenCV):
 
 | Camera | Model | Resolution | fx, fy (px) | Rate on the real robot |
@@ -68,7 +87,7 @@ URDF has no place for these, so they are only in the MJCF:
 - drives and their gains (`<position kp kv>`), armature
 - gravity compensation: every robot body is gravity-compensated (`gravcomp="1"`)
 - contact settings: friction, `condim`, `solref`, `solimp`, `margin`, `gap`; which body pairs
-  don't collide (`<contact><exclude>`): within an arm part, only different fingers collide
+  don't collide (`<contact><exclude>`): within an arm unit, only different fingers collide
 - the stiffness of the hand's couplings (`<equality>`); URDF's `mimic` has only the ratio
 - solver options, the home keyframe and the camera intrinsics
 
@@ -190,10 +209,19 @@ workstation (LW-v1), because fixing them changes the physics or the camera views
 
 ## For contributors
 
-Edit the URDF and the MJCF directly; there is no generator. `tests/test_assets.py` checks that
-every MJCF compiles and that each URDF matches its MJCF (joints, couplings, masses, inertias, link
-poses at the home pose, mesh files), that every referenced file exists and every mesh is used, the
-mesh format, and the SDK channel files:
+Edit the parts' MJCF, `assembly.yaml` and the assembly's scene (`lw_v0.xml`); then write the rest:
+
+```
+uv run --group test python tools/assemble.py
+```
+
+It rewrites each assembly's units and URDF, and the URDF of every part an assembly uses (the four
+unverified hands keep their own URDFs). Don't edit written files: each starts with a comment
+saying so, and CI fails if they differ from what the tool writes. `tests/test_assets.py` checks
+that every MJCF compiles and that each URDF matches its MJCF (joints, couplings, masses, inertias,
+link poses at the home pose, mesh files), that every referenced file exists and every mesh is
+used, the mesh format, the SDK channel and controller files, that the written files are current
+and equal MuJoCo's own composition, and that LW-v0's physics is still what was verified:
 
 ```
 uv run --group test pytest
@@ -201,10 +229,16 @@ uv run --group test pytest
 
 CI runs it on MuJoCo 3.17.0 and 4.0.1, with the package `linker-lw-v0` built and installed.
 
+**Verified assemblies are frozen.** `tests/verified/lw_v0.json` is LW-v0's compiled physics at
+the home pose, in the world frame (bodies, joints, drives, couplings, contacts, collision shapes,
+options). A part change that alters it fails the test. If the change is meant, write the file
+again (`python tools/verified.py lw_v0`) in a change that also gives the robot a new version, or
+make a new assembly.
+
 Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj`, with an `.mtl` and one
-`<robot>_palette.png` per robot. Colours are texture coordinates into the palette, so URDF tools and
-MuJoCo show the same colours. The palette is named after its robot so that tools which gather
-textures into one folder (USD converters) keep the robots' palettes apart. Collision meshes are
+`<folder>_palette.png` per part or robot. Colours are texture coordinates into the palette, so URDF tools and
+MuJoCo show the same colours. The palette is named after its folder so that tools which gather
+textures into one folder (USD converters) keep the palettes apart. Collision meshes are
 `meshes/collision/<link>_col.obj`. No STL, glTF or other formats.
 
 ## Licence
