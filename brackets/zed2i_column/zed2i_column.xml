@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="zed2i_column">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="zed2i_column_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="zed2i_column_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="zed2i_camera_base_link_col" file="meshes/collision/zed2i_camera_base_link_col.obj" />
+    <mesh name="zed2i_camera_base_link_vis" file="meshes/visual/zed2i_camera_base_link_vis.obj" />
+    <texture name="zed2i_column_palette" type="2d" file="meshes/visual/zed2i_column_palette.png" />
+    <material name="zed2i_camera_base_link" texture="zed2i_column_palette" metallic="0" roughness="0.6" />
+  </asset>
+  <worldbody>
+    <body name="camera_base_link">
+      <inertial pos="0.0538773695271655 -0.0338436903808578 0.0404431717089871" mass="0.120253078965696" fullinertia="0.00024086634809874 0.000187914824387855 0.000340317013404989 -3.07915341770146e-05 1.11484097335586e-05 5.88336477049719e-05" />
+      <geom class="zed2i_column_visual" mesh="zed2i_camera_base_link_vis" material="zed2i_camera_base_link" />
+      <geom class="zed2i_column_collision" mesh="zed2i_camera_base_link_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <site name="base_mount" pos="0 0 0" />
+      <frame name="mount_camera" pos="0.04497998518419849 -0.0953742976544662 0.0704842258407723" quat="0.6941147128830013 0.1349040163886127 -0.13490491037604502 0.6941227102450982" />
+    </body>
+  </worldbody>
+</mujoco>

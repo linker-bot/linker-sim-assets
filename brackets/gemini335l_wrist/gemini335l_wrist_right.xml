@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="gemini335l_wrist_right">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="gemini335l_wrist_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="gemini335l_wrist_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="right_bracket_link_col" file="meshes/collision/right_bracket_link_col.obj" />
+    <mesh name="right_bracket_link_vis" file="meshes/visual/right_bracket_link_vis.obj" />
+    <texture name="gemini335l_wrist_palette" type="2d" file="meshes/visual/gemini335l_wrist_palette.png" />
+    <material name="right_bracket_link" texture="gemini335l_wrist_palette" metallic="0" roughness="0.5" />
+  </asset>
+  <worldbody>
+    <body name="bracket_link" gravcomp="1">
+      <inertial pos="-0.0170467817267 -0.0186586593967 0.0113804112197" mass="0.028999999" fullinertia="2.85198618931e-05 1.38178590477e-05 4.09679060097e-05 -4.30737984152e-06 -6.26545862101e-07 -3.65662963816e-07" />
+      <geom class="gemini335l_wrist_visual" mesh="right_bracket_link_vis" material="right_bracket_link" />
+      <geom class="gemini335l_wrist_collision" mesh="right_bracket_link_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <body name="camera_mount" pos="-0.0454344910202 -0.067500000756 0.0374074526432" euler="0 -1.2217304764 3.14159265359" gravcomp="1">
+        <inertial pos="0 0 0" mass="1e-09" diaginertia="1e-06 1e-06 1e-06" />
+        <site name="camera_mount" pos="0 0 0" size="0.001" />
+        <frame name="mount_camera" pos="0 0 0" />
+      </body>
+      <site name="flange_mount" pos="0 0 0" size="0.001" />
+    </body>
+  </worldbody>
+</mujoco>

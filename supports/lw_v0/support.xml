@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="support">
+  <compiler angle="radian" autolimits="true" />
+  <asset>
+    <mesh name="workstation_table_vis" file="meshes/visual/workstation_table_vis.obj" />
+    <texture name="lw_v0_palette" type="2d" file="meshes/visual/lw_v0_palette.png" />
+    <material name="workstation_table" texture="lw_v0_palette" metallic="0" roughness="0.6" />
+  </asset>
+  <worldbody>
+    <body name="support">
+      <inertial pos="0.3 0 -0.75" mass="100.0" fullinertia="2.0 2.0 2.0 0.0 0.0 0.0" />
+      <geom name="support_visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="workstation_table_vis" material="workstation_table" />
+      <geom name="table_body" pos="0.3422 -0.0003 -0.8848" euler="0 0 0" group="3" type="box" size="0.3125 0.625 0.385" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0.0001" />
+      <geom name="armbase_column" pos="-0.0003 -0.0003 -0.5900" euler="0 0 0" group="3" type="box" size="0.03 0.06 0.55" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0.0001" />
+      <geom name="armbase_top_flange" pos="-0.0003 -0.0003 0.0002" euler="1.5708 0 0" group="3" type="box" size="0.03 0.06 0.089" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" gap="0.0001" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,6 +1,0 @@
-newmtl zed2i_camera_base_link
-Kd 1 1 1
-Ks 0 0 0
-Pm 0
-Pr 0.6
-map_Kd lw_v0_palette.png

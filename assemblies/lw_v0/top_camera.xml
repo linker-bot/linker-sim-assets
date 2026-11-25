@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Written by tools/assemble.py from assemblies/lw_v0/assembly.yaml and the components it names. Edit those, not this file. -->
+<mujoco model="top_camera">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <default>
+    <default class="sensor_zed2i_column_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="sensor_zed2i_column_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+    <default class="sensor_zed2i_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="sensor_zed2i_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="sensor_zed2i_camera_base_link_col" file="../../brackets/zed2i_column/meshes/collision/zed2i_camera_base_link_col.obj" />
+    <mesh name="sensor_zed2i_camera_base_link_vis" file="../../brackets/zed2i_column/meshes/visual/zed2i_camera_base_link_vis.obj" />
+    <texture name="sensor_zed2i_column_palette" type="2d" file="../../brackets/zed2i_column/meshes/visual/zed2i_column_palette.png" />
+    <material name="sensor_zed2i_camera_base_link" texture="sensor_zed2i_column_palette" metallic="0" roughness="0.6" />
+    <mesh name="sensor_zed2i_camera_col" file="../../cameras/zed2i/meshes/collision/zed2i_camera_col.obj" />
+    <mesh name="sensor_zed2i_camera_vis" file="../../cameras/zed2i/meshes/visual/zed2i_camera_vis.obj" />
+    <texture name="sensor_zed2i_palette" type="2d" file="../../cameras/zed2i/meshes/visual/zed2i_palette.png" />
+    <material name="sensor_zed2i_camera" texture="sensor_zed2i_palette" metallic="0" roughness="0.4" />
+  </asset>
+  <worldbody>
+    <body name="sensor_camera_base_link">
+      <inertial pos="0.0538773695271655 -0.0338436903808578 0.0404431717089871" mass="0.120253078965696" fullinertia="0.00024086634809874 0.000187914824387855 0.000340317013404989 -3.07915341770146e-05 1.11484097335586e-05 5.88336477049719e-05" />
+      <geom class="sensor_zed2i_column_visual" mesh="sensor_zed2i_camera_base_link_vis" material="sensor_zed2i_camera_base_link" />
+      <geom class="sensor_zed2i_column_collision" mesh="sensor_zed2i_camera_base_link_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <site name="sensor_base_mount" pos="0 0 0" />
+      <frame name="sensor_mount_camera" pos="0.04497998518419849 -0.0953742976544662 0.0704842258407723" quat="0.6941147128830013 0.1349040163886127 -0.13490491037604502 0.6941227102450982">
+        <body name="sensor_camera">
+          <inertial pos="0.00588303123659471 -1.8811472602465714e-05 8.277464171469845e-06" mass="0.170230156191785" fullinertia="0.00038292153519216195 3.2566288054752786e-05 0.0003906027773006867 -6.689775240918137e-11 -6.472828213740936e-08 3.093537394534995e-09" />
+          <geom class="sensor_zed2i_visual" mesh="sensor_zed2i_camera_vis" material="sensor_zed2i_camera" />
+          <geom class="sensor_zed2i_collision" mesh="sensor_zed2i_camera_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+          <body name="sensor_left_optical" pos="0.02765829697528989 0.059979670172410744 0.0001905187280706747" quat="0.5000098080290507 -0.49998451991354875 0.4999897331308525 -0.5000159382312819">
+            <site name="sensor_left_optical" pos="0 0 0" size="0.001" />
+            <camera name="sensor_left_optical" quat="0 1 0 0" resolution="1280 720" sensorsize="1280 720" focalpixel="448.1328244542143 514.1332824271612" principalpixel="0 0" />
+            <inertial pos="0 0 0" mass="1e-9" diaginertia="1e-06 1e-06 1e-06" />
+          </body>
+          <body name="sensor_right_optical" pos="0.027656935762132285 -0.0600203281398186 0.00019062873121336067" quat="0.5000098080290507 -0.49998451991354875 0.4999897331308525 -0.5000159382312819">
+            <site name="sensor_right_optical" pos="0 0 0" size="0.001" />
+            <inertial pos="0 0 0" mass="1e-9" diaginertia="1e-06 1e-06 1e-06" />
+          </body>
+        </body>
+      </frame>
+    </body>
+  </worldbody>
+</mujoco>

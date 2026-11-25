@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="ar5_08_left">
+  <compiler discardvisual="false" autolimits="true" angle="radian" eulerseq="XYZ" />
+  <option timestep="0.0020833333333333333" integrator="implicitfast" solver="Newton" iterations="30" ls_iterations="50" cone="elliptic" impratio="10" />
+  <size nconmax="256" njmax="512" />
+  <default>
+    <default class="ar5_08_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="1" />
+    </default>
+    <default class="ar5_08_collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="AR5_5_08L_W4C4A6_base_col" file="meshes/collision/AR5_5_08L_W4C4A6_base_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link1_col" file="meshes/collision/AR5_5_08L_W4C4A6_link1_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link2_col" file="meshes/collision/AR5_5_08L_W4C4A6_link2_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link3_col" file="meshes/collision/AR5_5_08L_W4C4A6_link3_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link4_col" file="meshes/collision/AR5_5_08L_W4C4A6_link4_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link5_col" file="meshes/collision/AR5_5_08L_W4C4A6_link5_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link6_col" file="meshes/collision/AR5_5_08L_W4C4A6_link6_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link7_col" file="meshes/collision/AR5_5_08L_W4C4A6_link7_col.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_base_vis" file="meshes/visual/AR5_5_08L_W4C4A6_base_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link1_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link1_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link2_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link2_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link3_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link3_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link4_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link4_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link5_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link5_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link6_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link6_vis.obj" />
+    <mesh name="AR5_5_08L_W4C4A6_link7_vis" file="meshes/visual/AR5_5_08L_W4C4A6_link7_vis.obj" />
+    <texture name="ar5_08_palette" type="2d" file="meshes/visual/ar5_08_palette.png" />
+    <material name="AR5_5_08L_W4C4A6_base" texture="ar5_08_palette" metallic="0.05" roughness="0.58" />
+    <material name="AR5_5_08L_W4C4A6_link1" texture="ar5_08_palette" metallic="0.05" roughness="0.58" />
+    <material name="AR5_5_08L_W4C4A6_link2" texture="ar5_08_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link3" texture="ar5_08_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link4" texture="ar5_08_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link5" texture="ar5_08_palette" metallic="0.03" roughness="0.42" />
+    <material name="AR5_5_08L_W4C4A6_link6" texture="ar5_08_palette" metallic="0.05" roughness="0.58" />
+    <material name="AR5_5_08L_W4C4A6_link7" texture="ar5_08_palette" metallic="0.05" roughness="0.58" />
+  </asset>
+  <worldbody>
+    <body name="AR5_5_08L_W4C4A6_base" gravcomp="1">
+      <inertial pos="-3.32756117005828e-05 -5.336332348134862e-05 0.05327725576477859" quat="0.9907496273073473 -0.003299931537009728 0.0029587459669429845 0.13563013037119376" mass="1.9851084670032253" diaginertia="0.002841170573611531 0.002806933388088207 0.0023093132100751356" />
+      <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_base_vis" material="AR5_5_08L_W4C4A6_base" />
+      <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_base_col" euler="0 0 0" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+      <site name="base_mount" pos="0 0 0" />
+      <body name="AR5_5_08L_W4C4A6_link1" pos="0 0 0" euler="0 0 0" gravcomp="1">
+        <inertial pos="-0.000184 0.001568 0.172804" mass="2.166" fullinertia="0.00332249 0.00260904 0.00317691 0.00000032 -0.00000048 -0.00001486" />
+        <joint name="AR5_5_08L_W4C4A6_joint_1" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+        <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link1_vis" material="AR5_5_08L_W4C4A6_link1" />
+        <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link1_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+        <body name="AR5_5_08L_W4C4A6_link2" pos="0 0 0.1745" gravcomp="1">
+          <inertial pos="-0.000017 0.001795 0.106689" mass="1.903" fullinertia="0.00779803 0.00674819 0.00305507 0.00000248 -0.00000226 -0.00049283" />
+          <joint name="AR5_5_08L_W4C4A6_joint_2" type="hinge" axis="0 1 0" range="-2.0944 2.0944" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+          <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link2_vis" material="AR5_5_08L_W4C4A6_link2" />
+          <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link2_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+          <body name="AR5_5_08L_W4C4A6_link3" pos="0 0 0.332" gravcomp="1">
+            <inertial pos="0.008227 -0.001273 -0.020611" mass="1.845" fullinertia="0.00641285 0.00591595 0.00276583 0.00000909 0.00034765 -0.00002314" />
+            <joint name="AR5_5_08L_W4C4A6_joint_3" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+            <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link3_vis" material="AR5_5_08L_W4C4A6_link3" />
+            <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link3_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+            <body name="AR5_5_08L_W4C4A6_link4" pos="0.0105 0 0" gravcomp="1">
+              <inertial pos="-0.009242 -0.002172 0.084042" mass="1.037" fullinertia="0.00294639 0.00244447 0.00140961 -0.00002418 -0.00012203 0.00022029" />
+              <joint name="AR5_5_08L_W4C4A6_joint_4" type="hinge" axis="0 1 0" range="-1.0472 2.5307" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-120 120" />
+              <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link4_vis" material="AR5_5_08L_W4C4A6_link4" />
+              <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link4_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+              <body name="AR5_5_08L_W4C4A6_link5" pos="-0.0105 0 0.278" gravcomp="1">
+                <inertial pos="-0.000756 0.000723 -0.086764" mass="1.279" fullinertia="0.00241349 0.00200246 0.00158693 -0.00003807 -0.00004536 0.00006623" />
+                <joint name="AR5_5_08L_W4C4A6_joint_5" type="hinge" axis="0 0 1" range="-3.1067 3.1067" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-100 100" />
+                <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link5_vis" material="AR5_5_08L_W4C4A6_link5" />
+                <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link5_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                <body name="AR5_5_08L_W4C4A6_link6" pos="0 0 0" gravcomp="1">
+                  <inertial pos="-0.005104 0.000251 0.000056" mass="0.906" fullinertia="0.00061429 0.00074781 0.00075897 -0.00000088 0.00000104 -0.00000047" />
+                  <joint name="AR5_5_08L_W4C4A6_joint_6" type="hinge" axis="0 1 0" range="-1.047197551196598 1.047197551196598" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-100 100" />
+                  <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link6_vis" material="AR5_5_08L_W4C4A6_link6" />
+                  <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link6_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                  <body name="AR5_5_08L_W4C4A6_link7" pos="0 0 0" gravcomp="1">
+                    <inertial pos="-0.001562 -0.000366 0.05392" mass="0.33" fullinertia="0.00046062 0.00068652 0.00043943 0.00000269 0.00003859 -0.00000095" />
+                    <joint name="AR5_5_08L_W4C4A6_joint_7" type="hinge" axis="1 0 0" range="-1.5707963267948966 1.5707963267948966" damping="0" frictionloss="0" armature="0.01" actuatorfrclimited="true" actuatorfrcrange="-100 100" />
+                    <geom class="ar5_08_visual" mesh="AR5_5_08L_W4C4A6_link7_vis" material="AR5_5_08L_W4C4A6_link7" />
+                    <geom class="ar5_08_collision" mesh="AR5_5_08L_W4C4A6_link7_col" friction="1 0 0" condim="4" solref="0.004 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" priority="0" solmix="1" />
+                    <body name="AR5_5_08L_W4C4A6_tcp" pos="0 0 0.09" gravcomp="1">
+                      <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
+                      <site name="tool0" pos="0 0 0" />
+                      <frame name="mount_flange" pos="0 0 0" euler="0 0 -1.57079633" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="AR5_5_08L_W4C4A6_joint_1_drive" joint="AR5_5_08L_W4C4A6_joint_1" kp="16000" kv="614.2237548828125" />
+    <position name="AR5_5_08L_W4C4A6_joint_2_drive" joint="AR5_5_08L_W4C4A6_joint_2" kp="16000" kv="613.7109985351562" />
+    <position name="AR5_5_08L_W4C4A6_joint_3_drive" joint="AR5_5_08L_W4C4A6_joint_3" kp="16000" kv="603.791015625" />
+    <position name="AR5_5_08L_W4C4A6_joint_4_drive" joint="AR5_5_08L_W4C4A6_joint_4" kp="16000" kv="600.3331298828125" />
+    <position name="AR5_5_08L_W4C4A6_joint_5_drive" joint="AR5_5_08L_W4C4A6_joint_5" kp="16000" kv="604.13671875" />
+    <position name="AR5_5_08L_W4C4A6_joint_6_drive" joint="AR5_5_08L_W4C4A6_joint_6" kp="16000" kv="604.7486572265625" />
+    <position name="AR5_5_08L_W4C4A6_joint_7_drive" joint="AR5_5_08L_W4C4A6_joint_7" kp="16000" kv="603.66796875" />
+  </actuator>
+  <contact>
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link1" />
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link2" />
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link3" />
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="AR5_5_08L_W4C4A6_base" body2="AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="AR5_5_08L_W4C4A6_link1" body2="AR5_5_08L_W4C4A6_link2" />
+    <exclude body1="AR5_5_08L_W4C4A6_link1" body2="AR5_5_08L_W4C4A6_link3" />
+    <exclude body1="AR5_5_08L_W4C4A6_link1" body2="AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="AR5_5_08L_W4C4A6_link1" body2="AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="AR5_5_08L_W4C4A6_link1" body2="AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="AR5_5_08L_W4C4A6_link1" body2="AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="AR5_5_08L_W4C4A6_link2" body2="AR5_5_08L_W4C4A6_link3" />
+    <exclude body1="AR5_5_08L_W4C4A6_link2" body2="AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="AR5_5_08L_W4C4A6_link2" body2="AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="AR5_5_08L_W4C4A6_link2" body2="AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="AR5_5_08L_W4C4A6_link2" body2="AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="AR5_5_08L_W4C4A6_link3" body2="AR5_5_08L_W4C4A6_link4" />
+    <exclude body1="AR5_5_08L_W4C4A6_link3" body2="AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="AR5_5_08L_W4C4A6_link3" body2="AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="AR5_5_08L_W4C4A6_link3" body2="AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="AR5_5_08L_W4C4A6_link4" body2="AR5_5_08L_W4C4A6_link5" />
+    <exclude body1="AR5_5_08L_W4C4A6_link4" body2="AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="AR5_5_08L_W4C4A6_link4" body2="AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="AR5_5_08L_W4C4A6_link5" body2="AR5_5_08L_W4C4A6_link6" />
+    <exclude body1="AR5_5_08L_W4C4A6_link5" body2="AR5_5_08L_W4C4A6_link7" />
+    <exclude body1="AR5_5_08L_W4C4A6_link6" body2="AR5_5_08L_W4C4A6_link7" />
+  </contact>
+</mujoco>
