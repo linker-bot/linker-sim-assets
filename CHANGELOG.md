@@ -4,9 +4,13 @@ The version is the git tag; the `linker-lw-v0` package carries the same version.
 
 ## 1.0.0
 
-The files of 0.7.0, unchanged, with a promise: within 1.x, LW-v0's paths, names, physics and
-geometry stay as they are (README "Versions"; README.zh-CN "版本"). The L6, L20 Lite, L25 and L30
-hands are not covered until they are verified.
+The files of 0.7.0 with a promise: within 1.x, LW-v0's paths, names, physics and geometry stay
+as they are (README "Versions"; README.zh-CN "版本"). The L6, L20 Lite, L25 and L30 hands are not
+covered until they are verified.
+
+- **The table's work surface is green** (`#2E7D5B`, an anti-static mat's green), the rest of the
+  support grey as before. Only the colour of the table's visual mesh changes (its texture
+  coordinates and `lw_v0_palette.png`); its geometry and all physics are the same as 0.7.0's.
 
 - Package `linker-lw-v0` 1.0.0; products install it at the tag `v1.0.0`.
 - Speeds measured with 0.6.0's and 0.7.0's files in linker-lab and linker-sim: the same.
