@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "linker-lw-v0"
-version = "0.7.0"
+version = "1.0.0"
 description = "LW-v0, Linkerbot's two-arm camera workstation, as MJCF and URDF with meshes (data only)"
 readme = "README.md"
 license = "Apache-2.0"

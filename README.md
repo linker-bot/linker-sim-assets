@@ -21,7 +21,7 @@ at a time, after each has been verified in our simulators.
 | --- | --- |
 | MuJoCo | `assemblies/lw_v0/lw_v0.xml` (the whole station), or one unit: `left.xml`, `right.xml`, `top_camera.xml`. One part alone: its folder's `.xml`, e.g. `arms/ar5_08/ar5_08_left.xml`, `hands/<hand>/<hand>_<side>.xml` |
 | ROS, Isaac Sim, PyBullet, Drake, viser and other URDF tools | `assemblies/lw_v0/lw_v0.urdf`, or a part's `.urdf`, e.g. `hands/<hand>/<hand>_<side>.urdf` |
-| Python (linker-sim, linker-lab) | The package `linker-lw-v0` from this repository at a tag, e.g. in `pyproject.toml`: `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.7.0"`; then `importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0/lw_v0.xml"` |
+| Python (linker-sim, linker-lab) | The package `linker-lw-v0` from this repository at a tag, e.g. in `pyproject.toml`: `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v1.0.0"`; then `importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0/lw_v0.xml"` |
 
 The package `linker-lw-v0` holds LW-v0's files at the same paths as this repository, the O6's
 meshes it uses, `hands/o6/sdk_channels.yaml` and `motor.yaml`, and `arms/ar5_08/controller.yaml`. It contains no code. Everything else: clone the
@@ -207,6 +207,42 @@ workstation (LW-v1), because fixing them changes the physics or the camera views
 - The top camera's optical frames lie 22.7 mm in front of where the ZED 2i's own description
   puts them, along the optical axis.
 
+## Versions
+
+Each release is a git tag `v<major>.<minor>.<patch>`; the package `linker-lw-v0` has the same
+version. Pin a tag (or its commit) and you get exactly those files.
+
+**What 1.x keeps** (from 1.0.0 on, until 2.0.0), for LW-v0 and the parts it is built from:
+
+- **Paths:** `assemblies/lw_v0/lw_v0.xml`, `left.xml`, `right.xml`, `top_camera.xml`,
+  `lw_v0.urdf`, and each part's MJCF and URDF where they are today. The package holds them at the
+  same paths under `linker_lw_v0/`, with `hands/o6/sdk_channels.yaml`, `hands/o6/motor.yaml` and
+  `arms/ar5_08/controller.yaml`.
+- **Names:** every body, joint, site, camera, drive (`<actuator>`) and coupling (`<equality>`)
+  name, in LW-v0 (`left/hand_lh_index_mcp_pitch`) and in each part's own files
+  (`lh_index_mcp_pitch`); the keyframe `home` and its pose.
+- **Physics:** LW-v0's compiled model, frozen in `tests/verified/lw_v0.json`, which CI checks on
+  every change: bodies, masses and inertias, joints and their limits, drives and their gains,
+  couplings, contact settings and exclusions, collision shapes, solver options. The O6's SDK
+  channel map, its motor model (`geared-shaft-v1`) and constants, and the arm controller's limits
+  stay as they are (also in that file).
+- **Geometry:** LW-v0's visual meshes keep their shape and place (also in that file).
+
+**What may change in 1.x:**
+
+- A **minor** version (1.1.0) adds: new robots, parts and assemblies, new files, new names. It
+  may correct a colour (a material of a visual mesh).
+- A **patch** version (1.0.1) fixes what the promise doesn't cover: documentation, tests, tools,
+  file formatting and comments, and the names of meshes, materials, textures and default classes
+  inside a file.
+- **Not covered:** the L6, L20 Lite, L25 and L30 hands, which we haven't verified in simulation
+  ([Not yet verified](#not-yet-verified)). Any 1.x version may change them; once verified, each
+  joins the promise. Also `tools/` and `tests/`, which are for contributors.
+
+Anything else, such as a change to LW-v0's physics or geometry or a renamed joint, is either a new
+assembly next to LW-v0 (LW-v1, for example with the issues above fixed), or 2.0.0. The changelog
+lists every change.
+
 ## For contributors
 
 Edit the parts' MJCF, `assembly.yaml` and the assembly's scene (`lw_v0.xml`); then write the rest:
@@ -231,9 +267,9 @@ CI runs it on MuJoCo 3.17.0 and 4.0.1, with the package `linker-lw-v0` built and
 
 **Verified assemblies are frozen.** `tests/verified/lw_v0.json` is LW-v0's compiled physics at
 the home pose, in the world frame (bodies, joints, drives, couplings, contacts, collision shapes,
-options). A part change that alters it fails the test. If the change is meant, write the file
-again (`python tools/verified.py lw_v0`) in a change that also gives the robot a new version, or
-make a new assembly.
+options, visual geometry) and its parts' controller data. A part change that alters it fails the test. If the change is meant, write the file
+again (`python tools/verified.py lw_v0`) in a change that is a new major version, or make a new
+assembly ([Versions](#versions)).
 
 Meshes: one `.obj` per link, `meshes/visual/<link>_vis.obj`, with an `.mtl` and one
 `<folder>_palette.png` per part or robot. Colours are texture coordinates into the palette, so URDF tools and

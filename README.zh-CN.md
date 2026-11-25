@@ -21,7 +21,7 @@
 | --- | --- |
 | MuJoCo | `assemblies/lw_v0/lw_v0.xml`（整个工作站），或单个单元：`left.xml`、`right.xml`、`top_camera.xml`。单独加载一个部件：该部件目录中的 `.xml`，例如 `arms/ar5_08/ar5_08_left.xml`、`hands/<hand>/<hand>_<side>.xml` |
 | ROS、Isaac Sim、PyBullet、Drake、viser 等 URDF 工具 | `assemblies/lw_v0/lw_v0.urdf`，或某个部件的 `.urdf`，例如 `hands/<hand>/<hand>_<side>.urdf` |
-| Python（linker-sim、linker-lab） | 从本仓库的某个标签安装 `linker-lw-v0`，例如在 `pyproject.toml` 中写 `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v0.7.0"`；然后 `importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0/lw_v0.xml"` |
+| Python（linker-sim、linker-lab） | 从本仓库的某个标签安装 `linker-lw-v0`，例如在 `pyproject.toml` 中写 `"linker-lw-v0 @ git+https://github.com/linker-bot/linker-sim-assets@v1.0.0"`；然后 `importlib.resources.files("linker_lw_v0") / "assemblies/lw_v0/lw_v0.xml"` |
 
 `linker-lw-v0` 包含 LW-v0 的文件（路径与本仓库相同）、它用到的 O6 网格，以及
 `hands/o6/sdk_channels.yaml`、`motor.yaml` 以及 `arms/ar5_08/controller.yaml`。包中没有代码。其他文件请克隆本仓库或下载 ZIP。
@@ -179,6 +179,36 @@ LW-v0 保留了两个产品验证时的几何。以下问题推迟到后续工�
 - 腕部相机在支架上的位置比支架 CAD 中高 16.4 mm。
 - 顶部相机的光学坐标系沿光轴比 ZED 2i 官方描述中的位置靠前 22.7 mm。
 
+## 版本
+
+每个版本是一个 git 标签 `v<主版本>.<次版本>.<修订号>`；`linker-lw-v0` 包的版本号与之相同。固定（pin）一个
+标签（或它的提交），得到的就是那一版的文件。
+
+**1.x 保持不变的内容**（从 1.0.0 起，直到 2.0.0），针对 LW-v0 及组成它的部件：
+
+- **路径：** `assemblies/lw_v0/lw_v0.xml`、`left.xml`、`right.xml`、`top_camera.xml`、`lw_v0.urdf`，以及每个
+  部件的 MJCF 和 URDF 的当前位置。包内这些文件位于 `linker_lw_v0/` 下的相同路径，另有
+  `hands/o6/sdk_channels.yaml`、`hands/o6/motor.yaml` 和 `arms/ar5_08/controller.yaml`。
+- **名称：** 每个刚体、关节、站点（site）、相机、驱动（`<actuator>`）和耦合（`<equality>`）的名称，包括
+  LW-v0 中的名称（`left/hand_lh_index_mcp_pitch`）和各部件自身文件中的名称（`lh_index_mcp_pitch`）；关键帧
+  `home` 及其姿态。
+- **物理：** LW-v0 编译后的模型，即 CI 在每次修改时检查的 `tests/verified/lw_v0.json`：刚体、质量和惯量、
+  关节及其限位、驱动及其增益、耦合、接触设置和排除、碰撞形状、求解器选项。O6 的 SDK 通道映射、其电机模型
+  （`geared-shaft-v1`）和常数，以及机械臂控制器的限值都保持不变（同样记录在该文件中）。
+- **几何：** LW-v0 的可视网格保持其形状和位置（同样记录在该文件中）。
+
+**1.x 中可能变化的内容：**
+
+- **次版本**（1.1.0）新增：新的机器人、部件和装配体，新文件，新名称。也可以修正颜色（可视网格的材质）。
+- **修订版本**（1.0.1）修复上述承诺不涵盖的内容：文档、测试、工具、文件格式和注释，以及文件内部网格、材质、
+  纹理和默认类（default class）的名称。
+- **不在承诺范围内：** L6、L20 Lite、L25 和 L30 灵巧手，我们尚未在仿真中验证它们（见[尚未验证](#尚未验证)）。
+  任何 1.x 版本都可能修改它们；验证之后，它们各自加入承诺。另外，`tools/` 和 `tests/` 面向贡献者，也不在
+  承诺范围内。
+
+其他任何改变，例如修改 LW-v0 的物理或几何、重命名关节，要么作为与 LW-v0 并列的新装配体（LW-v1，例如修复
+上面的已知问题），要么作为 2.0.0。每项改变都会列在更新日志（CHANGELOG）中。
+
 ## 贡献者须知
 
 编辑部件的 MJCF、`assembly.yaml` 和装配体的场景文件（`lw_v0.xml`）；然后生成其余文件：
@@ -200,8 +230,9 @@ uv run --group test pytest
 CI 在 MuJoCo 3.17.0 和 4.0.1 上运行测试，并构建、安装 `linker-lw-v0` 包。
 
 **已验证的装配体是冻结的。** `tests/verified/lw_v0.json` 是 LW-v0 在初始姿态下、世界坐标系中编译后的物理
-（刚体、关节、驱动、耦合、接触、碰撞形状、选项）。改变它的部件修改会使测试失败。如果这一改变是有意的，
-请重新生成该文件（`python tools/verified.py lw_v0`），并在同一次修改中给机器人一个新版本号；或者新建一个装配体。
+（刚体、关节、驱动、耦合、接触、碰撞形状、选项、可视几何）及其部件的控制器数据。改变它的部件修改会使测试失败。如果这一改变是有意的，
+请重新生成该文件（`python tools/verified.py lw_v0`），并让这次修改成为一个新的主版本；或者新建一个装配体
+（见[版本](#版本)）。
 
 网格：每个连杆一个 `.obj`，即 `meshes/visual/<link>_vis.obj`，配一个 `.mtl`；每个部件或机器人一张
 `<folder>_palette.png`。颜色是指向调色板的纹理坐标，因此 URDF 工具和 MuJoCo 显示相同的颜色。调色板以其所在
