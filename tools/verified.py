@@ -4,21 +4,25 @@
 
 `tests/test_assets.py` compares each assembly with its file on every push, so a component change
 that alters a verified assembly fails until it is accepted: rewrite the file with this tool, in
-a change that also gives the robot a new version (or make a new assembly). Visual meshes,
-materials and names of meshes, materials and classes are not physics and are left out.
+a change that is a new major version (or make a new assembly; README "Versions"). Materials and
+the names of meshes, materials and classes are left out: a colour may be corrected in 1.x.
 
 The summary, at the home keyframe, by name: bodies (pose, mass, centre of mass, inertia tensor,
 gravity compensation), joints (anchor, axis, limits, armature, damping, friction, stiffness),
 drives, couplings, contact exclusions, collision geoms (pose, shape, contact settings; a mesh by
-the centroid, second moments and extent of its vertices), sites, cameras, solver options.
+the centroid, second moments and extent of its vertices), visual geoms (their meshes the same
+way), sites, cameras, solver options; and the controller data next to the parts (each part
+folder's `.yaml` files, read).
 """
 
 import json
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import mujoco
 import numpy as np
+import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 OPTIONS = ("timestep", "impratio", "tolerance", "ls_tolerance", "noslip_tolerance", "gravity", "wind", "magnetic",
@@ -36,6 +40,31 @@ def _name(m, objtype, i):
 
 def _pose(pos, mat):
     return {"pos": _l(pos), "mat": _l(np.asarray(mat).reshape(3, 3))}
+
+
+def _mesh(m, d, g):
+    """A mesh geom by its vertices in the world frame: count, centroid, second moments, extent."""
+    i = m.geom_dataid[g]
+    v = m.mesh_vert[m.mesh_vertadr[i]:m.mesh_vertadr[i] + m.mesh_vertnum[i]].astype(float)
+    w = v @ d.geom_xmat[g].reshape(3, 3).T + d.geom_xpos[g]
+    c = w.mean(axis=0)
+    return {"vertices": int(len(w)), "centroid": _l(c), "moments": _l((w - c).T @ (w - c) / len(w)),
+            "min": _l(w.min(axis=0)), "max": _l(w.max(axis=0))}
+
+
+def controller_data(path):
+    """The `.yaml` files in the folders of the parts the assembly at `path` uses, read."""
+    folder = Path(path).parent
+    files = {(folder / model.get("file")).resolve()
+             for model in ET.parse(path).getroot().iter("model")}
+    if (folder / "assembly.yaml").exists():
+        for unit in yaml.safe_load((folder / "assembly.yaml").read_text())["units"].values():
+            files |= {(folder / part["file"]).resolve() for part in unit["parts"].values()}
+    data = {}
+    for part_folder in sorted({f.parent for f in files} - {folder.resolve()}):
+        for f in sorted(part_folder.glob("*.yaml")):
+            data[f.relative_to(ROOT).as_posix()] = yaml.safe_load(f.read_text())
+    return data
 
 
 def summary(path):
@@ -102,16 +131,23 @@ def summary(path):
                      "solref": _l(m.geom_solref[g]), "solimp": _l(m.geom_solimp[g]),
                      "margin": float(m.geom_margin[g]), "gap": float(m.geom_gap[g])}
             if m.geom_type[g] == mujoco.mjtGeom.mjGEOM_MESH:
-                i = m.geom_dataid[g]
-                v = m.mesh_vert[m.mesh_vertadr[i]:m.mesh_vertadr[i] + m.mesh_vertnum[i]].astype(float)
-                w = v @ d.geom_xmat[g].reshape(3, 3).T + d.geom_xpos[g]
-                c = w.mean(axis=0)
-                entry |= {"vertices": int(len(w)), "centroid": _l(c), "moments": _l((w - c).T @ (w - c) / len(w)),
-                          "min": _l(w.min(axis=0)), "max": _l(w.max(axis=0))}
+                entry |= _mesh(m, d, g)
             else:
                 entry |= {"size": _l(m.geom_size[g]), **_pose(d.geom_xpos[g], d.geom_xmat[g])}
             out["collision_geoms"][name] = entry
 
+    out["visual_geoms"] = {}
+    for b in range(1, m.nbody):
+        geoms = [g for g in range(m.ngeom) if m.geom_bodyid[g] == b and not (m.geom_contype[g] or m.geom_conaffinity[g])]
+        for k, g in enumerate(geoms):
+            entry = {"body": m.body(b).name, "type": int(m.geom_type[g]), "group": int(m.geom_group[g])}
+            if m.geom_type[g] == mujoco.mjtGeom.mjGEOM_MESH:
+                entry |= _mesh(m, d, g)
+            else:
+                entry |= {"size": _l(m.geom_size[g]), **_pose(d.geom_xpos[g], d.geom_xmat[g])}
+            out["visual_geoms"][f"{m.body(b).name}#{k}"] = entry
+
+    out["controller_data"] = controller_data(path)
     out["sites"] = {m.site(s).name: _pose(d.site_xpos[s], d.site_xmat[s]) for s in range(m.nsite)}
     out["cameras"] = {m.camera(c).name: {**_pose(d.cam_xpos[c], d.cam_xmat[c]), "fovy": float(m.cam_fovy[c]),
                                          "resolution": _l(m.cam_resolution[c]), "intrinsic": _l(m.cam_intrinsic[c]),
