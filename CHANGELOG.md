@@ -2,7 +2,7 @@
 
 The version is the git tag; the `linker-lw-v0` package carries the same version.
 
-## Unreleased (0.7.0)
+## 0.7.0
 
 **Parts and assemblies; no physics change.** LW-v0 is now built from parts, each a robot of its
 own with its MJCF, URDF and meshes: `arms/ar5_08/` (left, right), `flanges/ar5_08_o6/` (one for
